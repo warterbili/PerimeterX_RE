@@ -1,0 +1,80 @@
+{
+  "_info": {
+    "segment_count": 10,
+    "xorKey": 100
+  },
+  "segments": [
+    {
+      "handler": "0lll0l",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "l0l0ll",
+      "args": [
+        "77154308812988452537"
+      ]
+    },
+    {
+      "handler": "0lll000l",
+      "args": [
+        "1779263984197"
+      ]
+    },
+    {
+      "handler": "000ll0",
+      "args": [
+        "d86mjs31u1as73fma2b0"
+      ]
+    },
+    {
+      "handler": "0lll0000",
+      "args": [
+        "5991"
+      ]
+    },
+    {
+      "handler": "0ll0ll00",
+      "args": [
+        "c6d57bbd-5420-11f1-b507-989a861bfb2d",
+        "true"
+      ]
+    },
+    {
+      "handler": "0lllll",
+      "args": [
+        "cfd9cefe14afa066871391513aad0ada43ded38d31b093369807bc6c7f45bc5c"
+      ]
+    },
+    {
+      "handler": "l00lll",
+      "args": [
+        "cc",
+        "60",
+        "U2FtZVNpdGU9TGF4Ow=="
+      ]
+    },
+    {
+      "handler": "l00ll0",
+      "args": [
+        "ccc:0,ai:0,uiii:0"
+      ]
+    },
+    {
+      "handler": "0ll0l000",
+      "args": [
+        "N0g54lW35eB8LIHBV3rVQNXqTroXjaGCBe7QxxEWo/c=:9s/CeJfrQ6zo1A2xyKooXc4xrj-Mf/EM/tCpXjmSiK-L8xvlqrxg35B5RuRCG4sr9h5hMEScyLN52V8zUdnmdMS1/WtToqoQO2h1x5iRlxWvtqeou8IDvZXH0yLryMjC3nOxnwJBPt2E4xGADa7hpnem2YhKHC12WneVRnP9uqCVYI/OmkbMrC-ndNpTNpU/",
+        "true"
+      ]
+    }
+  ],
+  "state_extracted": {
+    "jf": "cu",
+    "to": "77154308812988452537",
+    "no": "1779263984197",
+    "appId": "d86mjs31u1as73fma2b0",
+    "cts": "c6d57bbd-5420-11f1-b507-989a861bfb2d",
+    "qa": "cfd9cefe14afa066871391513aad0ada43ded38d31b093369807bc6c7f45bc5c"
+  }
+}

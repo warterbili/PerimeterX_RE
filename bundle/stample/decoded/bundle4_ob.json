@@ -1,0 +1,54 @@
+{
+  "_info": {
+    "xorKey": 90,
+    "segmentCount": 2,
+    "handlerCount": 2
+  },
+  "state": {
+    "px3": {
+      "name": "_px3",
+      "value": "f53336b9d402cafba9d134ba8947d715994bc82e8ec4272222cbdf625717fe72:nsSEEyGZ5wo4iYVUwKScD4TQdp8uAnwp2t7Kp//UVUct7Cy96ZSdsUxxzLMxzjq3kklwPZZ6aNwEpymf4GhFGw==:1000:dBoMgbsVwthnJFyML10zVc5mvGJWtAvzIy0LTF+bqd2AvNBgg/EC6Ccgdt6+OV8c0cjn2PMbC4mvPIwZcJ8GynBBZbyedzULB2WF6vVU42WFqFvSYxDMJOGXawCdo2OBCvMaDFFfOJdUtCyEtmmK8SWKeLgQ/NkIGi3Vz4ABE7BvOGrNP2eCOishXhFxktaW5EtNK+FR/tkTlg3+tzOHpcwQ4jmLUBODCZ0g8R78bZOwOQh0qE44kqOfTM0HqeVgcSLRrOpzcHMfMdabHbwIjhOK9/8xD+oU4sHSqEa9g4+ry+mo0usyw5Eq72ahZxvGqKchImrQTUJOwmroFBBzfccVYpYYaAT0yroANRwBzTvPdweLhOY3n+zzu2bjYZn0+3qtvzNFdz1l6GZ1emGApFceE6QDQzTA/dtImxDLc8NoTzLHwsGPhQvV7rBPZDJeWpGxlKe2oSw9lckMsUShpUk0JpUPDdM4BuSUGoXbvGQKcKzO7Zn2tgDGj5TwRuBfCvsmo1EnuQ3Da03EPF7H8A==",
+      "ttl": 330,
+      "secure": true,
+      "maxAge": 300
+    },
+    "jf": "cu"
+  },
+  "params": {
+    "vid": null,
+    "cts": null,
+    "cs": null,
+    "sid": null,
+    "no": null
+  },
+  "segments": [
+    {
+      "index": 0,
+      "raw": "OOllOl|_px3|330|f53336b9d402cafba9d134ba8947d715994bc82e8ec4272222cbdf625717fe72:nsSEEyGZ5wo4iYVUwKScD4TQdp8uAnwp2t7Kp//UVUct7Cy96ZSdsUxxzLMxzjq3kklwPZZ6aNwEpymf4GhFGw==:1000:dBoMgbsVwthnJFyML10zVc5mv...",
+      "handler": "OOllOl",
+      "handlerType": "set_cookie",
+      "args": [
+        "_px3",
+        "330",
+        "f53336b9d402cafba9d134ba8947d715994bc82e8ec4272222cbdf625717fe72:nsSEEyGZ5wo4iYVUwKScD4TQdp8uAnwp2t7Kp//UVUct7Cy96ZSdsUxxzLMxzjq3kklwPZZ6aNwEpymf4GhFGw==:1000:dBoMgbsVwthnJFyML10zVc5mvGJWtAvzIy0LTF+bqd2AvNBgg/EC6Ccgdt6+OV8c0cjn2PMbC4mvPIwZcJ8GynBBZbyedzULB2WF6vVU42WFqFvSYxDMJOGXawCdo2OBCvMaDFFfOJdUtCyEtmmK8SWKeLgQ/NkIGi3Vz4ABE7BvOGrNP2eCOishXhFxktaW5EtNK+FR/tkTlg3+tzOHpcwQ4jmLUBODCZ0g8R78bZOwOQh0qE44kqOfTM0HqeVgcSLRrOpzcHMfMdabHbwIjhOK9/8xD+oU4sHSqEa9g4+ry+mo0usyw5Eq72ahZxvGqKchImrQTUJOwmroFBBzfccVYpYYaAT0yroANRwBzTvPdweLhOY3n+zzu2bjYZn0+3qtvzNFdz1l6GZ1emGApFceE6QDQzTA/dtImxDLc8NoTzLHwsGPhQvV7rBPZDJeWpGxlKe2oSw9lckMsUShpUk0JpUPDdM4BuSUGoXbvGQKcKzO7Zn2tgDGj5TwRuBfCvsmo1EnuQ3Da03EPF7H8A==",
+        "true",
+        "300"
+      ],
+      "result": {
+        "type": "set_cookie",
+        "name": "_px3",
+        "value": "f53336b9d402cafba9d134ba8947d715994bc82e8ec4272222cbdf625717fe72:nsSEEyGZ5wo4iYVUwKScD4TQdp8uAnwp2t7Kp//UVUct7Cy96ZSdsUxxzLMxzjq3kklwPZZ6aNwEpymf4GhFGw==:1000:dBoMgbsVwthnJFyML10zVc5mvGJWtAvzIy0LTF+bqd2AvNBgg/EC6Ccgdt6+OV8c0cjn2PMbC4mvPIwZcJ8GynBBZbyedzULB2WF6vVU42WFqFvSYxDMJOGXawCdo2OBCvMaDFFfOJdUtCyEtmmK8SWKeLgQ/NkIGi3Vz4ABE7BvOGrNP2eCOishXhFxktaW5EtNK+FR/tkTlg3+tzOHpcwQ4jmLUBODCZ0g8R78bZOwOQh0qE44kqOfTM0HqeVgcSLRrOpzcHMfMdabHbwIjhOK9/8xD+oU4sHSqEa9g4+ry+mo0usyw5Eq72ahZxvGqKchImrQTUJOwmroFBBzfccVYpYYaAT0yroANRwBzTvPdweLhOY3n+zzu2bjYZn0+3qtvzNFdz1l6GZ1emGApFceE6QDQzTA/dtImxDLc8NoTzLHwsGPhQvV7rBPZDJeWpGxlKe2oSw9lckMsUShpUk0JpUPDdM4BuSUGoXbvGQKcKzO7Zn2tgDGj5TwRuBfCvsmo1EnuQ3Da03EPF7H8A==",
+        "ttl": 330
+      }
+    },
+    {
+      "index": 1,
+      "raw": "OlOlll|cu",
+      "handler": "OlOlll",
+      "handlerType": "control_flag",
+      "args": [
+        "cu"
+      ]
+    }
+  ]
+}

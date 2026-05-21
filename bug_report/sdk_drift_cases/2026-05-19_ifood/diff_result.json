@@ -1,0 +1,1119 @@
+{
+  "ev1": {
+    "static_count": 8,
+    "dynamic_count": 6,
+    "missing_count": 0,
+    "static_fields": [
+      {
+        "k": "cgIHSDRhAX8=",
+        "value": "https://www.ifood.com.br/restaurantes"
+      },
+      {
+        "k": "XQkoAxhuKjY=",
+        "value": 0
+      },
+      {
+        "k": "dEABCjEhBjA=",
+        "value": "Win32"
+      },
+      {
+        "k": "egoPQDxmDXA=",
+        "value": 0
+      },
+      {
+        "k": "Tl57FAs5fS4=",
+        "value": 3600
+      },
+      {
+        "k": "BzdyfUJXdks=",
+        "value": null
+      },
+      {
+        "k": "DFg5Ekk4PSU=",
+        "value": 0
+      },
+      {
+        "k": "bHgZcioeHEk=",
+        "value": false
+      }
+    ],
+    "dynamic_fields": [
+      {
+        "k": "PSkIY3tJDFE=",
+        "a": 2167,
+        "b": 747
+      },
+      {
+        "k": "VQEgCxNnKjw=",
+        "a": 1779130113664,
+        "b": 1779131078654
+      },
+      {
+        "k": "bHgZcikfE0A=",
+        "a": 1779130113675,
+        "b": 1779131078667
+      },
+      {
+        "k": "NSEAa3NAC18=",
+        "a": "2bd832d0-52ea-11f1-98d8-e17481f98467",
+        "b": "6b0623c0-52ec-11f1-a40f-159decdb261b"
+      },
+      {
+        "k": "R3cyPQIVMAw=",
+        "a": "194693e2bce104232d97ad4d8df7c2224f1d23da747ff6f71c338a9806f731c7:ppC4a3bHDWvPVLULJHwXjxuS02sofmtnEOcOQ10pc8JR+nrfMF4DPtT8Z4VbmU5OS3BgYF7l+57E+B0al6driw==:1000:DxjFwtJR3H0zgTqXIL9vpJVhibHcfWcSWjzQ3TXLlVErud/T4ONrZxlr58Lcy6I7Zirk0mVbFNHEZiIJmTwey+gJts8w/3+9awAjVnMFSyWX2wh1MJr/RRKw2Dt6Eip+nkP9p91hPSUS7nAvl4QML3AKSuBnLSWhGfmkwjQHMgYznyQKCq6ecnt5tiaaSiSBjHqFWLZVjnmmQnkJ02Y0hGXRk3yk78FFNMAONVAXgbX2ehNN4mxcSWK8xK+FspuZOcqXVZ37NDwRqA0RJgXnB82EFvJP4PyPexnwcjVj29qq+FyDOngHdTa/+G2ZFcuZcq13RLFhhqosX/YwdXx3z9qJYZaSQ7cGt3a6WQ3IhGQnOgNMtGWyp74oTi5iscokXXw7KRSMGAL6G/pKa5wkNCiFFuqZx3PMzWNWugw0iizMyzXyYC/S6AXpkvrHQ3KAdRiXVAETZowcZAawbUoYEg==",
+        "b": "28575a0b0631ffe5dd1dcacb35ce254becc22023d0bbeef34526f8240b2e0aa4:/CRyhGaCmsDoNjqP0IBhlY6ReCMznUi44qLID/NB1Dey3l6mjSGjaB24fIC8DzT4YMUHaSsT5x03xnoTS715OA==:1000:bk4Dd8xp6NTuQecB+jUAdjq2wEWZqXwQIdr3mblTt5rCnZHt5g1xUYllnhsUpHOLgQTd9mME3v79REWhgQ2VGrm180OM9HjSioqQrTT1b1BmDr24ewRm5PI3IRwC7ZicrMr3KPMjnxt1o5mjpZv2kyOWTL9J1vcueO+f6/6C9TQPXYmqUJWrRzsRIott4uA127KG226KMAtatMP6J3ywJ4ChNK0VFn6D5XV7F7LAVEvSlnlj48H55nICv9jt5nm3JhhZDG08k25HlmlNToZWjxVOGpZHU0uzSrFvQXCG4BsivXe+H3RZG9J6Xy3diDPQPbPgwHceJvZEZ7ZCfq3og9dMjMXTo6avAPswRqn9qtDrRtJzqm+X5UdaYtSJLJeEs1nR9NNnlpqGNpQ5Mj51rQqMv5dzXEYkWxS/A2/QwkfnfUnKFElETecEDDWHrtuxJWctmSmlTxtdvYvrvgkpOAQ0F2iEEq76IKWWsLb2OzxtNzXCSMVPoTEsrp5YwrfQ"
+      },
+      {
+        "k": "cyNGaTZBQVs=",
+        "a": {
+          "PX12738": 12,
+          "PX12739": 0,
+          "PX12740": 0,
+          "PX12741": -1
+        },
+        "b": {
+          "PX12738": 14,
+          "PX12739": 0,
+          "PX12740": 0,
+          "PX12741": -1
+        }
+      }
+    ],
+    "missing_fields": []
+  },
+  "ev2": {
+    "static_count": 192,
+    "dynamic_count": 32,
+    "missing_count": 2,
+    "static_fields": [
+      {
+        "k": "VGBhahEDY1E=",
+        "value": "yFn;v_,GJ)b!Oq"
+      },
+      {
+        "k": "Q3M2OQYQNAs=",
+        "value": true
+      },
+      {
+        "k": "fg4LRDttCXA=",
+        "value": 1.6
+      },
+      {
+        "k": "T386NQoaPg4=",
+        "value": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ]
+      },
+      {
+        "k": "LDhZMmlfUwY=",
+        "value": 5
+      },
+      {
+        "k": "Y1NWWSUzU20=",
+        "value": true
+      },
+      {
+        "k": "V0ciTRIhIXc=",
+        "value": true
+      },
+      {
+        "k": "RTEwewNXOk0=",
+        "value": true
+      },
+      {
+        "k": "DXl4M0sUcgc=",
+        "value": true
+      },
+      {
+        "k": "EmInaFQCLVk=",
+        "value": "en-US"
+      },
+      {
+        "k": "dEABCjEhBjA=",
+        "value": "Win32"
+      },
+      {
+        "k": "dEABCjIjCzk=",
+        "value": [
+          "en-US",
+          "en",
+          "zh-CN"
+        ]
+      },
+      {
+        "k": "RBBxWgJydmw=",
+        "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+      },
+      {
+        "k": "BFAxGkE1MC8=",
+        "value": true
+      },
+      {
+        "k": "OARNTn5iRnw=",
+        "value": -480
+      },
+      {
+        "k": "bRlYEyt6WCA=",
+        "value": 32
+      },
+      {
+        "k": "EX1kN1ceYwI=",
+        "value": 3
+      },
+      {
+        "k": "DFg5Ekk9MyE=",
+        "value": "Gecko"
+      },
+      {
+        "k": "JnZTfGAaUUY=",
+        "value": "20030107"
+      },
+      {
+        "k": "PSkIY3hPC1U=",
+        "value": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+      },
+      {
+        "k": "OSUMb39IDFQ=",
+        "value": true
+      },
+      {
+        "k": "EwNmCVViYj8=",
+        "value": true
+      },
+      {
+        "k": "ViZjLBNDZBo=",
+        "value": 2
+      },
+      {
+        "k": "NkZDDHArQz8=",
+        "value": "Netscape"
+      },
+      {
+        "k": "X08qRRkuL34=",
+        "value": "Mozilla"
+      },
+      {
+        "k": "YQ1UByduUTE=",
+        "value": true
+      },
+      {
+        "k": "AzN2eUVVc0k=",
+        "value": false
+      },
+      {
+        "k": "JnZTfGAWV08=",
+        "value": "3g"
+      },
+      {
+        "k": "eytOYT1GS1Q=",
+        "value": true
+      },
+      {
+        "k": "S3s+MQ4fPAM=",
+        "value": true
+      },
+      {
+        "k": "bHgZcikbHUE=",
+        "value": true
+      },
+      {
+        "k": "bj4bNCtfHgE=",
+        "value": true
+      },
+      {
+        "k": "a1teUS47XGU=",
+        "value": "x86"
+      },
+      {
+        "k": "VQEgCxBhIj4=",
+        "value": "64"
+      },
+      {
+        "k": "WGRtbh0Eb1Q=",
+        "value": [
+          {
+            "brand": "Chromium",
+            "version": "148"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "148"
+          },
+          {
+            "brand": "Not/A)Brand",
+            "version": "99"
+          }
+        ]
+      },
+      {
+        "k": "Hm4rZFsOKV8=",
+        "value": false
+      },
+      {
+        "k": "bHgZcikYGkA=",
+        "value": ""
+      },
+      {
+        "k": "R3cyPQIXMQ4=",
+        "value": "Windows"
+      },
+      {
+        "k": "BFAxGkEwMio=",
+        "value": "15.0.0"
+      },
+      {
+        "k": "R3cyPQIXMQw=",
+        "value": "148.0.7778.168"
+      },
+      {
+        "k": "Q3M2OQYTMAM=",
+        "value": true
+      },
+      {
+        "k": "JxcSHWJ3FCY=",
+        "value": true
+      },
+      {
+        "k": "PAhJQnlrQ3g=",
+        "value": true
+      },
+      {
+        "k": "W0suQR0oJHY=",
+        "value": 20
+      },
+      {
+        "k": "a1teUS44W2E=",
+        "value": false
+      },
+      {
+        "k": "b19aVSo+WG8=",
+        "value": []
+      },
+      {
+        "k": "EX1kN1QeZgA=",
+        "value": {}
+      },
+      {
+        "k": "cR1EFzR9TyI=",
+        "value": 2
+      },
+      {
+        "k": "egoPQDxsDXE=",
+        "value": false
+      },
+      {
+        "k": "Xi5rJBhOaBM=",
+        "value": false
+      },
+      {
+        "k": "InJXeGcWVkk=",
+        "value": false
+      },
+      {
+        "k": "BhYzXENwNW4=",
+        "value": false
+      },
+      {
+        "k": "VGBhahICYFA=",
+        "value": false
+      },
+      {
+        "k": "OSUMb39HDF4=",
+        "value": false
+      },
+      {
+        "k": "Dh47VEh4MW8=",
+        "value": false
+      },
+      {
+        "k": "BhYzXEB7Mmc=",
+        "value": false
+      },
+      {
+        "k": "PSkIY3tIDFE=",
+        "value": false
+      },
+      {
+        "k": "WQUsDxxhLj8=",
+        "value": false
+      },
+      {
+        "k": "Lx8aFWl5Hy8=",
+        "value": false
+      },
+      {
+        "k": "PAhJQnluSnc=",
+        "value": false
+      },
+      {
+        "k": "FCAhKlFDJBk=",
+        "value": false
+      },
+      {
+        "k": "O2sOIX4MCxs=",
+        "value": true
+      },
+      {
+        "k": "cyNGaTVATV8=",
+        "value": false
+      },
+      {
+        "k": "KnpfcG8dVEY=",
+        "value": false
+      },
+      {
+        "k": "fg4LRDtuCHI=",
+        "value": true
+      },
+      {
+        "k": "Z1dSXSI3UWo=",
+        "value": "TypeError: Cannot read properties of undefined (reading 'width')"
+      },
+      {
+        "k": "IU0UR2QtF3M=",
+        "value": "webkit"
+      },
+      {
+        "k": "Z1dSXSI3UWg=",
+        "value": 33
+      },
+      {
+        "k": "EX1kN1QdZw0=",
+        "value": false
+      },
+      {
+        "k": "EmInaFcCIV8=",
+        "value": false
+      },
+      {
+        "k": "PSkIY3hPCVE=",
+        "value": "109|66|66|70|80"
+      },
+      {
+        "k": "EwNmCVVvZzM=",
+        "value": true
+      },
+      {
+        "k": "Z1dSXSE0UG0=",
+        "value": true
+      },
+      {
+        "k": "GCQtLl1BLR0=",
+        "value": "false"
+      },
+      {
+        "k": "UT0kdxRcJEQ=",
+        "value": "false"
+      },
+      {
+        "k": "QS00ZwRJNFE=",
+        "value": 1
+      },
+      {
+        "k": "aRVcHy92XiQ=",
+        "value": 1
+      },
+      {
+        "k": "NABBSnFnSnk=",
+        "value": ""
+      },
+      {
+        "k": "YjIXOCRfHQs=",
+        "value": [
+          "loadTimes",
+          "csi",
+          "app"
+        ]
+      },
+      {
+        "k": "ZHAReiETG0w=",
+        "value": true
+      },
+      {
+        "k": "fWlIIzgKShU=",
+        "value": {}
+      },
+      {
+        "k": "XQkoAxhuKjY=",
+        "value": 0
+      },
+      {
+        "k": "WGRtbh4EbFQ=",
+        "value": 4
+      },
+      {
+        "k": "cgIHSDRhAX8=",
+        "value": "https://www.ifood.com.br/restaurantes"
+      },
+      {
+        "k": "UT0kdxddL0I=",
+        "value": []
+      },
+      {
+        "k": "dgYDTDBgAnk=",
+        "value": false
+      },
+      {
+        "k": "YGwVZiUOEl0=",
+        "value": "rgb(0, 102, 204)"
+      },
+      {
+        "k": "UBxlVhZxY2M=",
+        "value": true
+      },
+      {
+        "k": "WipvIBxKaBc=",
+        "value": 4294967296
+      },
+      {
+        "k": "MV0EV3c9BGM=",
+        "value": false
+      },
+      {
+        "k": "Hw9qBVlsYDM=",
+        "value": false
+      },
+      {
+        "k": "IU0UR2cgF3c=",
+        "value": false
+      },
+      {
+        "k": "JVEQW2A3EWw=",
+        "value": true
+      },
+      {
+        "k": "fy9KZTpKQFc=",
+        "value": 0
+      },
+      {
+        "k": "fg4LRDhtDn4=",
+        "value": false
+      },
+      {
+        "k": "PSkIY3tPDlg=",
+        "value": "visible"
+      },
+      {
+        "k": "cHwFdjUaDkM=",
+        "value": false
+      },
+      {
+        "k": "TTk4cwtfMkY=",
+        "value": 0
+      },
+      {
+        "k": "KnpfcG8eWEI=",
+        "value": 1440
+      },
+      {
+        "k": "ajofMC9cHQY=",
+        "value": false
+      },
+      {
+        "k": "Hm4rZFgNLFc=",
+        "value": 852
+      },
+      {
+        "k": "LDhZMmpVXQc=",
+        "value": "missing"
+      },
+      {
+        "k": "YQ1UByRqUzE=",
+        "value": true
+      },
+      {
+        "k": "X08qRRkvLHc=",
+        "value": true
+      },
+      {
+        "k": "OkpPAHwqSTo=",
+        "value": false
+      },
+      {
+        "k": "EFwlFlY9IyI=",
+        "value": true
+      },
+      {
+        "k": "b19aVSo/XWc=",
+        "value": 1
+      },
+      {
+        "k": "eEQNDj0lDD0=",
+        "value": 0
+      },
+      {
+        "k": "O2sOIX4OCRA=",
+        "value": true
+      },
+      {
+        "k": "M2MGKXYGBhI=",
+        "value": false
+      },
+      {
+        "k": "FwdiDVFnYDw=",
+        "value": true
+      },
+      {
+        "k": "b19aVSk/X2c=",
+        "value": true
+      },
+      {
+        "k": "KxseEW16HCU=",
+        "value": true
+      },
+      {
+        "k": "eEQNDj0lCzU=",
+        "value": true
+      },
+      {
+        "k": "Cho/UEx5PmQ=",
+        "value": false
+      },
+      {
+        "k": "Cho/UEx5OGI=",
+        "value": true
+      },
+      {
+        "k": "PSkIY3tECVY=",
+        "value": 0
+      },
+      {
+        "k": "UBxlVhZ/ZGY=",
+        "value": 8
+      },
+      {
+        "k": "EwNmCVZjYD8=",
+        "value": true
+      },
+      {
+        "k": "PSkIY3tJCVg=",
+        "value": "64556c77"
+      },
+      {
+        "k": "GwtuAV1rbjs=",
+        "value": ""
+      },
+      {
+        "k": "NABBSnFnRHk=",
+        "value": "10207b2f"
+      },
+      {
+        "k": "BFAxGkI9NyE=",
+        "value": "10207b2f"
+      },
+      {
+        "k": "IU0UR2QsEHE=",
+        "value": "90e65465"
+      },
+      {
+        "k": "IxMWGWV1ES0=",
+        "value": true
+      },
+      {
+        "k": "MkJHCHcjRzw=",
+        "value": true
+      },
+      {
+        "k": "M2MGKXUBDRo=",
+        "value": true
+      },
+      {
+        "k": "VGBhahIAYl8=",
+        "value": true
+      },
+      {
+        "k": "KVUcX2w1HG0=",
+        "value": true
+      },
+      {
+        "k": "JVEQW2AxEG0=",
+        "value": "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27"
+      },
+      {
+        "k": "MV0EV3Q9BGI=",
+        "value": "3207084bd110f1ac964863e23aa78e04"
+      },
+      {
+        "k": "NABBSnFhS34=",
+        "value": null
+      },
+      {
+        "k": "P28KJXkMDhQ=",
+        "value": "9f762773"
+      },
+      {
+        "k": "FwdiDVJhZDg=",
+        "value": "dae10548"
+      },
+      {
+        "k": "RlZzHAMweSc=",
+        "value": ""
+      },
+      {
+        "k": "EX1kN1cQbgY=",
+        "value": "a3d12c4"
+      },
+      {
+        "k": "b19aVSkzXW4=",
+        "value": "82002457"
+      },
+      {
+        "k": "SBR9Xg11d28=",
+        "value": "a3d12c4"
+      },
+      {
+        "k": "EwNmCVZkYjs=",
+        "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+      },
+      {
+        "k": "W0suQR4sKHo=",
+        "value": false
+      },
+      {
+        "k": "BFAxGkI9Oi8=",
+        "value": "90e65465"
+      },
+      {
+        "k": "Hw9qBVlibDQ=",
+        "value": 1440
+      },
+      {
+        "k": "QlJ3GAQwfSs=",
+        "value": 900
+      },
+      {
+        "k": "JDBROmFUUQk=",
+        "value": 1440
+      },
+      {
+        "k": "MDxFNnVYRQw=",
+        "value": 852
+      },
+      {
+        "k": "T386NQoZMAA=",
+        "value": "1440X900"
+      },
+      {
+        "k": "UiJnKBdHZRk=",
+        "value": 32
+      },
+      {
+        "k": "BzdyfUFReE8=",
+        "value": 32
+      },
+      {
+        "k": "NABBSnFjS34=",
+        "value": 0
+      },
+      {
+        "k": "R3cyPQIUOAg=",
+        "value": 0
+      },
+      {
+        "k": "HUloQ1goa3A=",
+        "value": 731
+      },
+      {
+        "k": "dWFAKzAARho=",
+        "value": 0
+      },
+      {
+        "k": "cgIHSDdjAX0=",
+        "value": 0
+      },
+      {
+        "k": "PSkIY3tJCVI=",
+        "value": true
+      },
+      {
+        "k": "MDxFNnVZQA0=",
+        "value": false
+      },
+      {
+        "k": "fEgJAjkrCzg=",
+        "value": -40.5
+      },
+      {
+        "k": "Q3M2OQUTNAM=",
+        "value": "49e5084e"
+      },
+      {
+        "k": "STU8fw9UO08=",
+        "value": "7c5f9724"
+      },
+      {
+        "k": "EX1kN1QaZw0=",
+        "value": "65d826e0"
+      },
+      {
+        "k": "IU0UR2QsHnQ=",
+        "value": "a9269e00"
+      },
+      {
+        "k": "XGhpYhoKY1A=",
+        "value": "50a5ec55"
+      },
+      {
+        "k": "OkpPAH8pSzA=",
+        "value": "73a0fb26"
+      },
+      {
+        "k": "Dz96dUpcfkM=",
+        "value": true
+      },
+      {
+        "k": "KDRdPm1XWQk=",
+        "value": true
+      },
+      {
+        "k": "aRVcHyx2WCs=",
+        "value": true
+      },
+      {
+        "k": "NkZDDHMlRzk=",
+        "value": false
+      },
+      {
+        "k": "MV0EV3Q+AG0=",
+        "value": true
+      },
+      {
+        "k": "STU8fwxWOEQ=",
+        "value": true
+      },
+      {
+        "k": "GmovYF8JKlI=",
+        "value": true
+      },
+      {
+        "k": "X08qRRovIH8=",
+        "value": "webkit"
+      },
+      {
+        "k": "WipvIB9KaBM=",
+        "value": "https:"
+      },
+      {
+        "k": "S3s+MQ4bOQE=",
+        "value": "function share() { [native code] }"
+      },
+      {
+        "k": "UT0kdxRdI0Y=",
+        "value": "Asia/Shanghai"
+      },
+      {
+        "k": "MkJHCHciQz0=",
+        "value": "w3c"
+      },
+      {
+        "k": "fg4LRDtuDnA=",
+        "value": "screen"
+      },
+      {
+        "k": "Y1NWWSYzUW4=",
+        "value": {
+          "plugext": {
+            "0": {
+              "f": "internal-pdf-viewer",
+              "n": "PDF Viewer"
+            },
+            "1": {
+              "f": "internal-pdf-viewer",
+              "n": "Chrome PDF Viewer"
+            },
+            "2": {
+              "f": "internal-pdf-viewer",
+              "n": "Chromium PDF Viewer"
+            },
+            "3": {
+              "f": "internal-pdf-viewer",
+              "n": "Microsoft Edge PDF Viewer"
+            },
+            "4": {
+              "f": "internal-pdf-viewer",
+              "n": "WebKit built-in PDF"
+            }
+          },
+          "plugins_len": 5
+        }
+      },
+      {
+        "k": "VQEgCxBhKjo=",
+        "value": {
+          "smd": {
+            "ok": true,
+            "ex": false
+          }
+        }
+      },
+      {
+        "k": "HCgpIllILBg=",
+        "value": {}
+      },
+      {
+        "k": "O2sOIX4LBRc=",
+        "value": false
+      },
+      {
+        "k": "eEQNDj0kCTo=",
+        "value": false
+      },
+      {
+        "k": "b19aVSo/X2Y=",
+        "value": "f1a38a60"
+      },
+      {
+        "k": "Q3M2OQYTPAo=",
+        "value": "default"
+      },
+      {
+        "k": "KnpfcG8aVUA=",
+        "value": 3
+      },
+      {
+        "k": "JDBROmFQWw8=",
+        "value": false
+      },
+      {
+        "k": "BXFwO0AScg4=",
+        "value": {
+          "zu": -977.06
+        }
+      },
+      {
+        "k": "JnZTfGMTUkg=",
+        "value": true
+      },
+      {
+        "k": "KDRdPm1SWgo=",
+        "value": true
+      },
+      {
+        "k": "NSEAa3NBAFs=",
+        "value": true
+      },
+      {
+        "k": "eEQNDj0jDzg=",
+        "value": true
+      },
+      {
+        "k": "egoPQDxmDXA=",
+        "value": 1
+      },
+      {
+        "k": "Tl57FAs5fS4=",
+        "value": 3600
+      },
+      {
+        "k": "bHgZcioeHEk=",
+        "value": false
+      }
+    ],
+    "dynamic_fields": [
+      {
+        "k": "RTEwewNQMUg=",
+        "a": 1779130115184,
+        "b": 1779131079492
+      },
+      {
+        "k": "ZRFQGyB2Vig=",
+        "a": 500,
+        "b": 300
+      },
+      {
+        "k": "eytOYT1IRFA=",
+        "a": 0.4,
+        "b": 1.45
+      },
+      {
+        "k": "EX1kN1QbYAc=",
+        "a": "d33373d7de219f6b403d862a824a1048",
+        "b": "9ee2433a7b2fdf189459739f6ee1b932"
+      },
+      {
+        "k": "HUloQ1sranQ=",
+        "a": 453,
+        "b": 1088
+      },
+      {
+        "k": "XGhpYhoEY1Q=",
+        "a": "TypeError: Cannot read properties of null (reading '0')\n    at nk (https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:2:59545)\n    at Array.Ch [as -119] (https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:2:157742)\n    at BT (https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:2:156412)\n    at https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:2:155883\n    at r (https://www.ifood.com.br/_next/static/chunks/pages/_app-71bcc64dd72605d6.js:3:3508789)",
+        "b": "TypeError: Cannot read properties of null (reading '0')\n    at nk (https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:2061:25)\n    at Array.Ch [as -119] (https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:7696:41)\n    at BT (https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:7612:32)\n    at https://client.px-cloud.net/PXO1GDTa7Q/main.min.js:7574:37"
+      },
+      {
+        "k": "KVUcX2wwHG4=",
+        "a": "https%3A%2F%2Fwww.google.com%2F",
+        "b": "https%3A%2F%2Fwww.ifood.com.br%2Frestaurantes"
+      },
+      {
+        "k": "NABBSnJgQXE=",
+        "a": 127594267,
+        "b": 90671524
+      },
+      {
+        "k": "EX1kN1cQZQY=",
+        "a": 189111895,
+        "b": 163139484
+      },
+      {
+        "k": "Czt+cU1WeEM=",
+        "a": "Tue May 19 2026 02:48:34 GMT+0800 (中国标准时间)",
+        "b": "Tue May 19 2026 03:04:39 GMT+0800 (中国标准时间)"
+      },
+      {
+        "k": "RlZzHAA6eC8=",
+        "a": 8,
+        "b": 3
+      },
+      {
+        "k": "HCgpIlpJKxk=",
+        "a": 8,
+        "b": 3
+      },
+      {
+        "k": "Dz96dUlecUM=",
+        "a": 610,
+        "b": 515
+      },
+      {
+        "k": "M2MGKXUOBB8=",
+        "a": "004bdc6e1776367a192a54ae2ce803e7",
+        "b": "eb20ad3d3a74edb4f575d7de4fbf6881"
+      },
+      {
+        "k": "Xi5rJBtKaB4=",
+        "a": "d85lu0q2dnhc73d2totg",
+        "b": "d85m5hpa6s2s73d4deqg"
+      },
+      {
+        "k": "FmYjbFAEJVg=",
+        "a": "a04763ab7aa6ec2e49dde775b834bb8e",
+        "b": "6e7e4c870bf6ebef55a646b95ae22b3c"
+      },
+      {
+        "k": "BzdyfUFRd04=",
+        "a": "961f1624b94fa3876c9be65a7f832c02",
+        "b": "15ba155c544b62aa0f0bcd9e6db5ff42"
+      },
+      {
+        "k": "KxseEW57HCI=",
+        "a": "a0b3525a2eaaea03cae43fec4c257d08",
+        "b": "3ecc5d5559321b7f91222a9d09946a03"
+      },
+      {
+        "k": "eWVMLzwFSRQ=",
+        "a": {
+          "support": true,
+          "status": {
+            "effectiveType": "3g",
+            "rtt": 500,
+            "downlink": 0.4,
+            "saveData": false
+          }
+        },
+        "b": {
+          "support": true,
+          "status": {
+            "effectiveType": "3g",
+            "rtt": 300,
+            "downlink": 1.45,
+            "saveData": false
+          }
+        }
+      },
+      {
+        "k": "XGhpYhkIbFM=",
+        "a": "18e8fd",
+        "b": "2c99b34"
+      },
+      {
+        "k": "FCAhKlJCIxk=",
+        "a": "12867650837902152349",
+        "b": "17378009915030971829"
+      },
+      {
+        "k": "EwNmCVZiYT8=",
+        "a": 3752,
+        "b": 2724
+      },
+      {
+        "k": "MkJHCHcmQzM=",
+        "a": 1,
+        "b": 2
+      },
+      {
+        "k": "PSkIY3tJDFE=",
+        "a": 3467,
+        "b": 1091
+      },
+      {
+        "k": "W0suQR0tL3E=",
+        "a": 1779130114938,
+        "b": 1779131078996
+      },
+      {
+        "k": "VQEgCxNnKjw=",
+        "a": 1779130113664,
+        "b": 1779131078654
+      },
+      {
+        "k": "bHgZcikfE0A=",
+        "a": 1779130115639,
+        "b": 1779131079709
+      },
+      {
+        "k": "NSEAa3NAC18=",
+        "a": "2bd832d0-52ea-11f1-98d8-e17481f98467",
+        "b": "6b0623c0-52ec-11f1-a40f-159decdb261b"
+      },
+      {
+        "k": "BzdyfUJXdks=",
+        "a": "ETU5atUvgzfcFxFDqNL9zCqkEOBRopJiTfcZmhg-q0cF1RoYrJLPVAHARXNyd3KW7ipZaVMlpFwrOiFb_Wgoqk_s7MOsYCZWNg0Gv41HIBFs4VXigEJkbxTNrJOxBa95U3xy9MA4IvocphRoj7W0g4uaDjbS05Kp1CrZUjU=",
+        "b": "L81VKj0-JtQ275-ItY0FWJ3scRMh3KghC7QX2ABTOZUAqSMoYVV1cRdSPMJAQRdPMuR-1WgrcU_en24a28bUh4GmctCI1nlZh2dOBc1-KXzenanenpdVnAETsHvfnV4pKXDW8fwQpweCyWDM9eI1Tylhmc2_DoiyWN6FIW4="
+      },
+      {
+        "k": "DFg5Ekk4PSU=",
+        "a": 1027.7999999970198,
+        "b": 308.5
+      },
+      {
+        "k": "R3cyPQIVMAw=",
+        "a": "194693e2bce104232d97ad4d8df7c2224f1d23da747ff6f71c338a9806f731c7:ppC4a3bHDWvPVLULJHwXjxuS02sofmtnEOcOQ10pc8JR+nrfMF4DPtT8Z4VbmU5OS3BgYF7l+57E+B0al6driw==:1000:DxjFwtJR3H0zgTqXIL9vpJVhibHcfWcSWjzQ3TXLlVErud/T4ONrZxlr58Lcy6I7Zirk0mVbFNHEZiIJmTwey+gJts8w/3+9awAjVnMFSyWX2wh1MJr/RRKw2Dt6Eip+nkP9p91hPSUS7nAvl4QML3AKSuBnLSWhGfmkwjQHMgYznyQKCq6ecnt5tiaaSiSBjHqFWLZVjnmmQnkJ02Y0hGXRk3yk78FFNMAONVAXgbX2ehNN4mxcSWK8xK+FspuZOcqXVZ37NDwRqA0RJgXnB82EFvJP4PyPexnwcjVj29qq+FyDOngHdTa/+G2ZFcuZcq13RLFhhqosX/YwdXx3z9qJYZaSQ7cGt3a6WQ3IhGQnOgNMtGWyp74oTi5iscokXXw7KRSMGAL6G/pKa5wkNCiFFuqZx3PMzWNWugw0iizMyzXyYC/S6AXpkvrHQ3KAdRiXVAETZowcZAawbUoYEg==",
+        "b": "28575a0b0631ffe5dd1dcacb35ce254becc22023d0bbeef34526f8240b2e0aa4:/CRyhGaCmsDoNjqP0IBhlY6ReCMznUi44qLID/NB1Dey3l6mjSGjaB24fIC8DzT4YMUHaSsT5x03xnoTS715OA==:1000:bk4Dd8xp6NTuQecB+jUAdjq2wEWZqXwQIdr3mblTt5rCnZHt5g1xUYllnhsUpHOLgQTd9mME3v79REWhgQ2VGrm180OM9HjSioqQrTT1b1BmDr24ewRm5PI3IRwC7ZicrMr3KPMjnxt1o5mjpZv2kyOWTL9J1vcueO+f6/6C9TQPXYmqUJWrRzsRIott4uA127KG226KMAtatMP6J3ywJ4ChNK0VFn6D5XV7F7LAVEvSlnlj48H55nICv9jt5nm3JhhZDG08k25HlmlNToZWjxVOGpZHU0uzSrFvQXCG4BsivXe+H3RZG9J6Xy3diDPQPbPgwHceJvZEZ7ZCfq3og9dMjMXTo6avAPswRqn9qtDrRtJzqm+X5UdaYtSJLJeEs1nR9NNnlpqGNpQ5Mj51rQqMv5dzXEYkWxS/A2/QwkfnfUnKFElETecEDDWHrtuxJWctmSmlTxtdvYvrvgkpOAQ0F2iEEq76IKWWsLb2OzxtNzXCSMVPoTEsrp5YwrfQ"
+      },
+      {
+        "k": "cyNGaTZBQVs=",
+        "a": {
+          "PX12738": 1976,
+          "PX12739": 0,
+          "PX12740": 0,
+          "PX12741": -1
+        },
+        "b": {
+          "PX12738": 1056,
+          "PX12739": 0,
+          "PX12740": 0,
+          "PX12741": -1
+        }
+      }
+    ],
+    "missing_fields": [
+      {
+        "k": "74>01036>51?6473452?",
+        "in_a": true,
+        "in_b": false,
+        "a": "47=32305=62<5740761<"
+      },
+      {
+        "k": "5373<44==51474=35<6=",
+        "in_a": false,
+        "in_b": true,
+        "b": "2404;33::26303:42;1:"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+POST https://sensor.grubhub.com/O97ybH4J/xhr/api/v2/collector
+sec-ch-ua-platform: "Windows"
+Referer: https://www.grubhub.com/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"
+Content-type: application/x-www-form-urlencoded
+sec-ch-ua-mobile: ?0
+
+payload=aUkQRhAIEGtYe2d9cVZqenMKDxAeEFYQCEkQaHpzYVdbe2Z0AgIPEAgQWkZGQkEIHR1FRUUcVUBHUFpHUBxRXV8dEB4QYnNaeWNcXkRhAVEPEAgCHhB5dmBXYl8DZGVVYw8QCBBlW1wBABAeEFRlXn57SEF0YVp/DxAIAh4QdHFzW3leeHN4YFUPEAgLBwcEHhBrdUVlaFtnfnGcDRQ8QCAEEAgIeEFNgZFR^6SwtIZFtVDxAIS}AwUFCwAEBDgAAAwEGAB4QdXNFjR35eA3Z4SkUKPEA8gDBQULAAQGDAAADAQsCHhB+dlpTf19CaGdVaw8NQCBAEUwFUUa>FRTAh8HBgAAHwMDVDAMfUFQDBx9RVg`K}RRA1NWAwcDCgcQHhBkdXBbU1p3c2hGkRQ8QCFKxH7Xl4eEHtxSmV4X2R/Z2B3DxAIAh4QY2ECAWhFVn57/ZEUPEAhUU15BV09Pbw==&appId=PXO97ybH4J&tag=FmYgK1gdJEAP&uuid=6a3fbfa0-5422-11f1-bf15-cd6c1ad15185&ft=359&seq=0&en=NTA&pc=1455335958198088&sid=39be282d-5422-11f1-bb2c-d1d635378bd7&vid=39be2274-5422-11f1-bb2a-96a992c633af&cts=39be2a71-5422-11f1-bb2c-d1d635378bd7&rsc=1

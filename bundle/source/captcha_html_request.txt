@@ -1,0 +1,17 @@
+curl 'https://captcha.px-cdn.net/PXO1GDTa7Q/captcha.js?a=c&m=0&u=68303b30-1224-11f1-a20a-312c66e49e40&v=6749e049-11fc-11f1-a04e-d4edd87c00aa' \
+  -X 'HEAD' \
+  -H 'accept: */*' \
+  -H 'accept-language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6' \
+  -H 'cache-control: no-cache' \
+  -H 'dnt: 1' \
+  -H 'origin: https://www.ifood.com.br' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://www.ifood.com.br/' \
+  -H 'sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0'

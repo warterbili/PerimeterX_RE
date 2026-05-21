@@ -1,0 +1,24 @@
+{
+  "_info": {
+    "segment_count": 2
+  },
+  "segments": [
+    {
+      "handler": "IoooII",
+      "args": [
+        "_px2",
+        "500",
+        "eyJ1IjoiNmEzZmJmYTAtNTQyMi0xMWYxLWJmMTUtY2Q2YzFhZDE1MTg1IiwidiI6IjM5YmUyMjc0LTU0MjItMTFmMS1iYjJhLTk2YTk5MmM2MzNhZiIsInQiOjE3NzkyNjQ3MjI4NzMsImgiOiI3ZDAwYzU1YTU4MjMzNDI4M2MyNzIxZDljZGEwNWQ0ZmFhZTgyOTRmYjAyNmY1NWI1YTAwZjhiNDNjNjk0ODAwIn0=",
+        "true",
+        "500"
+      ]
+    },
+    {
+      "handler": "IoIIIo",
+      "args": [
+        "cu"
+      ]
+    }
+  ],
+  "contains_px_cookie": true
+}

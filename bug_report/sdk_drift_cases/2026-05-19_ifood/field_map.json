@@ -1,0 +1,926 @@
+[
+  {
+    "key": "RTEwewNQMUg=",
+    "line": 7675,
+    "ctx": "\"RTEwewNQMUg=\"] % 10 + 1); t[\"egoPQD9rD3I=\"] && (t[hQ(736)] = t[\"egoPQD9rD3I=\"].substring(0, 80)), ",
+    "t": "number",
+    "v": "1779131755331"
+  },
+  {
+    "key": "X08qRRovIH8=",
+    "line": 5210,
+    "ctx": "\"X08qRRovIH8=\"] = xg, t[\"WipvIB9KaBM=\"] = hR(hV) === ig && hV.protocol, hR(hU.",
+    "t": "string",
+    "v": "\"webkit\""
+  },
+  {
+    "key": "WipvIB9KaBM=",
+    "line": 5211,
+    "ctx": "\"WipvIB9KaBM=\"] = hR(hV) === ig && hV.protocol, hR(hU.share) === ie && (t[hQ(356)] = hU.share.toStr",
+    "t": "string",
+    "v": "\"https:\""
+  },
+  {
+    "key": "UT0kdxRdI0Y=",
+    "line": 5217,
+    "ctx": "\"UT0kdxRdI0Y=\"] = \"undef\" } hS.webkitNotifications ? t[\"MkJHCHciQz0=\"] = \"wk\" ",
+    "t": "string",
+    "v": "\"Asia/Shanghai\""
+  },
+  {
+    "key": "MkJHCHciQz0=",
+    "line": 5219,
+    "ctx": "\"MkJHCHciQz0=\"] = \"wk\" : hS[hQ(361)] ? t[\"MkJHCHciQz0=\"] = hQ(362) : t[\"MkJHCHciQz0=\"] = \"undef\", h",
+    "t": "string",
+    "v": "\"w3c\""
+  },
+  {
+    "key": "HCgpIllILBg=",
+    "line": 5297,
+    "ctx": "\"HCgpIllILBg=\"] = t[100] } catch (t) {} } function xu(hM) { ",
+    "t": "object",
+    "v": "{}"
+  },
+  {
+    "key": "O2sOIX4LBRc=",
+    "line": 5468,
+    "ctx": "\"O2sOIX4LBRc=\"] = !(!e || !e[hQ(396)]) } catch (t) {} } catch (t) {} ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "eEQNDj0kCTo=",
+    "line": 5517,
+    "ctx": "\"eEQNDj0kCTo=\"] = !!hU.brave } catch (t) {} } function xM(t) { ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "Q3M2OQYTPAo=",
+    "line": 5362,
+    "ctx": "\"Q3M2OQYTPAo=\"] = JSON.stringify(hS[hQ(361)][hQ(374)]) : t[hQ(375)] = hS[hQ(361)][hQ(374)])) } catch (t",
+    "t": "string",
+    "v": "\"default\""
+  },
+  {
+    "key": "JDBROmFQWw8=",
+    "line": 5381,
+    "ctx": "\"JDBROmFQWw8=\"] = e.outerHTML.indexOf(n) > -1, hT.body[hQ(381)](e) } catch (t) {} ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "fg4LRDttCXA=",
+    "line": 7646,
+    "ctx": "\"fg4LRDttCXA=\"] = 1.6 } catch (t) {} } function Cc(t) { try ",
+    "t": "number",
+    "v": "1.6"
+  },
+  {
+    "key": "EwNmCVZjYD8=",
+    "line": 7667,
+    "ctx": "\"EwNmCVZjYD8=\"] = !(!hS[hQ(733)] || !hS[hQ(733)][hQ(734)]) } function Cg(t) { ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "XGhpYhkIbFM=",
+    "line": 7519,
+    "ctx": "\"XGhpYhkIbFM=\"] = kn(\"\" + Math.floor(t))) } function BF() { return hR(hU[hQ(7",
+    "t": "string",
+    "v": "\"1ac544\""
+  },
+  {
+    "key": "cR1EFzR9TyI=",
+    "line": 8123,
+    "ctx": "\"cR1EFzR9TyI=\"] = oH } function Ct(t) { t[hQ(882)] = oI } ",
+    "t": "number",
+    "v": "2"
+  },
+  {
+    "key": "FmYjbFAEJVg=",
+    "line": 4893,
+    "ctx": "\"FmYjbFAEJVg=\"] = iR(r, n)); var h = qf(); h && (e[\"BzdyfUFRd04=\"] = iR(h, n)), ",
+    "t": "string",
+    "v": "\"6e7e4c870bf6ebef55a646b95ae22"
+  },
+  {
+    "key": "BzdyfUFRd04=",
+    "line": 4895,
+    "ctx": "\"BzdyfUFRd04=\"] = iR(h, n)), ws(\"ZRFQGyN8Wyg=\", e) } function wN() { ",
+    "t": "string",
+    "v": "\"15ba155c544b62aa0f0bcd9e6db5f"
+  },
+  {
+    "key": "KxseEW57HCI=",
+    "line": 4403,
+    "ctx": "\"KxseEW57HCI=\"] = qA(), r[hQ(299)] = qC(); try { var ",
+    "t": "string",
+    "v": "\"3ecc5d5559321b7f91222a9d09946"
+  },
+  {
+    "key": "WipvIBxKaBc=",
+    "line": 7895,
+    "ctx": "\"WipvIBxKaBc=\"] = n[jb(\"anNIZWFwU2l6ZUxpbWl0\")], t[\"EX1kN1cQZQY=\"] = n[jb(hQ(801))]); ",
+    "t": "number",
+    "v": "4294967296"
+  },
+  {
+    "key": "EX1kN1cQZQY=",
+    "line": 7896,
+    "ctx": "\"EX1kN1cQZQY=\"] = n[jb(hQ(801))]); try { t[\"Czt+cU1WeEM=\"] = hS[hQ(802)](), ",
+    "t": "number",
+    "v": "224456166"
+  },
+  {
+    "key": "Czt+cU1WeEM=",
+    "line": 7898,
+    "ctx": "\"Czt+cU1WeEM=\"] = hS[hQ(802)](), t[\"MV0EV3c9BGM=\"] = !!hS.Buffer, t[hQ(719)] =",
+    "t": "string",
+    "v": "\"Tue May 19 2026 03:15:54 GMT+"
+  },
+  {
+    "key": "MV0EV3c9BGM=",
+    "line": 7899,
+    "ctx": "\"MV0EV3c9BGM=\"] = !!hS.Buffer, t[hQ(719)] = hS[hQ(803)], t[\"Hw9qBVlsYDM=\"] = !",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "Hw9qBVlsYDM=",
+    "line": 7901,
+    "ctx": "\"Hw9qBVlsYDM=\"] = !!hS[hQ(804)], t[\"IU0UR2cgF3c=\"] = !!hS.ActiveXObject, t[\"JV",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "IU0UR2cgF3c=",
+    "line": 7902,
+    "ctx": "\"IU0UR2cgF3c=\"] = !!hS.ActiveXObject, t[\"JVEQW2A3EWw=\"] = !!hU.sendBeacon, t[\"",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "JVEQW2A3EWw=",
+    "line": 7903,
+    "ctx": "\"JVEQW2A3EWw=\"] = !!hU.sendBeacon, t[\"fy9KZTpKQFc=\"] = BF(), t[\"fg4LRDhtDn4=\"]",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "fy9KZTpKQFc=",
+    "line": 7904,
+    "ctx": "\"fy9KZTpKQFc=\"] = BF(), t[\"fg4LRDhtDn4=\"] = Cy(), t[\"PSkIY3tPDlg=\"] = jC(), ",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "fg4LRDhtDn4=",
+    "line": 7905,
+    "ctx": "\"fg4LRDhtDn4=\"] = Cy(), t[\"PSkIY3tPDlg=\"] = jC(), t[hQ(805)] = !!hS[hQ(806)], ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "PSkIY3tPDlg=",
+    "line": 7906,
+    "ctx": "\"PSkIY3tPDlg=\"] = jC(), t[hQ(805)] = !!hS[hQ(806)], t[hQ(807)] = +hT[hQ(808)] ",
+    "t": "string",
+    "v": "\"visible\""
+  },
+  {
+    "key": "TTk4cwtfMkY=",
+    "line": 11385,
+    "ctx": "\"TTk4cwtfMkY=\": hT.documentMode }; hS._pxRootUrl && (t[\"dydCbTFGRlo=\"] = !0); ",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "Hm4rZFgNLFc=",
+    "line": 7911,
+    "ctx": "\"Hm4rZFgNLFc=\"] = Cz(hS.outerHeight), t[hQ(813)] = hU[hQ(814)] || BN, t[\"YQ1UB",
+    "t": "number",
+    "v": "852"
+  },
+  {
+    "key": "YQ1UByRqUzE=",
+    "line": 7913,
+    "ctx": "\"YQ1UByRqUzE=\"] = kz(hS.setTimeout), t[\"X08qRRkvLHc=\"] = hS.matchMedia && hS.matchMedia(hQ(815))[hQ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "X08qRRkvLHc=",
+    "line": 7524,
+    "ctx": "\"X08qRRkvLHc=\", hQ(720), hQ(721), \"STU8fw9UO08=\", \"MV0EV3Q9BGI=\", \"NABBSnFhS34=\", hQ(722)], BI = jb(\"bmF2aWdhdG9yLndlYmR",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "OkpPAHwqSTo=",
+    "line": 7915,
+    "ctx": "\"OkpPAHwqSTo=\"] = hS.hasOwnProperty(hQ(817)) || \"ontouchstart\"in hS, t[\"EFwlFlY9IyI=\"] = kz(hS[hQ(8",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "EFwlFlY9IyI=",
+    "line": 7916,
+    "ctx": "\"EFwlFlY9IyI=\"] = kz(hS[hQ(818)]) || kz(hU.battery) || kz(hU.getBattery), t[hQ(819)] = hS.performan",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "RlZzHAA6eC8=",
+    "line": 4407,
+    "ctx": "\"RlZzHAA6eC8=\"] = h.cssFromResourceApi, r[\"PSkIY3tECVY=\"] = h.imgFromResourceApi, ",
+    "t": "number",
+    "v": "3"
+  },
+  {
+    "key": "PSkIY3tECVY=",
+    "line": 4408,
+    "ctx": "\"PSkIY3tECVY=\"] = h.imgFromResourceApi, r[\"UBxlVhZ/ZGY=\"] = h.fontFromResourceApi, ",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "UBxlVhZ/ZGY=",
+    "line": 4409,
+    "ctx": "\"UBxlVhZ/ZGY=\"] = h.fontFromResourceApi, r[\"HCgpIlpJKxk=\"] = h.cssFromStyleSheets ",
+    "t": "number",
+    "v": "8"
+  },
+  {
+    "key": "HCgpIlpJKxk=",
+    "line": 4410,
+    "ctx": "\"HCgpIlpJKxk=\"] = h.cssFromStyleSheets } catch (t) {} } for (var ",
+    "t": "number",
+    "v": "3"
+  },
+  {
+    "key": "BXFwO0AScg4=",
+    "line": 7651,
+    "ctx": "\"BXFwO0AScg4=\"] = { zu: -977.06 } } catch (t) {} ",
+    "t": "object",
+    "v": "{\"zu\":-977.06}"
+  },
+  {
+    "key": "PSkIY3hPCVE=",
+    "line": 7707,
+    "ctx": "\"PSkIY3hPCVE=\"] = AO(), t[hQ(743)] = AN(), t[\"Z1dSXSE0UG0=\"] = t[\"EwNmCVVvZzM=",
+    "t": "string",
+    "v": "\"109|66|66|70|80\""
+  },
+  {
+    "key": "EwNmCVVvZzM=",
+    "line": 7709,
+    "ctx": "\"EwNmCVVvZzM=\"] = !!hS[hQ(744)], t[hQ(745)] = t[\"GCQtLl1BLR0=\"] = AL(), t[\"aRV",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "Z1dSXSE0UG0=",
+    "line": 7709,
+    "ctx": "\"Z1dSXSE0UG0=\"] = t[\"EwNmCVVvZzM=\"] = !!hS[hQ(744)], t[hQ(745)] = t[\"GCQtLl1BLR0=\"] = AL(), ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "GCQtLl1BLR0=",
+    "line": 7710,
+    "ctx": "\"GCQtLl1BLR0=\"] = AL(), t[\"aRVcHy92XiQ=\"] = t[\"QS00ZwRJNFE=\"] = AM(), t[hQ(746",
+    "t": "string",
+    "v": "\"false\""
+  },
+  {
+    "key": "QS00ZwRJNFE=",
+    "line": 7711,
+    "ctx": "\"QS00ZwRJNFE=\"] = AM(), t[hQ(746)] = hS.chrome && hS[hQ(747)][hQ(748)] && hS[hQ(747)].runtime.id ||",
+    "t": "number",
+    "v": "1"
+  },
+  {
+    "key": "aRVcHy92XiQ=",
+    "line": 7711,
+    "ctx": "\"aRVcHy92XiQ=\"] = t[\"QS00ZwRJNFE=\"] = AM(), t[hQ(746)] = hS.chrome && hS[hQ(747)][hQ(748)] && hS[hQ",
+    "t": "number",
+    "v": "1"
+  },
+  {
+    "key": "ZHAReiETG0w=",
+    "line": 7714,
+    "ctx": "\"ZHAReiETG0w=\"] = hQ(750)in HTMLAnchorElement.prototype } catch (t) {} } func",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "Q3M2OQUTNAM=",
+    "line": 7128,
+    "ctx": "\"Q3M2OQUTNAM=\"] = kn(ko(i))), (hS[n] || hS[e]) && (t[\"b19aVSk8XGY=\"] = kn(ko(hS[n]) + ko(hS[e]))), ",
+    "t": "string",
+    "v": "\"49e5084e\""
+  },
+  {
+    "key": "STU8fw9UO08=",
+    "line": 7133,
+    "ctx": "\"STU8fw9UO08=\"] = AW(hS, o); var c = [hQ(601), \"onunhandledrejection\", hQ(602), hQ(603), hQ(604), \"",
+    "t": "string",
+    "v": "\"7c5f9724\""
+  },
+  {
+    "key": "EX1kN1QaZw0=",
+    "line": 7135,
+    "ctx": "\"EX1kN1QaZw0=\"] = AW(hT, c); var a = [hQ(653), hQ(654), hQ(655), \"Clipboard\", hQ(656), hQ(657), hQ(",
+    "t": "string",
+    "v": "\"65d826e0\""
+  },
+  {
+    "key": "XGhpYhoKY1A=",
+    "line": 7139,
+    "ctx": "\"XGhpYhoKY1A=\"] = AW(hV, u), t[hQ(675)] = AX(), t[\"Dz96dUpcfkM=\"] = !!hS[hQ(67",
+    "t": "string",
+    "v": "\"50a5ec55\""
+  },
+  {
+    "key": "Dz96dUpcfkM=",
+    "line": 7141,
+    "ctx": "\"Dz96dUpcfkM=\"] = !!hS[hQ(676)], t[\"KDRdPm1XWQk=\"] = !!hS.webkitSpeechRecognition, ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "KDRdPm1XWQk=",
+    "line": 7142,
+    "ctx": "\"KDRdPm1XWQk=\"] = !!hS.webkitSpeechRecognition, t[hQ(677)] = !!hU[hQ(678)], t[",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "NkZDDHMlRzk=",
+    "line": 7144,
+    "ctx": "\"NkZDDHMlRzk=\"] = !!hS[hQ(679)], t[\"MV0EV3Q+AG0=\"] = hT.body ? !!hT[hQ(321)].scrollIntoViewIfNeeded",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "MV0EV3Q+AG0=",
+    "line": 7145,
+    "ctx": "\"MV0EV3Q+AG0=\"] = hT.body ? !!hT[hQ(321)].scrollIntoViewIfNeeded : void 0, t[\"STU8fwxWOEQ=\"] = AY()",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "STU8fwxWOEQ=",
+    "line": 7146,
+    "ctx": "\"STU8fwxWOEQ=\"] = AY(), t[\"GmovYF8JKlI=\"] = AZ() } catch (t) {} } ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "GmovYF8JKlI=",
+    "line": 7147,
+    "ctx": "\"GmovYF8JKlI=\"] = AZ() } catch (t) {} } function AS() { var ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "cyNGaTVATV8=",
+    "line": 7158,
+    "ctx": "\"cyNGaTVATV8=\"] = AV(), t[0][\"VGBhahICZVw=\"] = AQ(), t[79] = kt(hS, t[-22]), ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "KnpfcG8dVEY=",
+    "line": 7162,
+    "ctx": "\"KnpfcG8dVEY=\"] = t[79] && !!t[79][t[-213]], t[0][\"fg4LRDtuCHI=\"] = Ba(), t[0]",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "fg4LRDtuCHI=",
+    "line": 7163,
+    "ctx": "\"fg4LRDtuCHI=\"] = Ba(), t[0][\"Z1dSXSI3UWo=\"] = Bb(), t[0][\"IU0UR2QtF3M=\"] = Bc",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "Z1dSXSI3UWo=",
+    "line": 7164,
+    "ctx": "\"Z1dSXSI3UWo=\"] = Bb(), t[0][\"IU0UR2QtF3M=\"] = Bc(), t[0][\"Z1dSXSI3UWg=\"] = Bd",
+    "t": "string",
+    "v": "\"TypeError: Cannot read proper"
+  },
+  {
+    "key": "IU0UR2QtF3M=",
+    "line": 7165,
+    "ctx": "\"IU0UR2QtF3M=\"] = Bc(), t[0][\"Z1dSXSI3UWg=\"] = Bd(), t[0][\"EX1kN1QdZw0=\"] = Be",
+    "t": "string",
+    "v": "\"webkit\""
+  },
+  {
+    "key": "Z1dSXSI3UWg=",
+    "line": 7166,
+    "ctx": "\"Z1dSXSI3UWg=\"] = Bd(), t[0][\"EX1kN1QdZw0=\"] = Be(), t[0][\"W0suQR4rLXo=\"] = Bf",
+    "t": "number",
+    "v": "33"
+  },
+  {
+    "key": "EX1kN1QdZw0=",
+    "line": 7167,
+    "ctx": "\"EX1kN1QdZw0=\"] = Be(), t[0][\"W0suQR4rLXo=\"] = Bf(), t[0][hQ(682)] = Bg(), ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "T386NQoaPg4=",
+    "line": 8022,
+    "ctx": "\"T386NQoaPg4=\"] = t[3], t[0][hQ(839)] = t[2], t[0][hQ(840)] = t[0][\"Y1NWWSUzU20=\"] = t",
+    "t": "object",
+    "v": "[\"PDF Viewer\",\"Chrome PDF View"
+  },
+  {
+    "key": "Y1NWWSUzU20=",
+    "line": 8024,
+    "ctx": "\"Y1NWWSUzU20=\"] = t[-108], t[0][\"eytOYT5NSVM=\"] = pi; try { t[0][",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "dEABCjEhBjA=",
+    "line": 7524,
+    "ctx": "\"dEABCjEhBjA=\", \"RBBxWgJydmw=\", hQ(714), hQ(715), \"bRlYEyt6WCA=\", hQ(716), \"OARNTn5iRnw=\", hQ(717), hQ(718), hQ(719), \"X",
+    "t": "string",
+    "v": "\"Win32\""
+  },
+  {
+    "key": "RBBxWgJydmw=",
+    "line": 7524,
+    "ctx": "\"RBBxWgJydmw=\", hQ(714), hQ(715), \"bRlYEyt6WCA=\", hQ(716), \"OARNTn5iRnw=\", hQ(717), hQ(718), hQ(719), \"X08qRRkvLHc=\", hQ",
+    "t": "string",
+    "v": "\"Mozilla/5.0 (Windows NT 10.0;"
+  },
+  {
+    "key": "BFAxGkE1MC8=",
+    "line": 8037,
+    "ctx": "\"BFAxGkE1MC8=\"] = !!(hU.doNotTrack || null === hU.doNotTrack || hU.msDoNotTrack || hS[hQ(846)]), t[",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "OARNTn5iRnw=",
+    "line": 7524,
+    "ctx": "\"OARNTn5iRnw=\", hQ(717), hQ(718), hQ(719), \"X08qRRkvLHc=\", hQ(720), hQ(721), \"STU8fw9UO08=\", \"MV0EV3Q9BGI=\", \"NABBSnFhS3",
+    "t": "number",
+    "v": "-480"
+  },
+  {
+    "key": "bRlYEyt6WCA=",
+    "line": 7524,
+    "ctx": "\"bRlYEyt6WCA=\", hQ(716), \"OARNTn5iRnw=\", hQ(717), hQ(718), hQ(719), \"X08qRRkvLHc=\", hQ(720), hQ(721), \"STU8fw9UO08=\", \"M",
+    "t": "number",
+    "v": "32"
+  },
+  {
+    "key": "EX1kN1ceYwI=",
+    "line": 4402,
+    "ctx": "\"EX1kN1ceYwI=\"] = hU.languages && hU.languages[hQ(155)], r[\"KxseEW57HCI=\"] = qA(), ",
+    "t": "number",
+    "v": "3"
+  },
+  {
+    "key": "OSUMb39IDFQ=",
+    "line": 8047,
+    "ctx": "\"OSUMb39IDFQ=\"] = CE(), t[0][\"ViZjLBNDZBo=\"] = hU.mimeTypes && hU.mimeTypes.length || -1 ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "ViZjLBNDZBo=",
+    "line": 8048,
+    "ctx": "\"ViZjLBNDZBo=\"] = hU.mimeTypes && hU.mimeTypes.length || -1 } catch (t) {} try { ",
+    "t": "number",
+    "v": "2"
+  },
+  {
+    "key": "NkZDDHArQz8=",
+    "line": 8051,
+    "ctx": "\"NkZDDHArQz8=\"] = hU.appName } catch (t) {} try { t[0][hQ(858)] =",
+    "t": "string",
+    "v": "\"Netscape\""
+  },
+  {
+    "key": "ZRFQGyB2Vig=",
+    "line": 8063,
+    "ctx": "\"ZRFQGyB2Vig=\"] = hU.connection.rtt, t[0][hQ(862)] = hU[hQ(369)][hQ(863)], t[0",
+    "t": "number",
+    "v": "450"
+  },
+  {
+    "key": "eytOYT1GS1Q=",
+    "line": 8069,
+    "ctx": "\"eytOYT1GS1Q=\"] = \"onLine\"in hU && !0 === hU.onLine, t[0][\"S3s+MQ4fPAM=\"] = hU[hQ(867)] + \"\" === hQ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "S3s+MQ4fPAM=",
+    "line": 8070,
+    "ctx": "\"S3s+MQ4fPAM=\"] = hU[hQ(867)] + \"\" === hQ(868), t[0][hQ(869)] = !!nR(), pf && ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "a1teUS47XGU=",
+    "line": 8074,
+    "ctx": "\"a1teUS47XGU=\"] = pj.architecture, t[0][hQ(871)] = pj.bitness, t[0][hQ(872)] = pj.bran",
+    "t": "string",
+    "v": "\"x86\""
+  },
+  {
+    "key": "bHgZcikYGkA=",
+    "line": 8078,
+    "ctx": "\"bHgZcikYGkA=\"] = pj[hQ(874)], t[0][\"R3cyPQIXMQ4=\"] = pj[hQ(875)], t[0][\"BFAxGkEwMio=\"",
+    "t": "string",
+    "v": "\"\""
+  },
+  {
+    "key": "R3cyPQIXMQ4=",
+    "line": 8079,
+    "ctx": "\"R3cyPQIXMQ4=\"] = pj[hQ(875)], t[0][\"BFAxGkEwMio=\"] = pj[hQ(876)], t[0][\"R3cyPQIXMQw=\"",
+    "t": "string",
+    "v": "\"Windows\""
+  },
+  {
+    "key": "BFAxGkEwMio=",
+    "line": 8080,
+    "ctx": "\"BFAxGkEwMio=\"] = pj[hQ(876)], t[0][\"R3cyPQIXMQw=\"] = pj.uaFullVersion); try { ",
+    "t": "string",
+    "v": "\"15.0.0\""
+  },
+  {
+    "key": "R3cyPQIXMQw=",
+    "line": 8081,
+    "ctx": "\"R3cyPQIXMQw=\"] = pj.uaFullVersion); try { t[0][\"Q3M2OQYTMAM=\"] = !!hU.userAgentDa",
+    "t": "string",
+    "v": "\"148.0.7778.168\""
+  },
+  {
+    "key": "Q3M2OQYTMAM=",
+    "line": 8083,
+    "ctx": "\"Q3M2OQYTMAM=\"] = !!hU.userAgentData, t[0][hQ(877)] = hU.pdfViewerEnabled, t[0",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "EX1kN1QbYAc=",
+    "line": 8085,
+    "ctx": "\"EX1kN1QbYAc=\"] = pq, t[0][\"PAhJQnlrQ3g=\"] = !!hU[hQ(878)] } catch (t) {} ",
+    "t": "string",
+    "v": "\"e1519c05c92fc5fc8ad7866a6a124"
+  },
+  {
+    "key": "PAhJQnlrQ3g=",
+    "line": 8086,
+    "ctx": "\"PAhJQnlrQ3g=\"] = !!hU[hQ(878)] } catch (t) {} kD(t[0], \"W0suQR0oJHY=\", (function() { ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "W0suQR0oJHY=",
+    "line": 8088,
+    "ctx": "\"W0suQR0oJHY=\", (function() { return hU.hardwareConcurrency } ), ",
+    "t": "number",
+    "v": "20"
+  },
+  {
+    "key": "Hw9qBVlibDQ=",
+    "line": 7524,
+    "ctx": "\"Hw9qBVlibDQ=\", \"QlJ3GAQwfSs=\", hQ(709), \"T386NQoZMAA=\", hQ(710), hQ(711), hQ(712), \"BFAxGkI9NyE=\", hQ(713), \"dEABCjEhBj",
+    "t": "number",
+    "v": "1440"
+  },
+  {
+    "key": "QlJ3GAQwfSs=",
+    "line": 7524,
+    "ctx": "\"QlJ3GAQwfSs=\", hQ(709), \"T386NQoZMAA=\", hQ(710), hQ(711), hQ(712), \"BFAxGkI9NyE=\", hQ(713), \"dEABCjEhBjA=\", \"RBBxWgJydm",
+    "t": "number",
+    "v": "900"
+  },
+  {
+    "key": "JDBROmFUUQk=",
+    "line": 7847,
+    "ctx": "\"JDBROmFUUQk=\"] = r, t[\"MDxFNnVYRQw=\"] = h, t[hQ(784)] = n + \"X\" + e, ",
+    "t": "number",
+    "v": "1440"
+  },
+  {
+    "key": "MDxFNnVYRQw=",
+    "line": 7848,
+    "ctx": "\"MDxFNnVYRQw=\"] = h, t[hQ(784)] = n + \"X\" + e, t[\"UiJnKBdHZRk=\"] = screen && +",
+    "t": "number",
+    "v": "852"
+  },
+  {
+    "key": "T386NQoZMAA=",
+    "line": 7524,
+    "ctx": "\"T386NQoZMAA=\", hQ(710), hQ(711), hQ(712), \"BFAxGkI9NyE=\", hQ(713), \"dEABCjEhBjA=\", \"RBBxWgJydmw=\", hQ(714), hQ(715), \"b",
+    "t": "string",
+    "v": "\"1440X900\""
+  },
+  {
+    "key": "UiJnKBdHZRk=",
+    "line": 7850,
+    "ctx": "\"UiJnKBdHZRk=\"] = screen && +screen.pixelDepth || 0, t[\"BzdyfUFReE8=\"] = screen && +screen[hQ(785)]",
+    "t": "number",
+    "v": "32"
+  },
+  {
+    "key": "BzdyfUFReE8=",
+    "line": 7851,
+    "ctx": "\"BzdyfUFReE8=\"] = screen && +screen[hQ(785)] || 0 } catch (t) {} try { ",
+    "t": "number",
+    "v": "32"
+  },
+  {
+    "key": "NABBSnFjS34=",
+    "line": 7854,
+    "ctx": "\"NABBSnFjS34=\"] = hS.screenX, t[\"R3cyPQIUOAg=\"] = hS[hQ(786)], t[hQ(787)] = hS",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "R3cyPQIUOAg=",
+    "line": 7855,
+    "ctx": "\"R3cyPQIUOAg=\"] = hS[hQ(786)], t[hQ(787)] = hS[hQ(788)] || -1, t[hQ(789)] = hS",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "cgIHSDdjAX0=",
+    "line": 7859,
+    "ctx": "\"cgIHSDdjAX0=\"] = hS.scrollY || hS[hQ(793)] || 0, t[hQ(794)] = !(0 === hS.outerWidth && 0 === hS[hQ",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "MDxFNnVZQA0=",
+    "line": 7861,
+    "ctx": "\"MDxFNnVZQA0=\"] = Cx() } catch (t) {} } function Cn(t) { if ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "XQkoAxhuKjY=",
+    "line": 7688,
+    "ctx": "\"XQkoAxhuKjY=\", (function() { return qK() ? 1 : 0 } )",
+    "t": "number",
+    "v": "0"
+  },
+  {
+    "key": "XGhpYhoEY1Q=",
+    "line": 4391,
+    "ctx": "\"XGhpYhoEY1Q=\"] = kE(nk()), e[\"ICxVJmZAVBc=\"] = !!nk(), e[\"dgYDTDBnBHo=\"] = jC(), ",
+    "t": "string",
+    "v": "\"TypeError: Cannot read proper"
+  },
+  {
+    "key": "cgIHSDRhAX8=",
+    "line": 6336,
+    "ctx": "\"cgIHSDRhAX8=\"] = uW) } function zP(t, n) { return [oB(), t, n].join(\":\") ",
+    "t": "string",
+    "v": "\"https://www.ifood.com.br/rest"
+  },
+  {
+    "key": "UT0kdxddL0I=",
+    "line": 7698,
+    "ctx": "\"UT0kdxddL0I=\"] = Cu(), t[\"KVUcX2wwHG4=\"] = hT[hQ(740)] ? encodeURIComponent(hT[hQ(740)]) : \"\", ",
+    "t": "object",
+    "v": "[]"
+  },
+  {
+    "key": "KVUcX2wwHG4=",
+    "line": 7699,
+    "ctx": "\"KVUcX2wwHG4=\"] = hT[hQ(740)] ? encodeURIComponent(hT[hQ(740)]) : \"\", t[hQ(741)] = hS[hQ(145)](\"ono",
+    "t": "string",
+    "v": "\"https%3A%2F%2Fwww.ifood.com.b"
+  },
+  {
+    "key": "FCAhKlJCIxk=",
+    "line": 7674,
+    "ctx": "\"FCAhKlJCIxk=\"].substring(0, 80), t[kH(t[\"egoPQD9rD3I=\"] || t[hQ(735)], t[hQ(725)] % 10 + 2)] =",
+    "t": "string",
+    "v": "\"49540741429154733854\""
+  },
+  {
+    "key": "EwNmCVZiYT8=",
+    "line": 7677,
+    "ctx": "\"EwNmCVZiYT8=\"] = qm(), t[\"EwNmCVZiYT8=\"] && (t[hQ(737)] = parseInt(t[\"EwNmCVZiYT8=\"]) || 0); ",
+    "t": "number",
+    "v": "4184"
+  },
+  {
+    "key": "Q3M2OQYQNAs=",
+    "line": 7625,
+    "ctx": "\"Q3M2OQYQNAs=\"] = !0 } catch (t) {} } function BW(t) {} function",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "PSkIY3tJCVg=",
+    "line": 7752,
+    "ctx": "\"PSkIY3tJCVg=\", (function() { return BS(hS.console[hQ(753)]) } ",
+    "t": "string",
+    "v": "\"64556c77\""
+  },
+  {
+    "key": "BFAxGkI9NyE=",
+    "line": 7524,
+    "ctx": "\"BFAxGkI9NyE=\", hQ(713), \"dEABCjEhBjA=\", \"RBBxWgJydmw=\", hQ(714), hQ(715), \"bRlYEyt6WCA=\", hQ(716), \"OARNTn5iRnw=\", hQ(7",
+    "t": "string",
+    "v": "\"10207b2f\""
+  },
+  {
+    "key": "MkJHCHcjRzw=",
+    "line": 7775,
+    "ctx": "\"MkJHCHcjRzw=\"] = !!hS[hQ(759)], t[\"M2MGKXUBDRo=\"] = !!hS[hQ(760)], t[\"VGBhahI",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "M2MGKXUBDRo=",
+    "line": 7776,
+    "ctx": "\"M2MGKXUBDRo=\"] = !!hS[hQ(760)], t[\"VGBhahIAYl8=\"] = !!hS[hQ(761)], t[hQ(762)]",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "VGBhahIAYl8=",
+    "line": 7777,
+    "ctx": "\"VGBhahIAYl8=\"] = !!hS[hQ(761)], t[hQ(762)] = Cw(), t[\"KVUcX2w1HG0=\"] = qC(), ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "KVUcX2w1HG0=",
+    "line": 7779,
+    "ctx": "\"KVUcX2w1HG0=\"] = qC(), t[hQ(763)] = CF(), t[\"MV0EV3Q9BGI=\"] = CG(), ",
+    "t": "boolean",
+    "v": "true"
+  },
+  {
+    "key": "MV0EV3Q9BGI=",
+    "line": 7524,
+    "ctx": "\"MV0EV3Q9BGI=\", \"NABBSnFhS34=\", hQ(722)], BI = jb(\"bmF2aWdhdG9yLndlYmRyaXZlcg==\"), BJ = jb(\"T2JqZWN0LmdldE93blByb3BlcnR5",
+    "t": "string",
+    "v": "\"3207084bd110f1ac964863e23aa78"
+  },
+  {
+    "key": "NABBSnFhS34=",
+    "line": 7524,
+    "ctx": "\"NABBSnFhS34=\", hQ(722)], BI = jb(\"bmF2aWdhdG9yLndlYmRyaXZlcg==\"), BJ = jb(\"T2JqZWN0LmdldE93blByb3BlcnR5RGVzY3JpcHRvcg==",
+    "t": "object",
+    "v": "null"
+  },
+  {
+    "key": "EwNmCVZkYjs=",
+    "line": 7808,
+    "ctx": "\"EwNmCVZkYjs=\"] = n[BK], t[\"W0suQR4sKHo=\"] = !!n[BI], kD(t, \"BFAxGkI9Oi8=\", (f",
+    "t": "string",
+    "v": "\"Mozilla/5.0 (Windows NT 10.0;"
+  },
+  {
+    "key": "W0suQR4sKHo=",
+    "line": 7809,
+    "ctx": "\"W0suQR4sKHo=\"] = !!n[BI], kD(t, \"BFAxGkI9Oi8=\", (function() { var t = n[B",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "BFAxGkI9Oi8=",
+    "line": 7810,
+    "ctx": "\"BFAxGkI9Oi8=\", (function() { var t = n[BJ][hQ(209)](this, Object.getPrototypeOf(hU), BL); ",
+    "t": "string",
+    "v": "\"90e65465\""
+  },
+  {
+    "key": "InJXeGcWVkk=",
+    "line": 7822,
+    "ctx": "\"InJXeGcWVkk=\"] = !!hS[hQ(773)], t[\"BhYzXENwNW4=\"] = !!hS[hQ(774)], t[\"VGBhahI",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "BhYzXENwNW4=",
+    "line": 7823,
+    "ctx": "\"BhYzXENwNW4=\"] = !!hS[hQ(774)], t[\"VGBhahICYFA=\"] = !!hS.__nightmare, t[\"OSUM",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "VGBhahICYFA=",
+    "line": 7824,
+    "ctx": "\"VGBhahICYFA=\"] = !!hS.__nightmare, t[\"OSUMb39HDF4=\"] = kz(hS.RunPerfTest), t[",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "OSUMb39HDF4=",
+    "line": 7825,
+    "ctx": "\"OSUMb39HDF4=\"] = kz(hS.RunPerfTest), t[\"Dh47VEh4MW8=\"] = !!hS.geb, t[hQ(775)]",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "Dh47VEh4MW8=",
+    "line": 7826,
+    "ctx": "\"Dh47VEh4MW8=\"] = !!hS.geb, t[hQ(775)] = !!hS._Selenium_IDE_Recorder, t[\"PSkIY",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "PSkIY3tIDFE=",
+    "line": 7828,
+    "ctx": "\"PSkIY3tIDFE=\"] = !!hS._phantom || !!hS[hQ(776)], t[\"WQUsDxxhLj8=\"] = !!hT.__webdriver_script_fn, ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "WQUsDxxhLj8=",
+    "line": 7829,
+    "ctx": "\"WQUsDxxhLj8=\"] = !!hT.__webdriver_script_fn, t[hQ(777)] = !!hS.domAutomation || !!hS[hQ(778)], ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "FCAhKlFDJBk=",
+    "line": 7833,
+    "ctx": "\"FCAhKlFDJBk=\"] = Object[hQ(273)](hS)[hQ(781)]((function(t) { return 0 === t[hQ(240)](n) ",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "egoPQDxmDXA=",
+    "line": 4833,
+    "ctx": "\"egoPQDxmDXA=\"] = wn++, n[\"PSkIY3tJDFE=\"] = qQ() || jK(), wB(t, n) ? (wp.push(wt(t, n)",
+    "t": "number",
+    "v": "1"
+  },
+  {
+    "key": "PSkIY3tJDFE=",
+    "line": 4834,
+    "ctx": "\"PSkIY3tJDFE=\"] = qQ() || jK(), wB(t, n) ? (wp.push(wt(t, n)), \"S3s+MQ0ZNAE=\" === t &&",
+    "t": "number",
+    "v": "1555"
+  },
+  {
+    "key": "Tl57FAs5fS4=",
+    "line": 10092,
+    "ctx": "\"Tl57FAs5fS4=\"] = qe(); if (qx(i.d[\"VQEgCxNnKjw=\"] = qj(), o)) ",
+    "t": "number",
+    "v": "3600"
+  },
+  {
+    "key": "VQEgCxNnKjw=",
+    "line": 10093,
+    "ctx": "\"VQEgCxNnKjw=\"] = qj(), o)) continue } ",
+    "t": "number",
+    "v": "1779131754075"
+  },
+  {
+    "key": "NSEAa3NAC18=",
+    "line": 10097,
+    "ctx": "\"NSEAa3NAC18=\"] = oB(), i.d[\"BzdyfUJXdks=\"] = FI(), i.d[\"DFg5Ekk4PSU=\"",
+    "t": "string",
+    "v": "\"fd9b0d80-52ed-11f1-8be1-6b965"
+  },
+  {
+    "key": "BzdyfUJXdks=",
+    "line": 10098,
+    "ctx": "\"BzdyfUJXdks=\"] = FI(), i.d[\"DFg5Ekk4PSU=\"] = FJ(), r.push(i) ",
+    "t": "string",
+    "v": "\"3rxcTzITchdNlbgaO9_MUu8IqNIMS"
+  },
+  {
+    "key": "DFg5Ekk4PSU=",
+    "line": 10099,
+    "ctx": "\"DFg5Ekk4PSU=\"] = FJ(), r.push(i) } } if",
+    "t": "number",
+    "v": "841.6999999955297"
+  },
+  {
+    "key": "bHgZcioeHEk=",
+    "line": 6277,
+    "ctx": "\"bHgZcioeHEk=\"] = jS, e && (i.d[\"NABBSnFmQ38=\"] = e), i.d[\"BXFwO0AScww=\"] = yB",
+    "t": "boolean",
+    "v": "false"
+  },
+  {
+    "key": "cyNGaTZBQVs=",
+    "line": 6295,
+    "ctx": "\"cyNGaTZBQVs=\"] = r) } zO(t); var f = qk() , s = k",
+    "t": "object",
+    "v": "{\"PX12738\":1480,\"PX12739\":0,\"P"
+  }
+]

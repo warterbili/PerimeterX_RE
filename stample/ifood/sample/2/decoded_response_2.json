@@ -1,0 +1,38 @@
+{
+  "_info": {
+    "segment_count": 4
+  },
+  "segments": [
+    {
+      "handler": "000lll",
+      "args": [
+        "_px3",
+        "330",
+        "c3078d21c883a402db5a18b08def47c6a04947cb0f7bd86a612aabbefb37452c:zOjO13i0YpBDnKp9ZMgvgQ3mpxqTnIoJurS/s7vFqZuogG9OBkdWK5q2TiRn4OBAjWniT8mzcHQFBh4NElvN2w==:1000:yLPFccSoG2IaS7RaXNG4oyHi729JMhxIUOmUMhFfAwBg6iaCJNLoJwizGdft9gWXSTuy52yJayTgmZuSPnZIvcGxIKx0rvY/Ns9X1C2HlS/e8UAYYSImlmMiU6bUv2Zo8sI1CbyJC4vNhoiOdidw66ZAFHMUu/ozxf3aRLRX3T5cRpUsF21orgA3Y+5KY8HTy+k9gSohAvcqD/4rdA89mK5jtuK1ZgEZhHpMacIUmmzvR+jG4h6B3GSdVnMuV2YWY5urPEz+oPdqXEHZ3QdYFFwitq32Ncsybsk7D0XAJNh66nH9KUZEg5R3V2e+RU1o23D97D+0a1fSd13FzHKNdVUa8VX8iSiGoqo/GQt5ZDI8NXclfj6dPJRkL35JGPBviGYTVcs+Vx5pxqohVpXi6V9dpkw6prWbg8maBrgpx1Ci7ceEGb141Pu/P8s3fzO6S6sRZ843wjOViulc/QVDl6CQNB6gCTCed3pveJXlTAE=",
+        "true",
+        "300"
+      ]
+    },
+    {
+      "handler": "0lll0l",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "0ll0l000",
+      "args": [
+        "N0g54lW35eB8LIHBV3rVQNXqTroXjaGCBe7QxxEWo/c=:9s/CeJfrQ6zo1A2xyKooXc4xrj-Mf/EM/tCpXjmSiK-L8xvlqrxg35B5RuRCG4sr9h5hMEScyLN52V8zUdnmdMS1/WtToqoQO2h1x5iRlxWvtqeou8IDvZXH0yLryMjC3nOxnwJBPt2E4xGADa7hpnem2YhKHC12WneVRnP9uqC-jXyl10EqXg7tJliOBy0g",
+        "true"
+      ]
+    },
+    {
+      "handler": "0ll0l000",
+      "args": [
+        "N0g54lW35eB8LIHBV3rVQNXqTroXjaGCBe7QxxEWo/c=:9s/CeJfrQ6zo1A2xyKooXc4xrj-Mf/EM/tCpXjmSiK-L8xvlqrxg35B5RuRCG4sr9h5hMEScyLN52V8zUdnmdMS1/WtToqoQO2h1x5iRlxWvtqeou8IDvZXH0yLryMjC3nOxnwJBPt2E4xGADa7hpnem2YhKHC12WneVRnP9uqBDuInER0wbWgDq2labg2rN",
+        "true"
+      ]
+    }
+  ],
+  "contains_px_cookie": true
+}

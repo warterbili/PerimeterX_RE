@@ -1,0 +1,13 @@
+{
+  "name": "perimeter-node-bridge-ifood",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node bridge (JSDOM + intercept) — Plan B fallback for iFood _px3",
+  "scripts": {
+    "start": "node px-node-env/generate_px.js"
+  },
+  "dependencies": {
+    "jsdom": "^25.0.0",
+    "canvas": "^2.11.2"
+  }
+}

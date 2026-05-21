@@ -1,0 +1,600 @@
+{
+  "summary": {
+    "old_total": 202,
+    "new_total": 225,
+    "mapped_unique": 31,
+    "ambiguous": 12,
+    "unmapped_old": 29,
+    "unmapped_new": 178
+  },
+  "mapping": {
+    "JxsdHWJxEy8=": {
+      "new": "PSkIY3hPCVE=",
+      "value": "109|66|66|70|80"
+    },
+    "a1dRUS4+XmI=": {
+      "new": [
+        "GCQtLl1BLR0=",
+        "UT0kdxRcJEQ="
+      ],
+      "value": "false",
+      "ambiguous": true
+    },
+    "ICBaJmVNVRU=": {
+      "new": [
+        "GCQtLl1BLR0=",
+        "UT0kdxRcJEQ="
+      ],
+      "value": "false",
+      "ambiguous": true
+    },
+    "DzN1dUlScEY=": {
+      "new": "YjIXOCRfHQs=",
+      "value": [
+        "loadTimes",
+        "csi",
+        "app"
+      ]
+    },
+    "VipsLBNGZh8=": {
+      "new": "b19aVSo/X2Y=",
+      "value": "f1a38a60"
+    },
+    "DXV3M0gcegI=": {
+      "new": [
+        "bRlYEyt6WCA=",
+        "UiJnKBdHZRk=",
+        "BzdyfUFReE8="
+      ],
+      "value": 32,
+      "ambiguous": true
+    },
+    "JnpcfGAQWU4=": {
+      "new": [
+        "bRlYEyt6WCA=",
+        "UiJnKBdHZRk=",
+        "BzdyfUFReE8="
+      ],
+      "value": 32,
+      "ambiguous": true
+    },
+    "fyNFZTpPQF8=": {
+      "new": [
+        "IU0UR2QtF3M=",
+        "X08qRRovIH8="
+      ],
+      "value": "webkit",
+      "ambiguous": true
+    },
+    "W0chQR4rKXI=": {
+      "new": "WipvIB9KaBM=",
+      "value": "https:"
+    },
+    "b1NVVSo/XWQ=": {
+      "new": "UT0kdxRdI0Y=",
+      "value": "Asia/Shanghai"
+    },
+    "KVkTX2w1GGo=": {
+      "new": "MkJHCHciQz0=",
+      "value": "w3c"
+    },
+    "KnZQcG8aWkQ=": {
+      "new": "fg4LRDtuDnA=",
+      "value": "screen"
+    },
+    "KDhSPm1UWgk=": {
+      "new": "Y1NWWSYzUW4=",
+      "value": {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      }
+    },
+    "aRlTHyx1Vi4=": {
+      "new": "VQEgCxBhKjo=",
+      "value": {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      }
+    },
+    "HCQmIllILBg=": {
+      "new": [
+        "EX1kN1QeZgA=",
+        "fWlIIzgKShU=",
+        "HCgpIllILBg="
+      ],
+      "value": {},
+      "ambiguous": true
+    },
+    "O2cBIX4LBBI=": {
+      "new": "Q3M2OQYTPAo=",
+      "value": "default"
+    },
+    "fgIERDtrD38=": {
+      "new": "T386NQoaPg4=",
+      "value": [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ]
+    },
+    "JDxeOmFRVgA=": {
+      "new": "dEABCjEhBjA=",
+      "value": "Win32"
+    },
+    "FU1vS1Mna3k=": {
+      "new": "OARNTn5iRnw=",
+      "value": -480
+    },
+    "SlZwEA8/dSM=": {
+      "new": "DFg5Ekk9MyE=",
+      "value": "Gecko"
+    },
+    "b1NVVSkzWG8=": {
+      "new": "JnZTfGAaUUY=",
+      "value": "20030107"
+    },
+    "aHgSfi4ZHU0=": {
+      "new": "NkZDDHArQz8=",
+      "value": "Netscape"
+    },
+    "SBhyXg51eGU=": {
+      "new": "X08qRRkuL34=",
+      "value": "Mozilla"
+    },
+    "egYAQD9qDXQ=": {
+      "new": "a1teUS47XGU=",
+      "value": "x86"
+    },
+    "WiZgIB9KbRU=": {
+      "new": "VQEgCxBhIj4=",
+      "value": "64"
+    },
+    "VGxuahEAYlk=": {
+      "new": "R3cyPQIXMQ4=",
+      "value": "Windows"
+    },
+    "O2cBIX0LDBs=": {
+      "new": "Q3M2OQUTNAM=",
+      "value": "49e5084e"
+    },
+    "OSkDb39EC18=": {
+      "new": "STU8fw9UO08=",
+      "value": "7c5f9724"
+    },
+    "BFw+GkE3MiA=": {
+      "new": "EX1kN1QaZw0=",
+      "value": "65d826e0"
+    },
+    "Bzt9fUJWeE4=": {
+      "new": "IU0UR2QsHnQ=",
+      "value": "a9269e00"
+    },
+    "SlZwEAw4dSI=": {
+      "new": "XGhpYhoKY1A=",
+      "value": "50a5ec55"
+    },
+    "DzN1dUpcfkU=": {
+      "new": "OkpPAH8pSzA=",
+      "value": "73a0fb26"
+    },
+    "CFgyHk45OSs=": {
+      "new": "LDhZMmpVXQc=",
+      "value": "missing"
+    },
+    "ajYQMCxaFAU=": {
+      "new": [
+        "b19aVSo+WG8=",
+        "UT0kdxddL0I="
+      ],
+      "value": [],
+      "ambiguous": true
+    },
+    "KVkTX281HWQ=": {
+      "new": "PSkIY3tJCVg=",
+      "value": "64556c77"
+    },
+    "Az95eUZUc0o=": {
+      "new": [
+        "NABBSnFnRHk=",
+        "BFAxGkI9NyE="
+      ],
+      "value": "10207b2f",
+      "ambiguous": true
+    },
+    "SlZwEAw3eSs=": {
+      "new": [
+        "NABBSnFnRHk=",
+        "BFAxGkI9NyE="
+      ],
+      "value": "10207b2f",
+      "ambiguous": true
+    },
+    "VipsLBNHZxo=": {
+      "new": [
+        "IU0UR2QsEHE=",
+        "BFAxGkI9Oi8="
+      ],
+      "value": "90e65465",
+      "ambiguous": true
+    },
+    "Yj4YOCdSFw0=": {
+      "new": "MV0EV3Q9BGI=",
+      "value": "3207084bd110f1ac964863e23aa78e04"
+    },
+    "NkpMDHArSDk=": {
+      "new": [
+        "IU0UR2QsEHE=",
+        "BFAxGkI9Oi8="
+      ],
+      "value": "90e65465",
+      "ambiguous": true
+    },
+    "dytNbTJHQVk=": {
+      "new": [
+        "IU0UR2QtF3M=",
+        "X08qRRovIH8="
+      ],
+      "value": "webkit",
+      "ambiguous": true
+    },
+    "XQUnAxhpKzY=": {
+      "new": "Z1dSXSI3UWg=",
+      "value": 33
+    },
+    "JxsdHWJwFCc=": {
+      "new": "Tl57FAs5fS4=",
+      "value": 3600
+    }
+  },
+  "unmapped_old": [
+    {
+      "old": "FU1vS1MjYnw=",
+      "value": 1682
+    },
+    {
+      "old": "eWlDLzwGTh4=",
+      "value": [
+        -931.5
+      ]
+    },
+    {
+      "old": "RT0/ewNcNko=",
+      "value": 1920
+    },
+    {
+      "old": "DhI0VEh8MWc=",
+      "value": 1080
+    },
+    {
+      "old": "Ql54GAc2dys=",
+      "value": 1920
+    },
+    {
+      "old": "RT0/ewBVMEE=",
+      "value": 1032
+    },
+    {
+      "old": "eydBYT5NRFQ=",
+      "value": "1920X1080"
+    },
+    {
+      "old": "eWlDLz8ERxk=",
+      "value": 1872
+    },
+    {
+      "old": "DFQ2Ekk5OiE=",
+      "value": 948
+    },
+    {
+      "old": "EFAqFlU8IC0=",
+      "value": {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 0,
+          "downlink": 9.5,
+          "saveData": false
+        }
+      }
+    },
+    {
+      "old": "eydBYT1LRFA=",
+      "value": "zh-CN"
+    },
+    {
+      "old": "LDRWMmpbUwE=",
+      "value": [
+        "zh-CN",
+        "en",
+        "en-GB",
+        "en-US"
+      ]
+    },
+    {
+      "old": "S3cxMQ0YNAA=",
+      "value": 9.5
+    },
+    {
+      "old": "OSkDb39FCFw=",
+      "value": "4g"
+    },
+    {
+      "old": "Mk5ICHciRTI=",
+      "value": [
+        {
+          "brand": "Not:A-Brand",
+          "version": "99"
+        },
+        {
+          "brand": "Microsoft Edge",
+          "version": "145"
+        },
+        {
+          "brand": "Chromium",
+          "version": "145"
+        }
+      ]
+    },
+    {
+      "old": "OkZAAH8qTDA=",
+      "value": "19.0.0"
+    },
+    {
+      "old": "AEA6BkUsNjc=",
+      "value": "145.0.3800.70"
+    },
+    {
+      "old": "Em4oaFcEI1g=",
+      "value": "f49f18dbec5558a76590af096c339826"
+    },
+    {
+      "old": "OkZAAHwpRTc=",
+      "value": 16
+    },
+    {
+      "old": "aHgSfi4SG0U=",
+      "value": "hidden"
+    },
+    {
+      "old": "BFw+GkE0Nig=",
+      "value": 1920
+    },
+    {
+      "old": "Bzt9fUFUdU4=",
+      "value": 1032
+    },
+    {
+      "old": "LVUXU2s1E2A=",
+      "value": 9
+    },
+    {
+      "old": "U08pSRUgIH4=",
+      "value": "https://www.ifood.com.br/"
+    },
+    {
+      "old": "FU1vS1AkYHo=",
+      "value": "https%3A%2F%2Fwww.ifood.com.br%2F"
+    },
+    {
+      "old": "LxMVFWp8GCU=",
+      "value": "3Jzg9oNbX"
+    },
+    {
+      "old": "VQ0vCxBhID0=",
+      "value": "4YC/4YCb4YCR4YCA4YCd4YCB4YCd4YCU4YCG4YGS4YCi4YCT4YCH4YCe4YCb4YCc4YCT4YGS4YC94YCc4YCe4YCb4YCc4YCX4YGS4YGf4YGS4YCi4YCd4YCe4YCb4YCB4YCa4YGS4YGa4YCi4YCd4YCe4YCT4YCc4YCW4YGb"
+    },
+    {
+      "old": "Z1tdXSI3WWo=",
+      "value": "AudioData.SVGAnimatedAngle.SVGMetadataElement"
+    },
+    {
+      "old": "WiZgIB9JbRc=",
+      "value": "jgS"
+    }
+  ],
+  "unmapped_new": [
+    "RTEwewNQMUg=",
+    "VGBhahEDY1E=",
+    "Q3M2OQYQNAs=",
+    "fg4LRDttCXA=",
+    "LDhZMmlfUwY=",
+    "Y1NWWSUzU20=",
+    "V0ciTRIhIXc=",
+    "RTEwewNXOk0=",
+    "DXl4M0sUcgc=",
+    "EmInaFQCLVk=",
+    "dEABCjIjCzk=",
+    "RBBxWgJydmw=",
+    "BFAxGkE1MC8=",
+    "EX1kN1ceYwI=",
+    "PSkIY3hPC1U=",
+    "OSUMb39IDFQ=",
+    "EwNmCVViYj8=",
+    "ViZjLBNDZBo=",
+    "YQ1UByduUTE=",
+    "ZRFQGyB2Vig=",
+    "AzN2eUVVc0k=",
+    "eytOYT1IRFA=",
+    "JnZTfGAWV08=",
+    "eytOYT1GS1Q=",
+    "S3s+MQ4fPAM=",
+    "bHgZcikbHUE=",
+    "bj4bNCtfHgE=",
+    "WGRtbh0Eb1Q=",
+    "Hm4rZFsOKV8=",
+    "bHgZcikYGkA=",
+    "BFAxGkEwMio=",
+    "R3cyPQIXMQw=",
+    "Q3M2OQYTMAM=",
+    "JxcSHWJ3FCY=",
+    "EX1kN1QbYAc=",
+    "PAhJQnlrQ3g=",
+    "W0suQR0oJHY=",
+    "a1teUS44W2E=",
+    "cR1EFzR9TyI=",
+    "egoPQDxsDXE=",
+    "Xi5rJBhOaBM=",
+    "InJXeGcWVkk=",
+    "BhYzXENwNW4=",
+    "VGBhahICYFA=",
+    "OSUMb39HDF4=",
+    "Dh47VEh4MW8=",
+    "BhYzXEB7Mmc=",
+    "PSkIY3tIDFE=",
+    "WQUsDxxhLj8=",
+    "Lx8aFWl5Hy8=",
+    "PAhJQnluSnc=",
+    "FCAhKlFDJBk=",
+    "O2sOIX4MCxs=",
+    "cyNGaTVATV8=",
+    "KnpfcG8dVEY=",
+    "fg4LRDtuCHI=",
+    "Z1dSXSI3UWo=",
+    "EX1kN1QdZw0=",
+    "EmInaFcCIV8=",
+    "HUloQ1sranQ=",
+    "EwNmCVVvZzM=",
+    "Z1dSXSE0UG0=",
+    "QS00ZwRJNFE=",
+    "aRVcHy92XiQ=",
+    "NABBSnFnSnk=",
+    "ZHAReiETG0w=",
+    "XQkoAxhuKjY=",
+    "WGRtbh4EbFQ=",
+    "XGhpYhoEY1Q=",
+    "cgIHSDRhAX8=",
+    "KVUcX2wwHG4=",
+    "dgYDTDBgAnk=",
+    "YGwVZiUOEl0=",
+    "UBxlVhZxY2M=",
+    "NABBSnJgQXE=",
+    "WipvIBxKaBc=",
+    "EX1kN1cQZQY=",
+    "Czt+cU1WeEM=",
+    "MV0EV3c9BGM=",
+    "Hw9qBVlsYDM=",
+    "IU0UR2cgF3c=",
+    "JVEQW2A3EWw=",
+    "fy9KZTpKQFc=",
+    "fg4LRDhtDn4=",
+    "PSkIY3tPDlg=",
+    "cHwFdjUaDkM=",
+    "TTk4cwtfMkY=",
+    "KnpfcG8eWEI=",
+    "ajofMC9cHQY=",
+    "Hm4rZFgNLFc=",
+    "YQ1UByRqUzE=",
+    "X08qRRkvLHc=",
+    "OkpPAHwqSTo=",
+    "EFwlFlY9IyI=",
+    "b19aVSo/XWc=",
+    "eEQNDj0lDD0=",
+    "O2sOIX4OCRA=",
+    "M2MGKXYGBhI=",
+    "FwdiDVFnYDw=",
+    "b19aVSk/X2c=",
+    "KxseEW16HCU=",
+    "eEQNDj0lCzU=",
+    "Cho/UEx5PmQ=",
+    "Cho/UEx5OGI=",
+    "RlZzHAA6eC8=",
+    "PSkIY3tECVY=",
+    "UBxlVhZ/ZGY=",
+    "HCgpIlpJKxk=",
+    "EwNmCVZjYD8=",
+    "GwtuAV1rbjs=",
+    "IxMWGWV1ES0=",
+    "MkJHCHcjRzw=",
+    "M2MGKXUBDRo=",
+    "VGBhahIAYl8=",
+    "KVUcX2w1HG0=",
+    "JVEQW2AxEG0=",
+    "NABBSnFhS34=",
+    "P28KJXkMDhQ=",
+    "FwdiDVJhZDg=",
+    "RlZzHAMweSc=",
+    "EX1kN1cQbgY=",
+    "b19aVSkzXW4=",
+    "SBR9Xg11d28=",
+    "EwNmCVZkYjs=",
+    "W0suQR4sKHo=",
+    "Hw9qBVlibDQ=",
+    "QlJ3GAQwfSs=",
+    "JDBROmFUUQk=",
+    "MDxFNnVYRQw=",
+    "T386NQoZMAA=",
+    "NABBSnFjS34=",
+    "R3cyPQIUOAg=",
+    "Dz96dUlecUM=",
+    "HUloQ1goa3A=",
+    "dWFAKzAARho=",
+    "cgIHSDdjAX0=",
+    "PSkIY3tJCVI=",
+    "MDxFNnVZQA0=",
+    "M2MGKXUOBB8=",
+    "Xi5rJBtKaB4=",
+    "FmYjbFAEJVg=",
+    "BzdyfUFRd04=",
+    "KxseEW57HCI=",
+    "fEgJAjkrCzg=",
+    "Dz96dUpcfkM=",
+    "KDRdPm1XWQk=",
+    "aRVcHyx2WCs=",
+    "NkZDDHMlRzk=",
+    "MV0EV3Q+AG0=",
+    "STU8fwxWOEQ=",
+    "GmovYF8JKlI=",
+    "S3s+MQ4bOQE=",
+    "O2sOIX4LBRc=",
+    "eEQNDj0kCTo=",
+    "eWVMLzwFSRQ=",
+    "KnpfcG8aVUA=",
+    "JDBROmFQWw8=",
+    "XGhpYhkIbFM=",
+    "BXFwO0AScg4=",
+    "JnZTfGMTUkg=",
+    "KDRdPm1SWgo=",
+    "NSEAa3NBAFs=",
+    "eEQNDj0jDzg=",
+    "FCAhKlJCIxk=",
+    "74>01036>51?6473452?",
+    "EwNmCVZiYT8=",
+    "MkJHCHcmQzM=",
+    "egoPQDxmDXA=",
+    "PSkIY3tJDFE=",
+    "W0suQR0tL3E=",
+    "VQEgCxNnKjw=",
+    "bHgZcikfE0A=",
+    "NSEAa3NAC18=",
+    "BzdyfUJXdks=",
+    "DFg5Ekk4PSU=",
+    "bHgZcioeHEk=",
+    "R3cyPQIVMAw=",
+    "cyNGaTZBQVs="
+  ]
+}

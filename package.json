@@ -1,0 +1,21 @@
+{
+  "name": "perimeter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Complete PerimeterX SDK reverse engineering project (iFood + Grubhub + Bundle pure-algo)",
+  "scripts": {
+    "smoke:ifood": "node stample/ifood/px_cookie/smoke_test.js",
+    "smoke:grub":  "node stample/grub/px_cookie/smoke_test.js",
+    "px3":         "node stample/ifood/px_cookie/ifood_px3.js",
+    "px2":         "node stample/grub/px_cookie/grubhub_px2.js",
+    "demo:ifood":  "node stample/ifood/px_cookie/business_api_demo.js",
+    "demo:grub":   "node stample/grub/px_cookie/business_api_demo.js",
+    "validate":    "bash stample/live_validation/run_validation.sh"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

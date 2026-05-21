@@ -1,0 +1,13 @@
+{
+  "batch_id": 6,
+  "site": "https://www.ifood.com.br/restaurantes",
+  "uuid": "fa165ea0-5421-11f1-85cb-e97d388bd2ae",
+  "tag": "U0MmDhUmOnhXSw==",
+  "ft": "401",
+  "app_id": "PXO1GDTa7Q",
+  "captured_at": "2026-05-20T08:00:41Z",
+  "collector_post_count": 3,
+  "status_post_1": 200,
+  "status_post_2": 200,
+  "sdk_sha256": "b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8"
+}

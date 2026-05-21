@@ -1,0 +1,80 @@
+{
+  "_info": {
+    "segment_count": 10,
+    "xorKey": 100
+  },
+  "segments": [
+    {
+      "handler": "0lll0l",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "l0l0ll",
+      "args": [
+        "12422929343373247001"
+      ]
+    },
+    {
+      "handler": "0lll000l",
+      "args": [
+        "1779263544545"
+      ]
+    },
+    {
+      "handler": "000ll0",
+      "args": [
+        "d86mge5r5kbs739opgc0"
+      ]
+    },
+    {
+      "handler": "0lll0000",
+      "args": [
+        "4998"
+      ]
+    },
+    {
+      "handler": "0ll0ll00",
+      "args": [
+        "c6d57bbd-5420-11f1-b507-989a861bfb2d",
+        "true"
+      ]
+    },
+    {
+      "handler": "0lllll",
+      "args": [
+        "5ef33c572b0d3140de097f169eb4a4f325af24b8b55e546a172da7d4a92f4291"
+      ]
+    },
+    {
+      "handler": "l00lll",
+      "args": [
+        "cc",
+        "60",
+        "U2FtZVNpdGU9TGF4Ow=="
+      ]
+    },
+    {
+      "handler": "l00ll0",
+      "args": [
+        "ai:0,uiii:0"
+      ]
+    },
+    {
+      "handler": "0ll0l000",
+      "args": [
+        "N0g54lW35eB8LIHBV3rVQNXqTroXjaGCBe7QxxEWo/c=:9s/CeJfrQ6zo1A2xyKooXc4xrj-Mf/EM/tCpXjmSiK-L8xvlqrxg35B5RuRCG4sr9h5hMEScyLN52V8zUdnmdMS1/WtToqoQO2h1x5iRlxWvtqeou8IDvZXH0yLryMjC3nOxnwJBPt2E4xGADa7hpnem2YhKHC12WneVRnP9uqDScGFwWPwBpuhRLN5ChzaL",
+        "true"
+      ]
+    }
+  ],
+  "state_extracted": {
+    "jf": "cu",
+    "to": "12422929343373247001",
+    "no": "1779263544545",
+    "appId": "d86mge5r5kbs739opgc0",
+    "cts": "c6d57bbd-5420-11f1-b507-989a861bfb2d",
+    "qa": "5ef33c572b0d3140de097f169eb4a4f325af24b8b55e546a172da7d4a92f4291"
+  }
+}

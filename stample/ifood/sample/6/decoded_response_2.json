@@ -1,0 +1,38 @@
+{
+  "_info": {
+    "segment_count": 4
+  },
+  "segments": [
+    {
+      "handler": "000lll",
+      "args": [
+        "_px3",
+        "330",
+        "660398b67d3cac8a77a8fdd7f404f9630d76269ec58a76cfafce427cdea20498:Y0XroK8Bvui9q4OzCHcN3ZfY3+0jSCu2Tu0NrSoa7LxmFhc9Tj4xXXI6DvaHir6aKp5xKk++i13rKW4I0zH0kQ==:1000:KQ237G1voMEZVEl7ZrK6I4M6Q88rtHetZcrvZb3LlROkmy5qkJDojPGuVpNk39LbVp6l8UGY/iyLvuPYEcCMN4uX+doZC7BaM2h4o9IDHNhnDbfk6FVOfXvdrGmlGgaTZgcfAbywim921+TbWU8FlUghIK7N4Zs/xNog0DQeJtoHs18ZVCBwgtC0FJH1YnPgakQ3OE6sY4MwdvPbre9E7WNRVpu7Iuv28S/Kz0eNJpJ//NJoqQrMWaFl0lkM14gG53GCvWjT+d29OC+PhKDFrNzx1545sZW6ivvCf5hAhKOa6YAxf6qiyk3SUR0+dDhyT/aMd69WD8Kj/vHVs82WnMpuyz9oHUedbnto22b0yUZGbyPJXTIi9U9faPeUd9/rT135BKBlu+iqfJmGVxZ8e36mUq7NR+phHG4NpVEtFJuCbf9oqcMg2EmrlLH7DDCGlgoMoUqC6KNjV6GUc2dIiGHkikoupkn10pGnnPo0izY=",
+        "true",
+        "300"
+      ]
+    },
+    {
+      "handler": "0lll0l",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "0ll0l000",
+      "args": [
+        "N0g54lW35eB8LIHBV3rVQNXqTroXjaGCBe7QxxEWo/c=:9s/CeJfrQ6zo1A2xyKooXc4xrj-Mf/EM/tCpXjmSiK-L8xvlqrxg35B5RuRCG4sr9h5hMEScyLN52V8zUdnmdMS1/WtToqoQO2h1x5iRlxWvtqeou8IDvZXH0yLryMjC3nOxnwJBPt2E4xGADa7hphYxyijuWAAIomTBIiHTqE6Mi-aZOVXNgnu2yOAAMauW",
+        "true"
+      ]
+    },
+    {
+      "handler": "0ll0l000",
+      "args": [
+        "N0g54lW35eB8LIHBV3rVQNXqTroXjaGCBe7QxxEWo/c=:9s/CeJfrQ6zo1A2xyKooXc4xrj-Mf/EM/tCpXjmSiK-L8xvlqrxg35B5RuRCG4sr9h5hMEScyLN52V8zUdnmdMS1/WtToqoQO2h1x5iRlxWvtqeou8IDvZXH0yLryMjC3nOxnwJBPt2E4xGADa7hphYxyijuWAAIomTBIiHTqE6I1lferdvkX9REXozZwDxk",
+        "true"
+      ]
+    }
+  ],
+  "contains_px_cookie": true
+}

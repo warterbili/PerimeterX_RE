@@ -1,8 +1,8 @@
 # iFood pxcookie Pure-Algo Generator Update — Work Log
 
 - **Task start**: 2026-05-19
-- **Workstation**: Windows 11, user lsd
-- **Project path**: `C:\Users\lsd\projects\sourcing-cracked\ifood-web\collector无感纯算还原\`
+- **Workstation**: Windows 11
+- **Project path**: `<author's private sourcing project>/ifood-web/`
 - **Goal**: verify whether the old pxcookie generator still works; if broken, update SDK constants/fields
 - **Side task**: delete local commit `b52c30945ff80831b2b6f3043f2fcfe3a1120f2a` (project must stay in sync with GitHub)
 
@@ -53,7 +53,7 @@ ifood-web/collector无感纯算还原/
 ### 1.1 Situation Confirmation
 
 - Commit author: Shudong Lu (me, 2026-05-18 17:49)
-- Content: `grubhub-web/grubhub-auth/core/python/login.py` — modified login flow (attempt /auth/login before mail.tm JWT pre-check)
+- Content: Grubhub login flow change (attempt /auth/login before mail.tm JWT pre-check)
 - Status: local main is `ahead 1` of origin/main, **not pushed to GitHub**
 
 ### 1.2 Execution
@@ -76,7 +76,7 @@ Non-destructive; no force-push involved.
 Command:
 
 ```bash
-cd "C:/Users/lsd/projects/sourcing-cracked/ifood-web/collector无感纯算还原/auto"
+cd "<author's private sourcing project>/ifood-web/auto"
 node px_cookie.js
 ```
 
@@ -112,14 +112,14 @@ User gave a hard order: "log every step + force heartbeat every minute". Relying
 
 ### 3.2 Operation
 
-1. Build a project-level `.claude` directory: `C:/Users/lsd/projects/sourcing-cracked/ifood-web/.claude/`
+1. Build a project-level `.claude` directory under the private sourcing project root
 2. Write `settings.local.json`: PostToolUse hook, matcher=`Bash|Edit|Write|Read|MultiEdit|NotebookEdit|Grep|Glob`, command outputs JSON via stdout `{"hookSpecificOutput":{...,"additionalContext":"Hard-order recording reminder:..."},"suppressOutput":true}`
 3. Pipe-test command: `echo '{...}' | bash -c "..."` → JSON output OK ✓
 4. Schema validate (use node in lieu of jq, no jq locally): matcher + command both readable ✓
 
 ### 3.3 Global Memory Sync
 
-Wrote two memory entries to `C:\Users\lsd\.claude\projects\C--Users-lsd-projects-sourcing-cracked\memory\`:
+Wrote two memory entries to the project-level `.claude` memory directory:
 
 - `feedback_worklog_required.md` — WORKLOG hard-order rules
 - `feedback_lookup_order.md` — Reverse-lookup priority (treasure → CDP → SDK source; no guessing)
@@ -256,8 +256,8 @@ Next: cdp.
 ### 7.1 Data Source
 
 User copied real collector#1 and collector#2 from the browser:
-- `C:\Users\lsd\Desktop\1.txt` + `1响应.txt` (collector#1 + ob#1)
-- `C:\Users\lsd\Desktop\2.txt` + `2响应.txt` (collector#2 + ob#2)
+- `1.txt` + `1响应.txt` (collector#1 + ob#1)
+- `2.txt` + `2响应.txt` (collector#2 + ob#2)
 
 ### 7.2 Decode With Existing Scripts
 

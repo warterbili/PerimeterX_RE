@@ -77,7 +77,7 @@
 ### 准备
 
 ```bash
-cd C:/Users/lsd/lsd_projects/perimeter/stample/grub/px_cookie
+cd <repo-root>/stample/grub/px_cookie
 node smoke_test.js     # 自检 17/17 ✓ 确认环境就绪
 ```
 
@@ -217,15 +217,11 @@ node business_api_demo.js
 
 ### 生产项目（外部）
 
-| 路径 | 内容 |
+| 模块 | 用途 |
 |---|---|
-| `C:\Users\lsd\projects\sourcing-cracked\grubhub-web\` | Grubhub 完整生产 |
-| ├── `grubhub-auth/core/python/register.py` | 注册机（含 OTP + SSO） |
-| ├── `grubhub-auth/core/python/login.py` | 登录机 |
-| ├── `grubhub-auth/core/python/refresh.py` | Token 刷新（每天定时跑） |
-| ├── `grubhub-auth/core/python/px_pure_cookie.py` | Python 版 generator |
-| ├── `grubhub-auth/data/accounts.jsonl` | 共享账号池（5 账号） |
-| └── `grubhub-instacart/core/crawler_full.py` | 下游 Instacart 爬虫（**无 PX**） |
+| Grubhub 账号体系（注册 / 登录 / token 刷新机） | 走完 9 步链路拿 `__Host-instacart_sid` |
+| Python 版 _px2 generator | 包了 Node.js 子进程，供生产调用 |
+| 下游 Instacart 爬虫 | **无 PX**，承接上游账号 token |
 
 ---
 

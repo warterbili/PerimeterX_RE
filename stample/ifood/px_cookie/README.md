@@ -34,7 +34,7 @@ px_cookie/
 | EV2 字段数 | 203（精简） | 204（完整 cold visit） |
 | 适用场景 | 跟项目集成、复用 reverse 模块 | 单文件丢哪都能跑 |
 | CLI 入口 | `node ifood_px3.js` | 没有，用 `require()` |
-| 来源 | `perimeter_X/src/generators/` | `Desktop/ifood-pxcookie-update-2026-05-19/` |
+| 来源 | legacy `perimeter_X` 项目 generators | 作者本地阶段性档案 |
 
 ## 都用同一个 SDK
 
@@ -140,5 +140,5 @@ node ifood_px3.js     # 看返回的 cookie_name == "_px3"
 
 ---
 
-*来源：`perimeter_X/src/generators/ifood_px3.js` + `Desktop/ifood-pxcookie-update-2026-05-19/px_cookie_v2.js`。
+*来源：legacy `perimeter_X` 项目的 `ifood_px3.js` + 作者本地 `px_cookie_v2.js` 阶段性档案。
 两份都对应同一份 iFood SDK（sha256 `b47a639c…`），smoke test 13/13 通过。*

@@ -274,7 +274,7 @@ Expected: 6 lines of `batch X: OK` + 6 lines of `post1=200 post2=200`.
 
 ---
 
-*Capture source: original `perimeter_X/samples/grubhub/`, validated
+*Capture source: the legacy `perimeter_X` project's Grubhub sample directory, validated
 2026-05-21. All 6 batches respond with status=200 and have been
 round-trip verified with
 [`skill/AI_re/scripts/decode_payload.js`](../../../skill/AI_re/scripts/decode_payload.js).

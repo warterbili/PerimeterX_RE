@@ -91,8 +91,8 @@ This methodology is the **merged and curated version** of 3 predecessor methodol
 | Predecessor | Role |
 |---|---|
 | `../PX_逆向方法论_通用版.md` (1,233-line grep handbook) | **Retained** as §4 Stage 4's "grep pattern reference"; referenced from this directory |
-| `perimeterX_Re/docs/06_methodology/` (10 English procedure docs) | **Structural source** — the 10-chapter layout of this directory follows its structure |
-| `perimeter_X/docs/zh/18_methodology.md` (610-line combat-cadence document) | **Content backbone** — the 7-stage narrative + appendices A/B/C are fully reused |
+| the legacy `perimeterX_Re` project's 06_methodology (10 English procedure docs) | **Structural source** — the 10-chapter layout of this directory follows its structure |
+| the legacy `perimeter_X` project's `18_methodology.md` (610-line combat-cadence document) | **Content backbone** — the 7-stage narrative + appendices A/B/C are fully reused |
 
 Each predecessor is valuable on its own; this directory is the **best-practice merge**.
 

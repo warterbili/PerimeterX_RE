@@ -142,5 +142,5 @@ node grubhub_px2.js     # 看返回的 cookie_name == "_px2"
 
 ---
 
-*来源：`perimeter_X/src/generators/grubhub_px2.js` + `templates/grubhub_ev*_template.json`。
+*来源：legacy `perimeter_X` 项目的 `grubhub_px2.js` + `templates/grubhub_ev*_template.json`。
 对应 Grubhub SDK sha256 `5e81bffc…`，6 批解码闭环 + 5× live-generator runs，10/10 通过。*

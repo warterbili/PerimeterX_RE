@@ -1,12 +1,22 @@
-"""Field-by-field equality check: our generated ev2 vs a browser-captured ev2."""
-import sys, json
+"""Field-by-field equality check: our generated ev2 vs a browser-captured ev2.
+
+Requires a local Python decoder module (`px_pure_cookie`) exposing `decode_ob` and
+`GT`. Set the env var `PX_PY_DECODER_DIR` to its directory.
+"""
+import os, sys, json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, r"C:\Users\lsd\projects\ICT")
+_decoder_dir = os.environ.get("PX_PY_DECODER_DIR")
+if not _decoder_dir:
+    raise RuntimeError(
+        "Set PX_PY_DECODER_DIR to the directory containing px_pure_cookie.py "
+        "(must expose decode_ob and GT)."
+    )
+sys.path.insert(0, _decoder_dir)
 sys.path.insert(0, str(ROOT / "deliverables"))
 from px_pure_cookie_v2 import _generate_cookie, EV2_TEMPLATE, build_ev2  # type: ignore
-from ICT.px_pure_cookie import decode_ob, GT  # type: ignore
+from px_pure_cookie import decode_ob, GT  # type: ignore
 
 # Generate one round of our payload + state
 r = _generate_cookie()

@@ -34,7 +34,7 @@ px_cookie/
 | EV2 field count | 203 (slim) | 204 (full cold visit) |
 | Use case | Project integration; reuse reverse modules | Drop the single file anywhere |
 | CLI entry | `node ifood_px3.js` | None; use `require()` |
-| Source | `perimeter_X/src/generators/` | `Desktop/ifood-pxcookie-update-2026-05-19/` |
+| Source | legacy `perimeter_X` project's generators | author's local iteration archive |
 
 ## Both Use the Same SDK
 
@@ -140,5 +140,5 @@ If production fails:
 
 ---
 
-*Source: `perimeter_X/src/generators/ifood_px3.js` + `Desktop/ifood-pxcookie-update-2026-05-19/px_cookie_v2.js`.
+*Source: the legacy `perimeter_X` project's `ifood_px3.js` + the author's local `px_cookie_v2.js` iteration archive.
 Both correspond to the same iFood SDK (sha256 `b47a639c…`); smoke test 13/13 passes.*

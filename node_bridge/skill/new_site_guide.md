@@ -75,7 +75,7 @@ python ~/projects/Sourcing-AI-Skills/cdp-browser/scripts/cdp.py network 20 | \
 ## Step 3：复制 ifood 模板
 
 ```bash
-cd C:/Users/lsd/lsd_projects/perimeter
+cd <repo-root>
 cp -r node_bridge/ifood node_bridge/<site>
 cd node_bridge/<site>
 

@@ -55,7 +55,7 @@ Business API endpoints:
 ### Setup
 
 ```bash
-cd C:/Users/lsd/lsd_projects/perimeter/stample/ifood/px_cookie
+cd <repo-root>/stample/ifood/px_cookie
 node smoke_test.js     # self-test 21/21 ✓ confirms environment ready
 ```
 
@@ -185,12 +185,11 @@ Measured throughput (from `benchmark_workers.py`):
 
 ### Production Project (External)
 
-| Path | Contents |
+| Module | Purpose |
 |---|---|
-| `C:\Users\lsd\projects\sourcing-cracked\ifood-web\` | iFood complete production scraper |
-| ├── `px_cookie_generator.py` | Python generator (wraps the Node.js subprocess) |
-| ├── `ifood_full_scraper.py` | Main scraper (merchants + catalog + products) |
-| └── `benchmark_workers.py` | Concurrency benchmark (measured throughput / 429 rate) |
+| Python `_px3` generator | Wraps the Node.js subprocess for production use |
+| iFood main scraper (merchant / catalog / product tiers) | Consumes pure-algo `_px3`, runs merchants + catalog + products |
+| Concurrency benchmark | Measured throughput / 429 rate |
 
 ---
 

@@ -55,12 +55,12 @@ Each gotcha includes:
 
 | Source | Path | Gotchas extracted |
 |---|---|---|
-| **iFood production project** | `projects/sourcing-cracked/ifood-web/` | 25 |
-| **Grubhub production project** | `projects/sourcing-cracked/grubhub-web/` | (largely overlaps with iFood) |
-| **Desktop iteration archives (5)** | `Desktop/新建文件夹*` + `ifood-pxcookie-update-2026-05-19` | 30 |
+| **iFood production project** | (author's private sourcing project, ifood-web) | 25 |
+| **Grubhub production project** | (author's private sourcing project, grubhub-web) | (largely overlaps with iFood) |
+| **Desktop iteration archives (5)** | (author's local working archives) | 30 |
 | **AI_re baseline gotchas.md** | `skill/AI_re/references/gotchas.md` | 14 (mostly already in the above archives) |
-| **perimeter_X legacy project** | `lsd_projects/perimeter_X/` | heavily overlaps with Desktop |
-| **perimeterX_Re refactor project** | `lsd_projects/perimeterX_Re/` ⭐ | **+7 new discoveries** (Cookie TTL, Bundle#4 contradiction, PoW cache trap, trajectory pool too small, captcha.js separate versioning, Chrome version binding) |
+| **perimeter_X legacy project** | (author's local legacy project) | heavily overlaps with Desktop |
+| **perimeterX_Re refactor project** | (author's local fork-era project) ⭐ | **+7 new discoveries** (Cookie TTL, Bundle#4 contradiction, PoW cache trap, trajectory pool too small, captcha.js separate versioning, Chrome version binding) |
 
 **After dedup: 68 independent gotchas**. Where both sides mentioned a gotcha, the more thorough version was retained + double-cited.
 

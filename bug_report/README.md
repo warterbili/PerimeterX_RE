@@ -54,12 +54,12 @@
 
 | 来源 | 路径 | 提取的坑数 |
 |---|---|---|
-| **iFood 生产项目** | `projects/sourcing-cracked/ifood-web/` | 25 |
-| **Grubhub 生产项目** | `projects/sourcing-cracked/grubhub-web/` | (跟 ifood 多重合) |
-| **Desktop 阶段性档案 (5 个)** | `Desktop/新建文件夹*` + `ifood-pxcookie-update-2026-05-19` | 30 |
+| **iFood 生产项目** | （作者私有 sourcing 项目，ifood-web） | 25 |
+| **Grubhub 生产项目** | （作者私有 sourcing 项目，grubhub-web） | （跟 ifood 多重合） |
+| **Desktop 阶段性档案 (5 个)** | （作者本地工作目录归档） | 30 |
 | **AI_re 基线 gotchas.md** | `skill/AI_re/references/gotchas.md` | 14（多数已在上述档案里） |
-| **perimeter_X 老项目** | `lsd_projects/perimeter_X/` | 跟 Desktop 大量重合 |
-| **perimeterX_Re 重构项目** | `lsd_projects/perimeterX_Re/` ⭐ | **+7 条新发现**（Cookie TTL、Bundle#4 矛盾、PoW 缓存陷阱、轨迹池过小、captcha.js 跟版、Chrome 版本绑定） |
+| **perimeter_X 老项目** | （作者本地 legacy 项目） | 跟 Desktop 大量重合 |
+| **perimeterX_Re 重构项目** | （作者本地 fork 期项目） ⭐ | **+7 条新发现**（Cookie TTL、Bundle#4 矛盾、PoW 缓存陷阱、轨迹池过小、captcha.js 跟版、Chrome 版本绑定） |
 
 **去重后：68 条独立坑**。两边都提到的坑保留更详尽的版本 + 双引用。
 

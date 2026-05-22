@@ -140,5 +140,5 @@ If production fails, follow the [`../script/`](../script/) decision tree:
 
 ---
 
-*Source: `perimeter_X/src/generators/grubhub_px2.js` + `templates/grubhub_ev*_template.json`.
+*Source: the legacy `perimeter_X` project's `grubhub_px2.js` + `templates/grubhub_ev*_template.json`.
 Corresponds to Grubhub SDK sha256 `5e81bffc…`; 6-batch decode loop + 5× live-generator runs, 10/10 pass.*

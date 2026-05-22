@@ -4555,11 +4555,11 @@ perimeter/
 | Next major revision | When PX pushes an SDK major version (typically 3-6 months) |
 
 **Source materials**: this document is the digested merge of 31 source documents (12,000+ lines). The originals were deleted after merge (per the "redundant with silent path → trimmed" principle). Original file sources:
-- Main EN 13 (perimeterX_Re/docs/04_bundle)
-- Field tables + gotchas 4 (perimeter_X/docs/zh)
-- Chinese pedagogical 4 (Desktop 新建文件夹 (4)/docs)
-- Deep-Dive 7 (perimeter_X/docs/references)
-- Industry perspective 3 (ifood-web production project)
+- Main EN 13 (from the legacy `perimeterX_Re` project's 04_bundle chapter)
+- Field tables + gotchas 4 (from the legacy `perimeter_X` project's docs)
+- Chinese pedagogical 4 (author's local iteration archive)
+- Deep-Dive 7 (from the legacy `perimeter_X` project's references)
+- Industry perspective 3 (author's private sourcing project, ifood-web)
 
 To trace which segment came from which original document, the git history (`sourcing-cracked` repo before commit `007623b`) or the `warterbili/px3cookie` GitHub repo still retains the full originals.
 

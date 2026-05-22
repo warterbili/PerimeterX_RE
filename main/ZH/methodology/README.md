@@ -91,8 +91,8 @@ Stage 7 — Validate           10 × 稳定性测试
 | 前身 | 角色 |
 |---|---|
 | `../PX_逆向方法论_通用版.md`（1233 行 grep 工具书） | **保留** 作 §4 Stage 4 的"grep 模式速查"，本目录引用 |
-| `perimeterX_Re/docs/06_methodology/`（10 份英文流程） | **结构来源** —— 本目录 10 章布局参考其结构 |
-| `perimeter_X/docs/zh/18_methodology.md`（610 行实战节奏） | **内容主干** —— 7 阶段叙事 + 附录 A/B/C 全用 |
+| legacy `perimeterX_Re` 项目的 06_methodology（10 份英文流程） | **结构来源** —— 本目录 10 章布局参考其结构 |
+| legacy `perimeter_X` 项目的 `18_methodology.md`（610 行实战节奏） | **内容主干** —— 7 阶段叙事 + 附录 A/B/C 全用 |
 
 三份独立读各有优势；本目录是**最佳实践合并版**。
 

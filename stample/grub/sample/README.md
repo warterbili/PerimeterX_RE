@@ -263,6 +263,6 @@ sha256sum ../source/init.js
 
 ---
 
-*抓包来源：原 `perimeter_X/samples/grubhub/`，校验时间 2026-05-21。
+*抓包来源：作者本地 legacy `perimeter_X` 项目的 Grubhub 样本目录，校验时间 2026-05-21。
 全部 6 批响应 status=200，已用 [`skill/AI_re/scripts/decode_payload.js`](../../../skill/AI_re/scripts/decode_payload.js)
 回放验证通过。英文版见 [`README_EN.md`](README_EN.md)。*

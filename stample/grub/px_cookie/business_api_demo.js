@@ -45,8 +45,9 @@
  *   - 403 表示 _px2 评分不够，PX 拦截 (换 IP / 算法检查)
  *   - 401 "Invalid client_id" 表示 PX 过了但 client_id 错（项目用 config.yaml 的值）
  *
- * 完整链路 (8 步) 实现见 sourcing-cracked/grubhub-web/grubhub-auth/core/python/login.py
- *   本 demo 只演示前 3 步 (PX 通过的核心证据)；后续 OTP + OAuth2 SSO 需 mail.tm + 更多状态
+ * 完整链路 (8 步) 实现在作者私有 sourcing 项目中
+ * 本 demo 只演示前 3 步（PX 通过的核心证据）
+ * 后续 OTP + OAuth2 SSO 涉及账号自动化，公开仓库不提供
  */
 
 const https = require('https');

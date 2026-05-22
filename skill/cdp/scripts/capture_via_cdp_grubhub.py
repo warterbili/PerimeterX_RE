@@ -17,11 +17,12 @@ import urllib.request
 import urllib.parse
 from pathlib import Path
 
-SKILL = r"C:\Users\lsd\.claude\skills\cdp-browser\scripts"
+import os
+SKILL = os.environ.get("CDP_SKILL_DIR") or str(Path.home() / ".claude" / "skills" / "cdp-browser" / "scripts")
 sys.path.insert(0, SKILL)
 from cdp import CDPClient  # noqa: E402
 
-ROOT = Path(r"C:\Users\lsd\lsd_projects\perimeter_X\_test_run\grubhub")
+ROOT = Path(os.environ.get("CAPTURE_ROOT") or str(Path(__file__).resolve().parent.parent / "capture_workspace" / "grubhub"))
 SDK_DIR = ROOT / "sdk"
 SAMPLES = ROOT / "samples"
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"

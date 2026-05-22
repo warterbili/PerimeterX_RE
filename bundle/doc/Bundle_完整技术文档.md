@@ -4981,11 +4981,11 @@ perimeter/
 | 下次大修 | 当 PX 推 SDK 大版本时（典型 3-6 个月） |
 
 **素材来源**：本文档是 31 份原始文档（12000+ 行）的消化整合版。原素材合并完后已删除（按"跟无感重复 → 精简"原则）。原文件来源：
-- 主线 EN 13 份（perimeterX_Re/docs/04_bundle）
-- 字段表 + 踩坑 4 份（perimeter_X/docs/zh）
-- 中文 pedagogical 4 份（Desktop 新建文件夹 (4)/docs）
-- Deep-Dive 7 份（perimeter_X/docs/references）
-- 业界视角 3 份（ifood-web 生产项目）
+- 主线 EN 13 份（来自 legacy `perimeterX_Re` 项目 04_bundle 章节）
+- 字段表 + 踩坑 4 份（来自 legacy `perimeter_X` 项目 docs）
+- 中文 pedagogical 4 份（作者本地阶段性档案）
+- Deep-Dive 7 份（来自 legacy `perimeter_X` 项目 references）
+- 业界视角 3 份（作者私有 sourcing 项目 ifood-web）
 
 要回溯任意一段是从哪份原始文档来的，git history (`sourcing-cracked` 仓库 commit `007623b` 之前) 或 GitHub `warterbili/px3cookie` 仓库都还保留着完整原文。
 

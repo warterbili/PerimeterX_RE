@@ -10,12 +10,18 @@
     ...
   }
 """
-import json, sys, re
+import os, json, sys, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, r"C:\Users\lsd\projects\ICT")
-from ICT.px_pure_cookie import decode_ob, GT  # type: ignore
+_decoder_dir = os.environ.get("PX_PY_DECODER_DIR")
+if not _decoder_dir:
+    raise RuntimeError(
+        "Set PX_PY_DECODER_DIR to the directory containing px_pure_cookie.py "
+        "(must expose decode_ob and GT)."
+    )
+sys.path.insert(0, _decoder_dir)
+from px_pure_cookie import decode_ob, GT  # type: ignore
 
 def main():
     # Try matching state.* values per batch

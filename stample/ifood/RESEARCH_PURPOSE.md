@@ -55,7 +55,7 @@
 ### 准备
 
 ```bash
-cd C:/Users/lsd/lsd_projects/perimeter/stample/ifood/px_cookie
+cd <repo-root>/stample/ifood/px_cookie
 node smoke_test.js     # 自检 21/21 ✓ 确认环境就绪
 ```
 
@@ -185,12 +185,11 @@ GraphQL response: HTTP 200  (2057ms)
 
 ### 生产项目（外部）
 
-| 路径 | 内容 |
+| 模块 | 用途 |
 |---|---|
-| `C:\Users\lsd\projects\sourcing-cracked\ifood-web\` | iFood 完整生产爬虫 |
-| ├── `px_cookie_generator.py` | Python 版 generator（包了 Node.js 子进程） |
-| ├── `ifood_full_scraper.py` | 主爬虫（merchants + catalog + products） |
-| └── `benchmark_workers.py` | 并发性能测试（实测吞吐/429 率） |
+| Python 版 _px3 generator | 包了 Node.js 子进程，供生产调用 |
+| iFood 主爬虫（商家 / 菜单 / 商品三级） | 消费纯算 _px3，跑 merchants + catalog + products |
+| 并发性能测试 | 实测吞吐 / 429 率 |
 
 ---
 

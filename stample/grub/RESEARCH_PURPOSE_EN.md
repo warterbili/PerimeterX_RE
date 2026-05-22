@@ -77,7 +77,7 @@ Business API endpoints (all on `api-gtm.grubhub.com`):
 ### Setup
 
 ```bash
-cd C:/Users/lsd/lsd_projects/perimeter/stample/grub/px_cookie
+cd <repo-root>/stample/grub/px_cookie
 node smoke_test.js     # self-test 17/17 ✓ confirms environment ready
 ```
 
@@ -217,15 +217,11 @@ To complete the full 8 steps (OTP verification → SSO → instacart_sid), use m
 
 ### Production Project (External)
 
-| Path | Contents |
+| Module | Purpose |
 |---|---|
-| `C:\Users\lsd\projects\sourcing-cracked\grubhub-web\` | Grubhub complete production |
-| ├── `grubhub-auth/core/python/register.py` | Registration machine (with OTP + SSO) |
-| ├── `grubhub-auth/core/python/login.py` | Login machine |
-| ├── `grubhub-auth/core/python/refresh.py` | Token refresh (runs on a daily schedule) |
-| ├── `grubhub-auth/core/python/px_pure_cookie.py` | Python generator |
-| ├── `grubhub-auth/data/accounts.jsonl` | Shared account pool (5 accounts) |
-| └── `grubhub-instacart/core/crawler_full.py` | Downstream Instacart scraper (**no PX**) |
+| Grubhub auth pipeline (registration / login / token-refresh runners) | Completes the 9-step chain to obtain `__Host-instacart_sid` |
+| Python `_px2` generator | Wraps the Node.js subprocess for production use |
+| Downstream Instacart scraper | **No PX** — consumes upstream account tokens |
 
 ---
 

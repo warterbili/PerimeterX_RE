@@ -242,7 +242,7 @@ Expected output: all `batch X: OK` + `post1=200 post2=200`.
 
 ---
 
-*Source: original `perimeter_X/samples/ifood/`, verified 2026-05-21.
+*Source: the legacy `perimeter_X` project's iFood sample directory, verified 2026-05-21.
 All 6 batches' responses are status=200, and the decoder
 [`skill/AI_re/scripts/decode_payload.js`](../../../skill/AI_re/scripts/decode_payload.js)
 re-decoding pass has been validated. Chinese version: [`README.md`](README.md).*

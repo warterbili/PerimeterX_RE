@@ -6,11 +6,16 @@ Compares:
   - Form params (key set, key order, value patterns)
   - Body length deltas
 """
-import sys, json, urllib.parse
+import os, sys, json, urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, r"C:\Users\lsd\projects\ICT")
+_decoder_dir = os.environ.get("PX_PY_DECODER_DIR")
+if not _decoder_dir:
+    raise RuntimeError(
+        "Set PX_PY_DECODER_DIR to the directory containing px_pure_cookie.py."
+    )
+sys.path.insert(0, _decoder_dir)
 sys.path.insert(0, str(ROOT / "deliverables"))
 from px_pure_cookie_v2 import _generate_cookie, DEFAULT_UA  # type: ignore
 

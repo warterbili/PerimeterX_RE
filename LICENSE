@@ -1,0 +1,119 @@
+# LICENSE — Dual-Track
+
+This project (`perimeter`) is released under a **dual-track license** to
+balance open research with anti-commercial-abuse protections, following the
+common practice of academic + security-research projects (e.g., Trail of Bits
+/ NCC Group / Project Zero companion repos).
+
+## Track 1 — Code: AGPL-3.0-only
+
+The following directories and files contain **executable code** and are
+licensed under the **GNU Affero General Public License v3.0**. Full license
+text: <https://www.gnu.org/licenses/agpl-3.0.txt> (SPDX: `AGPL-3.0-only`).
+
+Covered paths:
+
+- `revers/` — 9 pure-algorithm modules
+- `stample/*/px_cookie/` — iFood + Grubhub generators
+- `bundle/script/` — Bundle userscripts and shell helpers
+- `bundle/stample/helpers/` — WASM extraction / mouse trajectory tools
+- `node_bridge/` — Plan B environment-patching code
+- `skill/*/scripts/` — All CLI scripts under any skill directory
+- Any other `.js` / `.py` / `.sh` files inside the repository unless
+  otherwise marked
+
+SPDX identifier: `AGPL-3.0-only`
+
+Key effect: **anyone who uses this code to run a network service (SaaS,
+internal tool serving multiple users, hosted scraper, etc.) MUST publish
+their complete corresponding source code under the same AGPL-3.0 license**.
+Internal personal use, academic research, and security audit are all
+permitted without copyleft obligation as long as the modified code is not
+distributed or operated as a service for third parties.
+
+## Track 2 — Documentation: CC BY-NC-SA 4.0
+
+The following content is **documentation, methodology, captures, and
+research material** and is licensed under the **Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International** license. Full
+license text: <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
+(SPDX: `CC-BY-NC-SA-4.0`).
+
+Covered paths:
+
+- `main/` — All Chinese and English methodology, technical reference, and
+  field documents
+- `bug_report/` — All gotcha documents, drift cases, and worklogs
+- `research/` — All six research dossiers
+- `bundle/doc/` — Bundle full technical documentation
+- `bundle/source/SDK_INFO.md`, `bundle/source/WASM_ANALYSIS.md` — Bundle
+  metadata and WASM analysis docs
+- All `README.md`, `README_EN.md`, `SKILL.md`, and similar narrative files
+  anywhere in the repository
+- `stample/*/sample/` — Real-capture sample metadata and decoded JSON
+  references (but not the underlying captured byte streams, which are
+  ephemeral protocol data and not authored content)
+
+SPDX identifier: `CC-BY-NC-SA-4.0`
+
+Key effect: **the documentation may be shared and adapted for non-commercial
+purposes only, with attribution to `warterbili`, and derivative works must
+carry the same CC BY-NC-SA 4.0 license**. Commercial use of any kind
+(including republication on a paid platform, integration into a commercial
+training corpus, or use as marketing material for a commercial anti-bot
+service) is **not permitted**.
+
+## Why a Dual Track
+
+The Creative Commons FAQ explicitly recommends against using CC for software
+because CC was not designed to handle distribution-and-modification
+mechanics specific to source code. The Free Software Foundation similarly
+recommends against using GPL/AGPL for prose documentation.
+
+Combining the two:
+
+- **AGPL-3.0** protects against closed-source SaaS exploitation of the
+  reverse-engineering code while still permitting personal use, research,
+  and contribution back.
+- **CC BY-NC-SA 4.0** explicitly forbids commercial use of the methodology
+  and findings, making the documentation unusable for commercial anti-bot
+  bypass services without permission from the author.
+
+Together they form a two-layer anti-abuse shield.
+
+## Disclaimer (Restated From README §16)
+
+This project is released strictly for **research, education, and personal
+security-audit purposes**. The author (`warterbili`) accepts no liability for
+any direct or indirect damage caused by any party's use of this project.
+Users must comply with the laws of their jurisdiction (US CFAA, EU GDPR,
+China Cybersecurity / Data Security / PIPL, etc.) and the terms of service
+of any third-party platform they interact with. The project does NOT target
+any specific merchant; iFood and Grubhub serve only as technical objects of
+protocol-level reverse-engineering research.
+
+Use of this project — whether the code under AGPL-3.0 or the documentation
+under CC BY-NC-SA 4.0 — implies acceptance of the disclaimer in README §16.
+
+## Responsible Disclosure
+
+If PerimeterX / HUMAN Security wishes to initiate coordinated disclosure,
+the author reserves the right to adjust the disclosure scope within 90 days
+of a formal request. Contact via GitHub Issues.
+
+---
+
+**Summary**:
+
+| What you want to do | Allowed? |
+|---|---|
+| Read the docs for learning | ✅ Yes |
+| Run the code locally for personal research / audit | ✅ Yes |
+| Fork on GitHub and improve under the same licenses | ✅ Yes |
+| Run an internal scraper at your company that uses this code | ⚠️ Yes, but the modified source must be available to your internal users (AGPL-3.0 §13) |
+| Wrap the code into a commercial SaaS / paid product | ❌ Must open-source the entire stack under AGPL-3.0 |
+| Sell access to documentation / republish for profit | ❌ CC BY-NC-SA 4.0 forbids commercial use |
+| Use the methodology to train a commercial AI model | ❌ Commercial use of CC-NC content not allowed |
+| Cite in an academic paper | ✅ Yes (see README §17 BibTeX) |
+
+For questions or licensing requests beyond these tracks, open a GitHub Issue.

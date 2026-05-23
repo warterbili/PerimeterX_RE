@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>iFood Live Run 200</title>
+<style>body { font-family: 'SF Mono', 'Cascadia Mono', Menlo, monospace; background: #1e1e1e; color: #d4d4d4; margin: 0; padding: 32px; }
+.title { font-size: 22px; color: #4ec9b0; margin-bottom: 4px; font-weight: 600; }
+.subtitle { font-size: 13px; color: #888; margin-bottom: 24px; }
+.grid { display: grid; gap: 20px; }
+.panel { background: #252526; border: 1px solid #3e3e42; border-radius: 6px; padding: 18px; }
+.panel h3 { margin: 0 0 12px 0; font-size: 13px; color: #569cd6; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+pre { margin: 0; font-size: 12.5px; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.out .ok { color: #4ec9b0; font-weight: 600; }
+.out .http200 { color: #4ec9b0; font-weight: 700; background: #1e3a32; padding: 0 4px; border-radius: 3px; }
+.out .px-pass { color: #4ec9b0; font-weight: 700; }
+.out .target { color: #f0c674; font-weight: 700; }
+.badge { display: inline-block; background: #4ec9b0; color: #1e1e1e; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; margin-left: 8px; }
+.badge-px { background: #569cd6; color: #fff; }
+.grid { grid-template-columns: 1fr 1fr; }</style></head>
+<body>
+  <div class="title">iFood <span class="badge">HTTP 200</span> — _px3 → GraphQL Live Run</div>
+  <div class="subtitle">Verified 2026-05-23 · BrightData country-br · merchant: Bar e Lanches Estadão (São Paulo Centro)</div>
+  <div class="grid">
+    <div class="panel">
+      <h3>📄 Demo code (excerpt)</h3>
+      <pre class="code">// stample/ifood/px_cookie/business_api_demo.js  (key snippet)
+const generatePx3 = require('./ifood_px3');
+
+const DEFAULT_MERCHANT_ID = '5770dab7-943e-4046-9b71-1f9d39aec822';
+const GRAPHQL_URL = 'https://cw-marketplace.ifood.com.br/v1/merchant-info/graphql'
+                  + `?latitude=${LAT}&longitude=${LNG}&channel=IFOOD`;
+
+(async () =&gt; {
+  // Step 1: pure-algorithm _px3 generation
+  const px = await generatePx3();
+  const cookies = {
+    _px3:   px.cookie_value,
+    _pxvid: px.state.vid,
+    _pxcts: px.state.cts,
+  };
+
+  // Step 2: call iFood GraphQL with _px3 cookie
+  const res = await postGraphQL(merchantId, cookies, UA);
+  console.log(`GraphQL response: HTTP ${res.status}`);  // ← HTTP 200
+  console.log(JSON.parse(res.body));
+})();</pre>
+    </div>
+    <div class="panel">
+      <h3>⚡ Terminal output</h3>
+      <pre class="out">[proxy] using http://brd-customer-hl_*****-zone-residential-country-br:*****@zproxy.lum-superproxy.io:22225
+━━━ Step 1: generate _px3 ━━━
+<span class="ok">✅</span> _px3=82643a3ade11d4e1e87fa490b61f8e381eb13cd6…  ttl=330  (7152ms)
+   uuid=6f38d4d0-56b9-11f1-b98d-95570c5606c4  vid=708d460d-56b9-11f1-8f51-4f3e847d5fc2
+
+━━━ Step 2: call GraphQL with _px3 ━━━
+   merchant_id: 5770dab7-943e-4046-9b71-1f9d39aec822
+   cookies: _px3, _pxvid, _pxcts
+
+GraphQL response: <span class="http200">HTTP 200</span>  (1841ms)
+<span class="ok">✅</span> Business API succeeded — _px3 score sufficient
+
+{
+  "data": {
+    "merchant": {
+      "available": true,
+      "name": "Bar e Lanches Estadão",
+      "userRating": 4.9
+    }
+  }
+}
+
+━━━ Total: 8993ms  (gen 7152 + api 1841) ━━━</pre>
+    </div>
+  </div>
+</body></html>

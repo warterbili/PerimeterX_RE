@@ -9,7 +9,7 @@
  *   4. POST collector#1, decode ob#1 → extract state.{no,qa,vid,pxsid,cts,to,appId,jf}
  *   5. POST collector#2 with state injected, decode ob#2, extract _px3
  *
- * Constants (verified against locked SDK b47a639cde9d…, 10/10 validated):
+ * Constants (verified against locked SDK e042d5dede9d…, 10/10 validated):
  *   AppID:  PXO1GDTa7Q
  *   TAG:    U0MmDhUmOnhXSw==
  *   FT:     401

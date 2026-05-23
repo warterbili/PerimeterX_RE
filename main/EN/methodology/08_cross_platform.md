@@ -150,7 +150,7 @@ def px_serialize(obj):
 5. Run 100-iteration fuzz testing with random inputs (pre-generate 100 UUIDs/states; compute on both sides)
 ```
 
-Concrete test vector templates: see [`../../../revers/test/`](../../../revers/test/).
+Concrete test vector templates: see <!-- removed broken link: ../../../revers/test/ -->.
 
 ---
 
@@ -205,7 +205,10 @@ def uuid_v1():
     # but clockseq behavior isn't fully identical; PX uses its own random
 ```
 
-Full version: [`../../../skill/AI_re/scripts/py_port/`](../../../skill/AI_re/scripts/py_port/) (TBD — future work).
+> **Future work**: a complete Python port of the 9 reverse modules (under
+> `skill/AI_re/scripts/py_port/`). The cross-language quirks above are
+> documented; a faithful port should also include a smoke harness comparing
+> Python output to the Node reference. PRs welcome.
 
 ---
 

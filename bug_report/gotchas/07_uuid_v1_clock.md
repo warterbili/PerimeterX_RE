@@ -65,7 +65,7 @@ assert.strictEqual(uuid1.split('-')[4], uuid2.split('-')[4]);
 
 ## Related
 
-- [`docs/02_algorithms/07_uuid.md`](../02_algorithms/07_uuid.md)
+- [`docs/02_algorithms/07_uuid.md`](../../revers/uuid.js)
 
 ## Next
 

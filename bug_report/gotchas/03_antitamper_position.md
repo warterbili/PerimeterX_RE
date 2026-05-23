@@ -63,8 +63,8 @@ assert.strictEqual(ev2[slot], expected);
 
 ## Related
 
-- [`docs/02_algorithms/06_antitamper.md`](../02_algorithms/06_antitamper.md)
-- [`docs/03_protocol/04_ev2.md`](../03_protocol/04_ev2.md)
+- [`docs/02_algorithms/06_antitamper.md`](../../revers/antitamper.js)
+- [`docs/03_protocol/04_ev2.md`](../../main/EN/PX_SDK_Reverse_Engineering.md)
 
 ## Next
 

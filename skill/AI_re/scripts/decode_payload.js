@@ -22,7 +22,7 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
-const { decodePayload, DEFAULT_TIMESTAMP } = require('../reverse/payload');
+const { decodePayload, DEFAULT_TIMESTAMP } = require('../../../revers/payload');
 
 const ROOT = path.resolve(__dirname, '..');
 const JSON_DIR = path.join(ROOT, 'event_json');

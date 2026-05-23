@@ -72,7 +72,7 @@ assert.notStrictEqual(ev.offsetY, Math.floor(ev.offsetY), 'offsetY must be fract
 
 ## Related
 
-- [`docs/04_bundle/04_bundle3_press.md`](../04_bundle/04_bundle3_press.md)
+- [`docs/04_bundle/04_bundle3_press.md`](../../main/EN/PX_Bundle_Reverse_Methodology.md)
 
 ## Next
 

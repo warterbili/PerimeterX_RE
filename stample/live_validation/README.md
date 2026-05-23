@@ -44,7 +44,8 @@
 stample/live_validation/
 ├── README.md            ← 本文件（验证体系 + 怎么读 journal + 怎么写新 journal）
 └── journal/
-    └── 2026-05-21.md    ← 每次验证一份，按日期命名
+    ├── 2026-05-21.md    ← 双站首次端到端验证
+    └── 2026-05-23.md    ← 双站复跑 + demo 修复 + Grub 全链路打通（含 SSO → instacart_sid）
 ```
 
 journal 是**时间线档案**，**只追加**（SDK 升级 / 重新验证后加新文件，不改老的）。
@@ -56,6 +57,7 @@ journal 是**时间线档案**，**只追加**（SDK 升级 / 重新验证后加
 | 日期 | 站点 | 结果 | 详情 |
 |---|---|---|---|
 | 2026-05-21 | iFood + Grubhub | ✅ 双站全过 | [journal/2026-05-21.md](journal/2026-05-21.md) |
+| 2026-05-23 | iFood + Grubhub | ✅ 双站全链路打通（含 demo bug 修复 + Grub 拿到 `__Host-instacart_sid`） | [journal/2026-05-23.md](journal/2026-05-23.md) |
 
 ---
 

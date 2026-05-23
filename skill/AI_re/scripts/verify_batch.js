@@ -23,10 +23,12 @@
 
 const fs = require('fs');
 const path = require('path');
-const { decodePayload } = require('../reverse/payload');
-const { decodeOb } = require('../reverse/ob');
+const { decodePayload } = require('../../../revers/payload');
+const { decodeOb } = require('../../../revers/ob');
 
-const TAG = process.env.PX_TAG || 'U0MmDhUmOnhXSw==';  // override via env for OLD-SDK batches
+// Default TAG (iFood SDK). For Grubhub or other PX sites, the TAG is read from
+// meta.json per-batch (see verifyBatch). PX_TAG env var overrides everything.
+const DEFAULT_TAG = process.env.PX_TAG || 'U0MmDhUmOnhXSw==';
 
 function getParam(body, name) {
     // ⚠️ Important: do NOT do '+' → space substitution.
@@ -68,6 +70,9 @@ function ok(msg) {
 
 function verifyBatch(batchDir, verbose = false) {
     const meta = JSON.parse(fs.readFileSync(path.join(batchDir, 'meta.json'), 'utf8'));
+    // Per-batch TAG (e.g. Grub uses 'FmYgK1gdJEAP', iFood uses 'U0MmDhUmOnhXSw==').
+    // Env override wins; meta.json beats hardcoded iFood default.
+    const TAG = process.env.PX_TAG || meta.tag || DEFAULT_TAG;
     const uuid8 = (meta.uuid || '-').slice(0, 8);
     const sdk12 = (meta.sdk_sha256 || '-').slice(0, 12);
     const status = meta.status_http ?? meta.status_post_1 ?? '?';
@@ -110,7 +115,7 @@ function verifyBatch(batchDir, verbose = false) {
         const segCount = segments.length;
         const storedPath = path.join(batchDir, 'decoded_response_1.json');
         const out = {
-            _info: { segment_count: segCount, xorKey: parseInt((require('../reverse/ob').ml || (()=>'0'))(TAG)) % 128 },
+            _info: { segment_count: segCount, xorKey: parseInt((require('../../../revers/ob').ml || (()=>'0'))(TAG)) % 128 },
             segments: segments.map(s => {
                 const parts = s.split('|');
                 return { handler: parts[0], args: parts.slice(1) };

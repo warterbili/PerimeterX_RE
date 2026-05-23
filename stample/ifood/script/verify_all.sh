@@ -40,5 +40,5 @@ if [ -n "$failed_batches" ]; then
     echo "  ❌ 失败批次:$failed_batches"
     exit 1
 fi
-echo "  ✓ 全过 — 解码器对当前 SDK (b47a639c…) 工作正常"
+echo "  ✓ 全过 — 解码器对当前 SDK (e042d5de…) 工作正常"
 echo "═══════════════════════════════════════════"

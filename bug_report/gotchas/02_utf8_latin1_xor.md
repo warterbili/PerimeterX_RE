@@ -83,7 +83,7 @@ assert.strictEqual(decrypted, plain);  // round-trip preserves 中文
 
 ## Related
 
-- [`docs/02_algorithms/02_payload.md`](../02_algorithms/02_payload.md)
+- [`docs/02_algorithms/02_payload.md`](../../revers/payload.js)
 
 ## Next
 

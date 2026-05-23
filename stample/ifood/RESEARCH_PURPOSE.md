@@ -56,7 +56,8 @@
 
 ```bash
 cd <repo-root>/stample/ifood/px_cookie
-node smoke_test.js     # 自检 21/21 ✓ 确认环境就绪
+npm install https-proxy-agent     # 一次性，代理支持
+node smoke_test.js                # 自检 21/21 ✓ 确认环境就绪
 ```
 
 ### 跑 demo
@@ -64,39 +65,60 @@ node smoke_test.js     # 自检 21/21 ✓ 确认环境就绪
 ⚠️ **必须用巴西住宅代理**（Cloudflare 拦数据中心 IP + 非 BR IP）。本项目用 Bright Data：
 
 ```bash
+# PowerShell
+$env:HTTPS_PROXY = 'http://<BRD_USER>:<BRD_PASS>@zproxy.lum-superproxy.io:22225'
+# bash
 export HTTPS_PROXY='http://<BRD_USER>:<BRD_PASS>@<BRD_HOST>:<BRD_PORT>'
+
 node business_api_demo.js
 # 或指定商家 ID
-node business_api_demo.js ccd2ff85-a898-4da3-bd72-428a66443a2f
+node business_api_demo.js 5770dab7-943e-4046-9b71-1f9d39aec822
 ```
 
-需要 `npm i https-proxy-agent` 一次性安装代理支持。
+默认 `merchant_id = 5770dab7-…` (Bar e Lanches Estadão, São Paulo Centro) — 2026-05-23 实测仍活。
+如果该 ID 失效，从首页 feed 拉一个新的：
+`POST /v2/cardstack/search/home?latitude=-23.5505&longitude=-46.6333&channel=IFOOD&alias=HOME_MULTICATEGORY_V10`
+读 `MERCHANT_LIST_V2.contents[].id`。
 
-### ✅ 实测输出（2026-05-21 跑通）
+### ✅ 实测输出（2026-05-23 跑通）
 
 ```
-[proxy] using http://<BRD_USER>:***@<BRD_HOST>:<BRD_PORT>
+[proxy] using http://<BRD_USER>:***@zproxy.lum-superproxy.io:22225
 ━━━ Step 1: 生成 _px3 ━━━
-✅ _px3=08f5a8a978f48f083cb97786a6dcf91fb6cfa043…  ttl=330  (4413ms)
-   uuid=9378de50-552c-11f1-98bd-439e4f40c26a  vid=94574d6d-552c-11f1-82de-96bc3ff29a63
+✅ _px3=bd8a1bd1b7a5292d…  ttl=330  (5103ms)
+   uuid=...  vid=ee2defd8-5626-...
 
 ━━━ Step 2: 用 _px3 调 GraphQL 抓商家 ━━━
-   merchant_id: ccd2ff85-a898-4da3-bd72-428a66443a2f
+   merchant_id: 5770dab7-943e-4046-9b71-1f9d39aec822
    cookies: _px3, _pxvid, _pxcts
 
-GraphQL response: HTTP 200  (2057ms)
+GraphQL response: HTTP 200  (1897ms)
 ✅ 业务 API 调通 — _px3 评分足够
 
 {
   "data": {
     "merchant": {
-      "available": false,
-      "name": "Sorveteria Coelhinho - Shopping Vitória",
-      "userRating": 5
+      "available": true,
+      "name": "Bar e Lanches Estadão",
+      "userRating": 4.9
     }
   }
 }
+
+━━━ 总耗时: 7000ms  (gen 5103 + api 1897) ━━━
 ```
+
+### 2026-05-23 demo 修复记录（之前 400 的根因）
+
+之前的 demo 跑出来 400 "Merchant not found"，定位为 3 处叠加 bug，**单独修任一处都还是死，必须 3 处一起修才能通**：
+
+| # | 位置 | 原代码 | 后果 | 修复 |
+|---|---|---|---|---|
+| 1 | `business_api_demo.js:87` | `path: u.pathname` | URL `?latitude&longitude&channel=IFOOD` query string 被丢，后端拿不到地理索引 → 400 not_found | `path: u.pathname + u.search` |
+| 2 | 缺生产 header | 无 `platform / app_version / Country / browser` | 部分端点被 WAF 识别为非浏览器 | 4 个 header 全补 |
+| 3 | `DEFAULT_MERCHANT_ID = ccd2ff85-…` | 2026-05-21 verified，但 2 天后该店下架 → 400 not_found | 换 `5770dab7-…` (Bar e Lanches Estadão) |
+
+均已固化进 `business_api_demo.js`，开箱即跑。
 
 ### 关键发现（实测踩坑）
 
@@ -104,7 +126,9 @@ GraphQL response: HTTP 200  (2057ms)
 |---|---|---|
 | 不带代理 → 403 HTML | Cloudflare 拦非 BR IP | BR 住宅代理 |
 | `/v2/cardstack/search/home` 返回 px-captcha | feed 端点 PX 评分门槛比 GraphQL 高 | 用 `/v1/merchant-info/graphql` 端点验证 _px3 |
-| 缺 `?latitude=&longitude=&channel=IFOOD` → 400 "Merchant not found" | iFood 后端按地区索引 | URL 必须带这 3 参数 |
+| 缺 `?latitude=&longitude=&channel=IFOOD` → 400 "Merchant not found" | iFood 后端按地区索引；`u.pathname` 默认丢 query string | URL 必须带这 3 参数，且 `https.request({ path })` 用 `u.pathname + u.search` |
+| 400 "Merchant not found"（参数齐全） | merchant_id 已下架 / 改 ID | 换 ID；生产从 home feed 自动拉 |
+| 缺 `platform / app_version / Country / browser` header → 部分端点 WAF 拦 | iFood 服务端做浏览器 header 完整性校验 | 4 个 header 全带 |
 | iFood vs `cw-marketplace.ifood.com.br` 端点对比 | `marketplace.*` (移动 API) **无 PX**；`cw-marketplace.*` (web) **有 PX** | demo 用 cw- 因为我们的研究目标是测试 PX |
 
 ---
@@ -132,7 +156,7 @@ GraphQL response: HTTP 200  (2057ms)
                       │
                       ▼
          ┌──────────────────────────────────┐
-         │ ifood_full_scraper.py            │ ← sourcing-cracked/ifood-web/
+         │ ifood_full_scraper.py            │ ← 外部生产爬虫（不在本仓）
          │ (Python, curl_cffi chrome120 TLS)│
          └──────┬───────────────────────────┘
                 │ 每 ~300 次请求换 _px3
@@ -202,4 +226,5 @@ GraphQL response: HTTP 200  (2057ms)
 
 ---
 
-*校验时间 2026-05-21。生产实测 10/10 通过。*
+*校验时间 2026-05-23。生产实测 10/10 通过。Demo 已修复 3 处 bug（path + 生产 header + merchant ID），开箱即跑。
+完整端到端 journal：[`../live_validation/journal/2026-05-23.md`](../live_validation/journal/2026-05-23.md)*

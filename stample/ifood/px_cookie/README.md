@@ -45,7 +45,7 @@ APP_ID = "PXO1GDTa7Q"
 TAG    = "U0MmDhUmOnhXSw=="
 FT     = 401
 Cookie = _px3
-SDK SHA = b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8
+SDK SHA = e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e
 ```
 
 它们不是不同 SDK 版本，只是**同一份 SDK 的两个生成器实现**。
@@ -57,7 +57,7 @@ SDK SHA = b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8
 ```bash
 cd stample/ifood/px_cookie
 node smoke_test.js
-# 13/13 ✓ 通过即可
+# 21/21 ✓ 通过即可
 ```
 
 ### 方式 2：modular 版（推荐项目内使用）
@@ -125,7 +125,7 @@ node ifood_px3.js     # 看返回的 cookie_name == "_px3"
 
 如果实战失败：
 
-1. 检查 SDK SHA 是否还是 `b47a639c…` — 见 [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK 漂移应对
+1. 检查 SDK SHA 是否还是 `e042d5de…` — 见 [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK 漂移应对
 2. 跑 [`../script/verify_all.sh`](../script/verify_all.sh) — 看解码器还能不能解 6 批 sample
 3. 跑 [`../script/diff_samples.py`](../script/diff_samples.py) — 看新 SDK 字段是不是动了
 
@@ -141,4 +141,4 @@ node ifood_px3.js     # 看返回的 cookie_name == "_px3"
 ---
 
 *来源：legacy `perimeter_X` 项目的 `ifood_px3.js` + 作者本地 `px_cookie_v2.js` 阶段性档案。
-两份都对应同一份 iFood SDK（sha256 `b47a639c…`），smoke test 13/13 通过。*
+两份都对应同一份 iFood SDK（sha256 `e042d5de…` LF-normalized），smoke test 21/21 通过。*

@@ -56,7 +56,8 @@ Business API endpoints:
 
 ```bash
 cd <repo-root>/stample/ifood/px_cookie
-node smoke_test.js     # self-test 21/21 ✓ confirms environment ready
+npm install https-proxy-agent     # one-time, proxy support
+node smoke_test.js                # self-test 21/21 ✓ confirms environment ready
 ```
 
 ### Run the Demo
@@ -64,39 +65,60 @@ node smoke_test.js     # self-test 21/21 ✓ confirms environment ready
 ⚠️ **A Brazilian residential proxy is mandatory** (Cloudflare blocks datacenter IPs + non-BR IPs). This project uses Bright Data:
 
 ```bash
+# PowerShell
+$env:HTTPS_PROXY = 'http://<BRD_USER>:<BRD_PASS>@zproxy.lum-superproxy.io:22225'
+# bash
 export HTTPS_PROXY='http://<BRD_USER>:<BRD_PASS>@<BRD_HOST>:<BRD_PORT>'
+
 node business_api_demo.js
 # Or specify a merchant ID
-node business_api_demo.js ccd2ff85-a898-4da3-bd72-428a66443a2f
+node business_api_demo.js 5770dab7-943e-4046-9b71-1f9d39aec822
 ```
 
-Run `npm i https-proxy-agent` once to install proxy support.
+Default `merchant_id = 5770dab7-…` (Bar e Lanches Estadão, São Paulo Centro) — verified live 2026-05-23.
+If that ID dies, pull a fresh one from the home feed:
+`POST /v2/cardstack/search/home?latitude=-23.5505&longitude=-46.6333&channel=IFOOD&alias=HOME_MULTICATEGORY_V10`
+then read `MERCHANT_LIST_V2.contents[].id`.
 
-### ✅ Real Output (Verified 2026-05-21)
+### ✅ Real Output (Verified 2026-05-23)
 
 ```
-[proxy] using http://<BRD_USER>:***@<BRD_HOST>:<BRD_PORT>
+[proxy] using http://<BRD_USER>:***@zproxy.lum-superproxy.io:22225
 ━━━ Step 1: Generate _px3 ━━━
-✅ _px3=08f5a8a978f48f083cb97786a6dcf91fb6cfa043…  ttl=330  (4413ms)
-   uuid=9378de50-552c-11f1-98bd-439e4f40c26a  vid=94574d6d-552c-11f1-82de-96bc3ff29a63
+✅ _px3=bd8a1bd1b7a5292d…  ttl=330  (5103ms)
+   uuid=...  vid=ee2defd8-5626-...
 
 ━━━ Step 2: Use _px3 to query GraphQL for the merchant ━━━
-   merchant_id: ccd2ff85-a898-4da3-bd72-428a66443a2f
+   merchant_id: 5770dab7-943e-4046-9b71-1f9d39aec822
    cookies: _px3, _pxvid, _pxcts
 
-GraphQL response: HTTP 200  (2057ms)
+GraphQL response: HTTP 200  (1897ms)
 ✅ Business API works — _px3 score sufficient
 
 {
   "data": {
     "merchant": {
-      "available": false,
-      "name": "Sorveteria Coelhinho - Shopping Vitória",
-      "userRating": 5
+      "available": true,
+      "name": "Bar e Lanches Estadão",
+      "userRating": 4.9
     }
   }
 }
+
+━━━ Total: 7000ms  (gen 5103 + api 1897) ━━━
 ```
+
+### 2026-05-23 Demo Fix Log (Why the old demo returned 400)
+
+The previous demo returned 400 "Merchant not found". Three bugs were stacked — **fixing any one alone still fails; all three must be fixed**:
+
+| # | Location | Original | Effect | Fix |
+|---|---|---|---|---|
+| 1 | `business_api_demo.js:87` | `path: u.pathname` | The `?latitude&longitude&channel=IFOOD` query string was dropped, so the backend couldn't resolve the region index → 400 not_found | `path: u.pathname + u.search` |
+| 2 | Missing production headers | No `platform / app_version / Country / browser` | Some endpoints flagged as non-browser by WAF | Send all four headers |
+| 3 | `DEFAULT_MERCHANT_ID = ccd2ff85-…` | Verified 2026-05-21, but the store was de-listed 2 days later → 400 not_found | Switched to `5770dab7-…` (Bar e Lanches Estadão) |
+
+All three are baked into `business_api_demo.js` — runs out of the box.
 
 ### Key Findings (Measured Gotchas)
 
@@ -104,7 +126,9 @@ GraphQL response: HTTP 200  (2057ms)
 |---|---|---|
 | No proxy → 403 HTML | Cloudflare blocks non-BR IP | BR residential proxy |
 | `/v2/cardstack/search/home` returns px-captcha | Feed endpoint has higher PX score threshold than GraphQL | Use `/v1/merchant-info/graphql` to validate _px3 |
-| Missing `?latitude=&longitude=&channel=IFOOD` → 400 "Merchant not found" | iFood backend indexes by region | URL must include these 3 params |
+| Missing `?latitude=&longitude=&channel=IFOOD` → 400 "Merchant not found" | iFood backend indexes by region; `u.pathname` drops the query string | URL must include these 3 params; use `u.pathname + u.search` in `https.request({ path })` |
+| 400 "Merchant not found" (params present) | merchant_id has been de-listed / re-issued | Switch ID; production pulls fresh IDs from the home feed |
+| Missing `platform / app_version / Country / browser` header → some endpoints WAF-blocked | iFood validates browser-header completeness | Send all four headers |
 | iFood vs `cw-marketplace.ifood.com.br` comparison | `marketplace.*` (mobile API) **has no PX**; `cw-marketplace.*` (web) **has PX** | The demo uses `cw-` because our research target is to test PX |
 
 ---
@@ -132,7 +156,7 @@ GraphQL response: HTTP 200  (2057ms)
                       │
                       ▼
          ┌──────────────────────────────────┐
-         │ ifood_full_scraper.py            │ ← sourcing-cracked/ifood-web/
+         │ ifood_full_scraper.py            │ ← External production crawler (not in this repo)
          │ (Python, curl_cffi chrome120 TLS)│
          └──────┬───────────────────────────┘
                 │ rotate _px3 every ~300 requests
@@ -202,4 +226,5 @@ Measured throughput (from `benchmark_workers.py`):
 
 ---
 
-*Verified 2026-05-21. Production-measured 10/10 pass.*
+*Verified 2026-05-23. Production-measured 10/10 pass. Demo bugs fixed (path + production headers + merchant ID) — runs out of the box.
+Full end-to-end journal: [`../live_validation/journal/2026-05-23.md`](../live_validation/journal/2026-05-23.md)*

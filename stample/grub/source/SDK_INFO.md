@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | File | [`init.js`](init.js) |
-| **SHA-256** | `5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1` |
+| **SHA-256** | `4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301` (LF-normalized) |
 | Size | 270,004 bytes |
 | Source URL | `https://sensor.grubhub.com/O97ybH4J/init.js` |
 | Captured | 2026-05-20 via cdp-browser |
@@ -62,7 +62,7 @@ seg handler 例子（从真抓 OB 看到）：
 
 ```bash
 sha256sum stample/grub/source/init.js
-# expected: 5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1
+# expected: 4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301
 ```
 
 If your hash differs, PX has rolled a new SDK since this snapshot.

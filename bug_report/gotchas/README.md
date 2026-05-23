@@ -52,7 +52,7 @@ encoded as recipes. That is the value of this chapter.
 ## Test coverage
 
 Each bug has a corresponding regression test in
-[`tests/regression/`](../../tests/regression/). The CI gate refuses to merge if
+<!-- removed broken link: ../../tests/regression/ -->. The CI gate refuses to merge if
 any of them fails. This is how 22 hours of debugging becomes permanent project
 knowledge instead of tribal lore.
 

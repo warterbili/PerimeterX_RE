@@ -60,7 +60,7 @@ assert.strictEqual(out, golden.expected);
 
 ## Related
 
-- [`docs/04_bundle/02_bundle1.md`](../04_bundle/02_bundle1.md)
+- [`docs/04_bundle/02_bundle1.md`](../../main/EN/PX_Bundle_Reverse_Methodology.md)
 
 ## Next
 

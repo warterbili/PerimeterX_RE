@@ -88,7 +88,7 @@ python compare_my_ev2.py /path/to/my_ev2.json
 | FT | `401` |
 | Cookie | `_px3` (ttl 330) |
 | Collector | `collector-pxo1gdta7q.px-cloud.net/api/v2/collector` |
-| SDK SHA | `b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8` |
+| SDK SHA | `e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e` |
 
 ## Companion Resources
 

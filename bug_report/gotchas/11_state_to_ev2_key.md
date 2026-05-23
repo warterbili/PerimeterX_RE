@@ -93,9 +93,9 @@ samples.forEach(s => {
 
 ## Related
 
-- [`main/ZH/methodology/05_stage5_value_match.md`](../06_methodology/05_stage5_value_match.md)
+- [`main/ZH/methodology/05_stage5_value_match.md`](../../main/EN/methodology/05_stage5_value_match.md)
   (this is THE problem that motivated Stage 5)
-- [`docs/03_protocol/05_state.md`](../03_protocol/05_state.md)
+- [`docs/03_protocol/05_state.md`](../../main/EN/PX_SDK_Reverse_Engineering.md)
 
 ## Next
 

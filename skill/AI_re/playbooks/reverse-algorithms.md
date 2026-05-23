@@ -236,7 +236,7 @@ hM 解码器里。3 年没变过。
 ### 怎么逆出 hM 解码器
 
 直接从 SDK 拷源码（hM 函数 + 字母表常量），不用重写。AI_re 里已有 Node 版：
-[`../reverse/payload.js`](../reverse/payload.js)。
+[`../../../revers/payload.js`](../../../revers/payload.js)。
 
 或者从 SDK 自己读：
 
@@ -529,7 +529,7 @@ node skill/AI_re/scripts/verify_batch.js samples/<site>/1
 |---|---|
 | 算法完整公式 | [`../references/algorithm-chain.md`](../references/algorithm-chain.md) |
 | 完整 grep 模式索引 | [`../references/locate-by-pattern.md`](../references/locate-by-pattern.md) |
-| 9 个算法的可运行 Node 实现 | [`../reverse/`](../reverse/) |
+| 9 个算法的可运行 Node 实现 | [`../../../revers/`](../../../revers/) |
 | iFood vs Grubhub 算法对照 | [`../../../main/ZH/PX_完整SDK对照逆向方法论.md`](../../../main/ZH/PX_完整SDK对照逆向方法论.md) §2-3 |
 | 19 条算法相关坑 | [`../references/gotchas.md`](../references/gotchas.md) |
 

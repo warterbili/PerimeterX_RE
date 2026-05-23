@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | File | [`main.min.js`](main.min.js) |
-| **SHA-256** | `b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8` |
+| **SHA-256** | `e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e` |
 | Size | 231,438 bytes |
 | Source URL | `https://client.px-cloud.net/PXO1GDTa7Q/main.min.js` |
 | Captured | 2026-05-20 via cdp-browser |
@@ -41,7 +41,7 @@ Compare with older PX SDK versions which used `o` / `1`.
 
 ```bash
 sha256sum stample/ifood/source/main.min.js
-# expected: b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8
+# expected: e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e
 ```
 
 If your hash differs, PX has rolled a new SDK since this snapshot.

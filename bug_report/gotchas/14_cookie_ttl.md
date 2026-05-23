@@ -60,8 +60,8 @@ assert.ok(cookie.expiresAt > Date.now(), 'expiresAt must be future');
 
 ## Related
 
-- [`docs/03_protocol/06_cookies.md`](../03_protocol/06_cookies.md)
-- [`main/ZH/methodology/07_stage7_validate.md`](../06_methodology/07_stage7_validate.md)
+- [`docs/03_protocol/06_cookies.md`](../../main/EN/PX_SDK_Reverse_Engineering.md)
+- [`main/ZH/methodology/07_stage7_validate.md`](../../main/EN/methodology/07_stage7_validate.md)
 
 ## Phase 2 gotchas continue
 

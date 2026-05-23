@@ -13,7 +13,7 @@ throughout, including:
 
 - Inserting it into EV2 as `state.no`'s b64-key field
 - Feeding it to the anti-tamper function (`te(state.to, no)` — see
-  [`docs/02_algorithms/06_antitamper.md`](../02_algorithms/06_antitamper.md))
+  [`docs/02_algorithms/06_antitamper.md`](../../revers/antitamper.js))
 
 The anti-tamper function ends with `% 10` over `no`'s ASCII codes. If you
 `parseInt(no)` somewhere upstream, you lose the leading characters (`'a',
@@ -66,8 +66,8 @@ assert.notStrictEqual(sig, computeAntiTamper("3", 99999));  // Number version di
 
 ## Related
 
-- [`docs/02_algorithms/06_antitamper.md`](../02_algorithms/06_antitamper.md)
-- [`docs/02_algorithms/03_pc.md`](../02_algorithms/03_pc.md) (PC has a similar
+- [`docs/02_algorithms/06_antitamper.md`](../../revers/antitamper.js)
+- [`docs/02_algorithms/03_pc.md`](../../revers/pc.js) (PC has a similar
   no-as-string requirement)
 
 ## Next

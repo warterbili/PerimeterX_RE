@@ -44,7 +44,8 @@ The project has **3 layers** of validation, each complementing the others:
 stample/live_validation/
 ├── README.md            ← This file (validation system + how to read journals + how to write new ones)
 └── journal/
-    └── 2026-05-21.md    ← One per validation run, named by date
+    ├── 2026-05-21.md    ← First dual-site end-to-end validation
+    └── 2026-05-23.md    ← Dual-site re-run + demo fixes + Grub full chain (SSO → instacart_sid)
 ```
 
 The journal is a **timeline archive**, **append-only** (after SDK upgrades / re-validation, add a new file; don't modify old ones).
@@ -56,6 +57,7 @@ The journal is a **timeline archive**, **append-only** (after SDK upgrades / re-
 | Date | Sites | Result | Details |
 |---|---|---|---|
 | 2026-05-21 | iFood + Grubhub | ✅ Dual-site pass | [journal/2026-05-21.md](journal/2026-05-21.md) |
+| 2026-05-23 | iFood + Grubhub | ✅ Dual-site full chain (demo bug fixes + Grub `__Host-instacart_sid` obtained) | [journal/2026-05-23.md](journal/2026-05-23.md) |
 
 ---
 

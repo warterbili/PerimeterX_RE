@@ -28,7 +28,7 @@ TAG     = "FmYgK1gdJEAP"
 FT      = 359
 Cookie  = _px2  (TTL 500)
 Collector = https://sensor.grubhub.com/O97ybH4J/xhr/api/v2/collector
-SDK SHA = 5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1
+SDK SHA = 4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301
 ```
 
 > ⚠️ Older docs wrote AppID `PXdRotaCw0` / FT `330` — both wrong.
@@ -109,7 +109,7 @@ node grubhub_px2.js     # check cookie_name == "_px2"
 
 If production fails, follow the [`../script/`](../script/) decision tree:
 
-1. Check whether SDK SHA is still `5e81bffc…` — see [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK drift response
+1. Check whether SDK SHA is still `4accf1a5…` — see [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK drift response
 2. Run [`../script/verify_all.sh`](../script/verify_all.sh) — see whether the decoder can still decode 6 batches
 3. Run [`../script/diff_samples.py`](../script/diff_samples.py) — see whether new SDK fields shifted
 4. Run [`../script/find_state_keys.py`](../script/find_state_keys.py) — see whether state.* → EV2 key mapping changed
@@ -141,4 +141,4 @@ If production fails, follow the [`../script/`](../script/) decision tree:
 ---
 
 *Source: the legacy `perimeter_X` project's `grubhub_px2.js` + `templates/grubhub_ev*_template.json`.
-Corresponds to Grubhub SDK sha256 `5e81bffc…`; 6-batch decode loop + 5× live-generator runs, 10/10 pass.*
+Corresponds to Grubhub SDK sha256 `4accf1a5…`; 6-batch decode loop + 5× live-generator runs, 10/10 pass.*

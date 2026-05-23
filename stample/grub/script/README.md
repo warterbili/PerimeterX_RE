@@ -96,7 +96,7 @@ python compare_my_ev2.py /path/to/my_ev2.json
 | FT | `359` |
 | Cookie | `_px2` (ttl 500) |
 | Collector | `sensor.grubhub.com/O97ybH4J/xhr/api/v2/collector` |
-| SDK SHA | `5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1` |
+| SDK SHA | `4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301` |
 | OB wire chars | `o` + `I`（老版） |
 
 ⚠️ 旧文档把 AppID 写成 `PXdRotaCw0` / FT 写成 `330` —— 都错了。

@@ -133,7 +133,7 @@ Field meanings:
 | TAG | `U0MmDhUmOnhXSw==` |
 | FT | `401` |
 | Cookie | `_px3` |
-| SDK SHA-256 | `b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8` |
+| SDK SHA-256 | `e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e` |
 | Capture period | 2026-05-20 07:52:08Z – 08:00:41Z UTC (9 minutes) |
 | Capture tool | [`skill/cdp/scripts/capture_via_cdp_ifood.py`](../../../skill/cdp/scripts/capture_via_cdp_ifood.py) |
 | Capture method | CDP attached to real Chrome — no webdriver markers |
@@ -145,9 +145,9 @@ Field meanings:
 | 1 | `c83577f0-5420-11f1-9150-e1cff29e25cc` | 07:52:08 | — |
 | 2 | `d71c9fa0-5420-11f1-b025-9117175cbd66` | 07:52:33 | — |
 | 3 | `e5e801f0-5420-11f1-b77b-a38d8b11732d` | 07:52:58 | — |
-| 4 | `dccaacc0-5421-11f1-bba4-69ba559d3bad` | 07:59:51 | ✓ `b47a639c…` |
-| 5 | `eb306f70-5421-11f1-b21d-afdecf3ed7d5` | 08:00:16 | ✓ `b47a639c…` |
-| 6 | `fa165ea0-5421-11f1-85cb-e97d388bd2ae` | 08:00:41 | ✓ `b47a639c…` |
+| 4 | `dccaacc0-5421-11f1-bba4-69ba559d3bad` | 07:59:51 | ✓ `e042d5de…` |
+| 5 | `eb306f70-5421-11f1-b21d-afdecf3ed7d5` | 08:00:16 | ✓ `e042d5de…` |
+| 6 | `fa165ea0-5421-11f1-85cb-e97d388bd2ae` | 08:00:41 | ✓ `e042d5de…` |
 
 > Batches 1-3's `meta.json` **lack** the `sdk_sha256` field (the capture
 > script added it only at batch 4), but **the actual SDK is the same as

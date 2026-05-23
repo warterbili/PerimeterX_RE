@@ -78,70 +78,140 @@ Business API endpoints (all on `api-gtm.grubhub.com`):
 
 ```bash
 cd <repo-root>/stample/grub/px_cookie
-node smoke_test.js     # self-test 17/17 ✓ confirms environment ready
+npm install https-proxy-agent     # one-time, proxy support
+node smoke_test.js                # self-test 17/17 ✓ confirms environment ready
 ```
 
 ### Run the Demo
 
-⚠️ **A US residential proxy is recommended** (Grubhub is US-based; PX gives non-US IPs lower scores):
-
 ```bash
-export HTTPS_PROXY='http://<BRD_USER>:<BRD_PASS>@<BRD_HOST>:<BRD_PORT>'
 node business_api_demo.js
 ```
 
-Run `npm i https-proxy-agent` once to install proxy support.
+⭐ **As of 2026-05-23, the demo ships with a default US residential proxy + a default device-trusted test account** — `node business_api_demo.js` runs the full 3-stage chain to HTTP 200 out of the box.
+Override with env vars for production use:
 
-### ✅ Real Output (Verified 2026-05-21)
+```bash
+# PowerShell
+$env:HTTPS_PROXY     = 'http://<user>:<pwd>@<host>:<port>'   # US residential
+$env:GRUBHUB_EMAIL   = 'your@email.com'
+$env:GRUBHUB_PASSWORD= 'yourpassword'
+# bash
+export HTTPS_PROXY='http://<user>:<pwd>@<host>:<port>'
+export GRUBHUB_EMAIL='your@email.com'
+export GRUBHUB_PASSWORD='yourpassword'
+
+node business_api_demo.js
+```
+
+### ✅ Real Output (Verified 2026-05-23 — full 3-stage chain, all 200)
 
 ```
-[proxy] using http://<BRD_USER>:***@<BRD_HOST>:<BRD_PORT>
-━━━ Step 1: Generate _px2 ━━━
-✅ _px2=eyJ1IjoiNGE3OWVkYjAtNTUyZC0xMWYxLTg0ZmEt…  ttl=500  (3439ms)
-   uuid=4a79edb0-552d-11f1-84fa-27f24f2e45f3  vid=4ae84a1b-552d-11f1-a69a-ef65a2a9734d
+[proxy] using http://<user>:<pwd>@zproxy.lum-superproxy.io:22225
+━━━ Stage 1: Generate _px2 ━━━
+✅ _px2=eyJ1IjoiZDI0MWU4ZTAtNTY2MC0xMWYxLTk2ZTIt…  ttl=500  (3808ms)
+   uuid=d241e8e0-5660-11f1-96e2-3b6ca74ffdb1  vid=d32cf7af-5660-...
 
-━━━ Step 2: Call /auth (anonymous scope) with _px2 ━━━
+━━━ Stage 2: /auth (anonymous scope) ━━━
    endpoint: https://api-gtm.grubhub.com/auth
-   cookies: _px2, _pxvid
+   HTTP 200  (3752ms)
+✅ PX gate #1 passed — anon_token=9cd431b4-9ae9-4f…  expire_in=60min
 
-/auth response: HTTP 200  (1527ms)
-✅ Business API works — _px2 score sufficient
+━━━ Stage 3: /auth/login (real account) ━━━
+   email: ****@***.***
+   HTTP 200  (3295ms)
+✅ PX gate #2 passed — login successful
+   user access_token: 35ae5c54-****-****-****-************…
+   refresh_token:     54c8caee-****-****-****-************…
+   ud_id:             8f04f320-****-****-****-************
 
-anonymous_token: 024ce7a2-da71-4acc-b309-0d13cc72f8b7
-expires_in: 2026-05-21T16:54:07Z
-
-━━━ Total: 4966ms  (gen 3439 + api 1527) ━━━
-
-💡 After obtaining anonymous_token you can continue the full login/registration chain (mail.tm OTP + OAuth2 SSO)
-   Full production code in sourcing-cracked/grubhub-web/grubhub-auth/
+━━━ Total time: 10855ms  (gen 3808 + anon 3752 + login 3295) ━━━
 ```
+
+### Full Logic: What the Demo Does + Why It Used to Fail + Why It Now Works
+
+> Raw measured data: [`../live_validation/journal/2026-05-23.md`](../live_validation/journal/2026-05-23.md) §Part 2
+
+#### Full chain (demo runs 3 stages, verifying PX gates #1 + #2)
+
+```
+[1] grubhub_px2.js  →  _px2 + _pxvid                          ← generator (this dir)
+       (~3.8s, pure algorithm)
+            │
+            ▼
+[2] POST api-gtm.grubhub.com/auth (scope=anonymous)            ← PX gate #1
+       headers: cookie=_px2; _pxvid;  Chrome 120 UA
+       body:    { brand, client_id, device_id: <random UUID>, scope: "anonymous" }
+       → HTTP 200 + anonymous_token (UUID)
+            │
+            ▼
+[3] POST api-gtm.grubhub.com/auth/login                        ← PX gate #2
+       headers: cookie=_px2; _pxvid;  Authorization: Bearer <anon_token>
+       body:    { brand, client_id, device_id: "-981990071", email, password }
+       → HTTP 200 + user access_token + refresh_token + ud_id   ✅ demo ends
+       → HTTP 463 = PX passed + business layer demands OTP (device_id unfamiliar)
+       → HTTP 403 = PX score insufficient, blocked at the PX layer
+            │
+            │  Downstream production project (not in this demo):
+            ▼
+[4-7] 4-step SSO (init → authorize → /oauth2/<ud_id>/access → callback)
+       → Set-Cookie: __Host-instacart_sid
+            │
+            ▼
+[8] POST grocery.grubhub.com/graphql  (no PX! direct)
+       → Instacart grocery data
+```
+
+#### Where it used to fail (2026-05-21)
+
+**Punchline first**: the PX SDK portion ([1] [2]) **has always been green** — Stage 2 `/auth` was already 200 in the 2026-05-21 journal. The failure point was **Stage 3 `/auth/login`, stuck at HTTP 463**. The old demo called 463 "PX-pass" and returned — but no user access_token meant no SSO, **so end-to-end never completed**.
+
+Why did Stage 3 keep returning 463? Four stacked causes:
+
+| # | Cause | Detail |
+|---|---|---|
+| 1 | **`device_id` was a fresh UUID every run** | Old code used `crypto.randomUUID()` for `/auth/login`'s device_id. Grubhub's business layer saw "this email + unknown device" → forced OTP → 463 |
+| 2 | **`device_id` was an integer even when fixed** | Business-layer trust records are stored as **strings**. Even with a "trusted" account, integer `-981990071` doesn't match string `"-981990071"` → still treated as a new device |
+| 3 | **UA Chrome 148 didn't match TLS fingerprint** | Demo set UA `Chrome 148.0.0.0`, but the curl_cffi/proxy layer impersonated `chrome120`. PX cross-checks UA header vs TLS ClientHello → mismatch → score drop (not enough to fail Stage 2/3, but it added risk weight at the business layer) |
+| 4 | **No curated account pool** | The old demo asked the user to provide `GRUBHUB_EMAIL`/`PASSWORD`; random accounts have no device trust → business layer always demands OTP |
+
+The old demo returned 463 and stopped, with a comment saying "463 counts as PX-pass" — **but no user token = nothing downstream can run**.
+
+#### Why Stage 3 now returns 200 (2026-05-23)
+
+Three changes let the business layer pass us through:
+
+| # | Change | Code location | Why it works |
+|---|---|---|---|
+| 1 | **`device_id` is a fixed string `"-981990071"`** | `business_api_demo.js:205` | Business-layer trust records are stored as strings, and this number is **one-to-one bound to a specific account** (switching accounts requires switching device_id). Off by one digit → 463 |
+| 2 | **UA changed to Chrome 120 to match TLS** | `business_api_demo.js:102` | UA / TLS fingerprint consistent → PX score steady, business layer's trust signal improves |
+| 3 | **Default account is a maintained device-trusted account** | `DEFAULT_EMAIL` (line 68) | a device-trusted account is one that previously completed full OTP registration, so the business layer whitelisted its device_id → direct 200 |
+
+#### Two more changes live in the downstream production project (not in this demo)
+
+Listed for completeness — **this demo doesn't need them**:
+
+| # | Change | What it does |
+|---|---|---|
+| A | **Entry path: try `/auth/refresh` first, fallback to `/auth/login` on failure** | `/auth/refresh` is a low-bar PX endpoint + doesn't check device_id; accounts with a live refresh_token skip `/login` entirely |
+| B | **SSO step 3 (`PUT /oauth2/<ud_id>/access`) uses bare `_GH_HEADERS + Bearer`**, no `perimeter-x` HMAC header | That endpoint is also PX-gated, but adding the HMAC header actually causes 403 (its HMAC formula differs from other endpoints). Let the PX cookie travel via the jar; don't add a signed header |
+
+A and B serve `__Host-instacart_sid` extraction for grocery.grubhub.com data — orthogonal to validating the PX SDK here.
 
 ### Key Findings (Measured Gotchas)
 
 | Phenomenon | Cause | Fix |
 |---|---|---|
-| 401 "Invalid client_id" | Demo had an expired client_id hardcoded | Use `beta_UmWlpstzQSFmocLy3h1UieYcVST` (from `sourcing-cracked/grubhub-web/config.yaml`) |
-| Works without proxy (user's local IP) | Grubhub US accepts global IPs but PX score decreases | Add US residential proxy as insurance |
-| /auth returns UUID, not JWT | The anonymous scope returns a simple token, not a JWT | Working as intended — step 2 of registration exchanges for the user JWT |
+| Stage 2 HTTP 403 | _px2 score too low / datacenter IP / TLS fingerprint mismatch | Use a US residential proxy; align UA with TLS chrome120 |
+| Stage 3 HTTP 463 (OTP needed) | Business layer doesn't recognize the account's device_id | Switch to a device-trusted account or run the mail.tm OTP flow |
+| Stage 3 HTTP 403 | PX gate #2 didn't pass | Usually `_px2` cookie missing or expired in the jar |
+| Stage 3 HTTP 401 "Invalid client_id" | Demo has an expired client_id hardcoded | Use `beta_UmWlpstzQSFmocLy3h1UieYcVST` |
+| /auth returns UUID, not JWT | The anonymous scope returns a simple token | Working as intended — Stage 3's user access_token is the long-lived credential |
+| Works without a proxy (local IP) | Grubhub US accepts global IPs, but PX score drops | Use a US residential proxy as insurance (the demo ships one by default) |
 
-### Full-Chain Combat (2 PX Endpoints Verified)
+### Full Chain (extracting `__Host-instacart_sid`)
 
-The newer demo supports env vars for credentials → run the full chain:
-
-```bash
-export GRUBHUB_EMAIL='your@email.com'        # optional
-export GRUBHUB_PASSWORD='yourpassword'       # optional
-node business_api_demo.js
-```
-
-**Measured (2026-05-21)**:
-- Stage 1 ✅ Pure-algo _px2 generation (ttl=500, 7.8s)
-- Stage 2 ✅ `/auth (anonymous)` HTTP 200 + anon_token — **PX endpoint #1 passed**
-- Stage 3 ✅ `/auth/login (Bearer + email/pwd)` HTTP 463 + `verify_methods.OTP_EMAIL` — **PX endpoint #2 passed**
-
-463 = PX passed + Grubhub business-layer risk control demands OTP (device_id unfamiliar). Desktop (3) project's 5/5 real-account tests all returned 463, all judged PX-pass.
-
-To complete the full 8 steps (OTP verification → SSO → instacart_sid), use mail.tm + Web Unlocker proxy; full code in `sourcing-cracked/grubhub-web/grubhub-auth/core/python/`.
+This JS demo stops at Stage 3 (user access_token + refresh_token + ud_id). To continue and obtain the downstream grocery.grubhub.com cookie `__Host-instacart_sid` you need to run 4 more SSO steps — handled by the downstream production project (see journal §2.2 [7]-[10]). **This repo's job ends at Stage 3 — proving the PX SDK's _px2 is accepted at both gated endpoints by the live service.**
 
 ---
 
@@ -249,4 +319,5 @@ To complete the full 8 steps (OTP verification → SSO → instacart_sid), use m
 
 ---
 
-*Verified 2026-05-21. Production-measured 10/10 pass (account registration success rate across 5 accounts).*
+*Verified 2026-05-23. This JS demo runs the full 3-stage chain to HTTP 200 (device-trusted account, ~10.9s end-to-end).
+Full end-to-end journal: [`../live_validation/journal/2026-05-23.md`](../live_validation/journal/2026-05-23.md)*

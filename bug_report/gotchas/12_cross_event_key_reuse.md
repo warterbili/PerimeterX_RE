@@ -72,8 +72,8 @@ assert.notDeepStrictEqual(ev1Map, ev2Map);
 
 ## Related
 
-- [`docs/03_protocol/03_ev1.md`](../03_protocol/03_ev1.md)
-- [`docs/03_protocol/04_ev2.md`](../03_protocol/04_ev2.md)
+- [`docs/03_protocol/03_ev1.md`](../../main/EN/PX_SDK_Reverse_Engineering.md)
+- [`docs/03_protocol/04_ev2.md`](../../main/EN/PX_SDK_Reverse_Engineering.md)
 
 ## Next
 

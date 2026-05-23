@@ -7,7 +7,7 @@ one, but never matches.
 
 ## Root cause
 
-The PC algorithm (see [`docs/02_algorithms/03_pc.md`](../02_algorithms/03_pc.md))
+The PC algorithm (see [`docs/02_algorithms/03_pc.md`](../../revers/pc.js))
 is HMAC-MD5 of the payload, then extract digit characters from the **hex**
 output, joined and truncated to a specific length.
 
@@ -69,7 +69,7 @@ assert.strictEqual(computed, real.pc);
 
 ## Related
 
-- [`docs/02_algorithms/03_pc.md`](../02_algorithms/03_pc.md)
+- [`docs/02_algorithms/03_pc.md`](../../revers/pc.js)
 
 ## Next
 

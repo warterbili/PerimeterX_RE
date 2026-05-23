@@ -69,8 +69,8 @@ assert.ok(passed >= 9, `Expected ≥9/10 passed, got ${passed}/10`);
 
 ## Related
 
-- [`main/ZH/methodology/07_stage7_validate.md`](../06_methodology/07_stage7_validate.md)
-- [`docs/09_references/failure_modes.md`](../09_references/failure_modes.md)
+- [`main/ZH/methodology/07_stage7_validate.md`](../../main/EN/methodology/07_stage7_validate.md)
+- [`docs/09_references/failure_modes.md`](../4_sdk_drift.md)
 
 ## Next
 

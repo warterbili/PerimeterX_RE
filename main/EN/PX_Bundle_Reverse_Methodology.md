@@ -758,7 +758,11 @@ Use the 2,131-line artifact `bundle/script/userscripts/px_bundle3_auto.user.js` 
 2. Don't embed `` ` `` characters inside template literals
 3. Once fixed, `node build_userscript.js` outputs px_bundle3_auto.user.js
 
-Fixing the builder is a **TODO** — currently the path is manually maintaining the 2,131-line artifact.
+> **Future work**: auto-builder fix. The blocker is template-literal escaping
+> (line 319 in the legacy `build_userscript.js`). For now the userscript is
+> maintained by hand-editing the 2,131-line artifact in
+> [`bundle/script/userscripts/px_bundle3_auto.user.js`](../../bundle/script/userscripts/px_bundle3_auto.user.js).
+> If you fix the builder, please open a PR.
 
 ## 10.3 Tampermonkey Metadata
 

@@ -125,7 +125,7 @@ meta.json                   批 ID + UUID + 常量 + 时间戳 + 响应 status
 | TAG | `U0MmDhUmOnhXSw==` |
 | FT | `401` |
 | Cookie | `_px3` |
-| SDK SHA-256 | `b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8` |
+| SDK SHA-256 | `e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e` |
 | 抓包时间 | 2026-05-20 07:52:08Z ~ 08:00:41Z UTC（9 分钟） |
 | 抓包工具 | [`skill/cdp/scripts/capture_via_cdp_ifood.py`](../../../skill/cdp/scripts/capture_via_cdp_ifood.py) |
 | 抓包方法 | CDP 直连真 Chrome，无 webdriver 痕迹 |
@@ -137,9 +137,9 @@ meta.json                   批 ID + UUID + 常量 + 时间戳 + 响应 status
 | 1 | `c83577f0-5420-11f1-9150-e1cff29e25cc` | 07:52:08 | — |
 | 2 | `d71c9fa0-5420-11f1-b025-9117175cbd66` | 07:52:33 | — |
 | 3 | `e5e801f0-5420-11f1-b77b-a38d8b11732d` | 07:52:58 | — |
-| 4 | `dccaacc0-5421-11f1-bba4-69ba559d3bad` | 07:59:51 | ✓ `b47a639c…` |
-| 5 | `eb306f70-5421-11f1-b21d-afdecf3ed7d5` | 08:00:16 | ✓ `b47a639c…` |
-| 6 | `fa165ea0-5421-11f1-85cb-e97d388bd2ae` | 08:00:41 | ✓ `b47a639c…` |
+| 4 | `dccaacc0-5421-11f1-bba4-69ba559d3bad` | 07:59:51 | ✓ `e042d5de…` |
+| 5 | `eb306f70-5421-11f1-b21d-afdecf3ed7d5` | 08:00:16 | ✓ `e042d5de…` |
+| 6 | `fa165ea0-5421-11f1-85cb-e97d388bd2ae` | 08:00:41 | ✓ `e042d5de…` |
 
 > 批 1-3 的 `meta.json` **缺** `sdk_sha256` 字段（抓包脚本在批 4 才加上
 > 这字段记录），但**实际 SDK 跟批 4-6 是同一份** —— 9 分钟内 PX 不会推新版。

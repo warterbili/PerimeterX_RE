@@ -65,7 +65,7 @@ will differ and outputs won't match.
 
 ## Related
 
-- [`docs/04_bundle/07_wasm.md`](../04_bundle/07_wasm.md)
+- [`docs/04_bundle/07_wasm.md`](../../main/EN/PX_Bundle_Reverse_Methodology.md)
 
 ## Next
 

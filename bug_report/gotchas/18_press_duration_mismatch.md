@@ -72,7 +72,7 @@ assert.strictEqual(explicit, implicit, 'Duration field must match timestamp diff
 
 ## Related
 
-- [`docs/04_bundle/04_bundle3_press.md`](../04_bundle/04_bundle3_press.md) §"Tier 9 — timing arrays"
+- [`docs/04_bundle/04_bundle3_press.md`](../../main/EN/PX_Bundle_Reverse_Methodology.md) §"Tier 9 — timing arrays"
 
 ## Next
 

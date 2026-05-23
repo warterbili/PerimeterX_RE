@@ -15,7 +15,7 @@
 
 **Byte-exact SDK Internal Logic Dissection · Pure-algorithm Reconstruction of `_px3` / `_px2` · Zero-Browser Dependency · Dual-site 10/10 Production-Grade Verification**
 
-**🇬🇧 English · 🇨🇳 [简体中文](README_ZH.md)**
+**🇬🇧 English · 🇨🇳 [简体中文](README.zh.md)**
 
 <br />
 
@@ -571,7 +571,7 @@ Entropy analysis of dynamism for 204+ EV1/EV2 fields, quantifying per-field stab
 ```
 perimeter/                              v2.0 · 2026-05-23
 │
-├── README.md / README_ZH.md            ← This file (bilingual · paper-level overview; EN = root README, ZH companion in README_ZH.md)
+├── README.md / README.zh.md            ← This file (bilingual · paper-level overview; EN = root README, ZH companion in README.zh.md)
 ├── LICENSE                              ⭐ Dual-track License (AGPL-3.0 code + CC BY-NC-SA 4.0 docs)
 │
 ├── main/                               ⭐ Core technical docs (bilingual track)
@@ -953,7 +953,7 @@ Details in [`research/04_cross_vendor_comparison/`](research/04_cross_vendor_com
 
 | Resource | Chinese | English |
 |---|---|---|
-| Top-level README | ✅ ([README_ZH.md](README_ZH.md)) | ✅ (this file — repo root) |
+| Top-level README | ✅ ([README.zh.md](README.zh.md)) | ✅ (this file — repo root) |
 | Core technical docs (4) | ✅ | ✅ [`main/EN/`](main/EN/) all 4 complete |
 | ⭐ Methodology 10 chapters | ✅ 3,389 lines | ✅ [`main/EN/methodology/`](main/EN/methodology/) |
 | ⭐ EV1_EV2_UNIFIED_REFERENCE | ✅ 227 lines | ✅ [`main/EN/EV1_EV2_UNIFIED_REFERENCE.md`](main/EN/EV1_EV2_UNIFIED_REFERENCE.md) |

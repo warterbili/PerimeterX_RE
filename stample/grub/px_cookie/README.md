@@ -28,7 +28,7 @@ TAG     = "FmYgK1gdJEAP"
 FT      = 359
 Cookie  = _px2  (TTL 500)
 Collector = https://sensor.grubhub.com/O97ybH4J/xhr/api/v2/collector
-SDK SHA = 5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1
+SDK SHA = 4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301
 ```
 
 > ⚠️ 旧文档把 AppID 写成 `PXdRotaCw0` / FT 写成 `330` —— 都错。
@@ -110,7 +110,7 @@ node grubhub_px2.js     # 看返回的 cookie_name == "_px2"
 
 实战失败时按 [`../script/`](../script/) 决策树：
 
-1. 检查 SDK SHA 是否还是 `5e81bffc…` — 见 [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK 漂移应对
+1. 检查 SDK SHA 是否还是 `4accf1a5…` — 见 [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK 漂移应对
 2. 跑 [`../script/verify_all.sh`](../script/verify_all.sh) — 看解码器还能不能解 6 批 sample
 3. 跑 [`../script/diff_samples.py`](../script/diff_samples.py) — 看新 SDK 字段是不是动了
 4. 跑 [`../script/find_state_keys.py`](../script/find_state_keys.py) — 看 state.* → EV2 key 映射有没有变
@@ -143,4 +143,4 @@ node grubhub_px2.js     # 看返回的 cookie_name == "_px2"
 ---
 
 *来源：legacy `perimeter_X` 项目的 `grubhub_px2.js` + `templates/grubhub_ev*_template.json`。
-对应 Grubhub SDK sha256 `5e81bffc…`，6 批解码闭环 + 5× live-generator runs，10/10 通过。*
+对应 Grubhub SDK sha256 `4accf1a5…`，6 批解码闭环 + 5× live-generator runs，10/10 通过。*

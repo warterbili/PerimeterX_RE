@@ -17,7 +17,7 @@ Our first decoder matched by name (`if (segName === 'oOlIIl') doX()`), which
 broke on every new build. Correct: match by **arg shape**, which is invariant
 across all PX builds we've examined.
 
-The 27 shapes are listed in [`docs/02_algorithms/04_ob.md`](../02_algorithms/04_ob.md).
+The 27 shapes are listed in [`docs/02_algorithms/04_ob.md`](../../revers/ob.js).
 They are universal — same shape numbers across iFood (2026-05-20), Grubhub
 (2026-05-20), and historical builds going back two years.
 
@@ -81,9 +81,9 @@ project. Match by shape, not name. Document it loudly.
 
 ## Related
 
-- [`docs/02_algorithms/04_ob.md`](../02_algorithms/04_ob.md)
-- [`docs/01_architecture/diagrams/ob_decode.md`](../01_architecture/diagrams/ob_decode.md)
-- [`docs/05_obfuscation/05_cross_version_locating.md`](../05_obfuscation/05_cross_version_locating.md)
+- [`docs/02_algorithms/04_ob.md`](../../revers/ob.js)
+- [`docs/01_architecture/diagrams/ob_decode.md`](../../main/EN/PX_SDK_Reverse_Engineering.md)
+- [`docs/05_obfuscation/05_cross_version_locating.md`](../../skill/AI_re/references/locate-by-pattern.md)
 
 ## Next
 

@@ -45,7 +45,7 @@ APP_ID = "PXO1GDTa7Q"
 TAG    = "U0MmDhUmOnhXSw=="
 FT     = 401
 Cookie = _px3
-SDK SHA = b47a639cde9df4f91bdc4138ae0d64ebf7ce8c876a1e4c9967fd3af3d2975eb8
+SDK SHA = e042d5de834333985610691dbd6e435ca61a744e6a17271e4bbb4c21706a754e
 ```
 
 They're not different SDK versions — they're **two generator implementations of the same SDK**.
@@ -57,7 +57,7 @@ They're not different SDK versions — they're **two generator implementations o
 ```bash
 cd stample/ifood/px_cookie
 node smoke_test.js
-# 13/13 ✓ means good to go
+# 21/21 ✓ means good to go
 ```
 
 ### Method 2: Modular Version (Recommended for In-Project Use)
@@ -125,7 +125,7 @@ node ifood_px3.js     # check cookie_name == "_px3"
 
 If production fails:
 
-1. Check whether SDK SHA is still `b47a639c…` — see [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK drift response
+1. Check whether SDK SHA is still `e042d5de…` — see [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) §SDK drift response
 2. Run [`../script/verify_all.sh`](../script/verify_all.sh) — see whether the decoder can still decode 6 batches of samples
 3. Run [`../script/diff_samples.py`](../script/diff_samples.py) — see whether the new SDK's fields changed
 
@@ -141,4 +141,4 @@ If production fails:
 ---
 
 *Source: the legacy `perimeter_X` project's `ifood_px3.js` + the author's local `px_cookie_v2.js` iteration archive.
-Both correspond to the same iFood SDK (sha256 `b47a639c…`); smoke test 13/13 passes.*
+Both correspond to the same iFood SDK (sha256 `e042d5de…` LF-normalized); smoke test 21/21 passes.*

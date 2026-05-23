@@ -1,7 +1,7 @@
 # PX 逆向踩坑清单（14 条，2026-05-20 实测追加 Bug #14）
 
-> 配套阅读 [`../../../docs/zh/_ev1_ev2_unified_reference.md`](../../../docs/zh/_ev1_ev2_unified_reference.md)
-> 配套阅读 [`../../../docs/zh/18_methodology.md`](../../../docs/zh/18_methodology.md)
+> 配套阅读 <!-- removed broken link: ../../../docs/zh/_ev1_ev2_unified_reference.md -->
+> 配套阅读 <!-- removed broken link: ../../../docs/zh/18_methodology.md -->
 >
 > ⭐ 标记的是**真实付出过 debug 时间**的坑，不是"可能出错"的列表。
 

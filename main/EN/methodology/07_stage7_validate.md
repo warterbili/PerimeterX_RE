@@ -61,7 +61,7 @@ const res = await fetch('https://www.ifood.com.br/api/restaurants/...', {
 console.log(res.status);   // Expected: 200 (or 200 + JSON data)
 ```
 
-See [`../../../stample/ifood/px_cookie/smoke_test.sh`](../../../stample/ifood/px_cookie/smoke_test.sh).
+See [`../../../stample/ifood/px_cookie/smoke_test.sh`](../../../stample/ifood/px_cookie/smoke_test.js).
 
 ---
 
@@ -88,7 +88,7 @@ for ua in chrome120 chrome121 firefox119 edge120 chrome_mac; do
 done
 ```
 
-See [`../../../skill/AI_re/scripts/smoke_test.sh`](../../../skill/AI_re/scripts/smoke_test.sh).
+See <!-- removed broken link: ../../../skill/AI_re/scripts/smoke_test.sh -->.
 
 ---
 

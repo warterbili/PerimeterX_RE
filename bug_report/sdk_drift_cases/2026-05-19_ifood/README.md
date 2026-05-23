@@ -1,6 +1,6 @@
 # 2026-05-19 iFood SDK 中版本升级 — 实战 diff 案例
 
-> 这是一次**真实 SDK 升级**的完整 diff 记录。配合 [`bug_report/4_sdk_drift.md`](../../4_sdk_drift.md) 理论 + [`main/ZH/methodology/09_sdk_upgrade.md`](../../../main/ZH/methodology/09_sdk_upgrade.md) playbook 食用。
+> 这是一次**真实 SDK 升级**的完整 diff 记录。配合 [`bug_report/4_sdk_drift.md`](../../4_sdk_drift.md) 理论 + <!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md --> playbook 食用。
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## 后续 SDK 升级 / 跨站点 复用方法
 
-下次升级**严格按照** [`main/ZH/methodology/09_sdk_upgrade.md`](../../../main/ZH/methodology/09_sdk_upgrade.md) 的 7 步走，主要 lift-and-shift 这个目录的工具链：
+下次升级**严格按照** <!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md --> 的 7 步走，主要 lift-and-shift 这个目录的工具链：
 
 ```bash
 # 1. 拷一份模板目录
@@ -78,6 +78,6 @@ cp -r bug_report/sdk_drift_cases/2026-05-19_ifood bug_report/sdk_drift_cases/<NE
 ## 关联文档
 
 - 理论：[`bug_report/4_sdk_drift.md`](../../4_sdk_drift.md)
-- Playbook：[`main/ZH/methodology/09_sdk_upgrade.md`](../../../main/ZH/methodology/09_sdk_upgrade.md)
+- Playbook：<!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md -->
 - AI skill：[`skill/AI_re/skills/px_sdk_drift_audit/README.md`](../../../skill/AI_re/skills/px_sdk_drift_audit/README.md)
 - 字段对照：[`main/ZH/EV1_EV2_UNIFIED_REFERENCE.md`](../../../main/ZH/EV1_EV2_UNIFIED_REFERENCE.md)

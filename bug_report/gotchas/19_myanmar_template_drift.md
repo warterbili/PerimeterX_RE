@@ -55,7 +55,7 @@ of using a hardcoded constant.
 
 Alternatively, set up the SDK-drift workflow to auto-detect captcha.js
 changes (similar to the main SDK drift detection in
-[`.github/workflows/sdk_drift_detection.yml`](../../.github/workflows/sdk_drift_detection.yml)).
+<!-- removed broken link: ../../.github/workflows/sdk_drift_detection.yml -->).
 
 ## Regression test
 
@@ -83,8 +83,8 @@ assert.ok(checkTemplateMatchesSdk(sdkCaptchaSha, tplSha),
 
 ## Related
 
-- [`docs/04_bundle/09_myanmar_encoding.md`](../04_bundle/09_myanmar_encoding.md)
+- [`docs/04_bundle/09_myanmar_encoding.md`](../../main/EN/PX_Bundle_Reverse_Methodology.md)
 
 ## End of Phase 2 gotchas
 
-→ [Part 8: Platforms](../08_platforms/)
+→ [Part 8: Platforms](../../main/EN/methodology/08_cross_platform.md)

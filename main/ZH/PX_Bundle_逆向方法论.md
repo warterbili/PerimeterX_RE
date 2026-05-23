@@ -758,7 +758,10 @@ Document.prototype.appendChild = function(node) {
 2. 不要在 template literal 里嵌 `` ` `` 字符
 3. 跑通后 `node build_userscript.js` 输出 px_bundle3_auto.user.js
 
-修构建器是 **TODO** —— 当前路径是手维护 2131 行成品。
+> **后续工作**：修构建器。卡点是模板字符串转义（legacy `build_userscript.js`
+> 第 319 行）。当前路径是手维护 2131 行成品
+> [`bundle/script/userscripts/px_bundle3_auto.user.js`](../../bundle/script/userscripts/px_bundle3_auto.user.js)。
+> 如果你修了构建器，欢迎提 PR。
 
 ## 10.3 Tampermonkey 元数据
 

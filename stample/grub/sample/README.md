@@ -124,7 +124,7 @@ meta.json                   批 ID + UUID + 常量 + 时间戳 + 响应 status
 | Collector URL | `https://sensor.grubhub.com/O97ybH4J/xhr/api/v2/collector` |
 | EV1 event type | `YjIUOCdXHA8=` |
 | EV2 event type | `ViZgLBBGaB4=` |
-| SDK SHA-256 | `5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1` |
+| SDK SHA-256 | `4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301` |
 | SDK 大小 | ~263.7 KB |
 | SDK 源 URL | `https://sensor.grubhub.com/O97ybH4J/init.js`（不叫 `main.min.js`） |
 | 抓包时间 | 2026-05-20 08:02:24Z ~ 08:04:35Z UTC（2 分钟） |
@@ -242,7 +242,7 @@ done
 
 # 3. 跟 SDK 公共表的 SHA 对一下（确认 6 批同一份 SDK）
 sha256sum ../source/init.js
-# 应等于 5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1
+# 应等于 4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301
 ```
 
 预期输出：6 行 `batch X: OK` + 6 行 `post1=200 post2=200`。

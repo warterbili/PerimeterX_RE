@@ -69,8 +69,8 @@ assert.strictEqual(decodeKey('RTEwewNQMUg=', hQ), 'state.no');
 
 ## Related
 
-- [`docs/05_obfuscation/03_array_rotation.md`](../05_obfuscation/03_array_rotation.md)
-- [`docs/05_obfuscation/05_cross_version_locating.md`](../05_obfuscation/05_cross_version_locating.md)
+- [`docs/05_obfuscation/03_array_rotation.md`](../../skill/AI_re/references/locate-by-pattern.md)
+- [`docs/05_obfuscation/05_cross_version_locating.md`](../../skill/AI_re/references/locate-by-pattern.md)
 
 ## Next
 

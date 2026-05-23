@@ -15,8 +15,51 @@ from pathlib import Path
 
 CDP_PORT = 9222
 CDP_BASE = f"http://localhost:{CDP_PORT}"
-CHROME_PROFILE = "/tmp/chrome-cdp-profile"
-CHROME_BIN = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+import os, sys, tempfile
+
+# Cross-platform Chrome profile dir
+CHROME_PROFILE = os.environ.get("CHROME_PROFILE") or os.path.join(
+    tempfile.gettempdir(), "chrome-cdp-profile"
+)
+
+
+def _find_chrome_bin():
+    """Auto-detect Chrome binary by platform; honor CHROME_BIN env override."""
+    override = os.environ.get("CHROME_BIN")
+    if override and Path(override).exists():
+        return override
+    candidates = []
+    if sys.platform == "darwin":
+        candidates = [
+            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+            "/Applications/Chromium.app/Contents/MacOS/Chromium",
+        ]
+    elif sys.platform.startswith("win"):
+        local = os.environ.get("LOCALAPPDATA", "")
+        candidates = [
+            r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+            r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+            os.path.join(local, r"Google\Chrome\Application\chrome.exe") if local else "",
+        ]
+    else:  # linux / other unix
+        candidates = [
+            "/usr/bin/google-chrome",
+            "/usr/bin/google-chrome-stable",
+            "/usr/bin/chromium",
+            "/usr/bin/chromium-browser",
+            "/snap/bin/chromium",
+        ]
+    for c in candidates:
+        if c and Path(c).exists():
+            return c
+    raise RuntimeError(
+        f"Chrome 未找到。请安装 Chrome 或设置 CHROME_BIN env var。\n"
+        f"  检查过的路径: {candidates}"
+    )
+
+
+CHROME_BIN = _find_chrome_bin() if not os.environ.get("CDP_LAZY_CHROME") else None
 
 
 # ──────────────────────────────────────────────

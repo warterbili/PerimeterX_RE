@@ -23,7 +23,7 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
-const processOb = require('../reverse/ob');
+const processOb = require('../../../revers/ob');
 const { ml, buildSid, getParams } = processOb;
 
 const ROOT = path.resolve(__dirname, '..');

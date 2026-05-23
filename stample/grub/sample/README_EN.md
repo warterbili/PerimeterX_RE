@@ -132,7 +132,7 @@ Field meanings:
 | Collector URL | `https://sensor.grubhub.com/O97ybH4J/xhr/api/v2/collector` |
 | EV1 event type | `YjIUOCdXHA8=` |
 | EV2 event type | `ViZgLBBGaB4=` |
-| SDK SHA-256 | `5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1` |
+| SDK SHA-256 | `4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301` |
 | SDK size | ~263.7 KB |
 | SDK source URL | `https://sensor.grubhub.com/O97ybH4J/init.js` (note: not `main.min.js`) |
 | Capture window | 2026-05-20 08:02:24Z ~ 08:04:35Z UTC (2 minutes) |
@@ -253,7 +253,7 @@ done
 
 # 3. Confirm 6 batches share one SDK via SHA-256
 sha256sum ../source/init.js
-# Expected: 5e81bffc53ba95808ae81795358d8b71d3b5ba9ebfdaa013ff65ecafa278aad1
+# Expected: 4accf1a5f251a924856784815e9e1032b37f37d6756138c3c7550621960e5301
 ```
 
 Expected: 6 lines of `batch X: OK` + 6 lines of `post1=200 post2=200`.

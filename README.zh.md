@@ -570,7 +570,7 @@ state_no_parseint · utf8_latin1_xor · antitamper_position · pc_md5_slice · s
 ```
 perimeter/                              v2.0 · 2026-05-23
 │
-├── README.md / README_ZH.md            ← 本文件（双语 · 论文级导论；英文为 GitHub 首页，中文companion 即 README_ZH.md）
+├── README.md / README.zh.md            ← 本文件（双语 · 论文级导论；英文为 GitHub 首页，中文companion 即 README.zh.md）
 ├── LICENSE                              ⭐ 双轨 License（AGPL-3.0 代码 + CC BY-NC-SA 4.0 文档）
 │
 ├── main/                               ⭐ 核心技术文档（双语轨道）
@@ -971,7 +971,7 @@ iFood 又升级了，帮我跑 sdk_drift_audit
 
 | 资源 | 中文 | 英文 |
 |---|---|---|
-| 顶层 README | ✅ 本文件（[`README_ZH.md`](README_ZH.md)） | ✅ [`README.md`](README.md)（GitHub 首页） |
+| 顶层 README | ✅ 本文件（[`README.zh.md`](README.zh.md)） | ✅ [`README.md`](README.md)（GitHub 首页） |
 | 核心技术文档（4 份） | ✅ | ✅ [`main/EN/`](main/EN/) 4 份完整 |
 | ⭐ 方法论 10 章 | ✅ 3389 行 | ✅ [`main/EN/methodology/`](main/EN/methodology/) |
 | ⭐ EV1_EV2_UNIFIED_REFERENCE | ✅ 227 行 | ✅ [`main/EN/EV1_EV2_UNIFIED_REFERENCE.md`](main/EN/EV1_EV2_UNIFIED_REFERENCE.md) |

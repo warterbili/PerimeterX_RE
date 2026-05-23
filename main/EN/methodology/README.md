@@ -11,7 +11,7 @@
 
 The **complete reverse engineering methodology** for PerimeterX (HUMAN Security) SDK, broken into 7 sequential stages. Each stage has its own chapter and includes **time budget + required tools + step-by-step procedure + critical pitfalls + validation criteria**.
 
-This methodology **only covers the silent Collector path** (99% of business scenarios). For the press-challenge Bundle path see the standalone methodology [`../PX_Bundle_逆向方法论.md`](../PX_Bundle_逆向方法论.md) (973 lines, Chinese only for now).
+This methodology **only covers the silent Collector path** (99% of business scenarios). For the press-challenge Bundle path see the standalone methodology [`../PX_Bundle_逆向方法论.md`](../PX_Bundle_Reverse_Methodology.md) (973 lines, Chinese only for now).
 
 ---
 
@@ -106,9 +106,9 @@ Each predecessor is valuable on its own; this directory is the **best-practice m
 | **Reversing a new site** | Quick scan 00 for the budget, then **focus on 04 + 05 + 08** |
 | **PX pushed a new SDK and the generator broke** | Go straight to [`09_sdk_upgrade.md`](09_sdk_upgrade.md) |
 | **Can't obtain `_px3`, need to debug** | See [`07_stage7_validate.md`](07_stage7_validate.md) §troubleshooting decision tree + [`../../../bug_report/`](../../../bug_report/) |
-| **Onboarding N PX sites in bulk** | Read [`08_cross_platform.md`](08_cross_platform.md) + [`../PX_完整SDK对照逆向方法论.md`](../PX_完整SDK对照逆向方法论.md) |
+| **Onboarding N PX sites in bulk** | Read [`08_cross_platform.md`](08_cross_platform.md) + [`../PX_Complete_SDK_Comparative_Methodology.md`](../PX_Complete_SDK_Comparative_Methodology.md) |
 | **Quick grep-pattern lookup** | Go directly to `../PX_逆向方法论_通用版.md` (grep handbook quick reference) |
-| **Working on Bundle press-challenge** | Jump to [`../PX_Bundle_逆向方法论.md`](../PX_Bundle_逆向方法论.md) (973-line 8-stage methodology) |
+| **Working on Bundle press-challenge** | Jump to [`../PX_Bundle_逆向方法论.md`](../PX_Bundle_Reverse_Methodology.md) (973-line 8-stage methodology) |
 
 ---
 
@@ -126,4 +126,4 @@ Each predecessor is valuable on its own; this directory is the **best-practice m
 
 ---
 
-*Verified 2026-05-21. This methodology integrates 3 predecessors (A: 1,233-line grep handbook + B: 10 English procedure docs + C: 610-line combat-cadence narrative). Applicable scope: PX SDK silent Collector path. For the Bundle path see the standalone methodology [`../PX_Bundle_逆向方法论.md`](../PX_Bundle_逆向方法论.md).*
+*Verified 2026-05-21. This methodology integrates 3 predecessors (A: 1,233-line grep handbook + B: 10 English procedure docs + C: 610-line combat-cadence narrative). Applicable scope: PX SDK silent Collector path. For the Bundle path see the standalone methodology [`../PX_Bundle_逆向方法论.md`](../PX_Bundle_Reverse_Methodology.md).*

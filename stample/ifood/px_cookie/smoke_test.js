@@ -79,7 +79,10 @@ check('SDK 文件存在', () => {
 check('SDK SHA-256 跟 SDK_INFO.md 一致', () => {
     const crypto = require('crypto');
     const sdkPath = path.join(HERE, '..', 'source', 'main.min.js');
-    const sha = crypto.createHash('sha256').update(fs.readFileSync(sdkPath)).digest('hex');
+    // Normalize CRLF→LF for cross-platform SHA stability.
+    const buf = fs.readFileSync(sdkPath);
+    const normalized = Buffer.from(buf.toString('binary').replace(/\r\n/g, '\n'), 'binary');
+    const sha = crypto.createHash('sha256').update(normalized).digest('hex');
     if (sha !== SDK_CONSTANTS.SHA) {
         throw new Error(`SDK 已变！\n          实际: ${sha}\n          预期: ${SDK_CONSTANTS.SHA}`);
     }

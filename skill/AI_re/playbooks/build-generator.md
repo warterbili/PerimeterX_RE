@@ -343,7 +343,7 @@ done
 | 5 大算法公式 | [`../references/algorithm-chain.md`](../references/algorithm-chain.md) |
 | EV2 字段语义参考 | [`../../../main/ZH/PX_SDK_逆向技术文档.md`](../../../main/ZH/PX_SDK_逆向技术文档.md) 附录 E |
 | 现成 iFood 生成器（最佳起点） | [`../../../stample/ifood/px_cookie/ifood_px3.js`](../../../stample/ifood/px_cookie/ifood_px3.js) |
-| 9 个 reverse 算法模块 | [`../reverse/`](../reverse/) |
+| 9 个 reverse 算法模块 | [`../../../revers/`](../../../revers/) |
 | 验证 / 排查 | [`validate-generator.md`](validate-generator.md) |
 
 ---

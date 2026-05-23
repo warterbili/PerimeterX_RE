@@ -87,8 +87,8 @@ assert.deepStrictEqual(detectWireChars(grubhubSrc), { zero: 'o', one: 'I' });
 
 ## Related
 
-- [`docs/02_algorithms/04_ob.md`](../02_algorithms/04_ob.md)
-- [`docs/05_obfuscation/05_cross_version_locating.md`](../05_obfuscation/05_cross_version_locating.md)
+- [`docs/02_algorithms/04_ob.md`](../../revers/ob.js)
+- [`docs/05_obfuscation/05_cross_version_locating.md`](../../skill/AI_re/references/locate-by-pattern.md)
 
 ## Next
 

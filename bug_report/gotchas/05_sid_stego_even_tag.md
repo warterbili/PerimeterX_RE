@@ -9,7 +9,7 @@ index falls on a non-existent char.
 ## Root cause
 
 The SID-from-TAG steganography algorithm (see
-[`docs/02_algorithms/05_sid.md`](../02_algorithms/05_sid.md)) reads characters
+[`docs/02_algorithms/05_sid.md`](../../revers/sid.js)) reads characters
 at positions derived from TAG length. The "Plane-14 Tag Character" step:
 
 ```
@@ -65,7 +65,7 @@ for (let len = 8; len <= 24; len++) {
 
 ## Related
 
-- [`docs/02_algorithms/05_sid.md`](../02_algorithms/05_sid.md)
+- [`docs/02_algorithms/05_sid.md`](../../revers/sid.js)
 
 ## Next
 

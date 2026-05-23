@@ -10,7 +10,7 @@ testing — we compare design choices, not block rates.
 
 ## Results
 
-See [`docs/09_references/comparative_analysis.md`](../../docs/09_references/comparative_analysis.md)
+See <!-- removed broken link: ../../docs/09_references/comparative_analysis.md -->
 for the full table. Key observations:
 
 1. **PX is moderate on every axis** — heavier than Cloudflare, lighter than

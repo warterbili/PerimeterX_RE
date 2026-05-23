@@ -33,12 +33,17 @@ from pathlib import Path
 import os
 SKILL = os.environ.get("CDP_SKILL_DIR") or str(Path.home() / ".claude" / "skills" / "cdp-browser" / "scripts")
 sys.path.insert(0, SKILL)
-from cdp import CDPClient  # noqa: E402
+# Also import the local cdp.py (lives next to this script) so we can reuse
+# its cross-platform Chrome auto-detection.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cdp import CDPClient, CHROME_BIN  # noqa: E402
 
 ROOT = Path(os.environ.get("CAPTURE_ROOT") or str(Path(__file__).resolve().parent.parent / "capture_workspace" / "ifood"))
 SDK_DIR = ROOT / "sdk"
 SAMPLES = ROOT / "samples"
-CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+# Chrome binary auto-detected by cdp.py (Mac / Windows / Linux); set
+# CHROME_BIN env var to override.
+CHROME = CHROME_BIN
 CDP_PORT = 9222
 PROFILE = ROOT / "chrome_profile"
 URL = "https://www.ifood.com.br/restaurantes"
@@ -52,7 +57,7 @@ def cdp_up():
         return False
 
 
-def launch_chrome_windows():
+def launch_chrome():
     if cdp_up():
         print(f"[*] Chrome already on :{CDP_PORT}")
         return
@@ -245,7 +250,7 @@ async def capture_one_batch(batch_id: int, batch_dir: Path, sdk_target_path: Pat
 
 
 async def main():
-    launch_chrome_windows()
+    launch_chrome()
 
     N = int(sys.argv[1]) if len(sys.argv) > 1 else 6
     sdk_path = SDK_DIR / "main.min.js"

@@ -1,11 +1,15 @@
 """Capture the current Grubhub PerimeterX SDK .js source."""
-import asyncio, base64, json, os, subprocess, sys, time, urllib.request
+import asyncio, base64, json, os, subprocess, sys, tempfile, time, urllib.request
 from pathlib import Path
 import websockets
 
-CHROME_BIN = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+# Reuse cross-platform Chrome auto-detection from cdp.py (sibling script).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cdp import CHROME_BIN  # noqa: E402
+
 CDP_PORT = 9223
-PROFILE = Path(os.environ.get("TEMP", r"C:\Windows\Temp")) / "grubhub-sdk-capture"
+# Cross-platform temp dir for the dedicated capture profile.
+PROFILE = Path(tempfile.gettempdir()) / "grubhub-sdk-capture"
 SDK_DIR = Path(__file__).resolve().parent.parent / "sdk_cache"
 
 
@@ -113,4 +117,5 @@ async def main():
 
         listen_task.cancel()
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())

@@ -1025,6 +1025,8 @@ This project's release strictly conforms to **Reverse Engineering Fair Use** pri
 
 For compliance inquiries from the PerimeterX / HUMAN Security team, or to initiate **coordinated disclosure**, please reach `warterbili` via GitHub Issues. **The author reserves the right to adjust the disclosure scope within 90 days of receiving a formal compliance request**.
 
+**For reverse-engineering questions, security-testing collaboration, or new-platform research inquiries**: open a GitHub Issue, or reach the author directly via the email listed on the [GitHub profile](https://github.com/warterbili). Discussions about porting this methodology to other PX-protected sites, joint research, or paid pen-test engagements are welcome.
+
 ---
 
 ## 17. Citation

@@ -20,12 +20,17 @@ from pathlib import Path
 import os
 SKILL = os.environ.get("CDP_SKILL_DIR") or str(Path.home() / ".claude" / "skills" / "cdp-browser" / "scripts")
 sys.path.insert(0, SKILL)
-from cdp import CDPClient  # noqa: E402
+# Also import the local cdp.py (lives next to this script) so we can reuse
+# its cross-platform Chrome auto-detection.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cdp import CDPClient, CHROME_BIN  # noqa: E402
 
 ROOT = Path(os.environ.get("CAPTURE_ROOT") or str(Path(__file__).resolve().parent.parent / "capture_workspace" / "grubhub"))
 SDK_DIR = ROOT / "sdk"
 SAMPLES = ROOT / "samples"
-CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+# Chrome binary auto-detected by cdp.py (Mac / Windows / Linux); set
+# CHROME_BIN env var to override.
+CHROME = CHROME_BIN
 CDP_PORT = 9222
 PROFILE = ROOT / "chrome_profile"
 
@@ -38,7 +43,7 @@ SDK_URL_MATCHERS = ["sensor.grubhub.com", "PXdRotaCw0"]
 COLLECTOR_PATH_MATCHERS = ["/xhr/api/v2/collector", "/api/v2/collector"]
 
 
-def launch_chrome_windows() -> subprocess.Popen | None:
+def launch_chrome() -> subprocess.Popen | None:
     try:
         urllib.request.urlopen(f"http://127.0.0.1:{CDP_PORT}/json/version", timeout=1)
         print(f"[*] Chrome already on :{CDP_PORT}")
@@ -188,7 +193,7 @@ async def capture_once(cdp: CDPClient, batch_id: int, batch_dir: Path) -> dict:
 
 
 async def main():
-    launch_chrome_windows()
+    launch_chrome()
     tab = get_target_tab()
     print(f"[*] tab: {tab.get('url')}")
 

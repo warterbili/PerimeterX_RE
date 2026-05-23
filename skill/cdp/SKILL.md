@@ -133,7 +133,14 @@ pkill -f agent-browser
 
 ## 技术说明
 
-- Chrome 进程：使用用户独立 profile（`/tmp/chrome-cdp-profile`），与正常浏览器隔离
+- Chrome 进程：使用用户独立 profile（默认 `tempfile.gettempdir() / chrome-cdp-profile`，
+  即 macOS/Linux 走 `/tmp/...`，Windows 走 `%TEMP%\...`），与正常浏览器隔离。
+  可通过 `CHROME_PROFILE` env 覆盖。
+- Chrome 二进制：按 `sys.platform` 自动检测
+    - macOS:   `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
+    - Windows: `C:\Program Files\Google\Chrome\Application\chrome.exe`
+    - Linux:   `/usr/bin/google-chrome` / `/usr/bin/chromium` 等
+  可通过 `CHROME_BIN` env 覆盖。
 - CDP 端口：`localhost:9222`
 - 依赖：Python 3 标准库 + `websockets`（已安装）
 - 无 Playwright/Selenium，无 webdriver 特征

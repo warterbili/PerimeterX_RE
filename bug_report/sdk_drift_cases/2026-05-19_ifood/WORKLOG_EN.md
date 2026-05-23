@@ -52,7 +52,7 @@ ifood-web/collector无感纯算还原/
 
 ### 1.1 Situation Confirmation
 
-- Commit author: Shudong Lu (me, 2026-05-18 17:49)
+- Commit author: `warterbili` (me, 2026-05-18 17:49)
 - Content: Grubhub login flow change (attempt /auth/login before mail.tm JWT pre-check)
 - Status: local main is `ahead 1` of origin/main, **not pushed to GitHub**
 

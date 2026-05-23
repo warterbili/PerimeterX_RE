@@ -52,7 +52,7 @@ ifood-web/collector无感纯算还原/
 
 ### 1.1 情况确认
 
-- commit 作者：Shudong Lu（本人，2026-05-18 17:49）
+- commit 作者：`warterbili`（本人，2026-05-18 17:49）
 - 内容：Grubhub 登录链路改动（在 mail.tm JWT pre-check 之前先尝试 /auth/login）
 - 状态：本地 main 比 origin/main `ahead 1`，**未推送到 GitHub**
 

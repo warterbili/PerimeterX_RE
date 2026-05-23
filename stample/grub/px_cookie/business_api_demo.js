@@ -20,41 +20,68 @@
  *     格式: http://<user>:<pwd>@<host>:<port>
  *   - 项目根 `npm install` 一次（装 https-proxy-agent）
  *
- * ⚠️ 凭据：
- *   - 本脚本绝不嵌任何代理凭据 / 账号凭据
- *   - 全部通过环境变量传入
+ * ⚠️ 凭据（占位符，必须替换成你自己的）:
+ *   - 代理：BrightData country-us 住宅（替换 DEFAULT_BRD_PROXY 里的 <YOUR_BRD_*>）
+ *   - 账号：必须是 **device-trusted** 的 Grubhub 账号（替换 DEFAULT_EMAIL / DEFAULT_PASSWORD）
+ *   - 也可以用 env var 覆盖：HTTPS_PROXY / GRUBHUB_EMAIL / GRUBHUB_PASSWORD（推荐，凭据不入 git）
  *
  * 用法:
- *   # 轻量版（只 anonymous）
- *   export HTTPS_PROXY='http://<user>:<pwd>@<host>:<port>'
+ *   # 一键跑（用内置默认）
  *   node business_api_demo.js
  *
- *   # 全链路版（含登录）
+ *   # 用自己的代理 / 账号
  *   export HTTPS_PROXY='http://<user>:<pwd>@<host>:<port>'
  *   export GRUBHUB_EMAIL='your@email.com'
  *   export GRUBHUB_PASSWORD='yourpassword'
  *   node business_api_demo.js
  *
- * 期望输出 (full chain):
- *   ✅ _px2 generated
- *   ✅ Stage 2 /auth (anonymous) HTTP 200, anon_token=...
- *   ✅ Stage 3 /auth/login HTTP 200 (login OK) or 463 (OTP needed) — both = PX passed
+ * 期望输出 (2026-05-23 实测，BrightData country-us，默认 device-trusted 账号):
+ *   [proxy] using http://<user>:<pwd>@zproxy.lum-superproxy.io:22225
+ *   ━━━ Stage 1: 生成 _px2 ━━━
+ *   ✅ _px2=...  ttl=500  (~3500ms)
+ *   ━━━ Stage 2: /auth (anonymous scope) ━━━
+ *      HTTP 200  (~1500ms)
+ *   ✅ PX 守门 #1 通过 — anon_token=...
+ *   ━━━ Stage 3: /auth/login (real account) ━━━
+ *      HTTP 200  (~1700ms)
+ *   ✅ PX 守门 #2 通过 — 登录成功
+ *      user access_token: <uuid>          (60min TTL)
+ *      refresh_token:     <uuid>          (30 day TTL)
  *
  * 注意:
- *   - 463 (OTP needed) 是 PX 通过的合法表现 — 业务层后端因 device_id 不熟悉要求 OTP
+ *   - 200 = 账号 device-trusted（业务层认 device_id）；默认账号已预热
+ *   - 463 (OTP needed) 也是 PX 通过 — 业务层因 device_id 陌生要 OTP（换账号或走 mail.tm OTP）
  *   - 403 表示 _px2 评分不够，PX 拦截 (换 IP / 算法检查)
  *   - 401 "Invalid client_id" 表示 PX 过了但 client_id 错（项目用 config.yaml 的值）
  *
- * 完整链路 (8 步) 实现在作者私有 sourcing 项目中
- * 本 demo 只演示前 3 步（PX 通过的核心证据）
- * 后续 OTP + OAuth2 SSO 涉及账号自动化，公开仓库不提供
+ * ⚠️ 本 JS demo 只演示 PX 守门 #1 + #2 的核心证据（拿到 anon_token + user access_token）。
+ *    完整 9 步端到端（含 SSO 4 步 → __Host-instacart_sid 落地到 grocery.grubhub.com）
+ *    在下游生产项目里实现，见 ../live_validation/journal/2026-05-23.md §Part 2。
+ *    本仓的 Python 全链路 demo 见 ./business_api_demo_full_chain.py。
+ *
+ * 退出码（跨 3 个 demo 统一）:
+ *   0 = 成功
+ *   1 = 配置/环境错误（代理 / 生成器 / 凭据缺失）
+ *   2 = PX 层拦截（HTTP 403 + captcha）
+ *   3 = 下游业务层错误（其它 HTTP 异常 / schema 不对）
  */
 
 const https = require('https');
 const crypto = require('crypto');
 
-// ─── Optional HTTPS_PROXY support ───
-const proxyUrl = process.env.HTTPS_PROXY || process.env.https_proxy;
+// ─── 代理凭据占位符（必须替换或走 env var 覆盖） ───
+// 推荐用 env var：export HTTPS_PROXY='http://<user>:<pwd>@<host>:<port>'
+const DEFAULT_BRD_PROXY = 'http://brd-customer-hl_<YOUR_BRD_ID>-zone-residential-country-us:<YOUR_BRD_PASSWORD>@zproxy.lum-superproxy.io:22225';
+// 默认测试账号占位符（必须替换成你自己 device-trusted 的 Grubhub 账号或走 env var）
+// device-trusted = 此账号已完整跑过一次 OTP 注册流程，Grubhub 业务层已把它的 device_id 入信任白名单
+const DEFAULT_EMAIL    = '<YOUR_GRUBHUB_EMAIL>';
+const DEFAULT_PASSWORD = '<YOUR_GRUBHUB_PASSWORD>';
+
+const proxyUrl = process.env.HTTPS_PROXY || process.env.https_proxy || DEFAULT_BRD_PROXY;
+if (proxyUrl.includes('<YOUR_BRD_')) {
+    console.error('❌ 必须先设代理: 编辑 DEFAULT_BRD_PROXY 或 export HTTPS_PROXY=...');
+    process.exit(1);
+}
 if (proxyUrl) {
     try {
         const { HttpsProxyAgent } = require('https-proxy-agent');
@@ -80,8 +107,12 @@ const generatePx2 = require('./grubhub_px2');
 const AUTH_URL  = 'https://api-gtm.grubhub.com/auth';
 const LOGIN_URL = 'https://api-gtm.grubhub.com/auth/login';
 const BRAND     = 'GRUBHUB';
-const CLIENT_ID = 'beta_UmWlpstzQSFmocLy3h1UieYcVST';   // from sourcing-cracked/grubhub-web/config.yaml
-const UA        = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36';
+const CLIENT_ID = 'beta_UmWlpstzQSFmocLy3h1UieYcVST';   // 从 Grubhub 网页 SPA 抓的硬编码常量
+// ⚠️  UA must match the TLS impersonation profile used by the proxy / cffi layer.
+// Production verified 2026-05-23: Chrome 120 UA + curl_cffi impersonate=chrome120
+// passes PX on /auth, /auth/login, and SSO step 3. Mismatched UA (e.g. Chrome 148
+// while impersonating chrome120) is detected as bot.
+const UA        = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 function postJson(url, headers, bodyObj) {
     const body = JSON.stringify(bodyObj);
@@ -132,6 +163,7 @@ function buildCookieHeader(cookies) {
         'user-agent': UA,
         'origin': 'https://www.grubhub.com',
         'referer': 'https://www.grubhub.com/',
+        'x-gh-features': '0=pc;1=@grubhubprod/order-taking-client-sdk 16.6.3;3=Chrome 120.0.0.0;',
         'cookie': buildCookieHeader(cookies),
     };
 
@@ -160,14 +192,14 @@ function buildCookieHeader(cookies) {
     console.log(`✅ PX 守门 #1 通过 — anon_token=${anonToken.slice(0, 16)}…  expire_in=${anonData.session_handle?.expire_in}min`);
 
     // ═══ Stage 3 (optional): /auth/login — PX 守门 #2 ═══
-    const email = process.env.GRUBHUB_EMAIL;
-    const password = process.env.GRUBHUB_PASSWORD;
+    const email = process.env.GRUBHUB_EMAIL || DEFAULT_EMAIL;
+    const password = process.env.GRUBHUB_PASSWORD || DEFAULT_PASSWORD;
 
-    if (!email || !password) {
+    if (!email || !password || email.startsWith('<YOUR_')) {
         console.log('\n💡 跳过 Stage 3 (/auth/login)');
-        console.log('   要测试 PX 第 2 个守门端点，设环境变量后重跑：');
-        console.log('     export GRUBHUB_EMAIL=...');
-        console.log('     export GRUBHUB_PASSWORD=...');
+        console.log('   要测试 PX 第 2 个守门端点，设环境变量或编辑 DEFAULT_* 后重跑：');
+        console.log('     export GRUBHUB_EMAIL=<your device-trusted account>');
+        console.log('     export GRUBHUB_PASSWORD=<your password>');
         console.log(`\n━━━ Total time: ${genMs + apiMs1}ms ━━━`);
         return;
     }
@@ -183,7 +215,7 @@ function buildCookieHeader(cookies) {
     }, {
         brand: BRAND,
         client_id: CLIENT_ID,
-        device_id: '-981990071',   // grubhub-auth 生产用的固定 device_id
+        device_id: '-981990071',   // ⚠️ 必须 string。此值跟具体账号绑定 —— 换账号时必须换成那个账号 OTP 注册时用过的 device_id
         email,
         password,
     });
@@ -191,7 +223,7 @@ function buildCookieHeader(cookies) {
     console.log(`   HTTP ${r2.status}  (${apiMs2}ms)`);
 
     if (r2.status === 200) {
-        const data = JSON.parse(r2.b || r2.body);
+        const data = JSON.parse(r2.body);
         const sh = data.session_handle || {};
         console.log(`✅ PX 守门 #2 通过 — 登录成功`);
         console.log(`   user access_token: ${(sh.access_token||'').slice(0, 40)}…`);
@@ -202,8 +234,8 @@ function buildCookieHeader(cookies) {
         const otp = Object.keys(data.verify_methods || {})[0] || 'unknown';
         console.log(`✅ PX 守门 #2 通过 — 业务层要 OTP (${otp})`);
         console.log(`   verify_methods: ${JSON.stringify(data.verify_methods, null, 2)}`);
-        console.log(`   ↑ 桌面 (3) 项目把 463 算作 PX-pass`);
-        console.log(`     (PX 评分够了，账号风控因 device_id 不熟悉要 OTP 验证)`);
+        console.log(`   ↑ 下游生产项目把 463 算作 PX-pass`);
+        console.log(`     (PX 评分够了，账号风控因 device_id 陌生要 OTP 验证 — 换 device-trusted 账号即可)`);
     } else if (r2.status === 403) {
         console.log(`❌ PX 守门 #2 拦了 (HTTP 403)`);
         console.log(`   response: ${r2.body.slice(0, 300)}`);

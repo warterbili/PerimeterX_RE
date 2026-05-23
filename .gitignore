@@ -44,3 +44,9 @@ sample/**/dump.json
 # Bright Data / proxy credentials (don't commit creds even if obfuscated)
 proxy_creds.txt
 brd_*.txt
+
+# Local PX SDK captures (PerimeterX copyright + license restrictions on redistribution).
+# The committed copies under stample/{ifood,grub}/source/ are the canonical research
+# snapshots; any local re-captures should stay local.
+_live_*.js
+_live_*_init.js

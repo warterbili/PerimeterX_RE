@@ -36,6 +36,28 @@ tmp/
 *_tmp.js
 *_tmp.py
 
+# Skill ad-hoc debugging scratch (per-session captures, not curated reference data).
+# Anything we want preserved should be moved into stample/<site>/sample/ instead.
+skill/**/event_json/
+skill/**/responce_result/
+skill/**/_scratch/
+skill/**/_debug/
+
+# Per-run debug dumps under any stample/<site>/sample/ — kept local for diagnosis,
+# not for redistribution. Real ground-truth lives in numbered batches (sample/1/ etc.).
+stample/**/sample/_our_ev/
+stample/**/sample/_diff_report/
+stample/**/sample/_smoke_10x/
+stample/**/chrome_profile/
+
+# Screenshots: kept locally for personal reference, not redistributed.
+stample/screenshots/
+
+# Python bytecode (anywhere)
+**/__pycache__/
+*.pyc
+*.pyo
+
 # Large data files (use Git LFS if needed)
 *.jsonl
 data/*.json

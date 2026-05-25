@@ -28,6 +28,7 @@
 [![Version](https://img.shields.io/badge/version-2.0-blue?style=for-the-badge)](#)
 [![iFood](https://img.shields.io/badge/iFood-10%2F10%20✓-success?style=for-the-badge)](stample/ifood/)
 [![Grubhub](https://img.shields.io/badge/Grubhub-10%2F10%20✓-success?style=for-the-badge)](stample/grub/)
+[![Total Wine](https://img.shields.io/badge/Total%20Wine-10%2F10%20✓%20strict--tier-success?style=for-the-badge)](stample/totalwine/)
 [![Bundle](https://img.shields.io/badge/iFood%20Bundle-10%2F10%20✓-success?style=for-the-badge)](bundle/)
 
 ![Algorithms](https://img.shields.io/badge/Pure--algo%20Primitives-9%20core-green?style=flat-square&logo=hackthebox)
@@ -52,6 +53,7 @@
 <td align="center" width="110"><h2>+5</h2><sub><b>Bundle-only</b><br/>Primitives</sub></td>
 <td align="center" width="110"><h2>10/10</h2><sub><b>iFood ✓</b></sub></td>
 <td align="center" width="110"><h2>10/10</h2><sub><b>Grubhub ✓</b></sub></td>
+<td align="center" width="110"><h2>10/10</h2><sub><b>Total Wine ✓</b><br/>(strict-tier)</sub></td>
 <td align="center" width="110"><h2>10/10</h2><sub><b>Bundle ✓</b></sub></td>
 <td align="center" width="110"><h2>500ms</h2><sub><b>End-to-end</b></sub></td>
 </tr>
@@ -427,14 +429,17 @@ Complete algorithm analysis: [`main/EN/PX_SDK_Reverse_Engineering.md`](main/EN/P
 
 ### 5.2 Site Generators — [`stample/`](stample/)
 
-Dual-site mirrored structure; each site directory contains `px_cookie/` (generator) + `source/` (SDK lock) + `sample/` (6 capture batches) + `script/` (8 site-specific tools).
+Triple-site mirrored structure (added totalwine 2026-05-25); each site directory contains `px_cookie/` (generator) + `source/` (SDK lock) + `sample/` (6 capture batches) + `script/` (8+ site-specific tools).
 
-| Site | AppID | TAG | FT | Cookie | TTL | SDK Hash |
-|---|---|---|---|---|---|---|
-| **iFood** | `PXO1GDTa7Q` | `U0MmDhUmOnhXSw==` | `401` | `_px3` | 330 s | `b47a639c…` |
-| **Grubhub** | `PXO97ybH4J` | `FmYgK1gdJEAP` | `359` | `_px2` | 500 s | `5e81bffc…` |
+| Site | AppID | TAG | FT | Cookie | TTL | Tier | SDK Hash |
+|---|---|---|---|---|---|---|---|
+| **iFood** | `PXO1GDTa7Q` | `U0MmDhUmOnhXSw==` | `401` | `_px3` | 330 s | lenient | `b47a639c…` |
+| **Grubhub** | `PXO97ybH4J` | `FmYgK1gdJEAP` | `359` | `_px2` | 500 s | lenient | `5e81bffc…` |
+| **Total Wine** ⭐ | `PXFF0j69T5` | `CFQ7WU4xIS8MXA==` | `401` | `_px2` | 330 s | **strict** | `9335db02…` |
 
-All constants are **extracted directly from real POST body captures** ([`stample/{ifood,grub}/sample/`](stample/) — 6 auditable batches), not from documentation memory. Smoke tests pass at 21/21 (iFood) / 17/17 (Grubhub).
+All constants are **extracted directly from real POST body captures** ([`stample/{ifood,grub,totalwine}/sample/`](stample/) — 6 auditable batches per site), not from documentation memory. Smoke tests pass at 21/21 (iFood) / 17/17 (Grubhub) / 22/22 (Total Wine — includes 6 strict-tier-only checks).
+
+**Strict-tier vs lenient-tier** (new 2026-05-25): Total Wine demonstrates that the same PX SDK has different server-side enforcement at different customers. Strict tier adds: 3-POST chain (seq=2 cookie-confirmation beacon), server-side HMAC verification, counter sub-field synchronization, and `state.hid` extraction. See [`skill/AI_re/references/deployment-tiers.md`](skill/AI_re/references/deployment-tiers.md) for the full comparison and [`skill/AI_re/references/gotchas.md`](skill/AI_re/references/gotchas.md) Bug #15-#18 for the 4 strict-tier traps.
 
 ### 5.3 Bundle Path — [`bundle/`](bundle/)
 
@@ -496,13 +501,14 @@ Plan B is the project's **disaster-recovery insurance**, ensuring business conti
 
 | Site | Verification | Result |
 |---|---|---|
-| **ifood.com.br** | AppID `PXO1GDTa7Q` · TAG `U0MmDhUmOnhXSw==` · FT `401` · cookie `_px3` (ttl 330) | **10/10 pass** |
-| **grubhub.com** | AppID `PXO97ybH4J` · TAG `FmYgK1gdJEAP` · FT `359` · cookie `_px2` (ttl 500) | **10/10 pass** |
+| **ifood.com.br** | AppID `PXO1GDTa7Q` · TAG `U0MmDhUmOnhXSw==` · FT `401` · cookie `_px3` (ttl 330) · 2-POST chain · lenient tier | **10/10 pass** |
+| **grubhub.com** | AppID `PXO97ybH4J` · TAG `FmYgK1gdJEAP` · FT `359` · cookie `_px2` (ttl 500) · 2-POST chain · lenient tier | **10/10 pass** |
+| **totalwine.com** ⭐ | AppID `PXFF0j69T5` · TAG `CFQ7WU4xIS8MXA==` · FT `401` · cookie `_px2` (ttl 330) · **3-POST chain** · **strict tier** | **10/10 pass** (2026-05-25) |
 | **iFood Bundle press** | Bundle AppID `PXd6f03jmq8h6c7382req0` · FT `388` · 6 events + WASM + PoW | **10/10 pass** |
 
-All constants are **extracted directly from real POST body captures** ([`stample/{ifood,grub}/sample/`](stample/) — 6 auditable batches), not relying on documentation memory.
+All constants are **extracted directly from real POST body captures** ([`stample/{ifood,grub,totalwine}/sample/`](stample/) — 6 auditable batches per site), not relying on documentation memory.
 
-### 6.2 End-to-end Business API (2026-05-21)
+### 6.2 End-to-end Business API (2026-05-21 / 2026-05-25 for totalwine)
 
 Beyond byte correctness, this means **real proxy + real business API calls + real HTTP 200 responses**. Full journal: [`stample/live_validation/journal/2026-05-21.md`](stample/live_validation/journal/2026-05-21_EN.md)
 
@@ -510,6 +516,7 @@ Beyond byte correctness, this means **real proxy + real business API calls + rea
 |---|---|---|---|
 | **iFood** | BR residential (Bright Data) | `POST cw-marketplace.ifood.com.br/v1/merchant-info/graphql?lat&lng&channel=IFOOD` | ✅ HTTP 200 → `{ name: "Sorveteria Coelhinho - Shopping Vitória", userRating: 5, available: false }` |
 | **Grubhub** | Local direct (US proxy optional) | `POST /auth (anonymous) + /auth/login (Bearer + real account)` | ✅ HTTP 200 anon_token + HTTP 463 verify_methods (business-layer OTP; desktop 5/5 same verdict) |
+| **Total Wine** ⭐ | US residential (Bright Data) | `GET totalwine.com/search/all?text=wine` (PX-gated SRP HTML) | ✅ HTTP 200 → 1.3 MB real SRP HTML × 10/10 independent sessions on different exit IPs (strict-tier Layer 3.5 validation) |
 
 **Additional finding**: iFood's server stack also runs **Akamai Bot Manager** (response `set-cookie: ak_bmsc=...`); legitimate PX cookie + BR IP simultaneously passes both Akamai and PX layers.
 
@@ -629,7 +636,7 @@ perimeter/                              v2.0 · 2026-05-23
 │   │   └── scripts/                      ⭐ 14 CLI tools
 │   └── cdp/                             Real Chrome CDP capture skill (no webdriver signatures)
 │
-├── stample/                            ⭐ Site implementation layer (dual-site mirror)
+├── stample/                            ⭐ Site implementation layer (triple-site mirror)
 │   ├── ifood/
 │   │   ├── px_cookie/                    ifood_px3.js + templates + smoke_test 21/21 ✓
 │   │   ├── source/                       main.min.js (locked at SHA b47a639c…)
@@ -638,6 +645,12 @@ perimeter/                              v2.0 · 2026-05-23
 │   │   ├── script/                       8 iFood-specific scripts
 │   │   └── RESEARCH_PURPOSE.md           Research purpose statement
 │   ├── grub/                            (Same structure as iFood)
+│   ├── totalwine/                       ⭐ NEW 2026-05-25 (strict-tier deployment)
+│   │   ├── px_cookie/                    totalwine_px2.js + EV1/EV2/EV3 templates + smoke 22/22 ✓
+│   │   ├── source/                       main.min.js (locked at SHA 9335db02…)
+│   │   ├── sample/                       6 real capture batches × 13 files (含 EV3 解码)
+│   │   ├── script/                       8 scripts (3 are strict-tier-only: diff_ev2, find_hmac, smoke_10x_e2e)
+│   │   └── RESEARCH_PURPOSE.md           Strict vs lenient tier — 5 root causes documented
 │   └── live_validation/                ⭐ End-to-end business API validation journal
 │       └── journal/2026-05-21.md         BR residential proxy + dual-site HTTP 200
 │
@@ -687,12 +700,20 @@ cd ../../../stample/grub/px_cookie
 node smoke_test.js          # self-test 17/17 ✓
 node grubhub_px2.js
 
-# 4. Bundle path (press-challenge) — install userscript
+# 4. Total Wine — generate _px2 (strict-tier, 3-POST chain)
+cd ../../../stample/totalwine/px_cookie
+node smoke_test.js          # self-test 22/22 ✓ (includes 6 strict-tier-only checks)
+# Generator requires US residential proxy:
+$env:HTTPS_PROXY = 'http://<user>-session-<id>:<pwd>@<host>:<port>'
+node totalwine_px2.js
+# Expected: _px2=… ttl=330, ev1=13, ev2=199, ev3=11, seq2_status=200
+
+# 5. Bundle path (press-challenge) — install userscript
 # Install Tampermonkey in browser → load bundle/script/userscripts/px_bundle3_auto.user.js
 # Visit https://www.ifood.com.br/ → trigger challenge → automatic _px3
 ```
 
-500 ms to complete the full PX handshake: 2 collector POSTs, 10 cryptographic algorithms, 1 cookie.
+500 ms to complete the full PX handshake (lenient-tier, 2 POSTs); ~6 s for strict-tier 3-POST chain. 10 cryptographic algorithms shared across all 3 sites — only protocol assembly differs.
 
 ### 9.2 End-to-end Business API (Proxy Required)
 
@@ -707,6 +728,13 @@ export GRUBHUB_EMAIL='your@email.com'
 export GRUBHUB_PASSWORD='yourpassword'
 node stample/grub/px_cookie/business_api_demo.js
 # → HTTP 200 anon_token + HTTP 463 verify_methods
+
+# Total Wine ⭐ (strict-tier — REQUIRES US residential proxy)
+export HTTPS_PROXY='http://<user>-session-<id>:<pwd>@<host>:<port>'
+node stample/totalwine/px_cookie/business_api_demo.js
+# → HTTP 200 + ~1.3 MB real SRP HTML
+# For 10/10 stability test (different exit IP each iteration):
+python stample/totalwine/script/smoke_10x_e2e.py
 ```
 
 ### 9.3 Bundle Userscript (Press-challenge Automation)

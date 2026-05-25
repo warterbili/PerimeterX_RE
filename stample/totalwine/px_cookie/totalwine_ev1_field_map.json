@@ -1,0 +1,134 @@
+{
+  "Q3MwOQUQMA4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https://www.totalwine.com/",
+      "https://www.totalwine.com/",
+      "https://www.totalwine.com/"
+    ],
+    "present_in": "6/6"
+  },
+  "WQUqDxxiLjo=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "NSEGa3BAB1E=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Win32",
+      "Win32",
+      "Win32"
+    ],
+    "present_in": "6/6"
+  },
+  "WGRrbh4Ib14=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "IxMQGWVzEis=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1387,
+      2208,
+      1336
+    ],
+    "present_in": "6/6"
+  },
+  "PAhPQnlvT3g=": {
+    "category": "STATIC",
+    "sample_values": [
+      3600,
+      3600,
+      3600
+    ],
+    "present_in": "6/6"
+  },
+  "FmYlbFAAKVs=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1779708131128,
+      1779708169577,
+      1779708207082
+    ],
+    "present_in": "6/6"
+  },
+  "eWVKLzwCRh0=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1779708131135,
+      1779708169584,
+      1779708207090
+    ],
+    "present_in": "6/6"
+  },
+  "PSkOY3tIA1c=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "f915a7a0-582b-11f1-a3f8-11be2b3c03bb",
+      "0fffbe60-582c-11f1-b0ef-c79639e6b814",
+      "265b77d0-582c-11f1-8579-6331133ce52a"
+    ],
+    "present_in": "6/6"
+  },
+  "ajoZMC9aGwY=": {
+    "category": "STATIC",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "6/6"
+  },
+  "ViZlLBNGZxs=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "FCAnKlJGJBE=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "MDxDNnVeQgQ=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      {
+        "PX12738": 1,
+        "PX12739": 1,
+        "PX12740": 0,
+        "PX12741": -1
+      },
+      {
+        "PX12738": 1,
+        "PX12739": 0,
+        "PX12740": 0,
+        "PX12741": -1
+      },
+      {
+        "PX12738": 1,
+        "PX12739": 0,
+        "PX12740": 0,
+        "PX12741": -1
+      }
+    ],
+    "present_in": "6/6"
+  }
+}

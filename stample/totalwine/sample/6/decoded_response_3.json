@@ -1,0 +1,18 @@
+{
+  "xorKey": 109,
+  "segments": [
+    "llllOO|cu"
+  ],
+  "results": [
+    {
+      "handler": "llllOO",
+      "handlerType": "control_flag",
+      "args": [
+        "cu"
+      ]
+    }
+  ],
+  "state": {
+    "jf": "cu"
+  }
+}

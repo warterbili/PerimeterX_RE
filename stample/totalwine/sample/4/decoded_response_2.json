@@ -1,0 +1,61 @@
+{
+  "xorKey": 109,
+  "segments": [
+    "lOOllO|_px2|330|eyJ1IjoiM2NiZGMwZjAtNTgyYy0xMWYxLWExNzUtMmYxODQxZDY1MGVlIiwidiI6IjNjYWNmZTdmLTU4MmMtMTFmMS1hZmYwLTBhMmEwNGE0MWFjOSIsInQiOjE3Nzk3MDg1NDYxNDAsImgiOiJjZjlmYzE4ZjUxNGY3YzVlZjU5OGIwNGNkZTY4OGRlMzI0MjUxNzMyYmViMDVlMzIwMzA0MTkwYjMzNDgyNGRjIn0=|true|300",
+    "llllOO|cu",
+    "OlllOOll|xbxNzdCUrEeI4XywUYm6rN4HnRyE1hfcL6If5/AUEnY=:YAxhSlP9XZ70xohkmlydPpdNDYrR25oZWU18FEsanZX05m7L9LIizWj1JDzPiQ4bKhHc06dHsTKhvo-1h3hutojQpikCDom5uVVUAlSnS/BHxcmnMA2ljIs7riZQVVYvT5Shopo6AdE2TcpNwlJCcYa2ORiyX9qN9-LhPguLyBAnO8upYmnIQTG5fMaTMV8Q|true",
+    "OlllOOll|xbxNzdCUrEeI4XywUYm6rN4HnRyE1hfcL6If5/AUEnY=:YAxhSlP9XZ70xohkmlydPpdNDYrR25oZWU18FEsanZX05m7L9LIizWj1JDzPiQ4bKhHc06dHsTKhvo-1h3hutojQpikCDom5uVVUAlSnS/BHxcmnMA2ljIs7riZQVVYvT5Shopo6AdE2TcpNwlJCcYa2ORiyX9qN9-LhPguLyBAnO8upYmnIQTG5fMaTMV8Q|true"
+  ],
+  "results": [
+    {
+      "handler": "lOOllO",
+      "handlerType": "set_cookie",
+      "args": [
+        "_px2",
+        "330",
+        "eyJ1IjoiM2NiZGMwZjAtNTgyYy0xMWYxLWExNzUtMmYxODQxZDY1MGVlIiwidiI6IjNjYWNmZTdmLTU4MmMtMTFmMS1hZmYwLTBhMmEwNGE0MWFjOSIsInQiOjE3Nzk3MDg1NDYxNDAsImgiOiJjZjlmYzE4ZjUxNGY3YzVlZjU5OGIwNGNkZTY4OGRlMzI0MjUxNzMyYmViMDVlMzIwMzA0MTkwYjMzNDgyNGRjIn0=",
+        "true",
+        "300"
+      ],
+      "result": {
+        "type": "set_cookie",
+        "name": "_px2",
+        "value": "eyJ1IjoiM2NiZGMwZjAtNTgyYy0xMWYxLWExNzUtMmYxODQxZDY1MGVlIiwidiI6IjNjYWNmZTdmLTU4MmMtMTFmMS1hZmYwLTBhMmEwNGE0MWFjOSIsInQiOjE3Nzk3MDg1NDYxNDAsImgiOiJjZjlmYzE4ZjUxNGY3YzVlZjU5OGIwNGNkZTY4OGRlMzI0MjUxNzMyYmViMDVlMzIwMzA0MTkwYjMzNDgyNGRjIn0=",
+        "ttl": 330
+      }
+    },
+    {
+      "handler": "llllOO",
+      "handlerType": "control_flag",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "OlllOOll",
+      "handlerType": "unknown",
+      "args": [
+        "xbxNzdCUrEeI4XywUYm6rN4HnRyE1hfcL6If5/AUEnY=:YAxhSlP9XZ70xohkmlydPpdNDYrR25oZWU18FEsanZX05m7L9LIizWj1JDzPiQ4bKhHc06dHsTKhvo-1h3hutojQpikCDom5uVVUAlSnS/BHxcmnMA2ljIs7riZQVVYvT5Shopo6AdE2TcpNwlJCcYa2ORiyX9qN9-LhPguLyBAnO8upYmnIQTG5fMaTMV8Q",
+        "true"
+      ]
+    },
+    {
+      "handler": "OlllOOll",
+      "handlerType": "unknown",
+      "args": [
+        "xbxNzdCUrEeI4XywUYm6rN4HnRyE1hfcL6If5/AUEnY=:YAxhSlP9XZ70xohkmlydPpdNDYrR25oZWU18FEsanZX05m7L9LIizWj1JDzPiQ4bKhHc06dHsTKhvo-1h3hutojQpikCDom5uVVUAlSnS/BHxcmnMA2ljIs7riZQVVYvT5Shopo6AdE2TcpNwlJCcYa2ORiyX9qN9-LhPguLyBAnO8upYmnIQTG5fMaTMV8Q",
+        "true"
+      ]
+    }
+  ],
+  "state": {
+    "px3": {
+      "name": "_px2",
+      "value": "eyJ1IjoiM2NiZGMwZjAtNTgyYy0xMWYxLWExNzUtMmYxODQxZDY1MGVlIiwidiI6IjNjYWNmZTdmLTU4MmMtMTFmMS1hZmYwLTBhMmEwNGE0MWFjOSIsInQiOjE3Nzk3MDg1NDYxNDAsImgiOiJjZjlmYzE4ZjUxNGY3YzVlZjU5OGIwNGNkZTY4OGRlMzI0MjUxNzMyYmViMDVlMzIwMzA0MTkwYjMzNDgyNGRjIn0=",
+      "ttl": 330,
+      "secure": true,
+      "maxAge": 300
+    },
+    "jf": "cu"
+  }
+}

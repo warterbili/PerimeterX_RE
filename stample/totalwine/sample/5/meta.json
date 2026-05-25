@@ -1,0 +1,19 @@
+{
+  "batch_id": 5,
+  "proxy": "None:None",
+  "site": "totalwine.com",
+  "uuid": "53233e60-582c-11f1-bfa2-8d7256655f14",
+  "tag": "CFQ7WU4xIS8MXA==",
+  "ft": "401",
+  "app_id": "PXFF0j69T5",
+  "seq": "0",
+  "en": "NTA",
+  "method_post_1": "POST",
+  "captured_at": "2026-05-25T11:24:59Z",
+  "collector_post_count": 7,
+  "bundle_post_count": 0,
+  "status_post_1": 200,
+  "status_post_2": 200,
+  "first_collector_url": "https://www.totalwine.com/FF0j69T5/xhr/api/v2/collector",
+  "sdk_sha256": "847732ea8e712299c9093acfdc3f3873fced9c0d87aa70c6892d6e61dff1812e"
+}

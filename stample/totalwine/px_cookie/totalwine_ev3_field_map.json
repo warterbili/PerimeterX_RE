@@ -1,0 +1,62 @@
+{
+  "ZRFWGyB2UCE=": {
+    "category": "PARTIAL",
+    "sample": "[\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \",\"TypeError: Cannot read properties of null at nD at HTMLDocument.querySelector at observeAndSetFlag at Array.forEach at <anonymous>:2:1622 at Array.forEach at MutationObserver.<anonymous> at l.invoke at s.runGuarded at MutationObserver.<anonymous> \"]",
+    "present": "6/6"
+  },
+  "IxMQGWVzEis=": {
+    "category": "DYNAMIC",
+    "sample": 8544,
+    "present": "6/6"
+  },
+  "MDxDNnVeQgQ=": {
+    "category": "DYNAMIC",
+    "sample": {
+      "PX12738": 8103,
+      "PX12739": 8103,
+      "PX12740": 0,
+      "PX12741": -1
+    },
+    "present": "6/6"
+  },
+  "OkpJAH8oTTA=": {
+    "category": "DYNAMIC",
+    "sample": "eyJ1IjoiZjkxNWE3YTAtNTgyYi0xMWYxLWEzZjgtMTFiZTJiM2MwM2JiIiwidiI6ImY5MDQzMjMwLTU4MmItMTFmMS04ZjMyLWE3NzE2ODc2MWY2MyIsInQiOjE3Nzk3MDg0MzMxNDEsImgiOiI0NDAyYTU4YTJiYzI2YWRjNTljNTcyZWYxNzM0MDMzYTYzODcyOGUzNWFmYTE3YmI4ZTM0ZWIxMGQyMzAzZDQ4In0=",
+    "present": "6/6"
+  },
+  "WGRrbh4Ib14=": {
+    "category": "PARTIAL",
+    "sample": 3,
+    "present": "6/6"
+  },
+  "ajoZMC9aGwY=": {
+    "category": "DYNAMIC",
+    "sample": "TxXiBMzCHJTw8T7bLaU6eKz2jej2wUxwBpYP8qbHs81t2zQpFyRPo0pnYXePhSPEn-N0radyEfez8gCKOH2TWrcxXPkO8-fWxWWKfMRlBbbE3D8kZ4JX_d2p_vbi8nsbR2hc9C_PJ5hPDunynZSSy_fPBMVUlkt37ktXkBU=",
+    "present": "6/6"
+  },
+  "FCAnKlJGJBE=": {
+    "category": "STATIC",
+    "sample": true,
+    "present": "6/6"
+  },
+  "Q3MwOQUQMA4=": {
+    "category": "STATIC",
+    "sample": "https://www.totalwine.com/",
+    "present": "6/6"
+  },
+  "PSkOY3tIA1c=": {
+    "category": "DYNAMIC",
+    "sample": "f915a7a0-582b-11f1-a3f8-11be2b3c03bb",
+    "present": "6/6"
+  },
+  "eWVKLzwCRh0=": {
+    "category": "DYNAMIC",
+    "sample": 1779708139237,
+    "present": "6/6"
+  },
+  "ViZlLBNGZxs=": {
+    "category": "DYNAMIC",
+    "sample": 897,
+    "present": "6/6"
+  }
+}

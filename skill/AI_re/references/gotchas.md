@@ -226,6 +226,137 @@ for sname, sval in state.items():
 
 **通用规则**: **稳定性测试 ≠ 连发**。10/10 是逻辑正确性指标，需要给每次跑加间隔避免触发 throttle，否则你测的是"throttle 阈值"不是"算法稳定性"。
 
+## ⭐⭐⭐ Bug #14b → #15: Cookie 被签发 ≠ PX 边缘信任它（新发现 — totalwine 2026-05-25）
+
+> ⚠️ 这条改了**整个 skill 的 success criteria**——参考 [`../playbooks/validate-generator.md`](../playbooks/validate-generator.md) Layer 3.5 一并阅读。
+
+**症状**: collector chain 全 200，10/10 拿到 `_px2`，注入真浏览器 navigate 也能渲染页面。但**用 curl_cffi (chrome124 TLS, US 住宅代理) 拿同一个 cookie 直接 GET PX-gated endpoint 一律 403** —— body 是 PX bootstrap JSON (`{"appId":...,"jsClientSrc":...}`) 或 px-captcha challenge HTML。空 cookie 跟我们的 cookie 在这个端点上**返回完全一样的 403 body**，仿佛 PX 没看到我们的 cookie。
+
+**根因**: PX 有**两层校验**:
+
+```
+Layer 1 — SDK 客户端校验（cookie 签名 h、结构、TTL）
+  → 我们的 cookie 通过这层。所以注入浏览器后 SDK 不复发 collector。
+
+Layer 2 — PX 后端 trust score 校验
+  → collector chain 时 PX 后端对 EV1/EV2/EV3 字段做语义分析打分。
+  → 分数低 → cookie 仍然签发（这是"宽松信号"，让 bot 以为没事），
+    但 backend session record 标 trust=low → 边缘对该 cookie 的所有
+    后续请求都按"未授权"处理 → 403 PX block。
+```
+
+**关键证据（apples-to-apples control）**:
+- 浏览器自己拿到的 `_px2` + 任意 BrightData US 代理 IP + curl_cffi → ✅ 200
+- 我们生成的 `_px2` + 同样代理 IP + 同样 curl_cffi → 🚫 403 PX-block
+- ⇒ transport 没问题，**问题在 cookie 内容**。但不是密码学层面错，是 trust score 低。
+
+**修复（诊断路径）**:
+
+1. **第一步**: 跑 `compare_ev2_field_by_field`（[skill 自带](../scripts/compare_ev2_field_by_field.py)）—— 我们 EV2 vs 真抓 EV2 字段集 + 类型 + STATIC 值。99% 的根因在此暴露。
+2. **第二步**: 跑 [`recover-hmac-formulas.md`](../playbooks/recover-hmac-formulas.md) 验证每个 HMAC/MD5 字段 input 对不对。
+3. **第三步**: 检查 [`deployment-tiers.md`](deployment-tiers.md) 看这个站点是不是严档部署 → 是的话还要做 Gotcha #16/#17 的检查。
+
+**不要做**:
+- ❌ 怀疑 TLS 指纹（chrome124 impersonation 足够）
+- ❌ 怀疑 IP 被打标记（换代理也没用——证明: 浏览器 cookie 跨任何代理 IP 都 200）
+- ❌ 重写 collector POST 时序
+
+**通用规则**: **拿到 cookie 不算赢。Validation Layer 3.5 (= cookie 真打 PX-gated 端点拿真内容) 才算赢**。iFood/Grub 的 `business_api_demo.js` 是范本，任何新站点 README 必须有等价物。
+
+## ⭐⭐⭐ Bug #16: Seq=2 不是 "cleanup ping"——严档部署里它是必发 beacon（新发现 — totalwine 2026-05-25）
+
+**症状**: collector chain 走 2 POST（seq=0, seq=1）拿到 cookie 就停。Generator 测试 10/10 全过。但拿这个 cookie 走 Gotcha #15 描述的真端点测试时被拒。
+
+**根因**: 严档部署里 SDK 会发**第 3 个 collector POST (seq=2, en=NTA)**。这个 POST body 含 `OkpJAH8oTTA=` 字段，值是**刚拿到的 `_px2` cookie 字符串**。
+
+```
+seq=0 (EV1)  → PX 给 state (no/to/qa/vid/pxsid/cts/appId/hid…)
+seq=1 (EV2)  → PX 签发 _px2 cookie（已下发但 trust=pending）
+seq=2 (EV3)  → 客户端把 _px2 回传给 PX → PX 标 trust=verified
+```
+
+跳过 seq=2 → cookie 永远停在 `trust=pending` → 边缘看到此 cookie 时不放行（行为同未授权）。
+
+**怎么识别这个 trap**:
+- 抓包看 `meta.json` 里 `collector_post_count` —— 如果 ≥ 3 且看到 `request_3.txt` 存在
+- 解码 `request_3.txt` body 的 payload，看是否含 `OkpJAH8oTTA=`（值是 base64 cookie）
+- 如果是 → 必须实现 EV3 + seq=2 POST
+
+**修复**:
+```js
+// 拿到 cookie 后追加：
+const ev3 = buildEv3({ uuid, sendTime, cookieValue });   // cookieValue = 刚拿到的 _px2
+const payload3 = generatePayload(ev3, state.no, uuid);
+const pc3 = generatePC(ev3, uuid, TAG, FT);
+const body3 = formEncode({
+    payload: payload3, appId, tag, uuid, ft, seq: 2, en: 'NTA', bi,
+    cs: state.qa, pc: pc3, sid, vid: state.vid, cts: state.cts,
+    hid: state.hid, rsc: 3,
+});
+await post(COLLECTOR_URL + '?seq=2&rsc=3', body3, ua);
+```
+
+**通用规则**: **抓包 collector POST 数量 = 必发数量**。不要假设第 3 个之后的都是 "beacon noise"，先解码看看里面是不是 cookie 回传。
+
+## ⭐⭐ Bug #17: Counter 子字段同步约束（新发现 — totalwine 2026-05-25）
+
+**症状**: EV2/EV3 所有 b64 key 都对，字段类型、个数全一致，但 PX 仍然把 session 评低分。
+
+**根因**: 严档部署对**字典型字段的子字段间相关性**做校验。totalwine 案例:
+
+```js
+'MDxDNnVeQgQ=': {
+    PX12738: <num>,
+    PX12739: <num>,
+    PX12740: 0,
+    PX12741: -1,
+}
+```
+
+跨 6 个真实 batch：
+- **PX12738 永远等于 PX12739**（或两者同为 0）
+- 跨 EV1 → EV2 → EV3 **单调递增**（EV1 通常是 1, EV2 是 1000–3000, EV3 是 2000–9000）
+
+我们 generator 之前给两个独立 `Math.random()`（如 EV2 给 520 / 2072）→ 真实数据里**6/6 batch 都是相等**的 → PX 后端跨 event 看「同一计数器两路上报不一致」→ 判 bot。
+
+**修复**:
+```js
+const n2 = 1000 + Math.floor(Math.random() * 2500);
+ctx._counter2 = n2;
+tpl['MDxDNnVeQgQ='] = { PX12738: n2, PX12739: n2, PX12740: 0, PX12741: -1 };
+
+// EV3:
+const n3 = (ctx._prevCounter || 1500) + 1500 + Math.floor(Math.random() * 5000);
+tpl['MDxDNnVeQgQ='] = { PX12738: n3, PX12739: n3, PX12740: 0, PX12741: -1 };
+```
+
+**通用规则**: **对任何字典型 DYNAMIC 字段**，diff 工具不仅要看字段在不在、值是不是 STATIC，还要看**子字段之间是否有相关性约束**（相等、相加为 0、单调递增等）。这条对**所有部署**都适用——iFood/Grub 没踩到只是凑巧 random 值没触发它们的阈值。
+
+## ⭐⭐ Bug #18: HMAC 字段 input 必须**实测**，不能跨站点抄（新发现 — totalwine 2026-05-25）
+
+**症状**: 复用 iFood 或 Grubhub 的 HMAC 公式（如 `hmac(uuid, UA)`、`hmac(uuid+':a', UA)`、`hmac(uuid+':b', UA)`），在新站点跑出来的 HMAC 字段值**结构对**（32 字符 hex）、**类型对**（string）、**长度对**，PC 校验也过，但 cookie 后续仍然被拒。
+
+**根因**: 4 个 HMAC/MD5 字段（如 `Cho5UEx3PWY=`, `Lx8cFWl9HCE=`, `UiJhKBREYhs=`, `EFwjFlU8JyU=`）的 **b64 key 在不同站点的 SDK 里完全一样**（同混淆字典），但 **input 不一样**：
+
+| 字段 | iFood/Grub（旧文档猜测）| **totalwine 实测** |
+|---|---|---|
+| `Cho5UEx3PWY=` | `hmac(uuid, UA)` | `hmac(uuid, UA)` ✓ 恰好相同 |
+| `Lx8cFWl9HCE=` | `hmac(uuid+':a', UA)` ❌ | `hmac(state.vid, UA)` |
+| `UiJhKBREYhs=` | `hmac(uuid+':b', UA)` ❌ | `hmac(state.pxsid, UA)` |
+| `EFwjFlU8JyU=` | `hmac(uuid+':c', UA)` ❌ | **`md5(state.vid)` (单 arg, 不是 HMAC!)** |
+
+PX 后端对每个站点用 SDK 里**真实的**input 算一遍，跟客户端上报对比。错一个 HMAC → bot 评分。
+
+**修复（SOP）**: 见 [`../playbooks/recover-hmac-formulas.md`](../playbooks/recover-hmac-formulas.md)。简版：
+
+1. grep SDK 找 b64 key 出现位置 → 找 `i["..."] = jm(X(), Y())` 模式
+2. 找 X(), Y() 函数定义（`jm` = HMAC-MD5；单 arg 时 = MD5）
+3. 候选 input 枚举：uuid / state.vid / state.pxsid / state.cts / state.qa / sessionStorage[?]
+4. 跨 6 batch crypto 验证：哪个 input 公式让 6/6 batch 都命中 → 公式确定
+5. 不要找到一个就停——4 个 HMAC 字段都要单独验证
+
+**通用规则**: **任何 HMAC/MD5 字段，新站点都要重新 6 批 crypto 验证。不能从 iFood / Grub 抄假设。** 这一条对**所有未来站点**都适用——并不是 totalwine 特有。
+
 ---
 
 ## 📌 实测后纠正的「之前文档错」清单
@@ -241,5 +372,8 @@ for sname, sval in state.items():
 | Grubhub EV1 event type | (未记录) | `YjIUOCdXHA8=` | 模板字段名错 |
 | Grubhub EV2 event type | (未记录) | `ViZgLBBGaB4=` | 同 |
 | Grubhub EV2 `state.no` key | (未记录, 易猜成 `RTEwewNQMUg=`) | **`UT0ndxdcJUQ=`** | bot 评分降级 |
+| totalwine "Validated 10/10" (2026-05-21) | ~~只验 cookie 签发~~ | **必须真打 PX-gated 端点**——见 Bug #15 | 严档部署下 cookie 签发≠可用 |
+| totalwine seq=2 (2026-05-21 README) | ~~"cleanup ping, skip it"~~ | **mandatory beacon, 含 cookie 回传**——见 Bug #16 | 不发就永远低 trust |
+| totalwine HMAC inputs (2026-05-21) | ~~`uuid+':a'/':b'/':c'` 抄 iFood~~ | **`state.vid` / `state.pxsid` / `md5(state.vid)`**——见 Bug #18 | bot 评分 |
 
 > **教训**: **任何"常量"都要从最近一次抓包 POST body 里直接验证**, 不要从旧博客/笔记里抄。本 skill 的 `src/scripts/capture/capture_via_cdp.py` 跑一次, 然后看每批 `meta.json` 即可获得最新真实常量。

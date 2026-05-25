@@ -48,7 +48,7 @@ status: validated 2026-05-21 against ifood.com.br + grubhub.com; iFood + Grubhub
 
 ---
 
-## 🔴 第一次用先读这 5 份（按顺序）
+## 🔴 第一次用先读这 6 份（按顺序）
 
 按效率排序：
 
@@ -56,7 +56,8 @@ status: validated 2026-05-21 against ifood.com.br + grubhub.com; iFood + Grubhub
 2. **`references/locate-by-pattern.md`** ⭐ — **跨版本定位手册**（grep 模式 + 魔法常量 + 控制流特征，**不依赖行号**）
 3. **`references/handler-table.md`** — 27 个 OB handler 按**参数形状**匹配（跨版本通用，**不依赖 wire 字节名**）
 4. **`references/field-categories.md`** — STATIC/DYNAMIC/CONDITIONAL 三分类规则
-5. **`references/gotchas.md`** ⭐ — **19 条真实踩坑**（含 Bundle 路径 5 条），每条都付出过 debug 时间
+5. **`references/gotchas.md`** ⭐ — **18 条真实踩坑**（含 Bundle 路径 5 条 + 2026-05-25 新增的 #15-18 严档部署陷阱），每条都付出过 debug 时间
+6. **`references/deployment-tiers.md`** ⭐ (NEW 2026-05-25) — **PX 宽档 vs 严档** 对照表，决定 generator 验证强度 + 哪些 Gotcha 适用
 
 ## 🟢 操作手册 (Step-by-Step Playbooks)
 
@@ -72,7 +73,8 @@ status: validated 2026-05-21 against ifood.com.br + grubhub.com; iFood + Grubhub
 | **`playbooks/locate-functions.md`** ⭐⭐ | 定位 9 类**功能函数**（hQ/`/ns`/OB 派发/27 handler/mh 入口/Dd 收集器/cookie ur+lr/PoW/WASM）⚠️ 区分无感 vs Bundle | 30-60 分钟 |
 | **`playbooks/locate-field-sources.md`** ⭐⭐ | 定位每个 EV 字段的**值来源**（5 种方法 + 决策树） | 30-60 分钟 |
 | **`playbooks/build-generator.md`** | 有了 6 批样本，从零写出能跑的 generator | 3-8 小时 |
-| **`playbooks/validate-generator.md`** | 生成器写完了，验证 + 失败诊断决策树 | 10-30 分钟 |
+| **`playbooks/validate-generator.md`** | 生成器写完了，验证 + 失败诊断决策树（含 NEW Layer 3.5） | 10-30 分钟 |
+| **`playbooks/recover-hmac-formulas.md`** ⭐ NEW | HMAC/MD5 字段公式 5 步还原 SOP（SDK grep + 6 批 crypto 验证）—— 任何新站点都该走 | 30-60 分钟 |
 
 ### 整体流程跨两个 skill 协作
 
@@ -146,12 +148,15 @@ skill/AI_re/  ← Stage 4-8: 定位常量/函数 + 解码 + 字段分析 + 写 g
 | `lookup_keys.js` | hQ_map 反查 base64 key → SDK 位置 | b64 key + hQ_map + SDK | `via/idx` 信息 |
 | `probe_dynamic.js` | DYNAMIC 字段定位 SDK 赋值点 | DYNAMIC keys + 多批值 | `semantic.json` |
 
-#### 我生成 vs 真抓的对比（2 个 — 写 generator 时 debug 用）
+#### 我生成 vs 真抓的对比（5 个 — 写 generator 时 debug 用）
 
 | 脚本 | 用途 | 输入 | 输出 |
 |---|---|---|---|
 | **`diff_http_request.py`** | ⭐ **我的 POST vs 浏览器 POST** 字节级 diff（headers + form params + 顺序） | 1 个浏览器抓的 request + 我的 generator | console 输出差异表 |
 | **`compare_ev2_field_by_field.py`** | 我生成的 EV2 vs 真抓 EV2 逐字段相等检查 | 我的 ev2.json + 真 ev2.json | 字段级 diff 报告 |
+| **`diff_ev_ours_vs_real.py`** ⭐ | (NEW 2026-05-25) 5 段诊断：字段集 / 类型 / STATIC 值 / 顺序 / counter 同步性 —— 严档部署调试主力（[deployment-tiers.md](references/deployment-tiers.md)） | 我的 ev dump + 6 批真抓 ev | console 报告 + json 摘要 |
+| **`find_hmac_field_sources.py`** ⭐ | (NEW 2026-05-25) [`recover-hmac-formulas.md`](playbooks/recover-hmac-formulas.md) 的 Step 2+3 — grep SDK 找 HMAC 字段赋值点 + helper 函数体 | SDK 路径 + 目标 b64 keys | console 出 fn 体，喂给 Step 4 |
+| **`replay_apples_to_apples.py`** ⭐ | (NEW 2026-05-25) Layer 3.5 验证工具 — 同 proxy 同 TLS 下浏览器 cookie vs ours vs 空 cookie 三路对比，区分 "cookie 内容被标 bot" vs "transport 问题" | HTTPS_PROXY env + TARGET_URL env | console 出 4-way 矩阵 |
 
 #### 跨版本迁移（1 个）
 

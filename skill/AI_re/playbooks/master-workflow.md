@@ -38,6 +38,12 @@
 └──────────────────────────────────────────────────┘
                            ↓
 ┌──────────────────────────────────────────────────┐
+│ Stage 3.5: ⭐ 部署严格度判档 (NEW, 2026-05-25)    │ 5 min
+│   references/deployment-tiers.md                   │
+│   决定后续 validate 强度 + 哪些 Bug #15-18 要查    │
+└──────────────────────────────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────┐
 │ Stage 4: 从 SDK 源码补齐常量定位                  │ 10 min
 │   playbooks/locate-all-constants.md  (5 常量)      │
 │   playbooks/locate-functions.md  (9 类函数)        │
@@ -66,10 +72,12 @@
                            ↓
 ┌──────────────────────────────────────────────────┐
 │ Stage 8: 验证 + 10/10 测试                         │ 30 min
-│   playbooks/validate-generator.md (3 层验证)       │
+│   playbooks/validate-generator.md (4 层验证)       │
 │   1. smoke test (require + 常量同步)               │
 │   2. verify_batch (解码闭环)                       │
-│   3. 实战 10 次（间隔 ≥ 10s 避免 throttle）         │
+│   3. 实战 10 次拿到 _pxN (间隔 ≥ 10s)              │
+│   3.5 ⭐ NEW: 10 次真打 PX-gated 端点 200          │
+│       (严档部署必跑——见 Stage 3.5 的判档结果)      │
 └──────────────────────────────────────────────────┘
                            ↓
                        ✅ 完成
@@ -225,6 +233,50 @@ for i in 1 2 3 4 5 6; do
 done | sort -u
 # 必须只出一行，否则 Stage 2 的固定 SDK 没生效
 ```
+
+---
+
+## Stage 3.5：⭐ 部署严格度判档（5 min, NEW 2026-05-25）
+
+> 历史上 skill 默认所有 PX 部署一样宽松（iFood/Grub 的经验），导致严档部署（如 totalwine）走完所有 stage 后 generator 仍然不能真用。
+> 这一步**早期判档**，决定后续验证强度。详细对照表见 [`../references/deployment-tiers.md`](../references/deployment-tiers.md)。
+
+```bash
+# 1. POST 数 (宽档 = 2; 严档 = 3+)
+jq '.collector_post_count' stample/<site>/sample/*/meta.json
+
+# 2. Collector 路径 (一方 = 严档概率高)
+jq -r '.first_collector_url' stample/<site>/sample/1/meta.json
+
+# 3. 看第 3 个 POST body 是否含 cookie 回传字段
+if [ -f stample/<site>/sample/1/decoded_payload_3.json ]; then
+    jq '.[0].d | keys[]' stample/<site>/sample/1/decoded_payload_3.json | \
+        grep -E "OkpJAH8oTTA=|.*(eyJ1IjoiZ)" && \
+        echo "⚠️  严档信号: EV3 含 cookie 回传 → 必须实现 EV3 / seq=2 POST"
+fi
+
+# 4. State 是否含 hid (从 OlllOOll 段)
+grep -lE "OlllOOll" stample/<site>/sample/*/decoded_response_1.json | wc -l
+# 6/6 → state 有 hid，Gotcha #16 适用
+```
+
+**判档结果写到 `stample/<site>/log/RECON.md` 顶部**:
+
+```markdown
+## Deployment Tier (Stage 3.5, YYYY-MM-DD)
+- POST count: <2 | 3+>
+- Collector path: <三方 px-cloud.net | 一方>
+- EV3 cookie回传: <yes | no>
+- state.hid: <yes | no>
+- **Tier**: <宽档 | 严档>
+- **Additional gotchas to watch**: <#15-18 哪几条适用>
+```
+
+**如果是严档**：Stage 5-8 期间额外注意:
+- Gotcha #16: 实现 EV3 (seq=2) + 抽 state.hid
+- Gotcha #17: 字典子字段（counter）同步性
+- Gotcha #18: HMAC 字段全部走 [`recover-hmac-formulas.md`](recover-hmac-formulas.md)，6 批 crypto 验证
+- Stage 8 必须包含 Layer 3.5（拿 cookie 真打 PX-gated 端点）
 
 ---
 

@@ -1116,40 +1116,65 @@ $ grep -nE '"bake"|"YmFrZQ=="' init.js
 
 ## 8. 跨厂家差异速查
 
-下表列出 iFood 和 Grubhub 的**所有已知差异**：
+下表列出 iFood、Grubhub、**Total Wine**（2026-05-25 新增）的**所有已知差异**：
 
-| 维度 | iFood | Grubhub |
-|---|---|---|
-| **文件名** | `main.min.js` | `init.js` |
-| **AppID** | `PXO1GDTa7Q` | `PXO97ybH4J` |
-| **TAG** | `U0MmDhUmOnhXSw==` | `FmYgK1gdJEAP` |
-| **FT** | `401` | `359` |
-| **Cookie 名** | `_px3` | `_px2` |
-| **collector 主机** | `collector-pxo1gdta7q.px-cloud.net`（小写 AppID） | `collector-PXO97ybH4J.px-cloud.net`（大写） |
-| **OB 字段名** | `.ob` | `.do \|\| .ob` |
-| **常量打包方式** | 4 常量同一 `var` | 分散，且 `window._pxAppId` 全局暴露 |
-| **collector URL 存储** | 明文 1 处 | 明文 1 处 + base64 1 处 |
-| **调度结构** | 集中（`yU` 一个函数） | 分散（多个小函数 `Tf/Sf/wf/Af/Rf`） |
-| **Handler 注册** | `SP["wire字节"]=fn` 集中 | inline 在各函数内 |
-| **wire 字节字符** | `0` 和 `l` | `o` 和 `I` |
-| **SID Unicode 隐写** | ✓ | ✗（Grubhub 不用） |
-| **PC 长度** | 10 位 | 11 位 |
-| **/ns 探针** | 用 | 不用 |
-| **MD5 算法** | 完全相同（差变量名） | 完全相同 |
-| **HMAC 算法** | 完全相同 | 完全相同 |
-| **UUID v1 算法** | 完全相同 | 完全相同 |
-| **ml() 算法** | 完全相同 | 完全相同 |
-| **anti-tamper 算法** | 完全相同 | 完全相同 |
-| **base91 字母表** | 完全相同 | 完全相同 |
-| **fallback timestamp** | 完全相同 | 完全相同 |
-| **hP 字典存在性** | ✓ | ✓ |
+| 维度 | iFood | Grubhub | **Total Wine** ⭐ |
+|---|---|---|---|
+| **文件名** | `main.min.js` | `init.js` | `main.min.js` |
+| **AppID** | `PXO1GDTa7Q` | `PXO97ybH4J` | `PXFF0j69T5` |
+| **TAG** | `U0MmDhUmOnhXSw==` | `FmYgK1gdJEAP` | `CFQ7WU4xIS8MXA==` |
+| **FT** | `401` | `359` | `401` |
+| **Cookie 名** | `_px3` | `_px2` | `_px2` |
+| **collector 主机** | `collector-pxo1gdta7q.px-cloud.net`（三方） | `collector-PXO97ybH4J.px-cloud.net`（三方） | `www.totalwine.com/FF0j69T5/xhr/api/v2/collector`（**一方**） |
+| **部署严格度** | **宽档** | **宽档** | **严档** ⭐ |
+| **Collector POST 数** | 2 (seq=0, 1) | 2 (seq=0, 1) | **3 (seq=0, 1, 2)** —— seq=2 是 cookie 确认 beacon |
+| **EV2 字段数** | ~209 | ~190 | ~199 |
+| **EV3 (seq=2) 必发** | ✗ | ✗ | **✓** —— body 含 `OkpJAH8oTTA=` = 刚拿到的 cookie |
+| **state.hid 字段** | ✗ | ✗ | **✓** —— 从 ob#1 `OlllOOll\|<b64>=:<b64>\|true` 段提取 |
+| **HMAC 字段服务端校验** | 弱/不查 | 弱/不查 | **强校验** —— 后端独立算 HMAC 对比 |
+| **Counter 子字段同步约束** | 不查 | 不查 | **PX12738 == PX12739**，跨 EV 单调递增 |
+| **OB 字段名** | `.ob` | `.do \|\| .ob` | `.do \|\| .ob` |
+| **SID Unicode 隐写** | ✓ | ✗ | ✓ |
+| **PC 长度** | 10 位 | 11 位 | 16 位 |
+| **/ns 探针** | 用 | 不用 | 不用 |
+| **HMAC `Cho5UEx3PWY=`** | `hmac(uuid, UA)` | `hmac(uuid, UA)` | `hmac(uuid, UA)` |
+| **HMAC `Lx8cFWl9HCE=`** | (n/a) | (n/a) | `hmac(state.vid, UA)` ⭐ |
+| **HMAC `UiJhKBREYhs=`** | (n/a) | (n/a) | `hmac(state.pxsid, UA)` ⭐ |
+| **`EFwjFlU8JyU=`** | (n/a) | (n/a) | `md5(state.vid)` （**单 arg, 非 HMAC**） ⭐ |
+| **MD5 / HMAC / UUID / ml / anti-tamper / base91 算法** | 完全相同 | 完全相同 | 完全相同 |
+| **fallback timestamp / hP 字典** | 同 | 同 | 同 |
 
-**核心规律**：
+**核心规律**（更新版）：
 
 1. **底层算法跨厂家 100% 共享**（MD5/HMAC/UUID/ml/anti-tamper/base91）
 2. **协议常量跨厂家 100% 不同**（AppID/TAG/FT/cookie 名）
 3. **代码组织跨厂家可以差很大**（集中 vs 分散、明文 vs base64、变量名完全不同）
 4. **可选模块跨厂家可以不同**（SID 隐写 / /ns 探针）
+5. ⭐ **服务端策略可以分严档/宽档**（2026-05-25 新结论）—— 同一 PX SDK 在不同客户那有不同的后端校验强度。宽档下"cookie 签发就能用"，严档下还有 4 类额外校验（POST 数 / HMAC 服务端验签 / counter 同步性 / 字段集严格匹配）。详见 `skill/AI_re/references/deployment-tiers.md`。
+
+### 8.1 严档部署 vs 宽档部署：Total Wine 案例（新增 2026-05-25）
+
+**触发这一节的代价**：2026-05-25 整个一天的调试。之前默认 iFood/Grub 经验通用，按 2-POST 链 + 抄 HMAC 公式 + 不查 counter 同步性的策略做 totalwine，结果 collector 10/10 接受 cookie，但拿这些 cookie 去打 PX-gated 端点全 403（PX bootstrap JSON）。
+
+**5 个根因**（详见 `skill/AI_re/references/gotchas.md` Bug #15–#18）：
+
+1. **Layer 3.5 缺位** —— "collector 签发 cookie" ≠ "cookie 真能用"。严档下后端记 `trust=low` 的 cookie 仍然会被签发（让 bot 误以为成功），但边缘对这个 cookie 的所有后续请求按未授权处理。必须用 curl_cffi 拿 cookie 真打一个 gated 端点验证。
+
+2. **EV3 (seq=2) 是 cookie 确认 beacon** —— body 含 `OkpJAH8oTTA=` 字段，值是刚拿到的 `_px2`。PX 后端只有在收到这个 beacon 后才把 cookie 状态从 `trust=pending` 升级到 `trust=verified`。
+
+3. **HMAC 输入不能跨站点抄** —— 4 个 HMAC/MD5 字段的 b64 key 在 iFood/Grub/totalwine **完全一样**，但输入函数不同。totalwine SDK 里 `jm(state.vid, UA)`、`jm(state.pxsid, UA)`、`md5(state.vid)`，PX 后端独立算一遍对比，错一个就 bot。任何新站点都必须 6 批 crypto 验证（见 `skill/AI_re/playbooks/recover-hmac-formulas.md`）。
+
+4. **State.hid** —— 从 ob#1 `OlllOOll|<b64>=:<b64>|true` 段提取，作为 seq=2 POST 的 form 参数 `hid=` 回传。漏掉 = 严档后端校验失败。
+
+5. **Counter 字典子字段同步性** —— `MDxDNnVeQgQ=` 的 `PX12738` 和 `PX12739` 在 6/6 真实捕获里**永远相等**且跨 EV1→EV2→EV3 单调递增。独立 `Math.random()` 给俩值 = 明显 bot 信号。
+
+**判断新站点在哪档**（早期决策）：
+
+- `meta.json.collector_post_count` 长期 ≥3 + 第 3 个 POST body 含 cookie 字段 → 严档
+- collector 走自家域 (`<host>/<appPrefix>/xhr/api/v2/collector`) → 严档概率高
+- ob#1 含 `OlllOOll|...=:...|true` shape 段 → 严档
+
+具体判档脚本见 `skill/AI_re/playbooks/master-workflow.md` Stage 3.5 + `references/deployment-tiers.md`。
 
 ---
 

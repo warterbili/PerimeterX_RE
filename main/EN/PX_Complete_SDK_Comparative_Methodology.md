@@ -1156,35 +1156,36 @@ handler. PX internal convention, unchanged across vendors.
 
 ## 8. Cross-vendor difference quick reference
 
-The full list of **known differences** between iFood and Grubhub:
+Full list of **known differences** across iFood, Grubhub, and **Total Wine**
+(added 2026-05-25):
 
-| Dimension | iFood | Grubhub |
-|---|---|---|
-| **File name** | `main.min.js` | `init.js` |
-| **AppID** | `PXO1GDTa7Q` | `PXO97ybH4J` |
-| **TAG** | `U0MmDhUmOnhXSw==` | `FmYgK1gdJEAP` |
-| **FT** | `401` | `359` |
-| **Cookie name** | `_px3` | `_px2` |
-| **Collector host** | `collector-pxo1gdta7q.px-cloud.net` (lowercase AppID) | `collector-PXO97ybH4J.px-cloud.net` (uppercase) |
-| **OB field name** | `.ob` | `.do \|\| .ob` |
-| **Constant packing** | 4 constants in one `var` | Scattered, `window._pxAppId` globally exposed |
-| **Collector URL storage** | Plain only | Plain + base64 |
-| **Dispatch structure** | Centralized (single `yU` function) | Distributed (multiple small functions `Tf/Sf/wf/Af/Rf`) |
-| **Handler registration** | `SP["wire-byte"]=fn` centralized | Inlined inside each function |
-| **Wire byte chars** | `0` and `l` | `o` and `I` |
-| **SID Unicode stego** | ✓ | ✗ (Grubhub doesn't use) |
-| **PC length** | 10 digits | 11 digits |
-| **/ns probe** | Used | Not used |
-| **MD5 algorithm** | Identical (only var names differ) | Identical |
-| **HMAC algorithm** | Identical | Identical |
-| **UUID v1 algorithm** | Identical | Identical |
-| **ml() algorithm** | Identical | Identical |
-| **anti-tamper algorithm** | Identical | Identical |
-| **base91 alphabet** | Identical | Identical |
-| **fallback timestamp** | Identical | Identical |
-| **hP dictionary presence** | ✓ | ✓ |
+| Dimension | iFood | Grubhub | **Total Wine** ⭐ |
+|---|---|---|---|
+| **File name** | `main.min.js` | `init.js` | `main.min.js` |
+| **AppID** | `PXO1GDTa7Q` | `PXO97ybH4J` | `PXFF0j69T5` |
+| **TAG** | `U0MmDhUmOnhXSw==` | `FmYgK1gdJEAP` | `CFQ7WU4xIS8MXA==` |
+| **FT** | `401` | `359` | `401` |
+| **Cookie name** | `_px3` | `_px2` | `_px2` |
+| **Collector host** | `collector-pxo1gdta7q.px-cloud.net` (3rd-party) | `collector-PXO97ybH4J.px-cloud.net` (3rd-party) | `www.totalwine.com/FF0j69T5/xhr/api/v2/collector` (**1st-party**) |
+| **Deployment tier** | **lenient** | **lenient** | **strict** ⭐ |
+| **Collector POST count** | 2 (seq=0, 1) | 2 (seq=0, 1) | **3 (seq=0, 1, 2)** — seq=2 is cookie-confirmation beacon |
+| **EV2 field count** | ~209 | ~190 | ~199 |
+| **EV3 (seq=2) mandatory** | ✗ | ✗ | **✓** — body contains `OkpJAH8oTTA=` = just-issued cookie |
+| **state.hid field** | ✗ | ✗ | **✓** — from ob#1 `OlllOOll\|<b64>=:<b64>\|true` segment |
+| **HMAC fields server-side verified** | weak / not checked | weak / not checked | **strict check** — backend re-computes and compares |
+| **Counter sub-field sync constraint** | not checked | not checked | **PX12738 == PX12739**, monotonic across EVs |
+| **OB field name** | `.ob` | `.do \|\| .ob` | `.do \|\| .ob` |
+| **SID Unicode stego** | ✓ | ✗ | ✓ |
+| **PC length** | 10 digits | 11 digits | 16 digits |
+| **/ns probe** | Used | Not used | Not used |
+| **HMAC `Cho5UEx3PWY=`** | `hmac(uuid, UA)` | `hmac(uuid, UA)` | `hmac(uuid, UA)` |
+| **HMAC `Lx8cFWl9HCE=`** | (n/a) | (n/a) | `hmac(state.vid, UA)` ⭐ |
+| **HMAC `UiJhKBREYhs=`** | (n/a) | (n/a) | `hmac(state.pxsid, UA)` ⭐ |
+| **`EFwjFlU8JyU=`** | (n/a) | (n/a) | `md5(state.vid)` (**single-arg, NOT HMAC**) ⭐ |
+| **MD5 / HMAC / UUID / ml / anti-tamper / base91 algorithms** | Identical | Identical | Identical |
+| **fallback timestamp / hP dictionary** | Same | Same | Same |
 
-**Core pattern**:
+**Core pattern** (updated):
 
 1. **Underlying algorithms are 100% shared across vendors**
    (MD5/HMAC/UUID/ml/anti-tamper/base91)
@@ -1195,6 +1196,61 @@ The full list of **known differences** between iFood and Grubhub:
    variable names)
 4. **Optional modules can differ across vendors**
    (SID stego / /ns probe)
+5. ⭐ **Server-side policy can vary between strict and lenient tiers**
+   (new conclusion 2026-05-25) — the same PX SDK can have different
+   backend enforcement at different customers. Under lenient tier
+   "cookie issuance = working"; under strict tier 4 extra checks apply
+   (POST count, server-side HMAC verification, counter sync, exact field
+   set match). See `skill/AI_re/references/deployment-tiers.md`.
+
+### 8.1 Strict vs lenient deployments: the Total Wine case (added 2026-05-25)
+
+**Cost of triggering this section**: a full day of debugging on 2026-05-25.
+We initially assumed iFood/Grubhub experience transferred — built totalwine
+generator with 2-POST chain, copied HMAC formulas, ignored counter
+sync — collector issued cookies 10/10, but using those cookies against
+PX-gated endpoints returned 403 (PX bootstrap JSON) every time.
+
+**5 root causes** (full detail in `skill/AI_re/references/gotchas.md` Bug #15–#18):
+
+1. **Missing Layer 3.5** — "collector signed a cookie" ≠ "cookie actually
+   works". Strict-tier PX records `trust=low` cookies as issued (to mislead
+   bots into thinking they succeeded), but the edge rejects all subsequent
+   requests with those cookies. You must replay the cookie against a real
+   PX-gated endpoint via curl_cffi to validate.
+
+2. **EV3 (seq=2) is the cookie-confirmation beacon** — its body contains
+   `OkpJAH8oTTA=` field whose value is the just-issued `_px2`. Only after
+   receiving this beacon does PX backend flip the cookie from
+   `trust=pending` to `trust=verified`.
+
+3. **HMAC inputs do NOT transfer across sites** — the same 4 b64 keys for
+   HMAC/MD5 fields exist on iFood/Grubhub/totalwine, but the input
+   expressions differ. Total Wine's SDK uses `jm(state.vid, UA)`,
+   `jm(state.pxsid, UA)`, `md5(state.vid)`. PX backend re-computes each
+   server-side and compares — one mismatch = bot. **Every new site needs
+   6-batch crypto verification** (see `skill/AI_re/playbooks/recover-hmac-formulas.md`).
+
+4. **state.hid** — extracted from ob#1 `OlllOOll|<b64>=:<b64>|true` segment;
+   sent as `hid=` form parameter in seq=2 POST. Missing it fails strict
+   backend validation.
+
+5. **Counter sub-field synchronization** — `MDxDNnVeQgQ=` field has
+   `PX12738` and `PX12739` which in 6/6 real captures are **always equal**
+   and grow monotonically across EV1→EV2→EV3. Filling them with independent
+   `Math.random()` is an obvious bot signal.
+
+**How to detect strict-tier deployment early**:
+
+- `meta.json.collector_post_count` consistently ≥3 + 3rd POST body
+  contains a cookie field → strict
+- collector path is `<host>/<appPrefix>/xhr/api/v2/collector` (first-party)
+  → strict probability high
+- ob#1 contains an `OlllOOll|...=:...|true`-shaped segment → strict
+
+Concrete tier-detection scripts: see
+`skill/AI_re/playbooks/master-workflow.md` Stage 3.5 and
+`references/deployment-tiers.md`.
 
 ---
 

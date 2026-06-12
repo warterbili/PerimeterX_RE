@@ -7,6 +7,10 @@
 > [**sdenv** (github.com/pysunday/sdenv)](https://github.com/pysunday/sdenv) — the 718⭐ public env-patching ceiling,
 > a jsdom fork patched at the C++ layer. See §10/§11 + `skill/methodology.md §7`.
 
+> ⚠️ **Repositioned (after the 2026-06 strict+ academy case): node_bridge is now best used as a reverse-engineering ORACLE, not a production bypass.**
+> Its hard ceiling is the **JSDOM fingerprint** — canvas/WebGL/fonts are headless-ish low-entropy values in JSDOM, and strict+ PX scores those sensor fields for trust, so node_bridge (even running the real SDK) only yields a **low-trust cookie** (measured: its cookie is blocked over curl at the gate). **Full-chain TLS upgrades (chrome131→chrome142, /ns through the same session) do not fix it** — the transport gets real, the fingerprint stays JSDOM. academy reached strict+ 10/10 precisely by **dropping the node_bridge template for a real-Chrome CDP capture + pure math** (see [`skill/AI_re/references/gotchas.md`](../skill/AI_re/references/gotchas.md) Bug #22).
+> So: **use node_bridge to run the real SDK and observe how a field is computed — never ship its output as a production template.** That use never touches the gate, so TLS is irrelevant.
+
 ---
 
 ## 0. TL;DR — 30-second Overview

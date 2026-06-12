@@ -7,6 +7,14 @@
 > [**sdenv** (github.com/pysunday/sdenv)](https://github.com/pysunday/sdenv) — 718⭐ 的公开补环境 ceiling，
 > jsdom fork 改 C++ 层。详见 §10/§11 + `skill/methodology.md §7`。
 
+> ⚠️ **重新定位（2026-06 严档+ academy 之后）：node_bridge 现在的最佳用途是「逆向 oracle」，不是生产绕过。**
+> 原因——它的根本天花板是 **JSDOM 指纹**：canvas/WebGL/字体在 JSDOM 里是 headless 化的低熵值，PX 严档+ 对这些
+> 传感器字段打**信任分**，所以 node_bridge 跑真 SDK 也只能产出**低信任 cookie**（实测：它的 cookie 走 curl
+> 就被网关拦）。**全链路 TLS 升级（chrome131→chrome142、/ns 走同一 session）救不了它**——传输真了，指纹还是 JSDOM。
+> academy 之所以严档+ 10/10，正是**抛弃 node_bridge 模板、改用真 Chrome CDP 抓的模板 + 纯算**（见
+> [`skill/AI_re/references/gotchas.md`](../skill/AI_re/references/gotchas.md) Bug #22）。
+> 所以：**拿 node_bridge 跑真 SDK 看「某字段怎么算」是它的价值；别拿它的输出当生产模板。** 这个用途不过网关，TLS 无所谓。
+
 ---
 
 ## 0. TL;DR — 30 秒看懂

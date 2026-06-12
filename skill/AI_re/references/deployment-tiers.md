@@ -72,6 +72,19 @@ jq '.[0].d | keys[]' /tmp/ev3.json | grep -c "OkpJAH8oTTA="
 - 部署特征: 3 POSTs, 一方 collector, `_px2` cookie, EV2 有 hid state, counter 同步约束
 - 难度: 算法对了之后**还有 4 个独立陷阱**（Bug #15-#18）
 
+### 严档+ #2: Academy Sports（2026-06-13，第三档）⭐
+- AppID: `PXqqxM841a`
+- Collector: `https://collector-pxqqxm841a.px-cloud.net/api/v2/collector`（三方）
+- `/ns`: `https://ift.px-cloud.net/ns?c=<uuid>`；Cookie `_px3`（TTL 330）；SDK sha `50debea8`
+- 部署特征: Total Wine 那一档全有（3 POSTs、EV3、hid、counter、HMAC 强校验），**再加三条新校验 + 一个传输/IP 维度**：
+  1. **Counter 全模式校验**（Bug #19）—— 不止 `PX12738==PX12739`，子字段只能 `(0,0)/(N,N)/(N,0)`，`(0,N)` 非法。
+  2. **`/ns` token 是 TLS 指纹化的**（Bug #20）—— node TLS 取的 token 短（432）且被降信任，必须用真 Chrome TLS（504）。
+  3. **模板必须真 Chrome CDP 抓**（Bug #21）—— JSDOM/node_bridge 模板信任分不足，cookie 照样被网关拒。
+  4. **传输必须 Chrome TLS 持久 session + IP 信誉敏感**（Bug #22）—— 整链(/ns+collector+edge)走一条 curl_cffi chrome142 session；单 IP 高频 mint 会被降信任。
+- 实测: **新住宅 IP 每次换 → 10/10**；本地 IP 重复 mint 后 → ~1/5（IP 信誉，非算法）。
+- 难度: 字段全对（逐字段 diff 通过）后，**信任分仍由 mint 时的传输+IP+counter 合法性决定**。
+- 完整复盘: [`stample/academy/px_cookie/README.md`](../../../stample/academy/px_cookie/README.md) + 记忆 `px-strict-tier-gotchas`
+
 ## 严档为什么更难
 
 宽档下后端只查"该 session 上报的 PC 是否合法 + EV2 字段结构是否合理"，分数过线就放行。
@@ -84,6 +97,26 @@ jq '.[0].d | keys[]' /tmp/ev3.json | grep -c "OkpJAH8oTTA="
 5. State 里的 hid（device hardware id）是否原样回传？
 
 任何一条不满足 → cookie 签发但 trust=low → 边缘拒。
+
+## 第三档：严档+（academy）—— 信任分还绑定到「你怎么 mint」
+
+Total Wine 那一档全是**服务端对 EV 内容的校验**（HMAC、counter、字段集）。academy 在此之上，
+把 cookie 的 trust 还绑定到 **mint 时的传输与环境真实性**——即使 EV 内容逐字段对，也可能低信任：
+
+| 新维度 | 严档+（academy）怎么查 | 对策 |
+|---|---|---|
+| **Counter 子字段全模式** | `(PX12739, PX12740)` 只能 `(0,0)/(N,N)/(N,0)`，`(0,N)` 非法（TotalWine 文档只覆盖了 `PX12738==PX12739`） | 按抓到的 batch 用对应真实模式；跨 6 批 cross-tab 子计数器 |
+| **`/ns` token 的 TLS 指纹** | `/ns` 响应 `sm` 长度随客户端 TLS 变（node 432 / Chrome 504-512） | `/ns` 必须和 collector 走**同一个 Chrome-impersonate session** |
+| **模板的真实性** | JSDOM/node_bridge 采的传感器（canvas/WebGL/字体）是 headless 化的 → 低信任 | 模板**必须真 Chrome CDP 抓**；多指纹轮换避免"同指纹铸大量 cookie" |
+| **传输指纹** | node TLS 直接 mint → 低信任，网关拒 | 整链走 curl_cffi `chrome142` 持久 session（最接近真 149） |
+| **IP mint 信誉** | 单出口 IP 高频 mint → 该 IP（甚至代理池）被降信任 | 每 cookie 一个新住宅 IP；"浏览器能开首页"≠"该 IP mint 被信任" |
+
+**定位「墙在哪」用 4-way 矩阵**（真浏览器/curl × 真cookie/我们cookie）：真 cookie 两路都过；
+低信任 cookie 只在真浏览器过、走 curl 被拒 → 说明问题在 **cookie 信任分**（非传输/IP）。
+工具：`stample/academy/px_cookie/`（`session_server.py` 持久边车、`e2e.py` 干净IP测、`diff_my_vs_real.py` 逐字段）。
+
+> ⚠️ 严档+ 的关键认知：**Layer 3.5 通过率低且抖动 ≠ 算法错**。先用逐字段 diff 确认 EV（静态必等、动态对 shape+合法模式），
+> 再用 4-way 矩阵区分 cookie-trust vs 传输/IP。academy 卡在 ~40% 的真因就是一个非法 counter 模式（不是字段缺失）。
 
 ## 未来扩展的建议
 

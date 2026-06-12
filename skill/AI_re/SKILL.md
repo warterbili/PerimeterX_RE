@@ -1,8 +1,8 @@
 ---
 name: px-reverse
-description: PerimeterX / HUMAN Security SDK 逆向工程 skill —— 从抓包到生成 _px3/_px2 cookie 的端到端工作流。包含 9 个算法模块（payload/PC/OB/SID/UUID/anti-tamper/hash/memory/ns）、7 个 CLI 工具脚本、跨版本定位手册、27 个 OB handler 形状匹配表、19 条真实踩坑清单。Use when the user mentions PerimeterX, HUMAN Security, _pxN cookies, px-cloud.net, sensor.grubhub.com, pxcookie, or any reversing of PX collector POST traffic.
+description: PerimeterX / HUMAN Security SDK 逆向工程 skill —— 从抓包到生成 _px3/_px2 cookie 的端到端工作流。包含 9 个算法模块（payload/PC/OB/SID/UUID/anti-tamper/hash/memory/ns）、7 个 CLI 工具脚本、跨版本定位手册、27 个 OB handler 形状匹配表、23 条真实踩坑清单。Use when the user mentions PerimeterX, HUMAN Security, _pxN cookies, px-cloud.net, sensor.grubhub.com, pxcookie, or any reversing of PX collector POST traffic.
 languages: [zh, en]
-status: validated 2026-05-21 against ifood.com.br + grubhub.com; iFood + Grubhub generators 10/10 each
+status: validated against ifood.com.br + grubhub.com (宽档) + totalwine.com (严档) + academy.com (严档+); all 10/10 (academy on clean residential IPs)
 ---
 
 # PerimeterX SDK 逆向 Skill
@@ -48,7 +48,7 @@ status: validated 2026-05-21 against ifood.com.br + grubhub.com; iFood + Grubhub
 
 ---
 
-## 🔴 第一次用先读这 6 份（按顺序）
+## 🔴 第一次用先读这 7 份（按顺序）
 
 按效率排序：
 
@@ -56,8 +56,9 @@ status: validated 2026-05-21 against ifood.com.br + grubhub.com; iFood + Grubhub
 2. **`references/locate-by-pattern.md`** ⭐ — **跨版本定位手册**（grep 模式 + 魔法常量 + 控制流特征，**不依赖行号**）
 3. **`references/handler-table.md`** — 27 个 OB handler 按**参数形状**匹配（跨版本通用，**不依赖 wire 字节名**）
 4. **`references/field-categories.md`** — STATIC/DYNAMIC/CONDITIONAL 三分类规则
-5. **`references/gotchas.md`** ⭐ — **18 条真实踩坑**（含 Bundle 路径 5 条 + 2026-05-25 新增的 #15-18 严档部署陷阱），每条都付出过 debug 时间
-6. **`references/deployment-tiers.md`** ⭐ (NEW 2026-05-25) — **PX 宽档 vs 严档** 对照表，决定 generator 验证强度 + 哪些 Gotcha 适用
+5. **`references/gotchas.md`** ⭐ — **23 条真实踩坑**（Bundle 路径 5 条 + 严档 #15-18 + 严档+ #19-23 academy），每条都付出过 debug 时间
+6. **`references/deployment-tiers.md`** ⭐ — **PX 宽档 / 严档 / 严档+** 三档对照表，决定 generator 验证强度 + 哪些 Gotcha 适用
+7. **`references/validated-sites.md`** ⭐ (NEW 2026-06-13) — **4 站全部常量 + 每站不同的 b64 键映射** 查找表，逆向新站点必查（防 #1 移植 bug）
 
 ## 🟢 操作手册 (Step-by-Step Playbooks)
 
@@ -155,6 +156,7 @@ skill/AI_re/  ← Stage 4-8: 定位常量/函数 + 解码 + 字段分析 + 写 g
 | **`diff_http_request.py`** | ⭐ **我的 POST vs 浏览器 POST** 字节级 diff（headers + form params + 顺序） | 1 个浏览器抓的 request + 我的 generator | console 输出差异表 |
 | **`compare_ev2_field_by_field.py`** | 我生成的 EV2 vs 真抓 EV2 逐字段相等检查 | 我的 ev2.json + 真 ev2.json | 字段级 diff 报告 |
 | **`diff_ev_ours_vs_real.py`** ⭐ | (NEW 2026-05-25) 5 段诊断：字段集 / 类型 / STATIC 值 / 顺序 / counter 同步性 —— 严档部署调试主力（[deployment-tiers.md](references/deployment-tiers.md)） | 我的 ev dump + 6 批真抓 ev | console 报告 + json 摘要 |
+| **`cross_event_consistency.py`** ⭐⭐⭐ | (NEW 2026-06-12) **跨事件一致性**——上面所有 diff 都是单张快照、看不到的维度：CONSTANT（页面加载 ts/uuid/platform 跨 EV 恒定）+ MONOTONIC（perf/counter/now-ts 跨 EV 递增）。**严档低 trust 的隐藏根因**（[gotchas.md Bug #19](references/gotchas.md)）。先跑真实包提规则，再跑 generator dump 逐行对 | `samples/` 含 N/decoded_payload_{1,2,3}.json | console 规则表（标 "MUST preserve"） |
 | **`find_hmac_field_sources.py`** ⭐ | (NEW 2026-05-25) [`recover-hmac-formulas.md`](playbooks/recover-hmac-formulas.md) 的 Step 2+3 — grep SDK 找 HMAC 字段赋值点 + helper 函数体 | SDK 路径 + 目标 b64 keys | console 出 fn 体，喂给 Step 4 |
 | **`replay_apples_to_apples.py`** ⭐ | (NEW 2026-05-25) Layer 3.5 验证工具 — 同 proxy 同 TLS 下浏览器 cookie vs ours vs 空 cookie 三路对比，区分 "cookie 内容被标 bot" vs "transport 问题" | HTTPS_PROXY env + TARGET_URL env | console 出 4-way 矩阵 |
 
@@ -258,9 +260,21 @@ ev2[0].d['Xi5rJBtKaB4='] = state.appId;
 
 **比 SDK 反汇编 + 字段重写法快 10 倍，错误率低 10 倍**。
 
+> ⚠️ **模板法是必要非充分 —— 严档/严档+ 站点光套模板会卡在低 trust（这是最大的认知陷阱）。**
+> 模板搞定 STATIC 字段，但严档后端校验的是 **DYNAMIC 字段的语义 + 跨事件一致性 + counter 合法模式
+> + mint 传输真实性**，这些套模板看不出来。严档/严档+ 站点**必须**额外走：
+> 1. **逐字段 diff**（我的 EV vs 真抓）：静态必等、动态对 shape + **合法取值模式**（不止"有值"）。
+> 2. **跨事件一致性**（`cross_event_consistency.py`）：CONSTANT 跨 EV 恒定、MONOTONIC 跨 EV 递增。
+> 3. **写活字段去 SDK 逆真实来源**（grep b64 键字面量 `t["<key>"]=<expr>`），别猜值的形状。
+> 4. **trust 4-way 矩阵**（真浏览器/curl × 真/我们 cookie）定位"墙在 cookie 内容还是传输/IP"。
+> 5. **严档+（academy 类）**：模板**必须真 Chrome CDP 抓**（JSDOM 信任分不够），/ns 走真 Chrome TLS，
+>    每 cookie 一个新住宅 IP。详见 Bug #19-#23 + [`deployment-tiers.md`](references/deployment-tiers.md) 第三档。
+>
+> 一句话：**模板法负责"不缺字段"，深度逆向负责"动态字段对、跨事件一致、传输够真"。两者都要。**
+
 ---
 
-## ⚠️ Top 5 Gotchas（必记 — 完整 19 条在 `references/gotchas.md`）
+## ⚠️ Top 5 Gotchas（必记 — 完整 23 条在 `references/gotchas.md`）
 
 ### Gotcha #1 — `state.no` 必须是 number ⭐⭐⭐
 
@@ -312,19 +326,28 @@ const v = decodeURIComponent(raw.replace(/\+/g, '%20'));
 const v = decodeURIComponent(raw);
 ```
 
-完整 19 条（含 Bundle 路径 5 条）见 [`references/gotchas.md`](references/gotchas.md)。
+完整 23 条（Bundle 5 条 + 严档 #15-18 + 严档+ academy #19-23）见 [`references/gotchas.md`](references/gotchas.md)。
 
 ---
 
-## 🎯 已验证的两个站点（参考）
+## 🎯 已验证的四个站点（参考）—— 横跨 3 档
 
-| 站点 | AppID | TAG | FT | Cookie | 实测 |
-|---|---|---|---|---|---|
-| ifood.com.br | `PXO1GDTa7Q` | `U0MmDhUmOnhXSw==` | `401` | `_px3` (ttl 330) | **10/10** |
-| grubhub.com | `PXO97ybH4J` | `FmYgK1gdJEAP` | `359` | `_px2` (ttl 500) | **10/10** |
+| 站点 | 档位 | AppID | TAG | FT | Cookie | 实测 |
+|---|---|---|---|---|---|---|
+| ifood.com.br | 宽档 | `PXO1GDTa7Q` | `U0MmDhUmOnhXSw==` | `401` | `_px3` (ttl 330) | **10/10** |
+| grubhub.com | 宽档 | `PXO97ybH4J` | `FmYgK1gdJEAP` | `359` | `_px2` (ttl 500) | **10/10** |
+| totalwine.com | 严档 | `PXFF0j69T5` | `CFQ7WU4xIS8MXA==` | `401` | `_px2` (ttl 330) | **10/10** |
+| **academy.com** | **严档+** | `PXqqxM841a` | `dgYGCzBjH3pyBg==` | `405` | `_px3` (ttl 330) | **10/10**（干净住宅 IP）|
 
 ⚠️ 旧文档把 Grubhub AppID 写成 `PXdRotaCw0` / FT 写成 `330` —— **都错了**。
 本 skill 列的值是从真实抓包 POST body 直接提取的。
+
+📖 **四站全部常量 + 每站不同的 b64 键映射（state/HMAC/counter）+ wire char + 冷热策略**
+→ [`references/validated-sites.md`](references/validated-sites.md)（逆向新站点的查找表）。
+
+> academy 是**严档+**（第三档）：在 totalwine 严档之上，trust 还绑定到 mint 的 **传输 TLS +
+> /ns 的 TLS 指纹 + 模板必须真 Chrome + 出口 IP 信誉**（gotchas Bug #20-#23）。
+> 它也是第一个**逐字段 diff 全过但仍低 trust** 的站点 —— 真因是一个**非法 counter 模式**（Bug #20）。
 
 ---
 

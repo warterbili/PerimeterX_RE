@@ -2678,6 +2678,39 @@ grep for constants. **Never start reading from "line N."**
 
 ---
 
+## Appendix I — Strict+ Tier Deployment (academy.com, 2026-06-13)
+
+A third tier, "strict+", sits above totalwine's strict tier (3-POST / EV3 / hid / counter-sync /
+strong HMAC) by **also binding cookie trust to the authenticity of the MINT transport + environment**.
+Even with every EV field byte-correct and the cookie issued normally, a PX-gated endpoint still
+challenges if the mint used node TLS / a JSDOM fingerprint / a reputation-degraded IP. Measured:
+**fresh residential IP per cookie → 10/10**; local IP after heavy repeated minting → ~1/5 (IP
+reputation, not the algorithm).
+
+Constants: AppID `PXqqxM841a`, TAG `dgYGCzBjH3pyBg==`, FT `405`, cookie `_px3`,
+collector `collector-pxqqxm841a.px-cloud.net`, /ns `ift.px-cloud.net`, SDK sha `50debea8` (LF-norm).
+
+**Four strict+-only checks (undocumented before):**
+1. **Counter sub-field legal-pattern space** (refines totalwine's `PX12738==PX12739`): in
+   `{PX12738:N, PX12739:x, PX12740:y, PX12741:-1}`, `x/y ∈ {0, N}`, never independent. Real browsers
+   emit only `(0,0)/(N,N)/(N,0)`; **`(0,N)` never occurs** → instant bot flag. This single illegal
+   pattern pinned academy at ~40% until fixed → 10/10.
+2. **`/ns` token is TLS-fingerprinted**: `sm` length varies by client TLS (node 432 / Chrome 504-512);
+   fetch `/ns` through the same Chrome-impersonated session as the collector.
+3. **Template must be a real-Chrome CDP capture** (203 fields), not JSDOM/node_bridge (177, low-trust);
+   rotate 6 real fingerprints. node_bridge is a reversing oracle only, never a production template.
+4. **Two clocks**: `AzNzeUVTcks=`=`round(performance.now())` is since-navigation (EV1 4500-16000,
+   EV2=EV1+/ns-duration), separate from the Date gap `InJSeGcVXUo=-KDRYPm5SVwk=`; `/ns` duration is a float.
+
+**Diagnosis**: field-by-field diff (static must match; dynamic must match shape AND legal pattern),
+the 4-way trust matrix (real-browser/curl × real/our cookie), and Layer 3.5 on clean fresh IPs.
+
+Full write-up: [`stample/academy/`](../../stample/academy/) +
+[`skill/AI_re/references/validated-sites.md`](../../skill/AI_re/references/validated-sites.md) +
+gotchas Bug #19-#23 + deployment-tiers tier 3.
+
+---
+
 *End of document. For per-component deep dives, refer to the
 project's source artifacts in `sdk_artifacts/`, `platforms/`, and
 `packages/`.*

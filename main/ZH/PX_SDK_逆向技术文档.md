@@ -2593,5 +2593,49 @@ function mh(events, config) {
 
 ---
 
+## 附录 I — 严档+ 部署（academy.com，2026-06-13）
+
+第三档「严档+」：在 totalwine 严档（3-POST / EV3 / hid / counter 同步 / HMAC 强校验）之上，
+**把 cookie 的 trust 还绑定到 mint 的传输真实性与环境真实性**。即使 EV 逐字段全对、cookie 正常签发，
+若 mint 用的是 node TLS / JSDOM 指纹 / 被污染的 IP，PX-gated 端点照样挑战。academy 实测：
+**新住宅 IP 每次换 → 10/10**；本地 IP 重复 mint 后 → ~1/5（IP 信誉，非算法）。
+
+常量：AppID `PXqqxM841a`、TAG `dgYGCzBjH3pyBg==`、FT `405`、Cookie `_px3`、
+collector `collector-pxqqxm841a.px-cloud.net`、/ns `ift.px-cloud.net`、SDK sha `50debea8`（LF 归一）。
+
+### I.1 四条严档+ 独有校验（之前样本没记录）
+
+1. **Counter 子字段「合法模式空间」**（精确化 totalwine 的 `PX12738==PX12739`）
+   counter dict `{PX12738:N, PX12739:x, PX12740:y, PX12741:-1}`，`x/y ∈ {0, N}` 永不独立。
+   跨 6 批真抓 cross-tab → 真浏览器**只产生** `(0,0)/(N,N)/(N,0)`，**`(0,N)` 非法**。
+   academy 卡在 ~40% 的真因就是错给了 `(0,N)`；按抓到的 batch 用对应真实模式后 → 10/10。
+
+2. **`/ns` token 是 TLS 指纹化的**
+   `GET /ns?c=<uuid>` 返回的 `sm`（字段 `MV0BV3Q9AGE=`）长度随客户端 TLS 变：
+   node `https` → 432，真 Chrome（curl_cffi chrome142）→ 504-512。用 node 取等于在 token 里
+   盖了"声称 Chrome 实为 node"的章。`/ns` 必须和 collector 走同一个 Chrome-impersonate session。
+
+3. **模板必须真 Chrome CDP 抓**
+   JSDOM/node_bridge 跑真 SDK 也只采到 headless 化的 canvas/WebGL/字体 → 低信任。academy EV2
+   真抓 **203 字段**，node_bridge 给 **177**（字段数本身就是信号）。node_bridge 只配做**逆向 oracle**，
+   绝不能拿它的输出当生产模板。多抓几批，按 mint **轮换 6 个真指纹**避免同指纹被关联。
+
+4. **两套时钟 + perf 距导航**
+   `AzNzeUVTcks=` = `Math.round(performance.now())` = 距**导航**起点 ms（PX 加载晚，真实 EV1 4500-16000，
+   EV2 = EV1 + /ns耗时~650）；而 `InJSeGcVXUo= - KDRYPm5SVwk=`（Date 差）是**另一套时钟**（EV1 ~10ms，
+   EV2 ~1400ms）。`ZjYWPCNWFws=`(/ns duration) 是 **float**（644-706）非 int。
+
+### I.2 诊断方法论（新增）
+
+- **逐字段 diff**（我的 EV vs 真抓）：静态必等、动态对 shape + **合法取值模式**（不止"有值"）。
+- **trust 4-way 矩阵**：真浏览器/curl × 真cookie/我们cookie——真 cookie 两路过；我们 cookie 只真浏览器过、
+  走 curl 拒 = cookie borderline 信任；真 cookie 也开始 curl 拒 = IP/代理池被测污染（别误判算法回归）。
+- **Layer 3.5 必须在干净住宅 IP 上测**，每 cookie 一个新 IP；"浏览器能开首页"≠"该 IP mint 被信任"。
+
+完整复盘：[`stample/academy/`](../../stample/academy/) + [`skill/AI_re/references/validated-sites.md`](../../skill/AI_re/references/validated-sites.md)
++ gotchas Bug #19-#23 + deployment-tiers 第三档。
+
+---
+
 *文档结束。各组件的深入细节请参考 `sdk_artifacts/`、`platforms/`、`packages/`
 里的源工件。*

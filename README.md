@@ -29,6 +29,7 @@
 [![iFood](https://img.shields.io/badge/iFood-10%2F10%20✓-success?style=for-the-badge)](stample/ifood/)
 [![Grubhub](https://img.shields.io/badge/Grubhub-10%2F10%20✓-success?style=for-the-badge)](stample/grub/)
 [![Total Wine](https://img.shields.io/badge/Total%20Wine-10%2F10%20✓%20strict--tier-success?style=for-the-badge)](stample/totalwine/)
+[![Academy](https://img.shields.io/badge/Academy-10%2F10%20✓%20strict%2B--tier-success?style=for-the-badge)](stample/academy/)
 [![Bundle](https://img.shields.io/badge/iFood%20Bundle-10%2F10%20✓-success?style=for-the-badge)](bundle/)
 
 ![Algorithms](https://img.shields.io/badge/Pure--algo%20Primitives-9%20core-green?style=flat-square&logo=hackthebox)
@@ -504,9 +505,10 @@ Plan B is the project's **disaster-recovery insurance**, ensuring business conti
 | **ifood.com.br** | AppID `PXO1GDTa7Q` · TAG `U0MmDhUmOnhXSw==` · FT `401` · cookie `_px3` (ttl 330) · 2-POST chain · lenient tier | **10/10 pass** |
 | **grubhub.com** | AppID `PXO97ybH4J` · TAG `FmYgK1gdJEAP` · FT `359` · cookie `_px2` (ttl 500) · 2-POST chain · lenient tier | **10/10 pass** |
 | **totalwine.com** ⭐ | AppID `PXFF0j69T5` · TAG `CFQ7WU4xIS8MXA==` · FT `401` · cookie `_px2` (ttl 330) · **3-POST chain** · **strict tier** | **10/10 pass** (2026-05-25) |
+| **academy.com** ⭐⭐ | AppID `PXqqxM841a` · TAG `dgYGCzBjH3pyBg==` · FT `405` · cookie `_px3` (ttl 330) · **3-POST chain** · **strict+ tier** (TLS-fingerprinted /ns + real-Chrome template + counter full-pattern + IP-mint-reputation) | **10/10 pass** on clean residential IPs (2026-06-13) |
 | **iFood Bundle press** | Bundle AppID `PXd6f03jmq8h6c7382req0` · FT `388` · 6 events + WASM + PoW | **10/10 pass** |
 
-All constants are **extracted directly from real POST body captures** ([`stample/{ifood,grub,totalwine}/sample/`](stample/) — 6 auditable batches per site), not relying on documentation memory.
+All constants are **extracted directly from real POST body captures** ([`stample/{ifood,grub,totalwine,academy}/sample/`](stample/) — 6 auditable batches per site), not relying on documentation memory. Per-site b64 key maps + tier checklist: [`skill/AI_re/references/validated-sites.md`](skill/AI_re/references/validated-sites.md).
 
 ### 6.2 End-to-end Business API (2026-05-21 / 2026-05-25 for totalwine)
 
@@ -517,6 +519,7 @@ Beyond byte correctness, this means **real proxy + real business API calls + rea
 | **iFood** | BR residential (Bright Data) | `POST cw-marketplace.ifood.com.br/v1/merchant-info/graphql?lat&lng&channel=IFOOD` | ✅ HTTP 200 → `{ name: "Sorveteria Coelhinho - Shopping Vitória", userRating: 5, available: false }` |
 | **Grubhub** | Local direct (US proxy optional) | `POST /auth (anonymous) + /auth/login (Bearer + real account)` | ✅ HTTP 200 anon_token + HTTP 463 verify_methods (business-layer OTP; desktop 5/5 same verdict) |
 | **Total Wine** ⭐ | US residential (Bright Data) | `GET totalwine.com/search/all?text=wine` (PX-gated SRP HTML) | ✅ HTTP 200 → 1.3 MB real SRP HTML × 10/10 independent sessions on different exit IPs (strict-tier Layer 3.5 validation) |
+| **Academy** ⭐⭐ | US residential (fresh IP/cookie) | `GET academy.com/c/sports-outdoors` (PX-gated; whole mint on one chrome142 session) | ✅ no `/captcha/` redirect × **10/10** fresh-IP sessions (strict+ Layer 3.5; trust bound to mint TLS + /ns fingerprint + IP reputation) |
 
 **Additional finding**: iFood's server stack also runs **Akamai Bot Manager** (response `set-cookie: ak_bmsc=...`); legitimate PX cookie + BR IP simultaneously passes both Akamai and PX layers.
 
@@ -651,6 +654,12 @@ perimeter/                              v2.0 · 2026-05-23
 │   │   ├── sample/                       6 real capture batches × 13 files (含 EV3 解码)
 │   │   ├── script/                       8 scripts (3 are strict-tier-only: diff_ev2, find_hmac, smoke_10x_e2e)
 │   │   └── RESEARCH_PURPOSE.md           Strict vs lenient tier — 5 root causes documented
+│   ├── academy/                         ⭐⭐ NEW 2026-06-13 (strict+ deployment)
+│   │   ├── px_cookie/                    academy_px3.js + EV1/2/3 templates ×6 rotation + smoke 13/13 ✓
+│   │   │                                 + session_server.py (chrome142 持久 session 边车) + e2e.py
+│   │   ├── source/                       init.js (locked at SHA 50debea8…)
+│   │   ├── sample/                       6 real Chrome CDP capture batches × 13 files
+│   │   └── RESEARCH_PURPOSE.md           Strict+ tier — TLS/ns + real-Chrome template + counter + IP-mint
 │   └── live_validation/                ⭐ End-to-end business API validation journal
 │       └── journal/2026-05-21.md         BR residential proxy + dual-site HTTP 200
 │

@@ -53,6 +53,7 @@ skill/**/_debug/
 stample/**/sample/_our_ev/
 stample/**/sample/_diff_report/
 stample/**/sample/_smoke_10x/
+stample/**/_sdk_diff_*.js
 stample/**/chrome_profile/
 
 # Screenshots: kept locally for personal reference, not redistributed.

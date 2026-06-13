@@ -24,12 +24,12 @@ Strict-tier PX deployments (see references/deployment-tiers.md) need ALL
 sections clean. Lenient deployments (iFood/Grub) can tolerate small drift in 5.
 """
 
-import json, sys
+import json, sys, os
 from pathlib import Path
 from collections import Counter
 
-# Adapt these paths for your site:
-ROOT = Path("C:/Users/lsd/lsd_projects/perimeter/tmp/totalwine")
+# Adapt these paths for your site (default: the in-repo totalwine package; override with EV_DIFF_ROOT):
+ROOT = Path(os.environ.get("EV_DIFF_ROOT", "stample/totalwine"))
 
 OURS_PATH = ROOT / "sample/replay/our_ev_v2/our_ev2.json"
 REAL_BATCHES = [p for p in (ROOT / f"sample/{i}/decoded_payload_2.json" for i in range(1, 8)) if p.exists()]

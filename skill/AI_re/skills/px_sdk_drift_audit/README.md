@@ -12,7 +12,7 @@ User says:
 
 ## Procedure
 
-Follow <!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md -->:
+Follow [09_sdk_upgrade.md](../../../../main/ZH/methodology/09_sdk_upgrade.md):
 
 1. Re-lock the SDK
 2. Compare SHA

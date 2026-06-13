@@ -150,7 +150,7 @@ def px_serialize(obj):
 5. Run 100-iteration fuzz testing with random inputs (pre-generate 100 UUIDs/states; compute on both sides)
 ```
 
-Concrete test vector templates: see <!-- removed broken link: ../../../revers/test/ -->.
+Concrete approach: pre-generate fixed UUID/state inputs, then assert byte-equal outputs against the Node reference modules in [`revers/`](../../../revers/).
 
 ---
 

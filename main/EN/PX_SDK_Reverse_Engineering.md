@@ -2697,8 +2697,10 @@ collector `collector-pxqqxm841a.px-cloud.net`, /ns `ift.px-cloud.net`, SDK sha `
    pattern pinned academy at ~40% until fixed → 10/10.
 2. **`/ns` token is TLS-fingerprinted**: `sm` length varies by client TLS (node 432 / Chrome 504-512);
    fetch `/ns` through the same Chrome-impersonated session as the collector.
-3. **Template must be a real-Chrome CDP capture** (203 fields), not JSDOM/node_bridge (177, low-trust);
-   rotate 6 real fingerprints. node_bridge is a reversing oracle only, never a production template.
+3. **For pure-math, prefer a real-Chrome CDP static template** (203 fields, more complete + real sensors
+   than a JSDOM dump's 177); rotate real fingerprints. **JSDOM is NOT a trust ceiling**, though — node_bridge
+   running the live SDK passes academy on a clean IP (1.2MB real data); it serves as both an RE oracle AND a
+   maintenance-free production fallback. Pass rate is governed by counter+TLS+IP (next item).
 4. **Two clocks**: `AzNzeUVTcks=`=`round(performance.now())` is since-navigation (EV1 4500-16000,
    EV2=EV1+/ns-duration), separate from the Date gap `InJSeGcVXUo=-KDRYPm5SVwk=`; `/ns` duration is a float.
 

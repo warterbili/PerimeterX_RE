@@ -12,11 +12,11 @@ How to adapt to your site:
 
 Example: see how 4 HMAC fields were recovered for totalwine in
 references/gotchas.md Bug #18."""
-import re, sys
+import re, sys, os
 from pathlib import Path
 
-# Adapt these for your site:
-SDK_PATH = Path('C:/Users/lsd/lsd_projects/perimeter/tmp/totalwine/source/main.min.js')
+# Adapt these for your site (default: the in-repo totalwine SDK; override with SDK_PATH):
+SDK_PATH = Path(os.environ.get("SDK_PATH", "stample/totalwine/source/main.min.js"))
 TARGET_B64_KEYS = ['Cho5UEx3PWY', 'Lx8cFWl9HCE', 'UiJhKBREYhs', 'EFwjFlU8JyU']
 # Append helper functions you found in the grep output (X/Y in jm(X,Y) calls):
 HELPER_FNS = ['oU', 'ku', 'qy', 'qT', 'jm']

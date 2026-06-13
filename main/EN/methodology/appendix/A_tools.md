@@ -145,16 +145,15 @@ Arguments (env vars):
 - `HTTP_PROXY` — proxy
 - `DEBUG=1` — enable debug logs
 
-### A.14 `smoke_test.sh` — End-to-end stability test
+### A.14 `smoke_test.js` — Generator ↔ SDK constant-sync check
 
 ```bash
-./smoke_test.sh ifood 10
-# Run 10 times; output: 10/10 ✓
+node smoke_test.js
+# Validates each generator's constants (AppID/TAG/FT) match source/SDK_INFO.md; prints N/N ✓
 ```
 
-Arguments:
-- `--ua-list <file>` cross-UA test
-- `--proxy-list <file>` cross-proxy test
+Per-site (`stample/<site>/px_cookie/smoke_test.js`). Run after an SDK bump to confirm the
+generator, SDK_INFO.md, and captured SDK all agree. For end-to-end stability, loop the generator.
 
 ---
 

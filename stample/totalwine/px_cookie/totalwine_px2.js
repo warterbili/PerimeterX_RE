@@ -47,7 +47,7 @@ const COLLECTOR_URL = 'https://www.totalwine.com/FF0j69T5/xhr/api/v2/collector';
 const BI = 'AhIxElclcDNERlc3G04LMQM7JVUTF3g3Dg8uXzldex0APXcvRlR6JmxJRWkDPDxLASh9LCoadHFrH2NQE35maRsPOzsXEgQ/Fzx3Sh1ef2MOCXBpaFp5Hw0ycnlYQD4=';
 const DEFAULT_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36';
 
-// Templates built from 6 fresh-capture batches (tmp/totalwine/sample/{1..6}/decoded_payload_*.json)
+// Templates built from 6 fresh-capture batches (sample/{1..6}/decoded_payload_*.json)
 const TEMPLATES = __dirname;
 const EV1_TEMPLATE = JSON.parse(fs.readFileSync(path.join(TEMPLATES, 'totalwine_ev1_template.json'), 'utf8'));
 const EV2_TEMPLATE = JSON.parse(fs.readFileSync(path.join(TEMPLATES, 'totalwine_ev2_template.json'), 'utf8'));

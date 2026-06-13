@@ -16,14 +16,15 @@
 
 → 别再盯单字段。问题在 **counter 合法模式 / 传输 TLS / 模板真实性 / IP 信誉** 四者之一。
 
-## 1. 抓包 —— 必须真 Chrome（不能 JSDOM/node_bridge）⭐
+## 1. 抓包 —— 纯算静态模板用真 Chrome CDP ⭐
 
 ```bash
 python skill/cdp/scripts/capture_via_cdp_<site>.py 6     # 真 Chrome CDP，6 批，记 sdk_sha256
 ```
-**严档+ 铁律（Bug #22）**：模板**只能来自真 Chrome CDP 抓包**。node_bridge（JSDOM 跑真 SDK）采到的
-canvas/WebGL/字体是 headless 化低熵值 → 信任分天生不够，它自己的 cookie 也过不了网关。
-node_bridge 只配做**逆向 oracle**（看真 SDK 怎么算某字段），绝不当生产模板。多抓几批 → **轮换多指纹**。
+**纯算稳妥默认（Bug #22）**：写**纯算**时静态 EV 模板**优先真 Chrome CDP 抓**（203 字段，比 JSDOM dump 的
+177 更全、传感器值更真）。多抓几批 → **轮换多指纹**避免同指纹被关联降分。
+⚠️ **但 JSDOM 不是信任天花板**：node_bridge 跑真 SDK（live）在干净 IP 上实测能过 academy（1.2MB 真数据）——
+它既是**逆向 oracle**，也是**零维护生产兜底**（SDK 轮换自动适配）。通过率真正由 **counter+TLS+IP**（Bug #23）决定。
 
 ## 2. 逐字段 diff —— 静态等 / 动态对 shape ⭐
 

@@ -61,7 +61,7 @@ const res = await fetch('https://www.ifood.com.br/api/restaurants/...', {
 console.log(res.status);   // 期望: 200 (or 200 + JSON data)
 ```
 
-详见 [`../../../stample/ifood/px_cookie/smoke_test.sh`](../../../stample/ifood/px_cookie/smoke_test.js)。
+详见 [`../../../stample/ifood/px_cookie/smoke_test.js`](../../../stample/ifood/px_cookie/smoke_test.js)。
 
 ---
 
@@ -79,16 +79,16 @@ console.log(res.status);   // 期望: 200 (or 200 + JSON data)
 ### 7.3.1 稳定性 smoke test 脚本
 
 ```bash
-# 单 IP 10 次
-./smoke_test.sh ifood 10
+# 单 IP 10 次 —— 循环跑 generator，期望 10 个不同的有效 cookie
+for i in $(seq 10); do node ifood_px3.js; done
 
 # 跨 5 个 UA × 10 次
 for ua in chrome120 chrome121 firefox119 edge120 chrome_mac; do
-    USER_AGENT=$(ua_lookup $ua) ./smoke_test.sh ifood 10
+    for i in $(seq 10); do USER_AGENT=$(ua_lookup $ua) node ifood_px3.js; done
 done
 ```
 
-详见 <!-- removed broken link: ../../../skill/AI_re/scripts/smoke_test.sh -->。
+详见各站的 `smoke_test.js`，如 [`stample/ifood/px_cookie/smoke_test.js`](../../../stample/ifood/px_cookie/smoke_test.js)。
 
 ---
 
@@ -195,7 +195,7 @@ generator 上线后**持续监控**：
 
 ```bash
 # 每小时跑 1 次 smoke test
-0 * * * * /path/to/smoke_test.sh ifood 5 >> /var/log/px_smoke.log 2>&1
+0 * * * * node /path/to/smoke_test.js ifood 5 >> /var/log/px_smoke.log 2>&1
 ```
 
 如果某天通过率突然下降 → PX 升级了，紧急走 [`09_sdk_upgrade.md`](09_sdk_upgrade.md)。

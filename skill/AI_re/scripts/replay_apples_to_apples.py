@@ -36,7 +36,7 @@ urllib3.disable_warnings()
 # ──────── Adapt these for your site ────────
 ROOT_NODE = Path(os.environ.get("ROOT_NODE", "."))
 TARGET_URL = os.environ.get("TARGET_URL", "https://www.totalwine.com/search/all?text=wine")
-GENERATOR_REL_PATH = os.environ.get("GENERATOR_REL_PATH", "./tmp/totalwine/px_cookie/totalwine_px2")
+GENERATOR_REL_PATH = os.environ.get("GENERATOR_REL_PATH", "stample/totalwine/px_cookie/totalwine_px2")
 
 # Proxy from env (DO NOT hard-code credentials in skill scripts):
 PROXY_URL = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")

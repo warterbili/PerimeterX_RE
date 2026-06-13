@@ -44,7 +44,7 @@ UA = os.environ.get("PX_UA",
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36")
 BLOCK_MARK = os.environ.get("BLOCK_MARK", "/captcha/")
 cdp.CDP_PORT = PORT; cdp.CDP_BASE = f"http://localhost:{PORT}"
-PROFILE = Path(os.environ.get("CDP_PROFILE", "tmp/_trust_matrix_profile"))
+PROFILE = Path(os.environ.get("CDP_PROFILE", "_trust_matrix_profile"))
 
 
 def up():

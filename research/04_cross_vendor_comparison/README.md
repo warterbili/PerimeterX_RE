@@ -10,8 +10,7 @@ testing — we compare design choices, not block rates.
 
 ## Results
 
-See <!-- removed broken link: ../../docs/09_references/comparative_analysis.md -->
-for the full table. Key observations:
+Key observations:
 
 1. **PX is moderate on every axis** — heavier than Cloudflare, lighter than
    Akamai. This makes it a useful study target.

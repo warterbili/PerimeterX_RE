@@ -150,7 +150,7 @@ def px_serialize(obj):
 5. 跑 100 组随机 input 做模糊测试（pre-generate 100 个 UUID/state，两边各算）
 ```
 
-具体 test vectors 模板见 <!-- removed broken link: ../../../revers/test/ -->。
+具体做法：预生成固定的 UUID/state 输入，两边各算后断言字节相等（对照 [`revers/`](../../../revers/) 的 Node 参考实现）。
 
 ---
 
@@ -205,7 +205,7 @@ def uuid_v1():
     # 但 clockseq 行为不完全一致，PX 自己用 random
 ```
 
-完整版见 <!-- removed broken link: ../../../skill/AI_re/scripts/py_port/ -->（待补 — 后续工作）。
+完整的 Python 移植（9 个模块）属后续工作（计划放在 `skill/AI_re/scripts/py_port/`），欢迎 PR。
 
 ---
 

@@ -1,8 +1,5 @@
 # PX 逆向踩坑清单（23 条；#1-14 基础 + #15-18 严档 totalwine + #19-23 严档+ academy）
 
-> 配套阅读 <!-- removed broken link: ../../../docs/zh/_ev1_ev2_unified_reference.md -->
-> 配套阅读 <!-- removed broken link: ../../../docs/zh/18_methodology.md -->
->
 > ⭐ 标记的是**真实付出过 debug 时间**的坑，不是"可能出错"的列表。
 
 ## ⭐⭐⭐ Bug #14（新发现 2026-05-20）: 解 POST body 时把 base64 的 `+` 替换成空格
@@ -452,20 +449,23 @@ const ns = await fetchNs(uuid, NS_HOST);          // sm.length == 432
 **通用规则**: 严档站点，**`/ns` 必须和 collector 走同一个真 Chrome TLS 传输**。验证法：
 直接对 `https://<ns-host>/ns?c=<uuid>` 用 node vs curl_cffi chrome 各取一次，比 `sm` 长度。
 
-## ⭐⭐⭐ Bug #22: 模板必须**真 Chrome CDP 抓**——JSDOM/node_bridge 的信任分不够（academy 2026-06-13）
+## ⭐⭐ Bug #22: 纯算静态模板用**真 Chrome CDP 抓**最稳——但 JSDOM **不是**信任天花板（academy 2026-06-13；2026-06-13 更正）
 
-**症状**: 用 node_bridge（JSDOM 跑真 SDK）生成的 EV 模板，字段全、结构对、cookie 631 字节正常签发，
-但网关页**照样被挑战**。换成真 Chrome CDP 抓的模板 → 通过。
+**⚠️ 先放更正**: 这条最早写成"JSDOM/node_bridge 过不了、只配做 oracle"——**是错的**，
+被烧过的出口 IP 误导了（真正原因见 Bug #23）。**node_bridge 跑真 SDK（JSDOM live）在干净住宅 IP 上
+实测能过 academy 严档+，拿到 1.2MB 真商品页**。JSDOM 指纹**不是**硬信任天花板。
 
-**根因**: JSDOM 里没有真 GPU/字体/音频，SDK 采到的 canvas/WebGL/字体指纹是 headless 化的低熵值。
-PX 严档对这些传感器字段打**信任分**——JSDOM 模板（哪怕跑的是真 SDK）天生低分。真 Chrome 抓的
-203 字段模板带真实传感器指纹 → 高分。
+**仍然成立的部分**: 写**纯算**时，静态 EV 模板**优先用真 Chrome CDP 抓**（`decoded_payload_2.json`，
+academy 真抓 **203 字段**，比 JSDOM dump 的 177 更全、传感器值更真）——这是**稳妥默认**，
+*不是*因为 JSDOM 静态模板必然被拒（同一干净 IP 上 JSDOM-静态模板 vs 真 Chrome 模板没做过 A/B，
+不能断言）。按 mint **轮换多个真指纹**、避免"同一指纹铸大量 cookie"被关联降分，仍是好习惯。
 
-**修复**: 模板**只能来自真 Chrome CDP 抓包**（`decoded_payload_2.json`）。另外 academy EV2
-真抓是 **203 字段**，node_bridge 给的是 **177**——字段数本身就是个 JSDOM 信号。多抓几批，
-按 mint **轮换 6 个真指纹**，避免"同一指纹铸大量 cookie"被关联降分。
+**真正决定 academy 通过率的是 Bug #23**（counter 合法 + chrome142 TLS 传输 + 干净 mint IP），
+**不是** JSDOM-vs-真Chrome 模板之争。当年"换了模板就过"很可能是同时换到了干净 IP 的混淆结果。
 
-**通用规则**: node_bridge 只配做**逆向时的 oracle**（看真 SDK 怎么算某字段），**绝不能拿它的输出当生产模板**。
+**通用规则（更正）**: node_bridge 有**两个**正当用途——(1) **逆向 oracle**（看真 SDK 怎么算某字段）；
+(2) **零维护的生产兜底**——它跑真 SDK，SDK 轮换时自动适配，干净 IP 上能直接产出过网关的 cookie。
+纯算（重抓+重建模板才能跟 SDK 升级）和 node_bridge（自动适配）是**互补**两条产线。
 
 ## ⭐⭐⭐ Bug #23: 严档+ 的信任分绑定到「传输 TLS + IP mint 信誉」（academy 2026-06-13）
 

@@ -1,6 +1,6 @@
 # 2026-05-19 iFood SDK Medium-Version Upgrade — Combat Diff Case
 
-> This is a complete diff record of a **real SDK upgrade**. Pair with [`bug_report/4_sdk_drift.md`](../../4_sdk_drift.md) (theory) + <!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md --> (playbook).
+> This is a complete diff record of a **real SDK upgrade**. Pair with [`bug_report/4_sdk_drift.md`](../../4_sdk_drift.md) (theory) + [09_sdk_upgrade.md](../../../main/EN/methodology/09_sdk_upgrade.md) (playbook).
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Reuse for Future SDK Upgrades / Cross-site Porting
 
-For the next upgrade, **strictly follow** the 7 steps in <!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md -->; mainly lift-and-shift this directory's tooling chain:
+For the next upgrade, **strictly follow** the 7 steps in [09_sdk_upgrade.md](../../../main/EN/methodology/09_sdk_upgrade.md); mainly lift-and-shift this directory's tooling chain:
 
 ```bash
 # 1. Copy a template directory
@@ -78,6 +78,6 @@ cp -r bug_report/sdk_drift_cases/2026-05-19_ifood bug_report/sdk_drift_cases/<NE
 ## Related Documents
 
 - Theory: [`bug_report/4_sdk_drift.md`](../../4_sdk_drift.md)
-- Playbook: <!-- removed broken link: ../../../main/ZH/methodology/09_sdk_upgrade.md -->
+- Playbook: [09_sdk_upgrade.md](../../../main/EN/methodology/09_sdk_upgrade.md)
 - AI skill: [`skill/AI_re/skills/px_sdk_drift_audit/README.md`](../../../skill/AI_re/skills/px_sdk_drift_audit/README.md)
 - Field reference: [`main/ZH/EV1_EV2_UNIFIED_REFERENCE.md`](../../../main/ZH/EV1_EV2_UNIFIED_REFERENCE.md)

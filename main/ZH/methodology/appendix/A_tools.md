@@ -145,16 +145,15 @@ node ../px_cookie/ifood_px3.js
 - `HTTP_PROXY` — 代理
 - `DEBUG=1` — 打开调试日志
 
-### A.14 `smoke_test.sh` — 端到端稳定性测试
+### A.14 `smoke_test.js` — 生成器 ↔ SDK 常量同步校验
 
 ```bash
-./smoke_test.sh ifood 10
-# 跑 10 次，输出: 10/10 ✓
+node smoke_test.js
+# 校验各生成器的常量（AppID/TAG/FT）与 source/SDK_INFO.md 一致；输出 N/N ✓
 ```
 
-参数：
-- `--ua-list <file>` 跨 UA 测试
-- `--proxy-list <file>` 跨代理测试
+每站一个（`stample/<site>/px_cookie/smoke_test.js`）。SDK 升级后跑一次，确认 generator、
+SDK_INFO.md、抓到的 SDK 三方一致。端到端稳定性测试请循环跑 generator。
 
 ---
 

@@ -15,7 +15,7 @@ status: validated against ifood.com.br + grubhub.com (宽档) + totalwine.com (�
 > **TL;DR (EN)**: Pure-math reconstruction of PX's collector POST chain.
 > Input: target URL + AppID. Output: stable `_px3` / `_px2` generator.
 > All constants from **live captures**, validated 10/10 against iFood +
-> Grubhub.
+> Grubhub + Total Wine + Academy.
 
 ---
 

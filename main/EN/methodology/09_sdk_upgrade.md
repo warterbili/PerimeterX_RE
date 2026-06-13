@@ -91,9 +91,9 @@ Most common. The SDK b64 key dictionary refreshes but the algorithm doesn't chan
     cp samples/6/decoded_payload_2.json ../px_cookie/ifood_ev2_template.json
 
 [7] Run generator (Stage 7, 30 min)
-    node ifood_px3.js
-    ./smoke_test.sh 10
-    # Expected: 10/10
+    node smoke_test.js                       # constants sync ✓
+    for i in $(seq 10); do node ifood_px3.js; done
+    # Expected: 10/10 distinct valid cookies
 ```
 
 **Whole process ~2 hours**.
@@ -134,7 +134,7 @@ To shorten response time:
 
 1. **Scriptify capture**: CDP automation captures 6 batches in < 10 minutes
 2. **Decoder toolkit ready**: become proficient with the 14 CLIs in [`../../../skill/AI_re/scripts/`](../../../skill/AI_re/scripts/)
-3. **Weekly cold-start test**: every Monday run `smoke_test.sh ifood 5` to catch issues early
+3. **Weekly cold-start test**: every Monday run the per-site `smoke_test.js` (constant-sync) + a few `node <site>_px3.js` runs to catch issues early
 4. **Retain N-1 version SDK**: keep last successful SDK as a copy for diff
 5. **Monitoring alerts**: pass rate < 95% → Slack/email alert
 

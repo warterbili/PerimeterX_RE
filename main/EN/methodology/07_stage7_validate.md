@@ -61,7 +61,7 @@ const res = await fetch('https://www.ifood.com.br/api/restaurants/...', {
 console.log(res.status);   // Expected: 200 (or 200 + JSON data)
 ```
 
-See [`../../../stample/ifood/px_cookie/smoke_test.sh`](../../../stample/ifood/px_cookie/smoke_test.js).
+See [`../../../stample/ifood/px_cookie/smoke_test.js`](../../../stample/ifood/px_cookie/smoke_test.js).
 
 ---
 
@@ -79,16 +79,16 @@ If any combination's pass rate < 100% → your generator has "doesn't work for c
 ### 7.3.1 Stability smoke-test Script
 
 ```bash
-# Single IP, 10 runs
-./smoke_test.sh ifood 10
+# Single IP, 10 runs — loop the generator, expect 10 distinct valid cookies
+for i in $(seq 10); do node ifood_px3.js; done
 
 # Across 5 UAs × 10 runs each
 for ua in chrome120 chrome121 firefox119 edge120 chrome_mac; do
-    USER_AGENT=$(ua_lookup $ua) ./smoke_test.sh ifood 10
+    for i in $(seq 10); do USER_AGENT=$(ua_lookup $ua) node ifood_px3.js; done
 done
 ```
 
-See <!-- removed broken link: ../../../skill/AI_re/scripts/smoke_test.sh -->.
+See the per-site `smoke_test.js`, e.g. [`stample/ifood/px_cookie/smoke_test.js`](../../../stample/ifood/px_cookie/smoke_test.js).
 
 ---
 
@@ -195,7 +195,7 @@ After the generator goes live, **monitor continuously**:
 
 ```bash
 # Run smoke test hourly
-0 * * * * /path/to/smoke_test.sh ifood 5 >> /var/log/px_smoke.log 2>&1
+0 * * * * node /path/to/smoke_test.js ifood 5 >> /var/log/px_smoke.log 2>&1
 ```
 
 If the pass rate suddenly drops one day → PX has upgraded; emergency-trigger [`09_sdk_upgrade.md`](09_sdk_upgrade.md).

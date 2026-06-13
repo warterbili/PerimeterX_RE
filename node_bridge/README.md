@@ -7,13 +7,13 @@
 > [**sdenv** (github.com/pysunday/sdenv)](https://github.com/pysunday/sdenv) — 718⭐ 的公开补环境 ceiling，
 > jsdom fork 改 C++ 层。详见 §10/§11 + `skill/methodology.md §7`。
 
-> ⚠️ **重新定位（2026-06 严档+ academy 之后）：node_bridge 现在的最佳用途是「逆向 oracle」，不是生产绕过。**
-> 原因——它的根本天花板是 **JSDOM 指纹**：canvas/WebGL/字体在 JSDOM 里是 headless 化的低熵值，PX 严档+ 对这些
-> 传感器字段打**信任分**，所以 node_bridge 跑真 SDK 也只能产出**低信任 cookie**（实测：它的 cookie 走 curl
-> 就被网关拦）。**全链路 TLS 升级（chrome131→chrome142、/ns 走同一 session）救不了它**——传输真了，指纹还是 JSDOM。
-> academy 之所以严档+ 10/10，正是**抛弃 node_bridge 模板、改用真 Chrome CDP 抓的模板 + 纯算**（见
-> [`skill/AI_re/references/gotchas.md`](../skill/AI_re/references/gotchas.md) Bug #22）。
-> 所以：**拿 node_bridge 跑真 SDK 看「某字段怎么算」是它的价值；别拿它的输出当生产模板。** 这个用途不过网关，TLS 无所谓。
+> ✅ **实测更正（2026-06-13）：node_bridge 能过 academy 严档+。** 早先写的"过不了、只配做 oracle"是**错的**——
+> 当时出口 IP 被烧了，错怪到 JSDOM 指纹头上。换干净住宅 IP 后，node_bridge 跑真 SDK（chrome142 TLS 转发）
+> **直接拿到 academy 1.2MB 真商品页**。JSDOM 指纹不是信任天花板；真正决定通过率的是 **出口 IP 信誉 + counter 合法 + Chrome TLS 传输**
+> （见 [`skill/AI_re/references/gotchas.md`](../skill/AI_re/references/gotchas.md) Bug #22/#23）。
+> 所以 node_bridge 有**两个**用途：(1) **逆向 oracle**——看真 SDK 怎么算某字段；(2) **零维护生产兜底**——
+> 它跑真 SDK，SDK 一轮换就自动适配，干净 IP 上直接出过网关的 cookie（对比纯算：SDK 升级要重抓重建模板）。
+> 纯算（`stample/academy/`）和 node_bridge 是**互补**的两条产线，不是谁取代谁。
 
 ---
 

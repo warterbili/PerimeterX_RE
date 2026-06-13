@@ -2615,10 +2615,11 @@ collector `collector-pxqqxm841a.px-cloud.net`、/ns `ift.px-cloud.net`、SDK sha
    node `https` → 432，真 Chrome（curl_cffi chrome142）→ 504-512。用 node 取等于在 token 里
    盖了"声称 Chrome 实为 node"的章。`/ns` 必须和 collector 走同一个 Chrome-impersonate session。
 
-3. **模板必须真 Chrome CDP 抓**
-   JSDOM/node_bridge 跑真 SDK 也只采到 headless 化的 canvas/WebGL/字体 → 低信任。academy EV2
-   真抓 **203 字段**，node_bridge 给 **177**（字段数本身就是信号）。node_bridge 只配做**逆向 oracle**，
-   绝不能拿它的输出当生产模板。多抓几批，按 mint **轮换 6 个真指纹**避免同指纹被关联。
+3. **纯算静态模板优先真 Chrome CDP 抓**
+   写纯算时静态 EV 模板优先真 Chrome CDP 抓：academy EV2 真抓 **203 字段**，比 JSDOM dump 的 **177** 更全更真
+   （稳妥默认）。多抓几批，按 mint **轮换多个真指纹**避免同指纹被关联。
+   ⚠️ **但 JSDOM 不是信任天花板**：node_bridge 跑真 SDK（live）在干净 IP 上实测能过 academy（1.2MB 真数据）——
+   它既是逆向 oracle，也是零维护生产兜底。通过率真正由下一条的 counter+TLS+IP 决定。
 
 4. **两套时钟 + perf 距导航**
    `AzNzeUVTcks=` = `Math.round(performance.now())` = 距**导航**起点 ms（PX 加载晚，真实 EV1 4500-16000，

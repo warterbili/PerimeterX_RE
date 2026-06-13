@@ -54,8 +54,7 @@ Then `myanmar_encode.js` reads `iframe_template.json` at runtime instead
 of using a hardcoded constant.
 
 Alternatively, set up the SDK-drift workflow to auto-detect captcha.js
-changes (similar to the main SDK drift detection in
-<!-- removed broken link: ../../.github/workflows/sdk_drift_detection.yml -->).
+changes (similar to the main SDK drift detection approach).
 
 ## Regression test
 

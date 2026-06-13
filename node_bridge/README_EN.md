@@ -7,9 +7,9 @@
 > [**sdenv** (github.com/pysunday/sdenv)](https://github.com/pysunday/sdenv) — the 718⭐ public env-patching ceiling,
 > a jsdom fork patched at the C++ layer. See §10/§11 + `skill/methodology.md §7`.
 
-> ⚠️ **Repositioned (after the 2026-06 strict+ academy case): node_bridge is now best used as a reverse-engineering ORACLE, not a production bypass.**
-> Its hard ceiling is the **JSDOM fingerprint** — canvas/WebGL/fonts are headless-ish low-entropy values in JSDOM, and strict+ PX scores those sensor fields for trust, so node_bridge (even running the real SDK) only yields a **low-trust cookie** (measured: its cookie is blocked over curl at the gate). **Full-chain TLS upgrades (chrome131→chrome142, /ns through the same session) do not fix it** — the transport gets real, the fingerprint stays JSDOM. academy reached strict+ 10/10 precisely by **dropping the node_bridge template for a real-Chrome CDP capture + pure math** (see [`skill/AI_re/references/gotchas.md`](../skill/AI_re/references/gotchas.md) Bug #22).
-> So: **use node_bridge to run the real SDK and observe how a field is computed — never ship its output as a production template.** That use never touches the gate, so TLS is irrelevant.
+> ✅ **Measured correction (2026-06-13): node_bridge DOES pass academy strict+.** The earlier "can't pass, oracle-only" note was **wrong** — the exit IP was burned and we misattributed the block to the JSDOM fingerprint. On a clean residential IP, node_bridge running the real SDK (forwarded over chrome142 TLS) **pulls academy's full 1.2MB product page**. JSDOM fingerprints are not a trust ceiling; what actually governs the pass rate is **exit-IP reputation + counter legality + Chrome TLS transport** (see [`skill/AI_re/references/gotchas.md`](../skill/AI_re/references/gotchas.md) Bug #22/#23).
+> So node_bridge has **two** valid uses: (1) a **reverse-engineering oracle** — observe how the real SDK computes a field; (2) a **maintenance-free production fallback** — it runs the real SDK, so it auto-adapts when the SDK rotates and yields a gate-passing cookie on a clean IP (vs. the pure-math track, which needs a fresh capture + template rebuild on each SDK bump).
+> Pure-math (`stample/academy/`) and node_bridge are **complementary** production lines, not one replacing the other.
 
 ---
 

@@ -91,9 +91,9 @@ SDK SHA 变了？
     cp samples/6/decoded_payload_2.json ../px_cookie/ifood_ev2_template.json
 
 [7] 跑 generator（Stage 7, 30 min）
-    node ifood_px3.js
-    ./smoke_test.sh 10
-    # 期望: 10/10
+    node smoke_test.js                       # 常量同步 ✓
+    for i in $(seq 10); do node ifood_px3.js; done
+    # 期望: 10/10 个不同的有效 cookie
 ```
 
 **全程 ~2 小时**。
@@ -134,7 +134,7 @@ PX 换了算法（理论上没发生过，但可能）。响应：
 
 1. **抓包工具脚本化**：CDP 自动化抓 6 批 < 10 分钟
 2. **解码工具齐全**：[`../../../skill/AI_re/scripts/`](../../../skill/AI_re/scripts/) 14 个 CLI 用熟
-3. **每周冷启动测试**：每周一跑 `smoke_test.sh ifood 5`，趁早发现问题
+3. **每周冷启动测试**：每周一跑各站 `smoke_test.js`（常量同步）+ 几次 `node <site>_px3.js`，趁早发现问题
 4. **保留 N-1 版本 SDK**：上次成功的 SDK 留一份，对比 diff 用
 5. **监控告警**：通过率 < 95% → Slack/email 告警
 

@@ -43,5 +43,4 @@ This means:
 
 ## See also
 
-- <!-- removed broken link: ../../docs/09_references/failure_modes.md -->
 - [`bug_report/gotchas/`](../../bug_report/gotchas/) — the 14 specific gotchas

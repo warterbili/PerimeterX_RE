@@ -1,0 +1,20 @@
+{
+  "batch_id": 5,
+  "site": "academy.com",
+  "uuid": "bb4f75c0-665b-11f1-9c75-2fffe636dfb9",
+  "tag": "dgYGCzBjH3pyBg==",
+  "ft": "405",
+  "app_id": "PXqqxM841a",
+  "seq": "0",
+  "en": "NTA",
+  "bi": "PSkNKWgeTwh7fWgMJHU0CjwAGm4sLEcPMTQbZAZpRCE6Bk8ReWFOHFNyelI8BwNwPhNCFxUhS0pUcwxjKE5ZAiI0XQYtczsEKQEecSM5FgoxNB8IBDQcKjIPGBduewE=",
+  "method_post_1": "POST",
+  "captured_at": "2026-06-12T12:39:22Z",
+  "collector_post_count": 2,
+  "bundle_post_count": 0,
+  "status_post_1": 200,
+  "status_post_2": 200,
+  "status_post_3": null,
+  "first_collector_url": "https://collector-pxqqxm841a.px-cloud.net/api/v2/collector",
+  "sdk_sha256": "40f2dd06dc4e8f7e6edec8fb8840cd78ad7ea069360694f3807ed302eabeb81d"
+}

@@ -1,0 +1,9 @@
+POST https://collector-pxqqxm841a.px-cloud.net/api/v2/collector
+sec-ch-ua-platform: "Windows"
+Referer: https://www.academy.com/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+Content-type: application/x-www-form-urlencoded
+sec-ch-ua-mobile: ?0
+
+payload=aUkQRhAIEGdbeFt5cFZ6UHAKDxAeEFYQCEkQYgAKYnhqWX92cHsPEAgQWkZGQkEIHR1FRUUcU1FTVldfSxxRXV8dEB4QfQBBfntqBn92cGMPEAgCHhB8AFF6fmp7dXBgUQ8QCBBlW1wBABAeEHxhd3RTAXx8c15BDxAIAh4Qc0h8SFdnZGZRWUEPEAgDAgoEAh4QZWNnQnZKSlt5WGcPEAgBBAICHhB5dmBrYl8HYWRFWQ8QCAMFCgMGABA^ULAwsLAAQeEHtceGFXdVFkamddDxAIAwUKAwAS}DEBQsDCwsGAh4QaGB0ZHVLfEVlSwNoPEAgQUwFTUwUBBQIfBAQHUB8DA1QDHwoHK8DNUFcfBVBUAlECBFACAlcEEB4Qf2QCcGQBYwtzdXcPEAha>cR15eHDhBoWGtlY`nF8KZXRFQQ8QCAIeEGV1YF1QWgZxU}3RnDxAIRkBHVx4Qc3dFRXBZZ0d/WGGKMPEAhJ7EGJqAwAFAQoQCAMGHhBiagMABQELEAgDBh4QYmoDAAUGAhAIAh47QYmoDAAUGAxAIHwNPT09v&appId=PXqqxM841a&tag=dgYGCzBjH3pyBg==&uuid=a3aa7370-665b-11f1-85be-7bf0c06b00e6&ft=405&seq=0&en=NTA&bi=PSkNKWgeTwh7fWgMJHU0CjwAGm4sLEcPMTQbZAZpRCE6Bk8ReWFOHFNyelI8BwNwPhNCFxUhS0pUcwxjKE5ZAiI0XQYtczsEKQEecSM5FgoxNB8IBDQcKjIPGBduewE=&pc=6304586223018889&rsc=1

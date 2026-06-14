@@ -8,7 +8,7 @@
 [![iFood](https://img.shields.io/badge/iFood-10%2F10-success?style=flat-square)](stample/ifood/)
 [![Grubhub](https://img.shields.io/badge/Grubhub-10%2F10-success?style=flat-square)](stample/grub/)
 [![Total Wine](https://img.shields.io/badge/Total%20Wine-10%2F10%20严档-success?style=flat-square)](stample/totalwine/)
-[![Academy](https://img.shields.io/badge/Academy-10%2F10%20严档%2B-success?style=flat-square)](#已验证站点)
+[![Academy](https://img.shields.io/badge/Academy-10%2F10%20严档%2B-success?style=flat-square)](stample/academy/)
 [![License](https://img.shields.io/badge/license-AGPL--3.0%20%2B%20CC%20BY--NC--SA-orange?style=flat-square)](#license)
 
 [English](README.md) · [快速开始](#快速开始) · [原理](#原理) · [文档](#文档) · [AI Skill](skill/AI_re/) · [License](#license)
@@ -35,7 +35,7 @@
 | [ifood.com.br](stample/ifood/) | 宽档 | `_px3` (ttl 330) | 2-POST | **10/10** |
 | [grubhub.com](stample/grub/) | 宽档 | `_px2` (ttl 500) | 2-POST | **10/10** |
 | [totalwine.com](stample/totalwine/) | **严档** | `_px2` (ttl 330) | 3-POST + EV3 | **10/10** |
-| academy.com | **严档+** | `_px3` (ttl 330) | 3-POST + TLS/IP 绑定信任 | **10/10** ¹ |
+| [academy.com](stample/academy/) | **严档+** | `_px3` (ttl 330) | 3-POST + TLS/IP 绑定信任 | **10/10** ¹ |
 
 所有常量都直接来自真实 POST body 抓包（每个公开站点 6 批可审计）。
 ¹ academy 是严档+ 案例（trust 还绑定到 mint 的 TLS 指纹、`/ns` token、真 Chrome 模板、出口 IP 信誉），

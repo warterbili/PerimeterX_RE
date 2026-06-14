@@ -1,0 +1,134 @@
+{
+  "P28PJXkMDBI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https://www.academy.com/",
+      "https://www.academy.com/",
+      "https://www.academy.com/"
+    ],
+    "present_in": "6/6"
+  },
+  "O2sLIX4MDBQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "N2cHLXIGBRc=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Win32",
+      "Win32",
+      "Win32"
+    ],
+    "present_in": "6/6"
+  },
+  "NSEFa3NNAls=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "AzNzeUVTcks=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      4587,
+      4508,
+      7475
+    ],
+    "present_in": "6/6"
+  },
+  "WQUpDxxiKjU=": {
+    "category": "STATIC",
+    "sample_values": [
+      3600,
+      3600,
+      3600
+    ],
+    "present_in": "6/6"
+  },
+  "KDRYPm5SVwk=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781267810580,
+      1781267844837,
+      1781267882177
+    ],
+    "present_in": "6/6"
+  },
+  "InJSeGcVXUo=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781267810587,
+      1781267844843,
+      1781267882187
+    ],
+    "present_in": "6/6"
+  },
+  "ZRFVGyNwWy8=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "627dba60-665b-11f1-af59-db9f4d985dca",
+      "76e91580-665b-11f1-8c42-15b677a006ca",
+      "8d2a9030-665b-11f1-8cd1-8bb1e0f6be25"
+    ],
+    "present_in": "6/6"
+  },
+  "MV0BV3Q9AGE=": {
+    "category": "STATIC",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "6/6"
+  },
+  "ZjYWPCNWFws=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "WGRobh4CaFU=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "AEwwBkUuMjQ=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      {
+        "PX12738": 8,
+        "PX12739": 0,
+        "PX12740": 0,
+        "PX12741": -1
+      },
+      {
+        "PX12738": 7,
+        "PX12739": 0,
+        "PX12740": 0,
+        "PX12741": -1
+      },
+      {
+        "PX12738": 11,
+        "PX12739": 11,
+        "PX12740": 11,
+        "PX12741": -1
+      }
+    ],
+    "present_in": "6/6"
+  }
+}

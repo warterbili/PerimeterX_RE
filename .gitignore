@@ -36,9 +36,9 @@ tmp/
 *_tmp.js
 *_tmp.py
 
-# Private site packages — runnable academy bypass kept local; methodology IS documented
-# (skill refs + main docs), but the turnkey generator/oracle stay off GitHub.
-stample/academy/
+# Customer-specific academy build — paid deliverable + bundled trial proxy key — stays local.
+stample/academy/customer_build/
+# node_bridge academy variant — kept private (oracle/fallback, not the published generator).
 node_bridge/academy/
 
 # Skill ad-hoc debugging scratch (per-session captures, not curated reference data).

@@ -8,7 +8,7 @@
 [![iFood](https://img.shields.io/badge/iFood-10%2F10-success?style=flat-square)](stample/ifood/)
 [![Grubhub](https://img.shields.io/badge/Grubhub-10%2F10-success?style=flat-square)](stample/grub/)
 [![Total Wine](https://img.shields.io/badge/Total%20Wine-10%2F10%20strict-success?style=flat-square)](stample/totalwine/)
-[![Academy](https://img.shields.io/badge/Academy-10%2F10%20strict%2B-success?style=flat-square)](#validated-sites)
+[![Academy](https://img.shields.io/badge/Academy-10%2F10%20strict%2B-success?style=flat-square)](stample/academy/)
 [![License](https://img.shields.io/badge/license-AGPL--3.0%20%2B%20CC%20BY--NC--SA-orange?style=flat-square)](#license)
 
 [中文](README.zh.md) · [Quick Start](#quick-start) · [How it works](#how-it-works) · [Docs](#documentation) · [AI Skill](skill/AI_re/) · [License](#license)
@@ -36,7 +36,7 @@
 | [ifood.com.br](stample/ifood/) | lenient | `_px3` (ttl 330) | 2-POST | **10/10** |
 | [grubhub.com](stample/grub/) | lenient | `_px2` (ttl 500) | 2-POST | **10/10** |
 | [totalwine.com](stample/totalwine/) | **strict** | `_px2` (ttl 330) | 3-POST + EV3 | **10/10** |
-| academy.com | **strict+** | `_px3` (ttl 330) | 3-POST + TLS/IP-bound trust | **10/10** ¹ |
+| [academy.com](stample/academy/) | **strict+** | `_px3` (ttl 330) | 3-POST + TLS/IP-bound trust | **10/10** ¹ |
 
 All constants come straight from real POST-body captures (6 auditable batches per public site).
 ¹ academy is a strict+ case (trust bound to the mint's TLS fingerprint, `/ns` token, real-Chrome template,

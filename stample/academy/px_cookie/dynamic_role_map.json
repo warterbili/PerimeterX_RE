@@ -1,0 +1,220 @@
+{
+  "RBB0WgJxcGk=": {
+    "role": "state.no(int)",
+    "cat": "DYNAMIC",
+    "sample": 1781267810860
+  },
+  "GUVpT18lbHQ=": {
+    "role": "number(perf/mem?)",
+    "cat": "DYNAMIC",
+    "sample": 32773412
+  },
+  "QS0xZwdANVY=": {
+    "role": "number(perf/mem?)",
+    "cat": "DYNAMIC",
+    "sample": 44102416
+  },
+  "KnpacGwXWUI=": {
+    "role": "Date.toString",
+    "cat": "DYNAMIC",
+    "sample": "Fri Jun 12 2026 20:36:51 GMT+0800 (\u4e2d\u56fd\u6807\u51c6\u65f6\u95f4)"
+  },
+  "TBh8Ugp+f2k=": {
+    "role": "?",
+    "cat": "PARTIAL",
+    "sample": "visible"
+  },
+  "Cho6UE9+OGI=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 945
+  },
+  "JxcXHWF0FS4=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 1013
+  },
+  "NABESnFjQns=": {
+    "role": "?",
+    "cat": "DYNAMIC",
+    "sample": "7621192401738327181829426"
+  },
+  "OARITn5oRn0=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 22
+  },
+  "RBB0WgJ9cG8=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 33
+  },
+  "NSEFa3NAAlA=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 22
+  },
+  "aRVZHyx1WS4=": {
+    "role": "hex8-nonce",
+    "cat": "DYNAMIC",
+    "sample": "e1c07c9c"
+  },
+  "NABESnJtQ3w=": {
+    "role": "HMAC(uuid,UA)",
+    "cat": "DYNAMIC",
+    "sample": "0fdc555d29ed8fc84d3f02e859c7037c"
+  },
+  "a1tbUS4/XWs=": {
+    "role": "state.appId",
+    "cat": "DYNAMIC",
+    "sample": "d8lvqomemddc73948vl0"
+  },
+  "cgICSDRgAXw=": {
+    "role": "HMAC(vid,UA)",
+    "cat": "DYNAMIC",
+    "sample": "990474d6db7d900db2efa0f07c1a7ce7"
+  },
+  "Xi5uJBhIbhc=": {
+    "role": "HMAC(pxsid,UA)",
+    "cat": "DYNAMIC",
+    "sample": "11b6e580bb3564699fa49ebd8d5d22ae"
+  },
+  "QAxwRgVsd3U=": {
+    "role": "MD5(vid)",
+    "cat": "DYNAMIC",
+    "sample": "a183252ce7208b13ec48e348eaeee792"
+  },
+  "Hw9vBVpvbz4=": {
+    "role": "?",
+    "cat": "PARTIAL",
+    "sample": {
+      "support": true,
+      "status": {
+        "effectiveType": "4g",
+        "rtt": 200,
+        "downlink": 10,
+        "saveData": false
+      }
+    }
+  },
+  "InJSeGcVUUs=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 200
+  },
+  "STU5fwxTOE8=": {
+    "role": "hex32-unmatched(fingerprint?)",
+    "cat": "PARTIAL",
+    "sample": "45e8c64e47f06b474456b246b2f31d9e"
+  },
+  "ViZmLBBEYR8=": {
+    "role": "state.to",
+    "cat": "DYNAMIC",
+    "sample": "47230032013943864394"
+  },
+  "65012210231;61:461;6": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": "56321123102852975285"
+  },
+  "Slp6EA87eCY=": {
+    "role": "state.echo(int)",
+    "cat": "DYNAMIC",
+    "sample": 2978
+  },
+  "AhIyWEdxPWw=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 920
+  },
+  "ajoaMC9ZFQU=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 74
+  },
+  "KnpacGwaXkE=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": true
+  },
+  "ICxQJmVIUR0=": {
+    "role": "number(perf/mem?)",
+    "cat": "PARTIAL",
+    "sample": 1
+  },
+  "AzNzeUVTcks=": {
+    "role": "number(perf/mem?)",
+    "cat": "DYNAMIC",
+    "sample": 5310
+  },
+  "JnZWfGAQUkw=": {
+    "role": "timestamp-ms",
+    "cat": "DYNAMIC",
+    "sample": 1781267811301
+  },
+  "KDRYPm5SVwk=": {
+    "role": "timestamp-ms",
+    "cat": "DYNAMIC",
+    "sample": 1781267810580
+  },
+  "InJSeGcVXUo=": {
+    "role": "timestamp-ms",
+    "cat": "DYNAMIC",
+    "sample": 1781267812005
+  },
+  "ZRFVGyNwWy8=": {
+    "role": "uuid",
+    "cat": "DYNAMIC",
+    "sample": "627dba60-665b-11f1-af59-db9f4d985dca"
+  },
+  "MV0BV3Q9AGE=": {
+    "role": "long-b64-random",
+    "cat": "DYNAMIC",
+    "sample": "Qnbyzo1ljIPYiV0QiqDyKZA3EYzg+n4GwxlGu+o6moyUGUqi33exGww3PV1vJhzoFnMRquY2qsHdBwbTwaU/A9RdO1fhWZzLEBokSwFwhXcQ56kH3REugwUjwq2BSOw04ZTQ4iwIa4OcmYuuk7SKFp73AXe1zT7HdqGamraHFI/qcM5sRqA3lbZbsahSpNo9RPbg39rnYfKrS+yRkUMSZIti+yzRk85KlEYJCIHCCntcK/DbvV8LGSbPSsvPthp9oDbQHz2wr2RrVzoce8W3koIPPnMUK0Ht1p/zskZ2KnSLsVyRGuZeLZW3uWY6kOrfzfbk+CGg2r4BG9EsxW9BrnZgMu84PHuuJH1sp1arOTUHH6/WKcVB9gmhert2MjOuBFmMrN9DN/gCsEZ3fragYzOfw+RtG81rLLkQHwANheX91Yqe73icLKyH2jmZsyTuxh3rgMkUskaI4Op/DASBWZfuGuBbexqhgwxomnL3aFXcOwlSWYuz2fGjR7UJOw=="
+  },
+  "ZjYWPCNWFws=": {
+    "role": "number(perf/mem?)",
+    "cat": "DYNAMIC",
+    "sample": 650.3000000119209
+  },
+  "AEwwBkUuMjQ=": {
+    "role": "counter-dict",
+    "cat": "DYNAMIC",
+    "sample": {
+      "PX12738": 1426,
+      "PX12739": 0,
+      "PX12740": 0,
+      "PX12741": -1
+    }
+  },
+  "714404640>7541>76105": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": null
+  },
+  "MkJCCHcgRTk=": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": null
+  },
+  "441<===343=74==575<=": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": null
+  },
+  ":<;2=;9>:8929:?:3=2<": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": null
+  },
+  "9:1?;?19:90;0<<0?88>": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": null
+  },
+  ":99<3==<=8929:<>=<<>": {
+    "role": "?",
+    "cat": "CONDITIONAL",
+    "sample": null
+  }
+}

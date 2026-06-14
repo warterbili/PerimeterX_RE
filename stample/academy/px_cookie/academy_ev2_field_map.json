@@ -1,0 +1,2081 @@
+{
+  "RBB0WgJxcGk=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781267810860,
+      1781267845054,
+      1781267882383
+    ],
+    "present_in": "6/6"
+  },
+  "QAxwRgZqd3c=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "U0MjSRUjJX4=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "WQUpDxxhLT4=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "OARITn1iS3w=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "NSEFa3NDAVE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "FCAkKlJCIRs=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "NkZGDHAgSTc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "AzNzeUVed0I=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "aRVZHy90WC0=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "eWVJLzwBTh8=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "fEgMAjouDDg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "fy9PZTpJSVA=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "egoKQD9pCnM=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "TTk9cwhaOkQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "GUVpT18lbHQ=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      32773412,
+      31657942,
+      22036938
+    ],
+    "present_in": "6/6"
+  },
+  "FUFlS1MhZ3w=": {
+    "category": "STATIC",
+    "sample_values": [
+      4395630592,
+      4395630592,
+      4395630592
+    ],
+    "present_in": "6/6"
+  },
+  "QS0xZwdANVY=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      44102416,
+      44531626,
+      24662698
+    ],
+    "present_in": "6/6"
+  },
+  "KnpacGwXWUI=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "Fri Jun 12 2026 20:36:51 GMT+0800 (中国标准时间)",
+      "Fri Jun 12 2026 20:37:25 GMT+0800 (中国标准时间)",
+      "Fri Jun 12 2026 20:38:02 GMT+0800 (中国标准时间)"
+    ],
+    "present_in": "6/6"
+  },
+  "fg4ORDhuC3A=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "ajoaMCxZFQY=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "YjISOCRfFAg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "RTE1ewBXMUw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "MkJCCHcnTTo=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Y1NTWSUwU2M=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "TBh8Ugp+f2k=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      "visible",
+      "visible",
+      "hidden"
+    ],
+    "present_in": "6/6"
+  },
+  "Ln5edGsYUEE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "AW1xJ0cLfhI=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Cho6UE9+OGI=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      945,
+      945,
+      157
+    ],
+    "present_in": "6/6"
+  },
+  "NABESnFmQ3w=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "JxcXHWF0FS4=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      1013,
+      1012,
+      25
+    ],
+    "present_in": "6/6"
+  },
+  "HUltQ1skbHY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "missing",
+      "missing",
+      "missing"
+    ],
+    "present_in": "6/6"
+  },
+  "FUFlS1AmZ30=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "CXV5P08Veg0=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "EX1hN1cdYg0=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "MV0BV3c8AmM=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Ln5edGseXEY=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Pk5OBHsvSjc=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "NABESnFjQns=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "7621192401738327181829426",
+      "2381494219784047733278843",
+      "3660662804751087941276722"
+    ],
+    "present_in": "6/6"
+  },
+  "OARITn5oRn0=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      22,
+      21,
+      22
+    ],
+    "present_in": "6/6"
+  },
+  "RBB0WgJ9cG8=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      33,
+      18,
+      28
+    ],
+    "present_in": "6/6"
+  },
+  "aHQYfi4XHE4=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "NSEFa3NAAlA=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      22,
+      21,
+      22
+    ],
+    "present_in": "6/6"
+  },
+  "ZRFVGyByUi8=": {
+    "category": "STATIC",
+    "sample_values": [
+      -913.01,
+      -913.01,
+      -913.01
+    ],
+    "present_in": "6/6"
+  },
+  "VGBkahIAYFE=": {
+    "category": "STATIC",
+    "sample_values": [
+      "64556c77",
+      "64556c77",
+      "64556c77"
+    ],
+    "present_in": "6/6"
+  },
+  "eEQIDj4kDTQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "T38/NQoYPwY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "10207b2f",
+      "10207b2f",
+      "10207b2f"
+    ],
+    "present_in": "6/6"
+  },
+  "STU5fw9YOkQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "10207b2f",
+      "10207b2f",
+      "10207b2f"
+    ],
+    "present_in": "6/6"
+  },
+  "KVUZX2w0GGk=": {
+    "category": "STATIC",
+    "sample_values": [
+      "90e65465",
+      "90e65465",
+      "90e65465"
+    ],
+    "present_in": "6/6"
+  },
+  "VGBkahIGZl4=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "JnZWfGMXU0g=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "T38/NQkdMQY=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Czt7cU1bfUQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "JVEVW2AxEGk=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "ZHAUeiEQEUw=": {
+    "category": "STATIC",
+    "sample_values": [
+      "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27",
+      "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27",
+      "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27"
+    ],
+    "present_in": "6/6"
+  },
+  "IU0RR2QtFHI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "3207084bd110f1ac964863e23aa78e04",
+      "3207084bd110f1ac964863e23aa78e04",
+      "3207084bd110f1ac964863e23aa78e04"
+    ],
+    "present_in": "6/6"
+  },
+  "UBxgVhV9b2I=": {
+    "category": "STATIC",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "6/6"
+  },
+  "EwNjCVZkYjs=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    ],
+    "present_in": "6/6"
+  },
+  "M2MDKXYEABI=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "aHQYfi4ZFks=": {
+    "category": "STATIC",
+    "sample_values": [
+      "90e65465",
+      "90e65465",
+      "90e65465"
+    ],
+    "present_in": "6/6"
+  },
+  "aRVZHyx1WS4=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "e1c07c9c",
+      "3f2abbc3",
+      "49947f33"
+    ],
+    "present_in": "6/6"
+  },
+  "NABESnJtQ3w=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "0fdc555d29ed8fc84d3f02e859c7037c",
+      "6d391783f7dd9add796925715ef2946e",
+      "f6ebb3218877cea69b495533335cf459"
+    ],
+    "present_in": "6/6"
+  },
+  "a1tbUS4/XWs=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "d8lvqomemddc73948vl0",
+      "d8lvr1eugvuc73bk49qg",
+      "d8lvrag5h66c739ihlr0"
+    ],
+    "present_in": "6/6"
+  },
+  "cgICSDRgAXw=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "990474d6db7d900db2efa0f07c1a7ce7",
+      "dcf039efcecfc3193ceb028ab027bb4f",
+      "36543dd5e42e09f5cf4d5ccc971b478d"
+    ],
+    "present_in": "6/6"
+  },
+  "Xi5uJBhIbhc=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "11b6e580bb3564699fa49ebd8d5d22ae",
+      "88ffa81240e28bf3fbf44c283285721d",
+      "5fcf6113c93310c39a92a4d3b4d12a36"
+    ],
+    "present_in": "6/6"
+  },
+  "QAxwRgVsd3U=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "a183252ce7208b13ec48e348eaeee792",
+      "af805a54a9626637cdc23818443e6841",
+      "207bb9d89ef6b5e8be59319d8ac36f8f"
+    ],
+    "present_in": "6/6"
+  },
+  "QAxwRgVvd3Y=": {
+    "category": "STATIC",
+    "sample_values": [
+      "JZOXEzd9w",
+      "JZOXEzd9w",
+      "JZOXEzd9w"
+    ],
+    "present_in": "6/6"
+  },
+  "PSkNY3hJAlk=": {
+    "category": "STATIC",
+    "sample_values": [
+      "webkit",
+      "webkit",
+      "webkit"
+    ],
+    "present_in": "6/6"
+  },
+  "YGwQZiUMElU=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https:",
+      "https:",
+      "https:"
+    ],
+    "present_in": "6/6"
+  },
+  "cHwAdjUcAkY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "function share() { [native code] }",
+      "function share() { [native code] }",
+      "function share() { [native code] }"
+    ],
+    "present_in": "6/6"
+  },
+  "UT0hdxRdI0Y=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Asia/Shanghai",
+      "Asia/Shanghai",
+      "Asia/Shanghai"
+    ],
+    "present_in": "6/6"
+  },
+  "Hw9vBVpvbjA=": {
+    "category": "STATIC",
+    "sample_values": [
+      "w3c",
+      "w3c",
+      "w3c"
+    ],
+    "present_in": "6/6"
+  },
+  "BXF1O0ARdQ8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "screen",
+      "screen",
+      "screen"
+    ],
+    "present_in": "6/6"
+  },
+  "Tl5+FAs+fCM=": {
+    "category": "STATIC",
+    "sample_values": [
+      {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      },
+      {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      },
+      {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "PAhMQnloQ3M=": {
+    "category": "STATIC",
+    "sample_values": [
+      {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      },
+      {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      },
+      {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "PAhMQnloTHg=": {
+    "category": "STATIC",
+    "sample_values": [
+      {},
+      {},
+      {}
+    ],
+    "present_in": "6/6"
+  },
+  "Xi5uJBtOYBI=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "bRldEyh5XCc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "EX1hN1QdYQQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "f1a38a60",
+      "f1a38a60",
+      "f1a38a60"
+    ],
+    "present_in": "6/6"
+  },
+  "Hw9vBVpvbz4=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 200,
+          "downlink": 10,
+          "saveData": false
+        }
+      },
+      {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 200,
+          "downlink": 10,
+          "saveData": false
+        }
+      },
+      {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 200,
+          "downlink": 10,
+          "saveData": false
+        }
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "HCgsIllIIxE=": {
+    "category": "STATIC",
+    "sample_values": [
+      "default",
+      "default",
+      "default"
+    ],
+    "present_in": "6/6"
+  },
+  "UiJiKBdCbRg=": {
+    "category": "STATIC",
+    "sample_values": [
+      3,
+      3,
+      3
+    ],
+    "present_in": "6/6"
+  },
+  "ViZmLBNGaRk=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "WQUpDxxlKjk=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "WipqIB9KZBU=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "egoKQD9pDXE=": {
+    "category": "STATIC",
+    "sample_values": [
+      {
+        "Az": 81650.8
+      },
+      {
+        "Az": 81650.8
+      },
+      {
+        "Az": 81650.8
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "O2sLIX4MDBQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "b19fVSk/W28=": {
+    "category": "STATIC",
+    "sample_values": [
+      2,
+      2,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "BFA0GkI8Oyw=": {
+    "category": "STATIC",
+    "sample_values": [
+      "TypeError: Cannot read properties of null (reading '0')\n    at lL (https://www.academy.com/qqxM841a/init.js:2:60753)\n    at Array.Bg [as -148] (https://www.academy.com/qqxM841a/init.js:3:82932)\n    at AS (https://www.academy.com/qqxM841a/init.js:3:81601)\n    at https://www.academy.com/qqxM841a/init.js:3:81149",
+      "TypeError: Cannot read properties of null (reading '0')\n    at lL (https://www.academy.com/qqxM841a/init.js:2:60753)\n    at Array.Bg [as -148] (https://www.academy.com/qqxM841a/init.js:3:82932)\n    at AS (https://www.academy.com/qqxM841a/init.js:3:81601)\n    at https://www.academy.com/qqxM841a/init.js:3:81149",
+      "TypeError: Cannot read properties of null (reading '0')\n    at lL (https://www.academy.com/qqxM841a/init.js:2:60753)\n    at Array.Bg [as -148] (https://www.academy.com/qqxM841a/init.js:3:82932)\n    at AS (https://www.academy.com/qqxM841a/init.js:3:81601)\n    at https://www.academy.com/qqxM841a/init.js:3:81149"
+    ],
+    "present_in": "6/6"
+  },
+  "P28PJXkMDBI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https://www.academy.com/",
+      "https://www.academy.com/",
+      "https://www.academy.com/"
+    ],
+    "present_in": "6/6"
+  },
+  "bRldEyt5UyY=": {
+    "category": "STATIC",
+    "sample_values": [
+      [],
+      [],
+      []
+    ],
+    "present_in": "6/6"
+  },
+  "VGBkahEFYVs=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "FCAkKlJGIB8=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "IxMTGWZxESI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "rgb(0, 102, 204)",
+      "rgb(0, 102, 204)",
+      "rgb(0, 102, 204)"
+    ],
+    "present_in": "6/6"
+  },
+  "cyNDaTZGQlI=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ],
+      [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ],
+      [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "HUltQ1guYnc=": {
+    "category": "STATIC",
+    "sample_values": [
+      5,
+      5,
+      5
+    ],
+    "present_in": "6/6"
+  },
+  "OARITn5kSHo=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "M2MDKXYFBRM=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Dh4+VEh4MWI=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "P28PJXkCABE=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "SBR4Xg50d28=": {
+    "category": "STATIC",
+    "sample_values": [
+      "zh-CN",
+      "zh-CN",
+      "zh-CN"
+    ],
+    "present_in": "6/6"
+  },
+  "N2cHLXIGBRc=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Win32",
+      "Win32",
+      "Win32"
+    ],
+    "present_in": "6/6"
+  },
+  "BXF1O0MSegg=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "zh-CN"
+      ],
+      [
+        "zh-CN"
+      ],
+      [
+        "zh-CN"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "fEgMAjoqDjQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    ],
+    "present_in": "6/6"
+  },
+  "BXF1O0AUcQ4=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Dh4+VEh4MGY=": {
+    "category": "STATIC",
+    "sample_values": [
+      -480,
+      -480,
+      -480
+    ],
+    "present_in": "6/6"
+  },
+  "Tl5+FAg9eyc=": {
+    "category": "STATIC",
+    "sample_values": [
+      32,
+      32,
+      32
+    ],
+    "present_in": "6/6"
+  },
+  "YjISOCRREA0=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "QlJyGAc3fSs=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Gecko",
+      "Gecko",
+      "Gecko"
+    ],
+    "present_in": "6/6"
+  },
+  "UiJiKBROZRI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "20030107",
+      "20030107",
+      "20030107"
+    ],
+    "present_in": "6/6"
+  },
+  "fEgMAjkuCjQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    ],
+    "present_in": "6/6"
+  },
+  "MDxANnZRRQ0=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "AzNzeUVSck8=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "UT0hdxRYI0E=": {
+    "category": "STATIC",
+    "sample_values": [
+      2,
+      2,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "NkZGDHArQz8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Netscape",
+      "Netscape",
+      "Netscape"
+    ],
+    "present_in": "6/6"
+  },
+  "Dh4+VEh/Pm8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Mozilla",
+      "Mozilla",
+      "Mozilla"
+    ],
+    "present_in": "6/6"
+  },
+  "AEwwBkYvMDA=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "InJSeGcVUUs=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      200,
+      200,
+      200
+    ],
+    "present_in": "6/6"
+  },
+  "KVUZX28zGW8=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "STU5fw9WNk4=": {
+    "category": "STATIC",
+    "sample_values": [
+      10,
+      10,
+      10
+    ],
+    "present_in": "6/6"
+  },
+  "FwdnDVFnZj4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "4g",
+      "4g",
+      "4g"
+    ],
+    "present_in": "6/6"
+  },
+  "ZjYWPCBbFgk=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "dEAECjEkAzg=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "KVUZX2w2GGw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "WGRobh0Eb1o=": {
+    "category": "STATIC",
+    "sample_values": [
+      "x86",
+      "x86",
+      "x86"
+    ],
+    "present_in": "6/6"
+  },
+  "WGRobh0Eb1s=": {
+    "category": "STATIC",
+    "sample_values": [
+      "64",
+      "64",
+      "64"
+    ],
+    "present_in": "6/6"
+  },
+  "bj4eNCteGQ4=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        {
+          "brand": "Google Chrome",
+          "version": "149"
+        },
+        {
+          "brand": "Chromium",
+          "version": "149"
+        },
+        {
+          "brand": "Not)A;Brand",
+          "version": "24"
+        }
+      ],
+      [
+        {
+          "brand": "Google Chrome",
+          "version": "149"
+        },
+        {
+          "brand": "Chromium",
+          "version": "149"
+        },
+        {
+          "brand": "Not)A;Brand",
+          "version": "24"
+        }
+      ],
+      [
+        {
+          "brand": "Google Chrome",
+          "version": "149"
+        },
+        {
+          "brand": "Chromium",
+          "version": "149"
+        },
+        {
+          "brand": "Not)A;Brand",
+          "version": "24"
+        }
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "UT0hdxRdJkw=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Hw9vBVpvaTc=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "DXl9M0gZewA=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Windows",
+      "Windows",
+      "Windows"
+    ],
+    "present_in": "6/6"
+  },
+  "LDhcMmlYWgI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "19.0.0",
+      "19.0.0",
+      "19.0.0"
+    ],
+    "present_in": "6/6"
+  },
+  "Slp6EA86fCE=": {
+    "category": "STATIC",
+    "sample_values": [
+      "149.0.7827.104",
+      "149.0.7827.104",
+      "149.0.7827.104"
+    ],
+    "present_in": "6/6"
+  },
+  "U0MjSRYjIHM=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "eytLYT5LSFo=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "STU5fwxTOE8=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      "45e8c64e47f06b474456b246b2f31d9e",
+      "45e8c64e47f06b474456b246b2f31d9e",
+      "45e8c64e47f06b474456b246b2f31d9e"
+    ],
+    "present_in": "6/6"
+  },
+  "KxsbEW54FCs=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Hw9vBVlsYDI=": {
+    "category": "STATIC",
+    "sample_values": [
+      16,
+      16,
+      16
+    ],
+    "present_in": "6/6"
+  },
+  "BFA0GkEzNCo=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Xi5uJBtJbh4=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "UBxgVhZ/bmA=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Hm4uZFsJIFI=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "GmoqYF8KLFY=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "AW1xJ0QNdxA=": {
+    "category": "STATIC",
+    "sample_values": [
+      "TypeError: Cannot read properties of undefined (reading 'width')",
+      "TypeError: Cannot read properties of undefined (reading 'width')",
+      "TypeError: Cannot read properties of undefined (reading 'width')"
+    ],
+    "present_in": "6/6"
+  },
+  "Pk5OBHsuSDA=": {
+    "category": "STATIC",
+    "sample_values": [
+      "webkit",
+      "webkit",
+      "webkit"
+    ],
+    "present_in": "6/6"
+  },
+  "X08vRRovKXA=": {
+    "category": "STATIC",
+    "sample_values": [
+      33,
+      33,
+      33
+    ],
+    "present_in": "6/6"
+  },
+  "dEAECjEgAjA=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "CXV5P0wVegg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "ViZmLBBEYR8=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "47230032013943864394",
+      "17226202681327810763",
+      "11498886168218802098"
+    ],
+    "present_in": "6/6"
+  },
+  "65012210231;61:461;6": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      "56321123102852975285",
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  },
+  "Slp6EA87eCY=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      2978,
+      85,
+      2240
+    ],
+    "present_in": "6/6"
+  },
+  "Xi5uJBtIahY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "109|66|66|70|80",
+      "109|66|66|70|80",
+      "109|66|66|70|80"
+    ],
+    "present_in": "6/6"
+  },
+  "Y1NTWSUxVG4=": {
+    "category": "STATIC",
+    "sample_values": [
+      1339,
+      1339,
+      1339
+    ],
+    "present_in": "6/6"
+  },
+  "EFwgFlYwJCw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "MkJCCHQhRTg=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "WGRobh0BbV0=": {
+    "category": "STATIC",
+    "sample_values": [
+      "false",
+      "false",
+      "false"
+    ],
+    "present_in": "6/6"
+  },
+  "ZjYWPCNXEw8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "false",
+      "false",
+      "false"
+    ],
+    "present_in": "6/6"
+  },
+  "RBB0WgF0cWw=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "S3s7MQ0YPAo=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "DXl9M0gecwA=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "ZHAUeiIdG0k=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "loadTimes",
+        "csi",
+        "app"
+      ],
+      [
+        "loadTimes",
+        "csi",
+        "app"
+      ],
+      [
+        "loadTimes",
+        "csi",
+        "app"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "XGhsYhkLY1Q=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "fg4ORDhjDXU=": {
+    "category": "STATIC",
+    "sample_values": [
+      1920,
+      1920,
+      1920
+    ],
+    "present_in": "6/6"
+  },
+  "OSUJb39HBlw=": {
+    "category": "STATIC",
+    "sample_values": [
+      1080,
+      1080,
+      1080
+    ],
+    "present_in": "6/6"
+  },
+  "LVkdU2g9GGA=": {
+    "category": "STATIC",
+    "sample_values": [
+      1920,
+      1920,
+      1920
+    ],
+    "present_in": "6/6"
+  },
+  "EX1hN1QZZA0=": {
+    "category": "STATIC",
+    "sample_values": [
+      1032,
+      1032,
+      1032
+    ],
+    "present_in": "6/6"
+  },
+  "DXl9M0gfcgY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "1920X1080",
+      "1920X1080",
+      "1920X1080"
+    ],
+    "present_in": "6/6"
+  },
+  "YQ1RByRoVjY=": {
+    "category": "STATIC",
+    "sample_values": [
+      32,
+      32,
+      32
+    ],
+    "present_in": "6/6"
+  },
+  "AhIyWER0PWo=": {
+    "category": "STATIC",
+    "sample_values": [
+      32,
+      32,
+      32
+    ],
+    "present_in": "6/6"
+  },
+  "AhIyWEdxPWw=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      920,
+      20,
+      -16000
+    ],
+    "present_in": "6/6"
+  },
+  "ajoaMC9ZFQU=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      74,
+      20,
+      -16000
+    ],
+    "present_in": "6/6"
+  },
+  "CXV5P08Udwk=": {
+    "category": "STATIC",
+    "sample_values": [
+      932,
+      932,
+      932
+    ],
+    "present_in": "6/6"
+  },
+  "fy9PZTpOSVY=": {
+    "category": "STATIC",
+    "sample_values": [
+      919,
+      919,
+      919
+    ],
+    "present_in": "6/6"
+  },
+  "JVEVW2AwFmo=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "X08vRRouLHA=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "KnpacGwaXkE=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Ln5edGsbXk8=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "KnpacGwaXUo=": {
+    "category": "STATIC",
+    "sample_values": [
+      "49e5084e",
+      "49e5084e",
+      "49e5084e"
+    ],
+    "present_in": "6/6"
+  },
+  "OARITn5lSn4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "7c5f9724",
+      "7c5f9724",
+      "7c5f9724"
+    ],
+    "present_in": "6/6"
+  },
+  "SBR4Xg1zfmQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "65d826e0",
+      "65d826e0",
+      "65d826e0"
+    ],
+    "present_in": "6/6"
+  },
+  "ICxQJmVNXxU=": {
+    "category": "STATIC",
+    "sample_values": [
+      "a9269e00",
+      "a9269e00",
+      "a9269e00"
+    ],
+    "present_in": "6/6"
+  },
+  "XQktAxtrIjE=": {
+    "category": "STATIC",
+    "sample_values": [
+      "50a5ec55",
+      "50a5ec55",
+      "50a5ec55"
+    ],
+    "present_in": "6/6"
+  },
+  "aRVZHyx2WC8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "73a0fb26",
+      "73a0fb26",
+      "73a0fb26"
+    ],
+    "present_in": "6/6"
+  },
+  "N2cHLXIEBhs=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "aHQYfi0XGUk=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "BhY2XEN1N2g=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "IU0RR2QuEHI=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "GCQoLl1HKRQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "GUVpT1wmaHQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "dgYGTDNlBn4=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "JxcXHWJ0ECY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "#87h_:h)Woy]5W",
+      "#87h_:h)Woy]5W",
+      "#87h_:h)Woy]5W"
+    ],
+    "present_in": "6/6"
+  },
+  "ICxQJmVIUR0=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      1,
+      1,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "NSEFa3NNAls=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "AzNzeUVTcks=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      5310,
+      5172,
+      8125
+    ],
+    "present_in": "6/6"
+  },
+  "JnZWfGAQUkw=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781267811301,
+      1781267845498,
+      1781267882822
+    ],
+    "present_in": "6/6"
+  },
+  "WQUpDxxiKjU=": {
+    "category": "STATIC",
+    "sample_values": [
+      3600,
+      3600,
+      3600
+    ],
+    "present_in": "6/6"
+  },
+  "KDRYPm5SVwk=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781267810580,
+      1781267844837,
+      1781267882177
+    ],
+    "present_in": "6/6"
+  },
+  "InJSeGcVXUo=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781267812005,
+      1781267846202,
+      1781267883792
+    ],
+    "present_in": "6/6"
+  },
+  "ZRFVGyNwWy8=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "627dba60-665b-11f1-af59-db9f4d985dca",
+      "76e91580-665b-11f1-8c42-15b677a006ca",
+      "8d2a9030-665b-11f1-8cd1-8bb1e0f6be25"
+    ],
+    "present_in": "6/6"
+  },
+  "MV0BV3Q9AGE=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "Qnbyzo1ljIPYiV0QiqDyKZA3EYzg+n4GwxlGu+o6moyUGUqi33exGww3PV1vJhzoFnMRquY2qsHdBwbTwaU/A9RdO1fhWZzLEBokSwFwhXcQ56kH3REugwUjwq2BSOw04ZTQ4iwIa4OcmYuuk7SKFp73AXe1zT7HdqGamraHFI/qcM5sRqA3lbZbsahSpNo9RPbg39rnYfKrS+yRkUMSZIti+yzRk85KlEYJCIHCCntcK/DbvV8LGSbPSsvPthp9oDbQHz2wr2RrVzoce8W3koIPPnMUK0Ht1p/zskZ2KnSLsVyRGuZeLZW3uWY6kOrfzfbk+CGg2r4BG9EsxW9BrnZgMu84PHuuJH1sp1arOTUHH6/WKcVB9gmhert2MjOuBFmMrN9DN/gCsEZ3fragYzOfw+RtG81rLLkQHwANheX91Yqe73icLKyH2jmZsyTuxh3rgMkUskaI4Op/DASBWZfuGuBbexqhgwxomnL3aFXcOwlSWYuz2fGjR7UJOw==",
+      "QlCxXeGHkQjuNf6H2aT/qciSlZbL9tp3EbP2021UZlDP7CHlHBHU1dOAPdADO0XXcnGoDQT9BqnJ3DtLQwsZHBDOAZL5uWamA51PfkzwDYC5iR41xtsJF57mL6GRkId3OtjdmTI04wV/XAH/aywgTg5tNQx/rOLsKOt5UK24BcF7LYrev+EltCSw+08cJREkUH9l3WciNQg6uNYMPwc5P60+JjEsGP6fptXxsy7vGkxoY+Xop2e1ugWgFMNiYQYHWlKc2bVu7X7CDdWwAhKtOrZiS1gPep9+JlIR13bYyfhSF8elwwfR0crAYJEG2JUR49V+eM6N+dQNk++LqorVl9MmdpvmveroJAm+wWP4+mfdfTN3Ip55inYHGKZQ2GaTzDWczChgosC1FoG+KkLE3vGzDm4iVkPR8MMRVFnmj2Elepl0ENOWnU2WeuoFAxVxktOHQ5lFoOBabYHjXLwxbMllxkCCQvpNIz+7AD7mTqDj9xW/7/UUOYwo",
+      "QuReADS9Vnl5Zq7jQMUxL1VX2n7ImJsp9Qa5NTw0faxWwNtoqq2OE2TeU3ktGuxyYqyT0A1t6gmeZkq/y00QjLm/XtNPPlfWTP5YNdewxktTQWUYhzqEDACCfh/kNWEwN70HRX9tU8M2T7PGZuDHPobe3XACiGiMOwNTFv8vtkmU+XSyT5x56SmpUDFe4KWVSQG1yg2NvUC1U8lBYroyY3Hn0nvTCaZ0tfi7mB9JjexPceYRL9mMTr+qlnzuHwVEv99tv5nuwPVlmqgO9VLAwENksS+lC958fQ4K5o4jnKXdoku3xMJ3imjyjuJZt8PJICqsDrNEqBB7zaKicADcaXyjuxy158uisfCu2f5BPa4+1/eahCjjT0GxC9f+X4+GjJvCMNG+DstVB3mm+74BzYvzbMaUIkdxjjbwL5deJyRNgG1BEIzAx4cSYuXwpTebLM0H5RSMdy+HnGUm1+j3ouZwHel583D+AjfZxtValS+MYODxu3wI8hI="
+    ],
+    "present_in": "6/6"
+  },
+  "ZjYWPCNWFws=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      650.3000000119209,
+      651.8000000119209,
+      649.2999999970198
+    ],
+    "present_in": "6/6"
+  },
+  "WGRobh4CaFU=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "AEwwBkUuMjQ=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      {
+        "PX12738": 1426,
+        "PX12739": 0,
+        "PX12740": 0,
+        "PX12741": -1
+      },
+      {
+        "PX12738": 1366,
+        "PX12739": 0,
+        "PX12740": 0,
+        "PX12741": -1
+      },
+      {
+        "PX12738": 1616,
+        "PX12739": 1616,
+        "PX12740": 1616,
+        "PX12741": -1
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "714404640>7541>76105": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      "427737573=4672=45236",
+      null
+    ],
+    "present_in": "1/6"
+  },
+  "MkJCCHcgRTk=": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      "2481ab361659145c190b69828050d2894a0fe9970450a243f4c0a0c696cb216b:v28ZDcLmj2hx7Rp0NL3CzlX7vaV/+IlC1MAruwAOrKJNyR+lcf3lT4MGoVtJiSc44BdCIAxtoDNSMmkW20gRDg==:1000:bwu1J4Z+c4wN1Evp2LALlrmB8xntluEw1Cek0erI1QXuIHbdaN9lay1cxKBABRD4fm06Lz7LJgz0jhFd+0ii3IgUakB1wVIB+tZbZAWimCpUGVFO0TMmj1FONWu8G8wTb2MFA6+2PEmJXObHBww7URgBoOlAKVLWDDSC6FDDO3PqxdKX1dKseS1L88/ffJqhD8T0Bk6ogmLyEYU+fuzMcde0vkRsM07WVfkBLSpRK5AbGL9uiwH1O9LhLiEVDJERnGZ4iXW0thUmdBxogmYMfNwRvgIPAoP0hjUuEM/c2VX/FsG39EbNUKz0A7SEFErM1Fy3Dk8fjjf0jPih945H1VYj69nxnxPDkT5hjpPz5IW8/Bo92/nO7g3CvlwMYeKUbukTaW2XcGCFJP7VSSpTp0w4wrKVhr1gIWs5AuBU5AheLtzIXtzf/GNDvqVjrCCuOPawEVEDs83/pfkc/8MQcg==",
+      "c0e3abdaf53940c39d21b0f75a5989c2481cb9122cce793d5bd93bd5b43a1a22:iVkFaiEct+wvsSo7XnExsho1dkfeuNgrD8yMiw/dDHkLlTzUYqkHagnm17Eyqvr1j3nKJ65xjUTsu2/LyFWlug==:1000:Rf0wXXm2Er/+aAJsCabW3u+ZqqtDe5v55YAzCwGtzJqOKjXK4h2R/MApZPAmDrTSxgZYywyYjHGmJnQFyr5OzfHq9+s1wffcMposXO/RuVTVtzbTXsEWHxJ7/lYMwvwEf7HByQxl3+EaYeCdYhTcjzrLIH6F8M+0YQU9nNzo0yCye+pLtiVTqEUcP/W+1lA6VrU6Q2CnnzYihHRdUnxkKRZ8bb1eYsc4XIo7mTOEI6N/Q/rfksCTqrVl3JWCgKNuH/SaRJ0X4GxMQEZZguR1qTPkXuW4q37x4PQ+lLN+EPUHOWCYaJ6Oev4O+eqM3urb+eKFyWnGySb20phSPY8rKSNYeFTWTc7+9oKX/Q/lnQbfTIW1HpiWgVnqOAuhakOYTJMPwwKPIUwwNEkVCYVl33TENSX2K1U71yBxu5nZQgxU2TZmJx7xIvPTSL9O17bO5KDJxlN9owz791wVdwsc+Q=="
+    ],
+    "present_in": "5/6"
+  },
+  "441<===343=74==575<=": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      "550=<<<252<65<<464=<"
+    ],
+    "present_in": "1/6"
+  },
+  ":<;2=;9>:8929:?:3=2<": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  },
+  "9:1?;?19:90;0<<0?88>": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  },
+  ":99<3==<=8929:<>=<<>": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  }
+}

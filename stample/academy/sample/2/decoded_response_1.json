@@ -1,0 +1,209 @@
+{
+  "xorKey": 44,
+  "segments": [
+    "oIIIII|_px3|330|2481ab361659145c190b69828050d2894a0fe9970450a243f4c0a0c696cb216b:v28ZDcLmj2hx7Rp0NL3CzlX7vaV/+IlC1MAruwAOrKJNyR+lcf3lT4MGoVtJiSc44BdCIAxtoDNSMmkW20gRDg==:1000:bwu1J4Z+c4wN1Evp2LALlrmB8xntluEw1Cek0erI1QXuIHbdaN9lay1cxKBABRD4fm06Lz7LJgz0jhFd+0ii3IgUakB1wVIB+tZbZAWimCpUGVFO0TMmj1FONWu8G8wTb2MFA6+2PEmJXObHBww7URgBoOlAKVLWDDSC6FDDO3PqxdKX1dKseS1L88/ffJqhD8T0Bk6ogmLyEYU+fuzMcde0vkRsM07WVfkBLSpRK5AbGL9uiwH1O9LhLiEVDJERnGZ4iXW0thUmdBxogmYMfNwRvgIPAoP0hjUuEM/c2VX/FsG39EbNUKz0A7SEFErM1Fy3Dk8fjjf0jPih945H1VYj69nxnxPDkT5hjpPz5IW8/Bo92/nO7g3CvlwMYeKUbukTaW2XcGCFJP7VSSpTp0w4wrKVhr1gIWs5AuBU5AheLtzIXtzf/GNDvqVjrCCuOPawEVEDs83/pfkc/8MQcg==|true|300",
+    "ooIoIo|770a6e34-665b-11f1-bb7a-629e9c491ff6",
+    "oIooIo|cu",
+    "ooIooI|17226202681327810763",
+    "oIIoIIoI|1781267845054",
+    "IIIIII|d8lvr1eugvuc73bk49qg",
+    "oIIoIIoo|85",
+    "oIIoIooo|770a6fcb-665b-11f1-bb7b-629e9c491ff6|true",
+    "oIooII|51548eb02d3e3119d3aa1c3c5fbb1a2eb8da057992c4215b20b0aff092815332",
+    "oIIooo|770a671b-665b-11f1-bb7a-13e7123c5ecf|31536000|true",
+    "ooIIII|cc|60|U2FtZVNpdGU9TGF4Ow==",
+    "ooIIII|idp_c|60|1,s",
+    "IoIIII|ai:0,uiii:0",
+    "oIIooIoo|70vLIUrFM9Kf/qxXADDbia-sxiwZx5C33n6rEbFyv14=:iwuO1mtYd1Q59Mm-5yGD9vo9VqhI6PhO8-3tbsVlFFdu66gyuJ1h3eUmg742FNyjSfoq-qOV/IgY4eiydc0yq6yxbW7vmYrHCAebyNYMjw9kSMzuNOIvkfjCd0jXPeVxEY6OXJ2BtlFPoRvPp8sM6SsMQGyfWSvKe6fNSW55wpGBcm42XVlWISjr5rIyGI2P|true"
+  ],
+  "results": [
+    {
+      "handler": "ooIIII",
+      "handlerType": "cookie_config",
+      "args": [
+        "cc",
+        "60",
+        "U2FtZVNpdGU9TGF4Ow=="
+      ],
+      "result": {
+        "type": "cookie_config",
+        "name": "cc",
+        "ttl": 60,
+        "value": "U2FtZVNpdGU9TGF4Ow=="
+      }
+    },
+    {
+      "handler": "oIIIII",
+      "handlerType": "set_cookie",
+      "args": [
+        "_px3",
+        "330",
+        "2481ab361659145c190b69828050d2894a0fe9970450a243f4c0a0c696cb216b:v28ZDcLmj2hx7Rp0NL3CzlX7vaV/+IlC1MAruwAOrKJNyR+lcf3lT4MGoVtJiSc44BdCIAxtoDNSMmkW20gRDg==:1000:bwu1J4Z+c4wN1Evp2LALlrmB8xntluEw1Cek0erI1QXuIHbdaN9lay1cxKBABRD4fm06Lz7LJgz0jhFd+0ii3IgUakB1wVIB+tZbZAWimCpUGVFO0TMmj1FONWu8G8wTb2MFA6+2PEmJXObHBww7URgBoOlAKVLWDDSC6FDDO3PqxdKX1dKseS1L88/ffJqhD8T0Bk6ogmLyEYU+fuzMcde0vkRsM07WVfkBLSpRK5AbGL9uiwH1O9LhLiEVDJERnGZ4iXW0thUmdBxogmYMfNwRvgIPAoP0hjUuEM/c2VX/FsG39EbNUKz0A7SEFErM1Fy3Dk8fjjf0jPih945H1VYj69nxnxPDkT5hjpPz5IW8/Bo92/nO7g3CvlwMYeKUbukTaW2XcGCFJP7VSSpTp0w4wrKVhr1gIWs5AuBU5AheLtzIXtzf/GNDvqVjrCCuOPawEVEDs83/pfkc/8MQcg==",
+        "true",
+        "300"
+      ],
+      "result": {
+        "type": "set_cookie",
+        "name": "_px3",
+        "value": "2481ab361659145c190b69828050d2894a0fe9970450a243f4c0a0c696cb216b:v28ZDcLmj2hx7Rp0NL3CzlX7vaV/+IlC1MAruwAOrKJNyR+lcf3lT4MGoVtJiSc44BdCIAxtoDNSMmkW20gRDg==:1000:bwu1J4Z+c4wN1Evp2LALlrmB8xntluEw1Cek0erI1QXuIHbdaN9lay1cxKBABRD4fm06Lz7LJgz0jhFd+0ii3IgUakB1wVIB+tZbZAWimCpUGVFO0TMmj1FONWu8G8wTb2MFA6+2PEmJXObHBww7URgBoOlAKVLWDDSC6FDDO3PqxdKX1dKseS1L88/ffJqhD8T0Bk6ogmLyEYU+fuzMcde0vkRsM07WVfkBLSpRK5AbGL9uiwH1O9LhLiEVDJERnGZ4iXW0thUmdBxogmYMfNwRvgIPAoP0hjUuEM/c2VX/FsG39EbNUKz0A7SEFErM1Fy3Dk8fjjf0jPih945H1VYj69nxnxPDkT5hjpPz5IW8/Bo92/nO7g3CvlwMYeKUbukTaW2XcGCFJP7VSSpTp0w4wrKVhr1gIWs5AuBU5AheLtzIXtzf/GNDvqVjrCCuOPawEVEDs83/pfkc/8MQcg==",
+        "ttl": 330
+      }
+    },
+    {
+      "handler": "ooIoIo",
+      "handlerType": "pxsid",
+      "args": [
+        "770a6e34-665b-11f1-bb7a-629e9c491ff6"
+      ],
+      "result": {
+        "type": "pxsid",
+        "value": "770a6e34-665b-11f1-bb7a-629e9c491ff6"
+      }
+    },
+    {
+      "handler": "oIooIo",
+      "handlerType": "control_flag",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "ooIooI",
+      "handlerType": "session_id",
+      "args": [
+        "17226202681327810763"
+      ]
+    },
+    {
+      "handler": "oIIoIIoI",
+      "handlerType": "timestamp",
+      "args": [
+        "1781267845054"
+      ]
+    },
+    {
+      "handler": "IIIIII",
+      "handlerType": "app_id",
+      "args": [
+        "d8lvr1eugvuc73bk49qg"
+      ]
+    },
+    {
+      "handler": "oIIoIIoo",
+      "handlerType": "captcha_control",
+      "args": [
+        "85"
+      ],
+      "result": {
+        "type": "captcha_control",
+        "signal": 85
+      }
+    },
+    {
+      "handler": "oIIoIooo",
+      "handlerType": "cts",
+      "args": [
+        "770a6fcb-665b-11f1-bb7b-629e9c491ff6",
+        "true"
+      ],
+      "result": {
+        "type": "cts",
+        "value": "770a6fcb-665b-11f1-bb7b-629e9c491ff6",
+        "flag": "true"
+      }
+    },
+    {
+      "handler": "oIooII",
+      "handlerType": "challenge_hash",
+      "args": [
+        "51548eb02d3e3119d3aa1c3c5fbb1a2eb8da057992c4215b20b0aff092815332"
+      ]
+    },
+    {
+      "handler": "oIIooo",
+      "handlerType": "vid",
+      "args": [
+        "770a671b-665b-11f1-bb7a-13e7123c5ecf",
+        "31536000",
+        "true"
+      ],
+      "result": {
+        "type": "vid",
+        "value": "770a671b-665b-11f1-bb7a-13e7123c5ecf",
+        "ttl": 31536000,
+        "flag": "true"
+      }
+    },
+    {
+      "handler": "ooIIII",
+      "handlerType": "cookie_config",
+      "args": [
+        "idp_c",
+        "60",
+        "1,s"
+      ],
+      "result": {
+        "type": "cookie_config",
+        "name": "idp_c",
+        "ttl": 60,
+        "value": "1,s"
+      }
+    },
+    {
+      "handler": "IoIIII",
+      "handlerType": "feature_flags",
+      "args": [
+        "ai:0,uiii:0"
+      ],
+      "result": {
+        "type": "feature_flags",
+        "items": {
+          "ai": "0",
+          "uiii": "0"
+        }
+      }
+    },
+    {
+      "handler": "oIIooIoo",
+      "handlerType": "unknown",
+      "args": [
+        "70vLIUrFM9Kf/qxXADDbia-sxiwZx5C33n6rEbFyv14=:iwuO1mtYd1Q59Mm-5yGD9vo9VqhI6PhO8-3tbsVlFFdu66gyuJ1h3eUmg742FNyjSfoq-qOV/IgY4eiydc0yq6yxbW7vmYrHCAebyNYMjw9kSMzuNOIvkfjCd0jXPeVxEY6OXJ2BtlFPoRvPp8sM6SsMQGyfWSvKe6fNSW55wpGBcm42XVlWISjr5rIyGI2P",
+        "true"
+      ]
+    }
+  ],
+  "state": {
+    "cookies": {
+      "cc": {
+        "ttl": 60,
+        "value": "U2FtZVNpdGU9TGF4Ow=="
+      },
+      "idp_c": {
+        "ttl": 60,
+        "value": "1,s"
+      }
+    },
+    "px3": {
+      "name": "_px3",
+      "value": "2481ab361659145c190b69828050d2894a0fe9970450a243f4c0a0c696cb216b:v28ZDcLmj2hx7Rp0NL3CzlX7vaV/+IlC1MAruwAOrKJNyR+lcf3lT4MGoVtJiSc44BdCIAxtoDNSMmkW20gRDg==:1000:bwu1J4Z+c4wN1Evp2LALlrmB8xntluEw1Cek0erI1QXuIHbdaN9lay1cxKBABRD4fm06Lz7LJgz0jhFd+0ii3IgUakB1wVIB+tZbZAWimCpUGVFO0TMmj1FONWu8G8wTb2MFA6+2PEmJXObHBww7URgBoOlAKVLWDDSC6FDDO3PqxdKX1dKseS1L88/ffJqhD8T0Bk6ogmLyEYU+fuzMcde0vkRsM07WVfkBLSpRK5AbGL9uiwH1O9LhLiEVDJERnGZ4iXW0thUmdBxogmYMfNwRvgIPAoP0hjUuEM/c2VX/FsG39EbNUKz0A7SEFErM1Fy3Dk8fjjf0jPih945H1VYj69nxnxPDkT5hjpPz5IW8/Bo92/nO7g3CvlwMYeKUbukTaW2XcGCFJP7VSSpTp0w4wrKVhr1gIWs5AuBU5AheLtzIXtzf/GNDvqVjrCCuOPawEVEDs83/pfkc/8MQcg==",
+      "ttl": 330,
+      "secure": true,
+      "maxAge": 300
+    },
+    "pxsid": "770a6e34-665b-11f1-bb7a-629e9c491ff6",
+    "jf": "cu",
+    "to": "17226202681327810763",
+    "eo": null,
+    "no": "1781267845054",
+    "ro": 1781267845,
+    "appId": "d8lvr1eugvuc73bk49qg",
+    "captchaSignal": 85,
+    "cts": "770a6fcb-665b-11f1-bb7b-629e9c491ff6",
+    "qa": "51548eb02d3e3119d3aa1c3c5fbb1a2eb8da057992c4215b20b0aff092815332",
+    "vid": "770a671b-665b-11f1-bb7a-13e7123c5ecf",
+    "features": {
+      "ai": "0",
+      "uiii": "0"
+    }
+  }
+}

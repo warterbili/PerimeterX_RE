@@ -1,0 +1,23 @@
+[
+  {
+    "t": "EFwgFlYwIiU=",
+    "d": {
+      "ViZmLBNBYxY=": "[\"TypeError: Cannot read properties of null at lL at HTMLDocument.getElementById at e.insertStaticCss at r.<anonymous> at r.<anonymous> at Generator.<anonymous> at Generator.next at a \",\"TypeError: Cannot read properties of null at lL at HTMLDocument.querySelectorAll at hideShipsToStoreSpanFromRecContainers at <anonymous>:171:9 at d at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:165:159 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:40:307 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:24:121 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:105:131 at Object.<anonymous> \",\"TypeError: Cannot read properties of null at lL at HTMLDocument.querySelectorAll at removeShipsBadge at <anonymous>:204:5 at d at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:165:159 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:40:307 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:24:121 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:105:131 at Object.<anonymous> \",\"TypeError: Cannot read properties of null at lL at HTMLDocument.querySelector at <anonymous>:80:39 at <anonymous>:101:3 at d at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:165:159 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:40:307 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:24:121 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:105:131 at Object.<anonymous> \",\"TypeError: Cannot read properties of null at lL at HTMLDocument.querySelectorAll at getTargets at injectDisclaimer at MonetateAiImageryDisclaimer at <anonymous>:147:3 at d at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:165:159 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:40:307 at https://www.academy.com/personalization/prod/se/js/3/a-682295e7/p/academy.com/t1779902150/4fb407fbf79b9150/custom.js:24:121\"]",
+      "NSEFa3NNAls=": 4,
+      "AzNzeUVTcks=": 10084,
+      "InJSeGcVXUo=": 1781267884796,
+      "ZRFVGyNwWy8=": "8d2a9030-665b-11f1-8cd1-8bb1e0f6be25",
+      "MV0BV3Q9AGE=": "QuReADS9Vnl5Zq7jQMUxL1VX2n7ImJsp9Qa5NTw0faxWwNtoqq2OE2TeU3ktGuxyYqyT0A1t6gmeZkq/y00QjLm/XtNPPlfWTP5YNdewxktTQWUYhzqEDACCfh/kNWEwN70HRX9tU8M2T7PGZuDHPobe3XACiGiMOwNTFv8vtkmU+XSyT5x56SmpUDFe4KWVSQG1yg2NvUC1U8lBYroyY3Hn0nvTCaZ0tfi7mB9JjexPceYRL9mMTr+qlnzuHwVEv99tv5nuwPVlmqgO9VLAwENksS+lC958fQ4K5o4jnKXdoku3xMJ3imjyjuJZt8PJICqsDrNEqBB7zaKicADcaXyjuxy158uisfCu2f5BPa4+1/eahCjjT0GxC9f+X4+GjJvCMNG+DstVB3mm+74BzYvzbMaUIkdxjjbwL5deJyRNgG1BEIzAx4cSYuXwpTebLM0H5RSMdy+HnGUm1+j3ouZwHel583D+AjfZxtValS+MYODxu3wI8hI=",
+      "ZjYWPCNWFws=": 649.2999999970198,
+      "WGRobh4CaFU=": true,
+      "MkJCCHcgRTk=": "f2bdb92909a640b79fb5e00c20c496618b9dbf75179fcd785126b69400b5ca57:XDia3h7bu3ydtTv2w8I1obGiqPYeh7MF7hRkdX9brvGVYIJzjYeTYA88OXh/as/XzzNKxhjFRBZ2gxdu2d88EQ==:1000:VRI+QkEAXMpL0fziBDmDCJPhZ/MN503RQYKMW/JirD40c43EPi+ff3D5B7TvFZH1HJPBLKoSOi70c7kq91RS91IEffS0e8dMkN6DC9f0QaLJ3tDEyM3qIu0vRNQWXclM78QjGz3EoQLpHrRy7PoQzDdvfl9vs6xR1PQOlh4+kWkOh9IKlpeD9PzepoRzFrOnOFz91+SFJWCDiJk08IVc1YWxQTk/CBdTeQlc2tnOMlzyHb7U4dHNSUVOQUo5F63yrgoYFvtdmsAcSLPGtUm3DyiiO2rLgk8noMs1t3II7qbwcr0JtP3NdqfjAzY1FHX3L9WK29udln7JzjzIBhHJDXm0+kgjo9WoYol4BekgevO6pEJlgX03ZiOhZKjmDVw4U2L7n+qlBlcPR2PgWZY1QGajUoOsda7K8wn0upVsprFh1BXETusLTzvw7aKUYjz77pwvXDJ66KEiA0aX69HlGA==",
+      "AEwwBkUuMjQ=": {
+        "PX12738": 2621,
+        "PX12739": 2621,
+        "PX12740": 2621,
+        "PX12741": -1
+      },
+      "P28PJXkMDBI=": "https://www.academy.com/"
+    }
+  }
+]

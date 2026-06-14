@@ -95,4 +95,4 @@ HOME_URL=https://site/ GATED=https://site/gated COOKIE=_px3 OUR_COOKIE="<ours>" 
 - `diff_ev_field_by_field` 0 problem + `cross_event_consistency` 全 match + counter 合法模式。
 - 干净住宅 IP（每次换）跑 ≥10 次 Layer 3.5（真打 PX-gated 端点）→ 无 captcha 重定向 = 通过。
 
-完整真实案例（私有包）：academy.com strict+，新住宅 IP **10/10**。方法论可复用于任何严档+ 站点。
+完整真实案例：academy.com strict+，新住宅 IP **10/10**（生成器已随项目开源）。方法论可复用于任何严档+ 站点。

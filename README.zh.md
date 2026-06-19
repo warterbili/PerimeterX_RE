@@ -9,6 +9,7 @@
 [![Grubhub](https://img.shields.io/badge/Grubhub-10%2F10-success?style=flat-square)](stample/grub/)
 [![Total Wine](https://img.shields.io/badge/Total%20Wine-10%2F10%20严档-success?style=flat-square)](stample/totalwine/)
 [![Academy](https://img.shields.io/badge/Academy-10%2F10%20严档%2B-success?style=flat-square)](stample/academy/)
+[![Walmart](https://img.shields.io/badge/Walmart-10%2F10%20PX层-yellow?style=flat-square)](stample/walmart/)
 [![License](https://img.shields.io/badge/license-AGPL--3.0%20%2B%20CC%20BY--NC--SA-orange?style=flat-square)](#license)
 
 [English](README.md) · [快速开始](#快速开始) · [原理](#原理) · [文档](#文档) · [AI Skill](skill/AI_re/) · [License](#license)
@@ -34,12 +35,16 @@
 |---|---|---|---|---|
 | [ifood.com.br](stample/ifood/) | 宽档 | `_px3` (ttl 330) | 2-POST | **10/10** |
 | [grubhub.com](stample/grub/) | 宽档 | `_px2` (ttl 500) | 2-POST | **10/10** |
+| [walmart.com](stample/walmart/) | 宽档 | `_px3` (ttl 330) | 2-POST | **10/10** ² |
 | [totalwine.com](stample/totalwine/) | **严档** | `_px2` (ttl 330) | 3-POST + EV3 | **10/10** |
 | [academy.com](stample/academy/) | **严档+** | `_px3` (ttl 330) | 3-POST + TLS/IP 绑定信任 | **10/10** ¹ |
 
 所有常量都直接来自真实 POST body 抓包（每个公开站点 6 批可审计）。
 ¹ academy 是严档+ 案例（trust 还绑定到 mint 的 TLS 指纹、`/ns` token、真 Chrome 模板、出口 IP 信誉），
 其生成器包**保持私有**。档位方法论记录在 [AI skill](skill/AI_re/references/deployment-tiers.md) 中。
+² walmart 是**仅 PX 层**案例 —— 站点主防护是 **Akamai Bot Manager**，PerimeterX 只是次级层。`_px3` 能被 PX
+collector 接受（10/10），但**不能**过 Walmart 业务 API（Akamai `_abck`/`bm_sv` 超出本 skill 范围）。
+收录为干净的宽档 + 跨事件一致性参考。
 
 ## 快速开始
 
@@ -53,6 +58,12 @@ node stample/ifood/px_cookie/ifood_px3.js
 
 # Grubhub — 产生 _px2
 node stample/grub/px_cookie/grubhub_px2.js
+
+# Walmart — 产生 _px3（宽档；仅 PX 层，需 US 出口 IP）
+node stample/walmart/px_cookie/walmart_px3.js
+# → ✅ _px3=a2426f96…  ttl=330  ev1=12 ev2=207
+# ⚠️ 仅 PX 层：Walmart 业务 API 由 Akamai 把守（超范围）。
+# PX 成功差分证明：node stample/walmart/script/px_success_proof.js
 
 # Total Wine — 产生 _px2（严档，3-POST；需 US 住宅代理）
 HTTPS_PROXY=http://user:pass@host:port node stample/totalwine/px_cookie/totalwine_px2.js
@@ -83,8 +94,10 @@ revers/        9 个算法模块（可 require()）              skill/      AI 
 stample/       各站生成器 + 6 批抓包                       ├─ AI_re/  PX 核心 skill（playbook + 工具）
   ├─ ifood/    宽档 · _px3                                 └─ cdp/    真 Chrome CDP 抓包 skill
   ├─ grub/     宽档 · _px2                               main/       技术文档（中 + 英）
-  └─ totalwine/ 严档 · _px2 · 3-POST                     bug_report/ 踩坑 / 失败模式记录
-bundle/        按压挑战路径（PoW + WASM 油猴）           research/   字段熵 + SDK 漂移研究
+  ├─ walmart/  宽档 · _px3 · 仅 PX 层（Akamai 把守）     bug_report/ 踩坑 / 失败模式记录
+  ├─ totalwine/ 严档 · _px2 · 3-POST                     research/   字段熵 + SDK 漂移研究
+  └─ academy/  严档+ · _px3 · TLS/IP 绑定信任
+bundle/        按压挑战路径（PoW + WASM 油猴）
 node_bridge/   JSDOM "Plan B" oracle（跑真 SDK）
 ```
 

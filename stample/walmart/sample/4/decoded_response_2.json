@@ -1,0 +1,61 @@
+{
+  "xorKey": 41,
+  "segments": [
+    "ooooIo|_px3|330|7ee5a79aec54772fb28ab8d4d9550d0e207f959c888a856487fe860e2718752a:gULnK6fjNW62O+xAnPR8ubJmDwOnOl+dzlZ4+nCF9nPOlxNJxxl3l2Aw3umrX6cUEC7H6BDz3VEGzgET/Pr8PQ==:1000:xsjyQnnvfiEivDmD5pT8Opf93ZTQ2zoH/9sZkBAibIXpktKQIhqm/nPaX1Pd6YSJxS5SZbqDfKrVf7CdWcKZUVOanALxDOWU0xE0v+d22zjY4JrF1+q8wF6bg+AIv9L+rtpvGQqBPmjMW8Rk2Bs/pRVqP8GtPYRjRaFHWJg1PVy+OZn63AcZbAL5TPKDJ4NR5zTDvDpJGVAnatFuU0w2m4HEFKOLDw1ucB571AfP485cNbFPcJRuyo8j8LVV4ZojDIVwRAed+cY+5iRzG/6O6EptbPwtWf1b66tunlj9FsOyoWNkqGKfLgpowliefO/+jvXioJzB8f+y5IHsuDs+b1kzttWcniYjw/MPoz0q5KGpdFy8eM/XZYdUVxAOY+sOjr6g1OIh+ogjSwDAbDj/yr94jMhbCkao12yS1vBrGPeEH85c82jx1vL83wGJ7bIWxj/znOfNaxbFUlu9bxuJQg==|true|300",
+    "ooIIII|cu",
+    "oIIIoIoI|_pxde|330|1304f79af94e5d2a9f1552fde2c1d4e355b2ca00489dd356f6710769ba193ac4:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2NDI3NDksImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyIwZGNlN2RhZWYyMjBiYzNhYjE3NGIyN2YxMTYyMDQwMiIsIjE4NjgwMDY4N2NhN2FkNDE1NTJjZGYyOWI1ZDY4YWI2IiwiODY5OTk4NmJkMzI2ZTcyYmRjOTQwOWQwNTk3MDQzMGEiXX0=|true|300"
+  ],
+  "results": [
+    {
+      "handler": "ooooIo",
+      "handlerType": "set_cookie",
+      "args": [
+        "_px3",
+        "330",
+        "7ee5a79aec54772fb28ab8d4d9550d0e207f959c888a856487fe860e2718752a:gULnK6fjNW62O+xAnPR8ubJmDwOnOl+dzlZ4+nCF9nPOlxNJxxl3l2Aw3umrX6cUEC7H6BDz3VEGzgET/Pr8PQ==:1000:xsjyQnnvfiEivDmD5pT8Opf93ZTQ2zoH/9sZkBAibIXpktKQIhqm/nPaX1Pd6YSJxS5SZbqDfKrVf7CdWcKZUVOanALxDOWU0xE0v+d22zjY4JrF1+q8wF6bg+AIv9L+rtpvGQqBPmjMW8Rk2Bs/pRVqP8GtPYRjRaFHWJg1PVy+OZn63AcZbAL5TPKDJ4NR5zTDvDpJGVAnatFuU0w2m4HEFKOLDw1ucB571AfP485cNbFPcJRuyo8j8LVV4ZojDIVwRAed+cY+5iRzG/6O6EptbPwtWf1b66tunlj9FsOyoWNkqGKfLgpowliefO/+jvXioJzB8f+y5IHsuDs+b1kzttWcniYjw/MPoz0q5KGpdFy8eM/XZYdUVxAOY+sOjr6g1OIh+ogjSwDAbDj/yr94jMhbCkao12yS1vBrGPeEH85c82jx1vL83wGJ7bIWxj/znOfNaxbFUlu9bxuJQg==",
+        "true",
+        "300"
+      ],
+      "result": {
+        "type": "set_cookie",
+        "name": "_px3",
+        "value": "7ee5a79aec54772fb28ab8d4d9550d0e207f959c888a856487fe860e2718752a:gULnK6fjNW62O+xAnPR8ubJmDwOnOl+dzlZ4+nCF9nPOlxNJxxl3l2Aw3umrX6cUEC7H6BDz3VEGzgET/Pr8PQ==:1000:xsjyQnnvfiEivDmD5pT8Opf93ZTQ2zoH/9sZkBAibIXpktKQIhqm/nPaX1Pd6YSJxS5SZbqDfKrVf7CdWcKZUVOanALxDOWU0xE0v+d22zjY4JrF1+q8wF6bg+AIv9L+rtpvGQqBPmjMW8Rk2Bs/pRVqP8GtPYRjRaFHWJg1PVy+OZn63AcZbAL5TPKDJ4NR5zTDvDpJGVAnatFuU0w2m4HEFKOLDw1ucB571AfP485cNbFPcJRuyo8j8LVV4ZojDIVwRAed+cY+5iRzG/6O6EptbPwtWf1b66tunlj9FsOyoWNkqGKfLgpowliefO/+jvXioJzB8f+y5IHsuDs+b1kzttWcniYjw/MPoz0q5KGpdFy8eM/XZYdUVxAOY+sOjr6g1OIh+ogjSwDAbDj/yr94jMhbCkao12yS1vBrGPeEH85c82jx1vL83wGJ7bIWxj/znOfNaxbFUlu9bxuJQg==",
+        "ttl": 330
+      }
+    },
+    {
+      "handler": "ooIIII",
+      "handlerType": "control_flag",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "oIIIoIoI",
+      "handlerType": "set_cookie",
+      "args": [
+        "_pxde",
+        "330",
+        "1304f79af94e5d2a9f1552fde2c1d4e355b2ca00489dd356f6710769ba193ac4:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2NDI3NDksImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyIwZGNlN2RhZWYyMjBiYzNhYjE3NGIyN2YxMTYyMDQwMiIsIjE4NjgwMDY4N2NhN2FkNDE1NTJjZGYyOWI1ZDY4YWI2IiwiODY5OTk4NmJkMzI2ZTcyYmRjOTQwOWQwNTk3MDQzMGEiXX0=",
+        "true",
+        "300"
+      ],
+      "result": {
+        "type": "set_cookie",
+        "name": "_pxde",
+        "value": "1304f79af94e5d2a9f1552fde2c1d4e355b2ca00489dd356f6710769ba193ac4:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2NDI3NDksImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyIwZGNlN2RhZWYyMjBiYzNhYjE3NGIyN2YxMTYyMDQwMiIsIjE4NjgwMDY4N2NhN2FkNDE1NTJjZGYyOWI1ZDY4YWI2IiwiODY5OTk4NmJkMzI2ZTcyYmRjOTQwOWQwNTk3MDQzMGEiXX0=",
+        "ttl": 330
+      }
+    }
+  ],
+  "state": {
+    "px3": {
+      "name": "_pxde",
+      "value": "1304f79af94e5d2a9f1552fde2c1d4e355b2ca00489dd356f6710769ba193ac4:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2NDI3NDksImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyIwZGNlN2RhZWYyMjBiYzNhYjE3NGIyN2YxMTYyMDQwMiIsIjE4NjgwMDY4N2NhN2FkNDE1NTJjZGYyOWI1ZDY4YWI2IiwiODY5OTk4NmJkMzI2ZTcyYmRjOTQwOWQwNTk3MDQzMGEiXX0=",
+      "ttl": 330,
+      "secure": true,
+      "maxAge": 300
+    },
+    "jf": "cu"
+  }
+}

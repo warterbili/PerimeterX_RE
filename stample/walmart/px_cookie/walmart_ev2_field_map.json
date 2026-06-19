@@ -1,0 +1,2111 @@
+{
+  "HwRkBVluazY=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781881529227,
+      1781881566109,
+      1781881603411
+    ],
+    "present_in": "6/6"
+  },
+  "NSoOa3BCAl0=": {
+    "category": "STATIC",
+    "sample_values": [
+      "5CsRqm",
+      "5CsRqm",
+      "5CsRqm"
+    ],
+    "present_in": "6/6"
+  },
+  "ajERMCxaHws=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      3540134,
+      4242895,
+      3528059
+    ],
+    "present_in": "6/6"
+  },
+  "EXZqN1cdYwA=": {
+    "category": "STATIC",
+    "sample_values": [
+      4395630592,
+      4395630592,
+      4395630592
+    ],
+    "present_in": "6/6"
+  },
+  "WG9jbh4JbF8=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      6074714,
+      5770683,
+      5753319
+    ],
+    "present_in": "6/6"
+  },
+  "X0QkRRkiLHc=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "Fri Jun 19 2026 23:05:29 GMT+0800 (中国标准时间)",
+      "Fri Jun 19 2026 23:06:06 GMT+0800 (中国标准时间)",
+      "Fri Jun 19 2026 23:06:43 GMT+0800 (中国标准时间)"
+    ],
+    "present_in": "6/6"
+  },
+  "T3Q0NQkfOgE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "IUYaR2cuHnE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Ahk5WER/NGg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "V0wsTRIhI3o=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "U0goSRYmLHs=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "LVIWU2s6HWk=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "ZHsfeiIWF0E=": {
+    "category": "STATIC",
+    "sample_values": [
+      "hidden",
+      "hidden",
+      "hidden"
+    ],
+    "present_in": "6/6"
+  },
+  "dg0NTDNgCHk=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Bh09XEBwOWk=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Qll5GAc2cCo=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "dyxMbTJBQFs=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "GU5iT18ma3w=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Y1hYWSU+Umw=": {
+    "category": "STATIC",
+    "sample_values": [
+      "missing",
+      "missing",
+      "missing"
+    ],
+    "present_in": "6/6"
+  },
+  "DFM3Ekk/PiQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "LnVVdGgeXUY=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "KnFRcGwaWUo=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "a1BQUS06WGU=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "AWZ6J0QNcxU=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "ChExUE97PmM=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "fgUFRDttCHU=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "6890257210765108501638807",
+      "7780030305620084891242607",
+      "6160695609588023011189400"
+    ],
+    "present_in": "6/6"
+  },
+  "LVIWU2s1E2A=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "JVoeW2M8EW4=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "ZRpeGyNyUSs=": {
+    "category": "STATIC",
+    "sample_values": [
+      2,
+      2,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "aR5SHy90XiQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "UBdrVhZ+Z2U=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "14575303954095704428",
+      "14828159029879583351",
+      "12931788724061872121"
+    ],
+    "present_in": "6/6"
+  },
+  "EFcrFlU9JSQ=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "10226433618921797431",
+      "30577089991342815163",
+      "12277461298666361059"
+    ],
+    "present_in": "6/6"
+  },
+  "89;;?=::?810;8>0>=:8": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      "98::><;;>901:9?1?<;9",
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  },
+  "cHcLdjUdAkA=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      2340,
+      8033,
+      103
+    ],
+    "present_in": "6/6"
+  },
+  "VQouCxBmJTE=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "YjkZOCRRHA4=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "LnVVdGsZUEI=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "BFs/GkEwMiw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "EmkpaFcCJF8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "TypeError: Cannot read properties of undefined (reading 'width')",
+      "TypeError: Cannot read properties of undefined (reading 'width')",
+      "TypeError: Cannot read properties of undefined (reading 'width')"
+    ],
+    "present_in": "6/6"
+  },
+  "cHcLdjUcBkI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "webkit",
+      "webkit",
+      "webkit"
+    ],
+    "present_in": "6/6"
+  },
+  "T3Q0NQofOQA=": {
+    "category": "STATIC",
+    "sample_values": [
+      33,
+      33,
+      33
+    ],
+    "present_in": "6/6"
+  },
+  "R3w8PQIXMQc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "GmEhYF8KKVc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "KV4SX2w1F24=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Qll5GAcyfC8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "AudioData.SVGAnimatedAngle.SVGMetadataElement",
+      "AudioData.SVGAnimatedAngle.SVGMetadataElement",
+      "AudioData.SVGAnimatedAngle.SVGMetadataElement"
+    ],
+    "present_in": "6/6"
+  },
+  "OkFBAHwnTTY=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "f9c0eaba9b489ed925481c14271b244a",
+      "6f97a3c19eadab8d3a101e6b5b572c73",
+      "4bf189e34753ca3cc6f6e39856cd786a"
+    ],
+    "present_in": "6/6"
+  },
+  "LDNXMmlcWgg=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "d8qllebhp09s738612jg",
+      "d8qllng867tc738roof0",
+      "d8qlm0ovt8vs73eghpj0"
+    ],
+    "present_in": "6/6"
+  },
+  "GmEhYFwIKVQ=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "6f75fbbe9f4f24fb00edab5caf3d3493",
+      "d4de67bfb0279aaa26f636353c377367",
+      "e2c3178c059b5f29766e68374128e566"
+    ],
+    "present_in": "6/6"
+  },
+  "MklJCHQkQjs=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "39c31088de2387ef1bccabca760e6abf",
+      "6a7ee1585c215fd6d40b8b18e367583b",
+      "83f570f9149aa61a15c680b285c4beec"
+    ],
+    "present_in": "6/6"
+  },
+  "CzBwcU5bfEI=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "18d8137ec6dd1d39a8fee976d585f6bd",
+      "ed799f1afdb993de6b67492068d36861",
+      "e68f2a4605c2f541aa28e4225018475a"
+    ],
+    "present_in": "6/6"
+  },
+  "AWZ6J0cNdRw=": {
+    "category": "STATIC",
+    "sample_values": [
+      "64556c77",
+      "64556c77",
+      "64556c77"
+    ],
+    "present_in": "6/6"
+  },
+  "cRZKFzd9RC0=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "FCsvKlFHJBk=": {
+    "category": "STATIC",
+    "sample_values": [
+      "10207b2f",
+      "10207b2f",
+      "10207b2f"
+    ],
+    "present_in": "6/6"
+  },
+  "DhU1VEhzPW8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "10207b2f",
+      "10207b2f",
+      "10207b2f"
+    ],
+    "present_in": "6/6"
+  },
+  "DXJ2M0gYfAU=": {
+    "category": "STATIC",
+    "sample_values": [
+      "90e65465",
+      "90e65465",
+      "90e65465"
+    ],
+    "present_in": "6/6"
+  },
+  "XQImAxtvLzc=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "QAd7RgVtdXI=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "cHcLdjYeDkU=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "S3AwMQ0bPQQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "bHMXcikYGUA=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "SlFxEA86fyY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27",
+      "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27",
+      "4YC14YCd4YCd4YCV4YCe4YCX4YGS5J256aus7r266YaI5oCR7r27"
+    ],
+    "present_in": "6/6"
+  },
+  "LVIWU2g5GGY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "3207084bd110f1ac964863e23aa78e04",
+      "3207084bd110f1ac964863e23aa78e04",
+      "3207084bd110f1ac964863e23aa78e04"
+    ],
+    "present_in": "6/6"
+  },
+  "OA9DTn1lR3o=": {
+    "category": "STATIC",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "6/6"
+  },
+  "UilpKBdFYxo=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    ],
+    "present_in": "6/6"
+  },
+  "DzR0dUpYfE4=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "FUpuS1Msa34=": {
+    "category": "STATIC",
+    "sample_values": [
+      "90e65465",
+      "90e65465",
+      "90e65465"
+    ],
+    "present_in": "6/6"
+  },
+  "EwhoCVZjbTw=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "PANHQnpoS3g=": {
+    "category": "STATIC",
+    "sample_values": [
+      "49e5084e",
+      "49e5084e",
+      "49e5084e"
+    ],
+    "present_in": "6/6"
+  },
+  "OkFBAHwrSDA=": {
+    "category": "STATIC",
+    "sample_values": [
+      "7c5f9724",
+      "7c5f9724",
+      "7c5f9724"
+    ],
+    "present_in": "6/6"
+  },
+  "TTI2cwheO0k=": {
+    "category": "STATIC",
+    "sample_values": [
+      "65d826e0",
+      "65d826e0",
+      "65d826e0"
+    ],
+    "present_in": "6/6"
+  },
+  "KD9TPm1VVw0=": {
+    "category": "STATIC",
+    "sample_values": [
+      "a9269e00",
+      "a9269e00",
+      "a9269e00"
+    ],
+    "present_in": "6/6"
+  },
+  "JDtfOmJSWwg=": {
+    "category": "STATIC",
+    "sample_values": [
+      "50a5ec55",
+      "50a5ec55",
+      "50a5ec55"
+    ],
+    "present_in": "6/6"
+  },
+  "AWZ6J0QOcBc=": {
+    "category": "STATIC",
+    "sample_values": [
+      "73a0fb26",
+      "73a0fb26",
+      "73a0fb26"
+    ],
+    "present_in": "6/6"
+  },
+  "EmkpaFcBI14=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "YGcbZiUPEVE=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "GwBgAV5oajU=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "N2wMLXIEBhg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "YGcbZiUPEVw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "eE8DDj0nCTU=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "KD9TPm1XWAw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "BFs/GkEwNyw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "XiVlJBtOYR4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "webkit",
+      "webkit",
+      "webkit"
+    ],
+    "present_in": "6/6"
+  },
+  "Azh4eUZTcUo=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https:",
+      "https:",
+      "https:"
+    ],
+    "present_in": "6/6"
+  },
+  "XQImAxhpLzM=": {
+    "category": "STATIC",
+    "sample_values": [
+      "function share() { [native code] }",
+      "function share() { [native code] }",
+      "function share() { [native code] }"
+    ],
+    "present_in": "6/6"
+  },
+  "OS4Cb3xFC14=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Asia/Shanghai",
+      "Asia/Shanghai",
+      "Asia/Shanghai"
+    ],
+    "present_in": "6/6"
+  },
+  "MDdLNnVcQQM=": {
+    "category": "STATIC",
+    "sample_values": [
+      "w3c",
+      "w3c",
+      "w3c"
+    ],
+    "present_in": "6/6"
+  },
+  "ICdbJmVMUBI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "screen",
+      "screen",
+      "screen"
+    ],
+    "present_in": "6/6"
+  },
+  "Jn1dfGMWVEs=": {
+    "category": "STATIC",
+    "sample_values": [
+      {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      },
+      {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      },
+      {
+        "plugext": {
+          "0": {
+            "f": "internal-pdf-viewer",
+            "n": "PDF Viewer"
+          },
+          "1": {
+            "f": "internal-pdf-viewer",
+            "n": "Chrome PDF Viewer"
+          },
+          "2": {
+            "f": "internal-pdf-viewer",
+            "n": "Chromium PDF Viewer"
+          },
+          "3": {
+            "f": "internal-pdf-viewer",
+            "n": "Microsoft Edge PDF Viewer"
+          },
+          "4": {
+            "f": "internal-pdf-viewer",
+            "n": "WebKit built-in PDF"
+          }
+        },
+        "plugins_len": 5
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "eW5CLzwFRh4=": {
+    "category": "STATIC",
+    "sample_values": [
+      {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      },
+      {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      },
+      {
+        "smd": {
+          "ok": true,
+          "ex": false
+        }
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "MDdLNnVcQAw=": {
+    "category": "STATIC",
+    "sample_values": [
+      {},
+      {},
+      {}
+    ],
+    "present_in": "6/6"
+  },
+  "eyBAYT5LRVc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "KnFRcG8aW0Q=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "eyBAYT5LS1I=": {
+    "category": "STATIC",
+    "sample_values": [
+      "f1a38a60",
+      "f1a38a60",
+      "f1a38a60"
+    ],
+    "present_in": "6/6"
+  },
+  "fEMHAjkoDDk=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 100,
+          "downlink": 1.5,
+          "saveData": false
+        }
+      },
+      {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 100,
+          "downlink": 1.55,
+          "saveData": false
+        }
+      },
+      {
+        "support": true,
+        "status": {
+          "effectiveType": "4g",
+          "rtt": 100,
+          "downlink": 1.7,
+          "saveData": false
+        }
+      }
+    ],
+    "present_in": "6/6"
+  },
+  "UilpKBdCbRs=": {
+    "category": "STATIC",
+    "sample_values": [
+      "default",
+      "default",
+      "default"
+    ],
+    "present_in": "6/6"
+  },
+  "OkFBAH8qRTA=": {
+    "category": "STATIC",
+    "sample_values": [
+      3,
+      3,
+      3
+    ],
+    "present_in": "6/6"
+  },
+  "KxAQEW57FCQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "N2wMLXIEAB4=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Nk1NDHMlQTc=": {
+    "category": "STATIC",
+    "sample_values": [
+      "}lZgs>[|/PjN,Dpf",
+      "}lZgs>[|/PjN,Dpf",
+      "}lZgs>[|/PjN,Dpf"
+    ],
+    "present_in": "6/6"
+  },
+  "NAtPSnFnQ38=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "dEsPCjIgADA=": {
+    "category": "STATIC",
+    "sample_values": [
+      2,
+      2,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "LVIWU2s1EmU=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      "TypeError: Cannot read properties of null (reading '0')\n    at kv (https://www.walmart.com/px/PXu6b0qd2S/init.js:2:68293)\n    at yK (https://www.walmart.com/px/PXu6b0qd2S/init.js:3:76184)\n    at yw (https://www.walmart.com/px/PXu6b0qd2S/init.js:3:74706)\n    at https://www.walmart.com/px/PXu6b0qd2S/init.js:3:74675",
+      "TypeError: Cannot read properties of null (reading '0')\n    at kv (https://www.walmart.com/px/PXu6b0qd2S/init.js:2:68293)\n    at yK (https://www.walmart.com/px/PXu6b0qd2S/init.js:3:76184)\n    at yw (https://www.walmart.com/px/PXu6b0qd2S/init.js:3:74706)\n    at https://www.walmart.com/px/PXu6b0qd2S/init.js:3:73867",
+      "TypeError: Cannot read properties of null (reading '0')\n    at kv (https://www.walmart.com/px/PXu6b0qd2S/init.js:2:68293)\n    at yK (https://www.walmart.com/px/PXu6b0qd2S/init.js:3:76184)\n    at yw (https://www.walmart.com/px/PXu6b0qd2S/init.js:3:74706)\n    at https://www.walmart.com/px/PXu6b0qd2S/init.js:3:73867"
+    ],
+    "present_in": "6/6"
+  },
+  "cyhIaTVAQF4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https://www.walmart.com/",
+      "https://www.walmart.com/",
+      "https://www.walmart.com/"
+    ],
+    "present_in": "6/6"
+  },
+  "ZHsfeiIQGk8=": {
+    "category": "STATIC",
+    "sample_values": [
+      [],
+      [],
+      []
+    ],
+    "present_in": "6/6"
+  },
+  "GC8jLl1BLR8=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "AEc7BkYqNDM=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Bh09XEN1MWg=": {
+    "category": "STATIC",
+    "sample_values": [
+      "ee",
+      "ee",
+      "ee"
+    ],
+    "present_in": "6/6"
+  },
+  "WiFhIBxHaRE=": {
+    "category": "STATIC",
+    "sample_values": [
+      1920,
+      1920,
+      1920
+    ],
+    "present_in": "6/6"
+  },
+  "CX5yP08Xdgw=": {
+    "category": "STATIC",
+    "sample_values": [
+      1080,
+      1080,
+      1080
+    ],
+    "present_in": "6/6"
+  },
+  "GmEhYF8OL1M=": {
+    "category": "STATIC",
+    "sample_values": [
+      1920,
+      1920,
+      1920
+    ],
+    "present_in": "6/6"
+  },
+  "DXJ2M0gdeAk=": {
+    "category": "STATIC",
+    "sample_values": [
+      1032,
+      1032,
+      1032
+    ],
+    "present_in": "6/6"
+  },
+  "IxgYGWZ1HCw=": {
+    "category": "STATIC",
+    "sample_values": [
+      "1920X1080",
+      "1920X1080",
+      "1920X1080"
+    ],
+    "present_in": "6/6"
+  },
+  "cyhIaTZGRFg=": {
+    "category": "STATIC",
+    "sample_values": [
+      32,
+      32,
+      32
+    ],
+    "present_in": "6/6"
+  },
+  "AEc7BkYqPzQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      32,
+      32,
+      32
+    ],
+    "present_in": "6/6"
+  },
+  "Vi1tLBNFaRg=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Nk1NDHMlSTk=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "KV4SX280F2k=": {
+    "category": "STATIC",
+    "sample_values": [
+      932,
+      932,
+      932
+    ],
+    "present_in": "6/6"
+  },
+  "VQouCxBgIzg=": {
+    "category": "STATIC",
+    "sample_values": [
+      919,
+      919,
+      919
+    ],
+    "present_in": "6/6"
+  },
+  "AEc7BkUtMzc=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "IxgYGWZyECw=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "GmEhYFwKLlE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Fm0tbFMDJlc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "UTYqdxRdL0w=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "Go4",
+        "Ahn5duYB"
+      ],
+      [
+        "Go4",
+        "Ahn5duYB"
+      ],
+      [
+        "Go4",
+        "Ahn5duYB"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "cHcLdjUfB0c=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        -5524.291
+      ],
+      [
+        -5524.291
+      ],
+      [
+        -5524.291
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "Z1xcXSI3V2w=": {
+    "category": "STATIC",
+    "sample_values": [
+      "130db",
+      "130db",
+      "130db"
+    ],
+    "present_in": "6/6"
+  },
+  "EFcrFlU/JyY=": {
+    "category": "STATIC",
+    "sample_values": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "present_in": "6/6"
+  },
+  "DzR0dUpceEI=": {
+    "category": "STATIC",
+    "sample_values": [
+      770897.2,
+      770897.2,
+      770897.2
+    ],
+    "present_in": "6/6"
+  },
+  "fWJGIzgPSRE=": {
+    "category": "STATIC",
+    "sample_values": [
+      "109|66|66|70|80",
+      "109|66|66|70|80",
+      "109|66|66|70|80"
+    ],
+    "present_in": "6/6"
+  },
+  "cRZKFzd/RiA=": {
+    "category": "STATIC",
+    "sample_values": [
+      111,
+      111,
+      111
+    ],
+    "present_in": "6/6"
+  },
+  "T3Q0NQkTOw8=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "MDdLNnZfRwY=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "RTo+ewBUMEg=": {
+    "category": "STATIC",
+    "sample_values": [
+      "false",
+      "false",
+      "false"
+    ],
+    "present_in": "6/6"
+  },
+  "cRZKFzR8RCQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "false",
+      "false",
+      "false"
+    ],
+    "present_in": "6/6"
+  },
+  "MklJCHcmRz4=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "IUYaR2cuFnw=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "EmkpaFcFLFs=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "T3Q0NQkSMAY=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "loadTimes",
+        "csi",
+        "app"
+      ],
+      [
+        "loadTimes",
+        "csi",
+        "app"
+      ],
+      [
+        "loadTimes",
+        "csi",
+        "app"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "BFs/GkEzOyw=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Nk1NDHAgQT0=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "Zj0dPCBWEAs=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "LnVVdGsaWkU=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "LnVVdGsYXUY=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "AEc7BkYuNDw=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "OkFBAHwoTzE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "PSIGY3tPAlg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "VGtvahINYFE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "OkFBAHwrSzI=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "eyBAYT5PTFE=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "WQ4iDx9jKTU=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "cgkJSDdkBH0=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "ChExUE95OmM=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "UBdrVhV/Z2w=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "XQImAxhsLDg=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ],
+      [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ],
+      [
+        "PDF Viewer",
+        "Chrome PDF Viewer",
+        "Chromium PDF Viewer",
+        "Microsoft Edge PDF Viewer",
+        "WebKit built-in PDF"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "Qll5GAc1fSw=": {
+    "category": "STATIC",
+    "sample_values": [
+      5,
+      5,
+      5
+    ],
+    "present_in": "6/6"
+  },
+  "LVIWU2s5HWc=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "fgUFRDtoCH4=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "MVYKV3c7DmE=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "RTo+ewNcOk8=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "cHcLdjYcD0c=": {
+    "category": "STATIC",
+    "sample_values": [
+      "zh-CN",
+      "zh-CN",
+      "zh-CN"
+    ],
+    "present_in": "6/6"
+  },
+  "InlZeGcTUEI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Win32",
+      "Win32",
+      "Win32"
+    ],
+    "present_in": "6/6"
+  },
+  "PSIGY3tKAlA=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        "zh-CN"
+      ],
+      [
+        "zh-CN"
+      ],
+      [
+        "zh-CN"
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "ChExUEx4OGY=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    ],
+    "present_in": "6/6"
+  },
+  "YjkZOCdXFg0=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "b1RUVSk5UWc=": {
+    "category": "STATIC",
+    "sample_values": [
+      -480,
+      -480,
+      -480
+    ],
+    "present_in": "6/6"
+  },
+  "T3Q0NQkcOgY=": {
+    "category": "STATIC",
+    "sample_values": [
+      32,
+      32,
+      32
+    ],
+    "present_in": "6/6"
+  },
+  "KxAQEW14GSQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "MVYKV3Q4DmQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Gecko",
+      "Gecko",
+      "Gecko"
+    ],
+    "present_in": "6/6"
+  },
+  "LnVVdGgSWU4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "20030107",
+      "20030107",
+      "20030107"
+    ],
+    "present_in": "6/6"
+  },
+  "FCsvKlFGIhw=": {
+    "category": "STATIC",
+    "sample_values": [
+      "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    ],
+    "present_in": "6/6"
+  },
+  "PkVFBHgjSz8=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "DhU1VEh/P2I=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "KV4SX2wwG2k=": {
+    "category": "STATIC",
+    "sample_values": [
+      2,
+      2,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "MVYKV3cwBGQ=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Netscape",
+      "Netscape",
+      "Netscape"
+    ],
+    "present_in": "6/6"
+  },
+  "fEMHAjopDDk=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Mozilla",
+      "Mozilla",
+      "Mozilla"
+    ],
+    "present_in": "6/6"
+  },
+  "LxQUFWl8HyM=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "Zj0dPCNRFQ8=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      100,
+      100,
+      100
+    ],
+    "present_in": "6/6"
+  },
+  "EXZqN1cbYQc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "T3Q0NQkcMAQ=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      1.5,
+      1.55,
+      1.7
+    ],
+    "present_in": "6/6"
+  },
+  "GmEhYFwKK1M=": {
+    "category": "STATIC",
+    "sample_values": [
+      "4g",
+      "4g",
+      "4g"
+    ],
+    "present_in": "6/6"
+  },
+  "U0goSRUuI3w=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "a1BQUS4/XGM=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "TBN3Ugl7fWE=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "fWJGIzgJShc=": {
+    "category": "STATIC",
+    "sample_values": [
+      "x86",
+      "x86",
+      "x86"
+    ],
+    "present_in": "6/6"
+  },
+  "cRZKFzR9RiI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "64",
+      "64",
+      "64"
+    ],
+    "present_in": "6/6"
+  },
+  "UBdrVhV8Z2w=": {
+    "category": "STATIC",
+    "sample_values": [
+      [
+        {
+          "brand": "Google Chrome",
+          "version": "149"
+        },
+        {
+          "brand": "Chromium",
+          "version": "149"
+        },
+        {
+          "brand": "Not)A;Brand",
+          "version": "24"
+        }
+      ],
+      [
+        {
+          "brand": "Google Chrome",
+          "version": "149"
+        },
+        {
+          "brand": "Chromium",
+          "version": "149"
+        },
+        {
+          "brand": "Not)A;Brand",
+          "version": "24"
+        }
+      ],
+      [
+        {
+          "brand": "Google Chrome",
+          "version": "149"
+        },
+        {
+          "brand": "Chromium",
+          "version": "149"
+        },
+        {
+          "brand": "Not)A;Brand",
+          "version": "24"
+        }
+      ]
+    ],
+    "present_in": "6/6"
+  },
+  "Bh09XEN2MWc=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "IUYaR2QtF3U=": {
+    "category": "STATIC",
+    "sample_values": [
+      "",
+      "",
+      ""
+    ],
+    "present_in": "6/6"
+  },
+  "CzBwcU5bfUI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Windows",
+      "Windows",
+      "Windows"
+    ],
+    "present_in": "6/6"
+  },
+  "X0QkRRovKXU=": {
+    "category": "STATIC",
+    "sample_values": [
+      "19.0.0",
+      "19.0.0",
+      "19.0.0"
+    ],
+    "present_in": "6/6"
+  },
+  "eW5CLzwFTx4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "149.0.7827.115",
+      "149.0.7827.115",
+      "149.0.7827.115"
+    ],
+    "present_in": "6/6"
+  },
+  "YjkZOCdSEQI=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "TBN3Ugl4f2k=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "cgkJSDdkA3g=": {
+    "category": "PARTIAL",
+    "sample_values": [
+      "45e8c64e47f06b474456b246b2f31d9e",
+      "1c6c612314c6ef41d95a2bac17b08b78",
+      "bc594164d1236d84d11093a18b0d5e57"
+    ],
+    "present_in": "6/6"
+  },
+  "Z1xcXSI0WGc=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "ZHsfeiITG00=": {
+    "category": "STATIC",
+    "sample_values": [
+      16,
+      16,
+      16
+    ],
+    "present_in": "6/6"
+  },
+  "InlZeGcRUkg=": {
+    "category": "STATIC",
+    "sample_values": [
+      false,
+      false,
+      false
+    ],
+    "present_in": "6/6"
+  },
+  "NSoOa3BFBFA=": {
+    "category": "STATIC",
+    "sample_values": [
+      2,
+      2,
+      2
+    ],
+    "present_in": "6/6"
+  },
+  "Vi1tLBBKYRw=": {
+    "category": "STATIC",
+    "sample_values": [
+      1,
+      1,
+      1
+    ],
+    "present_in": "6/6"
+  },
+  "Ahk5WERyM2o=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      2874,
+      2452,
+      2478
+    ],
+    "present_in": "6/6"
+  },
+  "TlV1FAg4eiQ=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781881529741,
+      1781881566623,
+      1781881603924
+    ],
+    "present_in": "6/6"
+  },
+  "Fm0tbFMBJVY=": {
+    "category": "STATIC",
+    "sample_values": [
+      3600,
+      3600,
+      3600
+    ],
+    "present_in": "6/6"
+  },
+  "ajERMCxcFQc=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781881529056,
+      1781881565927,
+      1781881603240
+    ],
+    "present_in": "6/6"
+  },
+  "U0goSRYkLHs=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781881531035,
+      1781881568039,
+      1781881605037
+    ],
+    "present_in": "6/6"
+  },
+  "HUJmQ1soY3c=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "4f354410-6bf0-11f1-9e97-d982e281c57b",
+      "652f7c90-6bf0-11f1-b248-6921a40c9d29",
+      "7b6cd890-6bf0-11f1-a127-e34be839eeba"
+    ],
+    "present_in": "6/6"
+  },
+  "AEc7BkUsMTA=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "QnSNdfyAVEvFG3cPuAaaFM3wocsW25mCrv3GsWRgtToFzrxUvgxv9iV4sAfhoCoYnS3EiYmnXGLf1MtzVRmNEP2Mpt54F6p45HgzHwuS4euOuU5WEUqvrV1kEoN0enety/hK3ERfXIvEYfpE6EJgIaVHfD46vZM+fEKNLcoysrT8aA1fdTRQ4aNKxFLMQpshuhJxlJbDSiCbs6inkcAeZul+JaBdqC5PoPDNY1LRy9nN3DIcP1F2HyYZyAo/d8eKlnT/5WVmyXVh68mfCilXR8JGRl9seRFDXC7q+Ni3aer3J2VCpr238yLVpAjB2v6RaJwILfMYVDC/uTeN5typz1qFKQWUyUdh/I8ejql9Gbq+OPo/VUXnavzqAFRt3P8KeOt+2D33gVE92zC053tWex9tH1qSww26Mr24qXWbK7IQP74oUe9B3x9YudDUz/h8RYWHc9RTgbehnBzelUwxp1mGoXR1XabP4SYvQ0vcpA5ocsEnFkzLAX5floJfuA==",
+      "QsDiuDBuwX2zcHCJILorrPZDV7kJ6VJMQqPMowcwybnrvjpHWPL+XA+yb08HiQayGfbqS3NX1sJXnvnLklmsnWP5sNvJJDFKQEOfE4taeBtVt2YsPslHgReNCd0AIZxh4GkH8nYUqj1XwhBI1yWqeUNDdXYgZZWOzZXR8ZedNr3JcgNMMT/QON8j+fTQmiPoCQ3ECtb9cMHa1fSKS7cBp49IBVMNDMGhU2kL+wQuf/I/qEH+BdVUxBxlo8apHFAgUjwAlCTq6Pbs4PPkZmZR2HrfexIVn1jcNWW2aalQFAxqzp8gxo41BQbHXCYI3sUhixNfk21m6aH4XmeJYkqejtKaZ+z+RSvajyXhAXh2Pd9gyGrz9MS9RSxNTX0XC4AgdcorOWY9MTlqLn75Fbn/NUdvm72oxcxJM2t8AepbjBbVReyJkhihD7pRpOojE/HQCHkzdbUSYw5y+eGWomy1SoA048pkJ+1f9OASehw5xbP61lfxlZCz",
+      "QqBA25t5ZiXVGxRFC48KhNdTasmyY1+7MrYRWs5b55nRLei0Kjwj8HDBLhF+PtE9lVH/km4RjEbSkgmOlqTbhhGQPCy9x0HNhmGHfdlZv2IWbOv7SdPivSmPemGmab7RwMFoltQgm0cWPoBJa/Y1ZrQtuuWGLAtAQAfadVoz4uSMMzBPlC4HShdGPLW8+WCbqDrQxdDVGuME5UJZEM8mK7WeInwuVJlZD/5IdNBY26daNW27rFc30x2jnBVyYMyVMGTZ6+3r8LQe7vOCGhQfSXTXjTmaNtWAv4b5tcJ8O51ejHJ2XWFV2J8QT1M5mmefR2VytcVig5McKIHAQbORHJRpdKlj9stMKzJ7rZiaR1R+P80IaxJbnVUyrtierNGYYqv96gfks0vUsCY60CfpRx74JP7moxedCf81fFa9BOTnxe9a0l3WWOqOn2YTGD9hT8qehcNS41OrRfn67jfJ7maCllE8O1znvGEFqPaa4CeEtFaF77Uyie5oUJw="
+    ],
+    "present_in": "6/6"
+  },
+  "SlFxEA86eyc=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      643,
+      641.2999999970198,
+      639.2999999970198
+    ],
+    "present_in": "6/6"
+  },
+  "Q3g4OQUVMwI=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  },
+  "8;><<;3222:8?93:>:=8": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      "9:?==:2333;9>82;?;<9",
+      null
+    ],
+    "present_in": "1/6"
+  },
+  "211447521:;55505236:": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      "300556430;:44414327;"
+    ],
+    "present_in": "1/6"
+  },
+  "3730310;32:774066:55": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  },
+  ";?=>222?>92?<?93?>8>": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  },
+  ":89?8=389<:2;<>?<3::": {
+    "category": "CONDITIONAL",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "1/6"
+  }
+}

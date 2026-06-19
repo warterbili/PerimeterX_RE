@@ -1,0 +1,175 @@
+{
+  "xorKey": 41,
+  "segments": [
+    "oIoIII|7b8594d5-6bf0-11f1-9962-5e640970be61",
+    "ooIIII|cu",
+    "oIoIoo|12931788724061872121|12277461298666361059",
+    "oIIIoIoo|1781881603411",
+    "IoooIo|d8qlm0ovt8vs73eghpj0",
+    "oIIIooII|103",
+    "oIIoIIII|7b859801-6bf0-11f1-9962-5e640970be61|true",
+    "ooIIIo|942b0698d55ec1c372ef28c4af6074383e5cd4ba450bde57352c5c6c7ea4f710",
+    "oooIoI|7b858cb4-6bf0-11f1-9962-4a860c426db9|31536000|true",
+    "oIooIo|cc|60|U2FtZVNpdGU9TGF4Ow==",
+    "IIooIo|uiii:0",
+    "oIIIoIoI|_pxde|330|4eaeca0c6c4d617c63d7abfc3a5b256cebebbd4fddd33e7773ea35a9c619c0de:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2MDM0MTEsImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyJkNWQwOWYwYWE5YWZjMDcyYmEyMDMyNmVlOTBhZjgwMSIsIjJlZGRkNzkzOWJlZmJjZTU2NzY4NzBiYTI5OGYyNDY2Il19|true|300"
+  ],
+  "results": [
+    {
+      "handler": "oIooIo",
+      "handlerType": "cookie_config",
+      "args": [
+        "cc",
+        "60",
+        "U2FtZVNpdGU9TGF4Ow=="
+      ],
+      "result": {
+        "type": "cookie_config",
+        "name": "cc",
+        "ttl": 60,
+        "value": "U2FtZVNpdGU9TGF4Ow=="
+      }
+    },
+    {
+      "handler": "oIoIII",
+      "handlerType": "pxsid",
+      "args": [
+        "7b8594d5-6bf0-11f1-9962-5e640970be61"
+      ],
+      "result": {
+        "type": "pxsid",
+        "value": "7b8594d5-6bf0-11f1-9962-5e640970be61"
+      }
+    },
+    {
+      "handler": "ooIIII",
+      "handlerType": "control_flag",
+      "args": [
+        "cu"
+      ]
+    },
+    {
+      "handler": "oIoIoo",
+      "handlerType": "session_id",
+      "args": [
+        "12931788724061872121",
+        "12277461298666361059"
+      ]
+    },
+    {
+      "handler": "oIIIoIoo",
+      "handlerType": "timestamp",
+      "args": [
+        "1781881603411"
+      ]
+    },
+    {
+      "handler": "IoooIo",
+      "handlerType": "app_id",
+      "args": [
+        "d8qlm0ovt8vs73eghpj0"
+      ]
+    },
+    {
+      "handler": "oIIIooII",
+      "handlerType": "status_code",
+      "args": [
+        "103"
+      ]
+    },
+    {
+      "handler": "oIIoIIII",
+      "handlerType": "cts",
+      "args": [
+        "7b859801-6bf0-11f1-9962-5e640970be61",
+        "true"
+      ],
+      "result": {
+        "type": "cts",
+        "value": "7b859801-6bf0-11f1-9962-5e640970be61",
+        "flag": "true"
+      }
+    },
+    {
+      "handler": "ooIIIo",
+      "handlerType": "challenge_hash",
+      "args": [
+        "942b0698d55ec1c372ef28c4af6074383e5cd4ba450bde57352c5c6c7ea4f710"
+      ]
+    },
+    {
+      "handler": "oooIoI",
+      "handlerType": "vid",
+      "args": [
+        "7b858cb4-6bf0-11f1-9962-4a860c426db9",
+        "31536000",
+        "true"
+      ],
+      "result": {
+        "type": "vid",
+        "value": "7b858cb4-6bf0-11f1-9962-4a860c426db9",
+        "ttl": 31536000,
+        "flag": "true"
+      }
+    },
+    {
+      "handler": "IIooIo",
+      "handlerType": "feature_flags",
+      "args": [
+        "uiii:0"
+      ],
+      "result": {
+        "type": "feature_flags",
+        "items": {
+          "uiii": "0"
+        }
+      }
+    },
+    {
+      "handler": "oIIIoIoI",
+      "handlerType": "set_cookie",
+      "args": [
+        "_pxde",
+        "330",
+        "4eaeca0c6c4d617c63d7abfc3a5b256cebebbd4fddd33e7773ea35a9c619c0de:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2MDM0MTEsImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyJkNWQwOWYwYWE5YWZjMDcyYmEyMDMyNmVlOTBhZjgwMSIsIjJlZGRkNzkzOWJlZmJjZTU2NzY4NzBiYTI5OGYyNDY2Il19",
+        "true",
+        "300"
+      ],
+      "result": {
+        "type": "set_cookie",
+        "name": "_pxde",
+        "value": "4eaeca0c6c4d617c63d7abfc3a5b256cebebbd4fddd33e7773ea35a9c619c0de:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2MDM0MTEsImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyJkNWQwOWYwYWE5YWZjMDcyYmEyMDMyNmVlOTBhZjgwMSIsIjJlZGRkNzkzOWJlZmJjZTU2NzY4NzBiYTI5OGYyNDY2Il19",
+        "ttl": 330
+      }
+    }
+  ],
+  "state": {
+    "cookies": {
+      "cc": {
+        "ttl": 60,
+        "value": "U2FtZVNpdGU9TGF4Ow=="
+      }
+    },
+    "pxsid": "7b8594d5-6bf0-11f1-9962-5e640970be61",
+    "jf": "cu",
+    "to": "12931788724061872121",
+    "eo": "12277461298666361059",
+    "no": "1781881603411",
+    "ro": 1781881603,
+    "appId": "d8qlm0ovt8vs73eghpj0",
+    "ao": "103",
+    "cts": "7b859801-6bf0-11f1-9962-5e640970be61",
+    "qa": "942b0698d55ec1c372ef28c4af6074383e5cd4ba450bde57352c5c6c7ea4f710",
+    "vid": "7b858cb4-6bf0-11f1-9962-4a860c426db9",
+    "features": {
+      "uiii": "0"
+    },
+    "px3": {
+      "name": "_pxde",
+      "value": "4eaeca0c6c4d617c63d7abfc3a5b256cebebbd4fddd33e7773ea35a9c619c0de:eyJ0aW1lc3RhbXAiOjE3ODE4ODE2MDM0MTEsImZfa2IiOjAsImlwY19pZCI6W10sImluY19pZCI6WyJkNWQwOWYwYWE5YWZjMDcyYmEyMDMyNmVlOTBhZjgwMSIsIjJlZGRkNzkzOWJlZmJjZTU2NzY4NzBiYTI5OGYyNDY2Il19",
+      "ttl": 330,
+      "secure": true,
+      "maxAge": 300
+    }
+  }
+}

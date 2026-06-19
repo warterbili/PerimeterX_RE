@@ -9,6 +9,7 @@
 [![Grubhub](https://img.shields.io/badge/Grubhub-10%2F10-success?style=flat-square)](stample/grub/)
 [![Total Wine](https://img.shields.io/badge/Total%20Wine-10%2F10%20strict-success?style=flat-square)](stample/totalwine/)
 [![Academy](https://img.shields.io/badge/Academy-10%2F10%20strict%2B-success?style=flat-square)](stample/academy/)
+[![Walmart](https://img.shields.io/badge/Walmart-10%2F10%20PX--layer-yellow?style=flat-square)](stample/walmart/)
 [![License](https://img.shields.io/badge/license-AGPL--3.0%20%2B%20CC%20BY--NC--SA-orange?style=flat-square)](#license)
 
 [中文](README.zh.md) · [Quick Start](#quick-start) · [How it works](#how-it-works) · [Docs](#documentation) · [AI Skill](skill/AI_re/) · [License](#license)
@@ -35,6 +36,7 @@
 |---|---|---|---|---|
 | [ifood.com.br](stample/ifood/) | lenient | `_px3` (ttl 330) | 2-POST | **10/10** |
 | [grubhub.com](stample/grub/) | lenient | `_px2` (ttl 500) | 2-POST | **10/10** |
+| [walmart.com](stample/walmart/) | lenient | `_px3` (ttl 330) | 2-POST | **10/10** ² |
 | [totalwine.com](stample/totalwine/) | **strict** | `_px2` (ttl 330) | 3-POST + EV3 | **10/10** |
 | [academy.com](stample/academy/) | **strict+** | `_px3` (ttl 330) | 3-POST + TLS/IP-bound trust | **10/10** ¹ |
 
@@ -42,6 +44,10 @@ All constants come straight from real POST-body captures (6 auditable batches pe
 ¹ academy is a strict+ case (trust bound to the mint's TLS fingerprint, `/ns` token, real-Chrome template,
 and exit-IP reputation); its generator package is kept private. The tier methodology is documented in the
 [AI skill](skill/AI_re/references/deployment-tiers.md).
+² walmart is **PX-layer only** — the site's primary gate is **Akamai Bot Manager**, with PerimeterX as a
+secondary layer. The `_px3` is accepted by the PX collector (10/10) but does **not** pass Walmart business
+APIs (Akamai `_abck`/`bm_sv` is out of this skill's scope). Included as a clean lenient + cross-event-consistency
+reference.
 
 ## Quick start
 
@@ -55,6 +61,12 @@ node stample/ifood/px_cookie/ifood_px3.js
 
 # Grubhub — generate _px2
 node stample/grub/px_cookie/grubhub_px2.js
+
+# Walmart — generate _px3 (lenient; PX-layer only, needs a US egress IP)
+node stample/walmart/px_cookie/walmart_px3.js
+# → ✅ _px3=a2426f96…  ttl=330  ev1=12 ev2=207
+# ⚠️ PX-layer only: Walmart's business APIs are gated by Akamai (out of scope).
+# PX-success differential proof: node stample/walmart/script/px_success_proof.js
 
 # Total Wine — generate _px2 (strict tier, 3-POST; needs a US residential proxy)
 HTTPS_PROXY=http://user:pass@host:port node stample/totalwine/px_cookie/totalwine_px2.js
@@ -87,8 +99,10 @@ revers/        9 algorithm modules (require()-able)         skill/      AI rever
 stample/       per-site generators + 6 capture batches        ├─ AI_re/  PX core skill (playbooks + tools)
   ├─ ifood/    lenient · _px3                                  └─ cdp/    real-Chrome CDP capture skill
   ├─ grub/     lenient · _px2                                main/       technical docs (ZH + EN)
-  └─ totalwine/ strict · _px2 · 3-POST                       bug_report/ gotchas / failure-mode records
-bundle/        press-challenge path (PoW + WASM userscript)  research/   field-entropy + SDK-drift studies
+  ├─ walmart/  lenient · _px3 · PX-layer only (Akamai-gated) bug_report/ gotchas / failure-mode records
+  ├─ totalwine/ strict · _px2 · 3-POST                       research/   field-entropy + SDK-drift studies
+  └─ academy/  strict+ · _px3 · TLS/IP-bound trust
+bundle/        press-challenge path (PoW + WASM userscript)
 node_bridge/   JSDOM "Plan B" oracle (run the real SDK)
 ```
 

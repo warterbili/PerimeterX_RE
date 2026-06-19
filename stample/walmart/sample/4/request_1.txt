@@ -1,0 +1,9 @@
+POST https://collector-pxu6b0qd2s.px-cloud.net/api/v2/collector
+sec-ch-ua-platform: "Windows"
+Referer: https://www.walmart.com/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+Content-type: application/x-www-form-urlencoded
+sec-ch-ua-mobile: ?0
+
+payload=aUkQRhAIEFdlB3F+SEVzYEpVDxAeEFYQCEkQUUtae1NmZHNjdAYPEAgQWkZGQkEIHR1FRUUcRVNeX1NARhxRXV8dEB4QfHNGYmFcdFxjAQoPEAgCHhB7XF5oV3VRZmd3ew8QCBBlW1wBABAeEGRbA0Z+cHB5a2BFDxAIAh4Qc1pZB2V3YEt/AF0PEAgAAgYGHhB0XwJGUHR/GcHhkaw8QCAEEAgIeEFNYd^2B/cUpRdGNRDxSAI}DAwUKANwoKAwQKGAgUFBB84QDZwJVXWFga1l+ekEPEAgDBQoDNaCgoDBAYCBQsAHhB6Z3hfYwNBXWsBUQ8QCBALA>D1FRBA`ALAh8EUFQCHwMDVAMfCgtWBhK}8FVAIKVgAEAQYFCgsQHhBzd1EFcFlnGQX9mcwK8Q7CFxHXl4eEGFedEp3cwoEV0tRDxAIAh4QYwFVBn17jZ2R/RXsPEAhGQEdXT09v&appId=PXu6b0qd2S&tag=eW5CaD8AUB99Zg==&uuid=91cc6290-6bf0-11f1-89d4-7f08d2634789&ft=396&seq=0&en=NTA&bi=Rl19VhNhNHcAAhNzXwpPdUd/YRFXUzxySkpqG30bP15FeTFvAhU+bCgNAS1HeHgPRWw5aG5eMDUvCSYfUjUkeFtLcC1TCUB7VXwwDgNIaX9KQjR+eRswXEgmMGtNBHo=&pc=9900107863583911&rsc=1

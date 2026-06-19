@@ -1,0 +1,110 @@
+{
+  "cyhIaTVAQF4=": {
+    "category": "STATIC",
+    "sample_values": [
+      "https://www.walmart.com/",
+      "https://www.walmart.com/",
+      "https://www.walmart.com/"
+    ],
+    "present_in": "6/6"
+  },
+  "NAtPSnFnQ38=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "InlZeGcTUEI=": {
+    "category": "STATIC",
+    "sample_values": [
+      "Win32",
+      "Win32",
+      "Win32"
+    ],
+    "present_in": "6/6"
+  },
+  "Vi1tLBBKYRw=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Ahk5WERyM2o=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      2194,
+      1761,
+      1795
+    ],
+    "present_in": "6/6"
+  },
+  "Fm0tbFMBJVY=": {
+    "category": "STATIC",
+    "sample_values": [
+      3600,
+      3600,
+      3600
+    ],
+    "present_in": "6/6"
+  },
+  "ajERMCxcFQc=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781881529056,
+      1781881565927,
+      1781881603240
+    ],
+    "present_in": "6/6"
+  },
+  "U0goSRYkLHs=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      1781881529075,
+      1781881565945,
+      1781881603257
+    ],
+    "present_in": "6/6"
+  },
+  "HUJmQ1soY3c=": {
+    "category": "DYNAMIC",
+    "sample_values": [
+      "4f354410-6bf0-11f1-9e97-d982e281c57b",
+      "652f7c90-6bf0-11f1-b248-6921a40c9d29",
+      "7b6cd890-6bf0-11f1-a127-e34be839eeba"
+    ],
+    "present_in": "6/6"
+  },
+  "AEc7BkUsMTA=": {
+    "category": "STATIC",
+    "sample_values": [
+      null,
+      null,
+      null
+    ],
+    "present_in": "6/6"
+  },
+  "SlFxEA86eyc=": {
+    "category": "STATIC",
+    "sample_values": [
+      0,
+      0,
+      0
+    ],
+    "present_in": "6/6"
+  },
+  "Q3g4OQUVMwI=": {
+    "category": "STATIC",
+    "sample_values": [
+      true,
+      true,
+      true
+    ],
+    "present_in": "6/6"
+  }
+}

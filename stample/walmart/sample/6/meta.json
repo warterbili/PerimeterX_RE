@@ -1,0 +1,19 @@
+{
+  "batch_id": 6,
+  "proxy": "None:None",
+  "site": "walmart.com",
+  "uuid": "be6020d0-6bf0-11f1-a9d2-6b6c44634095",
+  "tag": "eW5CaD8AUB99Zg==",
+  "ft": "396",
+  "app_id": "PXu6b0qd2S",
+  "seq": "0",
+  "en": "NTA",
+  "method_post_1": "POST",
+  "captured_at": "2026-06-19T15:08:52Z",
+  "collector_post_count": 2,
+  "bundle_post_count": 0,
+  "status_post_1": 200,
+  "status_post_2": 200,
+  "first_collector_url": "https://collector-pxu6b0qd2s.px-cloud.net/api/v2/collector",
+  "sdk_sha256": "94d67d51cd0f731db2a21c96108fc3beb5c6407f6ca0bcfa8701248590cb732c"
+}

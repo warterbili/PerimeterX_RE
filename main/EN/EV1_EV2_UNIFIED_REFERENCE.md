@@ -203,7 +203,7 @@ Use this with `references/gotchas.md`. Quick directory by "symptom → chapter":
 | Accepts PC but doesn't issue | gotcha #5 (state.appId must come from OB#1) + Section E above |
 | sid inconsistent with SDK | gotcha #6 (state.pxsid not session uuid) |
 | OB decode produces garbage | gotcha #7 (binary not UTF-8) |
-| Python requests loses sid characters | gotcha #8 (Tag Char Unicode) |
+| Python requests loses sid characters | gotcha #8 (Variation Selector Unicode) |
 | HMAC fields computed correctly but still rejected | gotcha #9 (UA consistency) |
 | **/auth/login HTTP 403 but collector all 200** ⭐ | **Section E above + extra fields (`DFQ2Ekk4PSU=` shouldn't be in Grubhub EV2)** |
 | 5/10 pass rate (PX intermittent 403) | **IP rate limit** — retry interval ≥ 10s; avoid burst sequences |

@@ -121,7 +121,7 @@ var decoded = Buffer.from(ob, 'base64').toString('binary');  // 必须 binary
 
 **症状**: Python 用 requests 发请求, server 拒绝
 
-**根因**: sid 含 Unicode Tag Characters (U+E0100+)，bash 终端 / 某些 HTTP 客户端会丢失这些不可见字符。
+**根因**: sid 含 Unicode Variation Selectors (U+E0100+)，bash 终端 / 某些 HTTP 客户端会丢失这些不可见字符。
 
 **修复**:
 - 检查 `len(sid.encode('utf-8'))` 是不是预期的 字节数

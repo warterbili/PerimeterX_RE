@@ -28,7 +28,7 @@ events (JS object)
    |
    |-> pc = jt(serialize(events), uuid:tag:ft)   (HMAC-MD5 + 数字提取)
    |
-   |-> sid = state.pxsid + hh(state.no)          (Unicode Tag Char 隐写)
+   |-> sid = state.pxsid + hh(state.no)          (Unicode Variation Selector 隐写)
    |
    '-> ev2[at_key] = at_val                       (anti-tamper 动态 XOR)
         at_key = te(state.to, state.no%10+2)
@@ -343,13 +343,22 @@ function decodeOb(responseJson, gt) {
 
 ---
 
-## 5. SID Unicode Tag Char 隐写
+## 5. SID Unicode Variation Selector 隐写
+
+> ⚠️ **Naming note**: the base `U+E0100` is the **Variation Selectors Supplement**
+> (U+E0100–E01EF), **not** the **Tags block** (U+E0000–E007F). The old "Tag Char" label
+> is a misnomer (both are Plane-14 and invisible, but different blocks). It is `+charCode`,
+> not `+digitValue`: `'7'(0x37) → U+E0137`; a digit tail lands in U+E0130–E0139.
+>
+> ⚠️ **命名澄清**：基址 `U+E0100` 是 **Variation Selectors Supplement**（U+E0100–E01EF），
+> 不是 **Tags 块**（U+E0000–E007F）。旧版叫 "Tag Char" 是误称（都在 Plane-14、都不可见，但块不同）。
+> 是 `+charCode` 不是 `+数字值`：`'7'(0x37) → U+E0137`，数字尾巴在 U+E0130–E0139。
 
 ```javascript
 function hh(t) {
     let result = '';
     for (let i = 0; i < t.length; i++) {
-        // Plane 14 Tag Characters 起点 U+E0100
+        // Plane 14 Variation Selectors 起点 U+E0100
         result += String.fromCodePoint(0xE0100 + t.charCodeAt(i));
     }
     return result;
@@ -362,10 +371,10 @@ function generateSid(pxsid, serverTimestamp) {
 
 输出特征：
 - 肉眼看 sid 长度 = 36（UUID 部分）
-- 实际 UTF-8 字节数 = `36 + |state.no| * 4`（每个 Tag Char 占 4 字节 UTF-8）
+- 实际 UTF-8 字节数 = `36 + |state.no| * 4`（每个 Variation Selector 占 4 字节 UTF-8）
 - 典型值：`36 + 13 * 4 = 88` 字节
 
-防御目的：终端 / 某些 HTTP 客户端会**丢失** Tag Characters，导致 sid 字节数变化 → 服务端识别为非浏览器。详见 `docs/zh/16_sid_steg.md`。
+防御目的：终端 / 某些 HTTP 客户端会**丢失** Variation Selectors，导致 sid 字节数变化 → 服务端识别为非浏览器。实现见 [`revers/sid.js`](../../../revers/sid.js)。
 
 ---
 

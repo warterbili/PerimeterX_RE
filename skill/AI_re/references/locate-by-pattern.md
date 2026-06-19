@@ -114,13 +114,17 @@ grep -nE ">=\s*48.*<=\s*57|charCodeAt.*%\s*10" main.js
 # 找紧跟 HMAC-MD5 hex 的代码块
 ```
 
-### 2.5 SID Unicode 隐写 — 搜 Plane 14 Tag Char
+### 2.5 SID Unicode 隐写 — 搜 Plane 14 Variation Selector
 
 ```bash
 grep -nE "917760|0xE0100|fromCodePoint" main.js
 ```
 
-**为什么稳定**: `0xE0100` (= 917760) 是 Unicode Plane 14 Tag Characters 起点。
+**Why stable**: `0xE0100` (= 917760) is the start of the Unicode Plane-14 **Variation
+Selectors Supplement** (U+E0100–E01EF) — NOT the Tags block (U+E0000–E007F); the old
+"Tag Char" label is a misnomer.
+
+**为什么稳定**: `0xE0100` (= 917760) 是 Unicode Plane 14 **Variation Selectors Supplement**（U+E0100–E01EF）起点 —— 不是 Tags 块（U+E0000–E007F），旧版叫 "Tag Char" 是误称。
 
 ### 2.6 anti-tamper — 搜 % 10 + 1 / % 10 + 2
 

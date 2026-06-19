@@ -241,7 +241,7 @@ d['CXV/P0wRfwU='] = state.appId;
 
 **注意**：跟 #16 init AppID 是两回事。
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:65-76
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -291,7 +291,7 @@ for (const k of Object.keys(d)) {
 
 **修复**：regex 用 `/^[0-9:;<=>?@]{15,25}$/`（不要漏 `:` 和 `;`）。
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:54-63
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -311,7 +311,7 @@ for (const k of Object.keys(d)) {
 
 **修复**：用跨批值匹配（不是类型猜）—— 见 [`stample/*/script/find_state_keys.py`](../stample/) 和 [`skill/AI_re/scripts/find_state_keys_in_ev2.py`](../skill/AI_re/scripts/find_state_keys_in_ev2.py)。
 
-**来源**：Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:25-41
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -330,7 +330,7 @@ for (const k of Object.keys(d)) {
 assert(JSON.stringify(Object.keys(myEv2).sort()) === JSON.stringify(Object.keys(template).sort()));
 ```
 
-**来源**：Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:45-66
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -345,7 +345,7 @@ assert(JSON.stringify(Object.keys(myEv2).sort()) === JSON.stringify(Object.keys(
 sid = generateSid(state.pxsid, String(state.no));   // 不是用 uuid
 ```
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:78-87
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -356,7 +356,7 @@ sid = generateSid(state.pxsid, String(state.no));   // 不是用 uuid
 **根因**：
 - **Collector#1**：`sid = uuid`（纯 UUID）
 - **Bundle#1**：`sid = uuid`（同上）
-- **Bundle#2+**：`sid = uuid + hh(serverNo)`（追加 Unicode Tag Char 隐写的 timestamp）
+- **Bundle#2+**：`sid = uuid + hh(serverNo)`（追加 Unicode Variation Selector 隐写的 timestamp）
 
 **修复**：按 POST 阶段决定 sid 格式；只在 Bundle#2+ 加 Unicode 隐写。
 
@@ -372,7 +372,7 @@ sid = generateSid(state.pxsid, String(state.no));   // 不是用 uuid
 
 **修复**：在 generator 顶部定义单一 `DEFAULT_UA` 常量，HMAC 算和 HTTP 请求都用这一个变量。
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:112-127
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -388,7 +388,7 @@ sid = generateSid(state.pxsid, String(state.no));   // 不是用 uuid
 
 **修复**：拿模板里的 typeof 当 ground truth，不要随便 `String()` / `parseInt`。
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:129-149
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -463,18 +463,18 @@ cts = (phase === 'collector' || phase === 'bundle1') ? state.cts : Date.now().to
 
 ---
 
-### #30 ⭐ Python 端 sid 含 Unicode Tag Chars，被 `requests` 默认编码截断
+### #30 ⭐ Python 端 sid 含 Unicode Variation Selectors，被 `requests` 默认编码截断
 
 **症状**：Python 实现 sid 算法正确，但发出去服务器还是拒；用 Node 等价代码就过。
 
-**根因**：sid 含 Plane 14 Unicode Tag Chars（U+E0100+），是"不可见"字符。Python 的 `requests` 默认按 URL 标准编码，有些版本会丢失或转 `?`。Chrome 的 "Copy as cURL" 也会丢。
+**根因**：sid 含 Plane 14 Unicode Variation Selectors（U+E0100+），是"不可见"字符。Python 的 `requests` 默认按 URL 标准编码，有些版本会丢失或转 `?`。Chrome 的 "Copy as cURL" 也会丢。
 
 **修复**：
 - 用 `urllib.parse.quote_plus(sid, safe='')` 显式编码
 - 验证 `len(sid.encode('utf-8'))` 跟期望字节数一致
 - **不要用 Chrome "Copy as cURL"** 抓 sid
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:101-111
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 

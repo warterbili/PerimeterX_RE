@@ -29,7 +29,7 @@ revers/
 ├── payload.js       XOR(50) + base64 + interleave → POST `payload=`
 ├── pc.js            HMAC-MD5 + digit extraction (16 chars) → POST `pc=`
 ├── ob.js            OB decode + 27 handler dispatch
-├── sid.js           Plane-14 Unicode Tag steganography → POST `sid=`
+├── sid.js           Plane-14 Unicode Variation-Selector steganography → POST `sid=`
 ├── uuid.js          UUID v1 (PX-compatible clockseq)
 ├── hash.js          djb2 variant
 ├── memory.js        performance.memory synthesis

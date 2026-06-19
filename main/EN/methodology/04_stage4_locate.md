@@ -219,7 +219,7 @@ Each algorithm has its "signature number". Use it to locate:
 | `2147483647` | INT32_MAX | `ml()` hash function |
 | `4294967296` | `2^32` | memory.jsHeapSizeLimit (4 GB) |
 | `268435455` | `0x0FFFFFFF` | UUID v1 timeLow mask |
-| `0xE0100` or `917760` | Plane 14 base | sid Unicode Tag steganography |
+| `0xE0100` or `917760` | Plane 14 base | sid Unicode Variation-Selector steganography |
 | `4210` or `0x1072` | XOR mask | Bundle Myanmar DOM encoding |
 | `2863` | hash factor | Field mixing function |
 

@@ -8,12 +8,25 @@
  *   serverTimestamp:  String — 服务器时间戳, 来自 ni() (ob 响应中解出)
  *
  * ═══ 输出 ═══
- *   String — uuid + Unicode Tag Characters 编码的时间戳
+ *   String — uuid + Unicode Variation Selectors 编码的时间戳
  *            如 "12b6d3c0-dc88-11f0-af79-f50eccdcaab9󠄱󠄷󠄷..." (36 + 13*2 = 62 chars)
  *
  * ═══ 算法 ═══
- *   hh(t): 每个字符 → U+E0100 + charCode (Unicode Tag Characters, Plane 14)
+ *   hh(t): 每个字符 → U+E0100 + charCode (Unicode Variation Selectors, Plane 14)
  *   sid = uuid + hh(serverTimestamp)
+ *
+ *   ⚠️ Naming note: the base U+E0100 lies in the **Variation Selectors Supplement**
+ *   block (U+E0100–U+E01EF, VS17–VS256), **NOT** the Tags block (U+E0000–U+E007F).
+ *   Older docs called this "Tag Char" — a misnomer (both are Plane-14 and invisible,
+ *   but they are different blocks). It is +charCode, NOT +digitValue: char '7'(0x37)
+ *   → U+E0137 (not U+E0107); a digit tail lands in U+E0130–E0139. The implementation
+ *   faithfully mirrors the SDK's %uDB40%uDD + charCode surrogate.
+ *
+ *   ⚠️ 命名澄清: 基址 U+E0100 落在 **Variation Selectors Supplement** 块
+ *   (U+E0100–U+E01EF, VS17–VS256)，**不是** Tags 块 (U+E0000–U+E007F)。
+ *   旧文档把它叫 "Tag Char" 是误称 (两者都在 Plane-14 且不可见，但块不同)。
+ *   注意是 +charCode 不是 +数字值: 字符 '7'(0x37) → U+E0137 (不是 U+E0107)，
+ *   数字尾巴落在 U+E0130–E0139。实现忠实对应 SDK 的 %uDB40%uDD+charCode surrogate。
  *
  *   编码表 (数字):
  *     '0' (0x30) → U+E0130    '5' (0x35) → U+E0135
@@ -38,7 +51,7 @@
  */
 
 // ═══ hh() — 隐写编码 (main.js:4366-4373) ═══
-// 每个字符 → Unicode Tag Character (U+E0100 + charCode)
+// 每个字符 → Unicode Variation Selector (U+E0100 + charCode)
 
 function hh(t) {
     let result = '';

@@ -126,7 +126,7 @@ Full 27-handler table: [`../../../../skill/AI_re/references/handler-table.md`](.
 
 ---
 
-## B.4 sid — Plane 14 Unicode Tag Steganography
+## B.4 sid — Plane 14 Unicode Variation-Selector Steganography
 
 ```python
 def encode_sid(uuid):

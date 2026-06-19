@@ -1,13 +1,22 @@
 # Gotchas — 19 个命名的生产踩坑（细颗粒度版）
 
-> 19 个具体 bug，每个**单文件**记录：症状 / 根因 / 难发现的原因 / 修复 / 防回归测试。
+> 19 个具体 bug，每个**单文件**记录：症状 / 根因 / 难发现的原因 / 修复。
 >
 > ⚠️ **跟 [`../1_collector_path.md`](../1_collector_path.md) 等 4 大文件的关系**：
-> - 那 4 个 `.md` 文件 = **聚合视图**（68 条按"路径"分类，速读）
-> - 本目录 19 个 `.md` 文件 = **细颗粒度版**（每条独立，深度更深，含修复代码 + 测试代码）
+> - 那 4 个 `.md` 文件 = **聚合视图**（按"路径"分类，速读）
+> - 本目录 19 个 `.md` 文件 = **细颗粒度版**（每条独立，深度更深）
 > - 两者**互补**：先扫 4 个聚合，再针对要复现某条 deep-dive 这里
->
-> *源自*: perimeterX_Re/docs/07_gotchas/，路径已适配到 perimeter/。
+
+> 🛑 **准确性声明（2026-06-20 校订）**。本目录从上游 `perimeterX_Re/docs/07_gotchas/`
+> 移植，移植时**交叉引用没改干净**，请按此读：
+> - **代码片段是示意性的**。真实可运行实现在 [`revers/`](../../revers/)，导出名是
+>   `generatePayload` / `generatePC` / `decodeOb` / `generateSid` 等 —— 个别文件里出现的
+>   `computePC` / `dispatchOB` / `extractSidFromTag` 是描述性占位名，**不是** `revers/` 里的真名。
+> - **`tests/regression/*.test.js` 路径在本仓不存在**（没有 `tests/` 目录）；那些是上游残留，当示意看。
+> - **`docs/0X_…` / `platforms/ifood/…` 路径也是上游残留**，本仓无对应文件。
+> - **SDK 行号 + 混淆函数名（如 `gb`/`ke`/`hh`）是真实的**（实测存在于各站 `source/` 下的 SDK）。
+> - **权威、逐字段经过验证的踩坑清单**在 [`skill/AI_re/references/gotchas.md`](../../skill/AI_re/references/gotchas.md)（23 条）。
+>   本目录是叙事补充，冲突时以那份为准。
 
 这些**不是算法 bug**。[`revers/`](../../revers/) 9 个算法没问题。
 这些是**算法周围的 bug** — edge cases、off-by-ones、错的编码选择、平台 quirks，每个第一次踩都花了几小时。

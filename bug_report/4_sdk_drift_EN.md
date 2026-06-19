@@ -20,7 +20,7 @@ Unlike one-off debugging gotchas, this category is **structural** — you must f
 - Algorithms: locate by **magic constants** (MD5 init `1732584193`, HMAC ipad `909522486`, UUID v1 `122192928e5`, INT32_MAX `2147483647`) — **these haven't moved in 3 years**
 - OB handlers: match by args shape (see [`skill/AI_re/references/handler-table.md`](../skill/AI_re/references/handler-table.md)), not by handler name
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md; confirmed across multiple archives
+**Source**: archived upstream notes (not shipped); confirmed across multiple archives
 
 ---
 
@@ -35,7 +35,7 @@ Unlike one-off debugging gotchas, this category is **structural** — you must f
 
 **Fix**: dynamically determine the charset from real OB decode output; never hardcode. Handler shape matching uses args type/count and is **charset-independent**.
 
-**Source**: Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:145-154
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -99,7 +99,7 @@ Unlike one-off debugging gotchas, this category is **structural** — you must f
 
 **Use the Stage 0-8 workflow in [`skill/AI_re/playbooks/master-workflow.md`](../skill/AI_re/playbooks/master-workflow.md); don't skip a stage.**
 
-**Source**: all of Desktop/新建文件夹 (3); `stample/grub/` combat record
+**Source**: all of archived upstream notes (not shipped); `stample/grub/` combat record
 
 ---
 

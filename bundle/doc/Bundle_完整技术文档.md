@@ -151,7 +151,7 @@ async function triggerCaptcha() {
 | payload 加密链（serialize → XOR(50) → base64 → 交织） | ✅ | ✅（交织 key 用 UUID 不是 AppID） |
 | PC HMAC-MD5 + 数字提取 16 位 | ✅ | ✅（FT 不同） |
 | OB 响应解码（XOR + 4 个 `~` split + handler 派发） | ✅ | ✅ + 多 2 个 PoW handler |
-| SID + Unicode Tag Char 隐写 | ✅ | ✅（含 cts 数字隐写） |
+| SID + Unicode Variation Selector 隐写 | ✅ | ✅（含 cts 数字隐写） |
 | UUID v1 with deterministic node | ✅ | ✅ |
 | `/ns` probe | ✅ | ✅ |
 
@@ -1028,7 +1028,7 @@ function jt(t, e) {
 ### 3.4.3 sid 隐写编码（main.js:4366）
 
 ```js
-// hh(t): 将字符串编码为 Unicode Tag Characters
+// hh(t): 将字符串编码为 Unicode Variation Selectors
 function hh(t) {
     return t.split("").reduce((acc, ch) => {
         var hex = ch.codePointAt(0).toString(16).padStart(2, "0");
@@ -1049,7 +1049,7 @@ function hh(t) {
 //   解码后是 "1771967728434" — 就是 cts 时间戳!
 ```
 
-⚠️ Python `requests` 默认会丢 Unicode Tag Char。用 `urllib.parse.quote_plus(sid, safe='')` 显式编码（坑 #E5）。
+⚠️ Python `requests` 默认会丢 Unicode Variation Selector。用 `urllib.parse.quote_plus(sid, safe='')` 显式编码（坑 #E5）。
 
 ## 3.5 OB#1 响应解码（13 段完整解析）
 
@@ -2096,7 +2096,7 @@ payload=<base64+Jf>&appId=PXO1GDTa7Q&tag=<tag>&uuid=<uuid>&ft=388&seq=3&en=NTA&b
 | `cts` | UUID 格式 | **ms timestamp** | 从 OB#2 后转 ms（不是 OB#1） |
 | `cs` | 无 | **64 hex** | 从 OB#1 `qa` 拿到的 challenge hash |
 | `ci` | 无 | **UUID** | challenge instance ID |
-| `sid` | 纯 UUID | UUID + **隐写数字（cts 时间戳的每位）** | Unicode Tag Chars |
+| `sid` | 纯 UUID | UUID + **隐写数字（cts 时间戳的每位）** | Unicode Variation Selectors |
 
 ## 6.3 Payload 228 字段三分类
 
@@ -2170,7 +2170,7 @@ Bundle#2 的 sid 比 Bundle#1 更复杂：
 Bundle#1 sid: <uuid>
               纯 UUID
 
-Bundle#2 sid: <uuid> + <Unicode Tag Chars 编码 cts 时间戳的每位>
+Bundle#2 sid: <uuid> + <Unicode Variation Selectors 编码 cts 时间戳的每位>
               UUID + 隐写
 
 例:
@@ -2178,7 +2178,7 @@ Bundle#2 sid: <uuid> + <Unicode Tag Chars 编码 cts 时间戳的每位>
   cts  = "1771967728434"
   sid  = "51338389-11b8-11f1-bb6d-13e608bfecce" + Tag('1') + Tag('7') + Tag('7') + Tag('1') + Tag('9') + Tag('6') + Tag('7') + Tag('7') + Tag('2') + Tag('8') + Tag('4') + Tag('3') + Tag('4')
 
-Unicode Tag Chars 映射:
+Unicode Variation Selectors 映射:
   Tag('0') = U+E0130
   Tag('1') = U+E0131
   Tag('2') = U+E0132
@@ -3701,13 +3701,13 @@ function hh(t) {
 }
 ```
 
-把字符串转成 Unicode Tag Characters（U+E0100+ 不可见字符）。
+把字符串转成 Unicode Variation Selectors（U+E0100+ 不可见字符）。
 
 ```
 "50" → U+E0035 U+E0030 → 两个不可见 Unicode 字符
 ```
 
-实际抓包看到 sid UUID 后附加的 Unicode Tag Chars 编码的是 **cts 时间戳的每位**，不是 ni()：
+实际抓包看到 sid UUID 后附加的 Unicode Variation Selectors 编码的是 **cts 时间戳的每位**，不是 ni()：
 
 ```
 U+E0131='1'
@@ -4646,7 +4646,7 @@ ifood_PerimeterX-WAF_jsReverse/
 - [x] Bundle #2 Request: POST 参数差异, Payload 解密 (80+ 浏览器指纹字段)
 - [x] cs 来源确认: 服务器 OB 响应 III000 handler 下发
 - [x] pc 算法确认: HMAC-MD5(salt="uuid:tag:ft", data=JSON(events)) → 提取+间隔取
-- [x] sid 隐写确认: Unicode Tag Characters (U+E0130 系列) 编码 cts 时间戳
+- [x] sid 隐写确认: Unicode Variation Selectors (U+E0130 系列) 编码 cts 时间戳
 - [x] Jf() 交织算法: payload = base64(XOR(JSON,50)) + UUID 驱动的字符交织 (offsets[i]-1)
 - [x] bi / tag 来源: 均为脚本硬编码固定值
 - [x] /ns 接口: 返回值放入 payload 字段 (Sm), 非 cs 参数

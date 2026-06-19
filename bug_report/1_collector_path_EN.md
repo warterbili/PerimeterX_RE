@@ -241,7 +241,7 @@ d['CXV/P0wRfwU='] = state.appId;
 
 **Note**: different from #16's init AppID.
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:65-76
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -291,7 +291,7 @@ for (const k of Object.keys(d)) {
 
 **Fix**: regex `/^[0-9:;<=>?@]{15,25}$/` (don't omit `:` and `;`).
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:54-63
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -311,7 +311,7 @@ for (const k of Object.keys(d)) {
 
 **Fix**: use cross-batch value matching (not type guessing) — see [`stample/*/script/find_state_keys.py`](../stample/) and [`skill/AI_re/scripts/find_state_keys_in_ev2.py`](../skill/AI_re/scripts/find_state_keys_in_ev2.py).
 
-**Source**: Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:25-41
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -330,7 +330,7 @@ Copying iFood's "EV1/EV2 both have duration" logic to Grubhub → EV2 has an ext
 assert(JSON.stringify(Object.keys(myEv2).sort()) === JSON.stringify(Object.keys(template).sort()));
 ```
 
-**Source**: Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:45-66
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -345,7 +345,7 @@ assert(JSON.stringify(Object.keys(myEv2).sort()) === JSON.stringify(Object.keys(
 sid = generateSid(state.pxsid, String(state.no));   // NOT uuid
 ```
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:78-87
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -356,7 +356,7 @@ sid = generateSid(state.pxsid, String(state.no));   // NOT uuid
 **Root cause**:
 - **Collector#1**: `sid = uuid` (raw UUID)
 - **Bundle#1**: `sid = uuid` (same)
-- **Bundle#2+**: `sid = uuid + hh(serverNo)` (appended Unicode Tag Char steganographed timestamp)
+- **Bundle#2+**: `sid = uuid + hh(serverNo)` (appended Unicode Variation Selector steganographed timestamp)
 
 **Fix**: choose sid format per POST phase; only add Unicode steganography in Bundle#2+.
 
@@ -372,7 +372,7 @@ sid = generateSid(state.pxsid, String(state.no));   // NOT uuid
 
 **Fix**: define a single `DEFAULT_UA` constant at the top of the generator; use this one variable for both HMAC computation and the HTTP request.
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:112-127
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -388,7 +388,7 @@ sid = generateSid(state.pxsid, String(state.no));   // NOT uuid
 
 **Fix**: treat the template's `typeof` as ground truth; don't carelessly `String()` / `parseInt`.
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:129-149
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -463,18 +463,18 @@ cts = (phase === 'collector' || phase === 'bundle1') ? state.cts : Date.now().to
 
 ---
 
-### #30 ⭐ Python sid Contains Unicode Tag Chars; `requests` Default Encoding Truncates Them
+### #30 ⭐ Python sid Contains Unicode Variation Selectors; `requests` Default Encoding Truncates Them
 
 **Symptom**: Python correctly implements the sid algorithm, but the server still rejects what's sent; equivalent Node code passes.
 
-**Root cause**: sid contains Plane 14 Unicode Tag Chars (U+E0100+), "invisible". Python's `requests` URL-encodes by default; some versions drop them or convert to `?`. Chrome's "Copy as cURL" also drops them.
+**Root cause**: sid contains Plane 14 Unicode Variation Selectors (U+E0100+), "invisible". Python's `requests` URL-encodes by default; some versions drop them or convert to `?`. Chrome's "Copy as cURL" also drops them.
 
 **Fix**:
 - Use `urllib.parse.quote_plus(sid, safe='')` for explicit encoding
 - Verify `len(sid.encode('utf-8'))` matches the expected byte count
 - **Don't use Chrome "Copy as cURL"** to capture sid
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:101-111
+**Source**: archived upstream notes (not shipped)
 
 ---
 

@@ -27,7 +27,7 @@ The Node ecosystem already covers most scenarios (high-throughput fetch, CDP, wo
 | payload (XOR+b64+interleave) | baseline | ⭐ 1h | ⭐⭐ 2h | ⭐ 1h | ⭐⭐ 2h |
 | pc (HMAC-MD5+digit) | baseline | ⭐ 1h | ⭐ 1h | ⭐ 1h | ⭐ 1h |
 | ob (decode + 27 handlers) | baseline | ⭐⭐ 3h | ⭐⭐ 3h | ⭐⭐ 3h | ⭐⭐⭐ 4h |
-| sid (Unicode Tag steg) | baseline | ⭐ 1h | ⭐⭐ 2h | ⭐⭐ 2h | ⭐⭐ 2h |
+| sid (Unicode Variation-Selector steg) | baseline | ⭐ 1h | ⭐⭐ 2h | ⭐⭐ 2h | ⭐⭐ 2h |
 | uuid v1 (PX-compatible) | baseline | ⭐ 30 min | ⭐ 30 min | ⭐ 30 min | ⭐ 30 min |
 | hash (djb2 + ml) | baseline | ⭐ 30 min | ⭐ 30 min | ⭐ 30 min | ⭐ 30 min |
 | memory (synth) | baseline | ⭐ 30 min | ⭐ 30 min | ⭐ 30 min | ⭐ 30 min |

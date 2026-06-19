@@ -79,7 +79,7 @@ Week 5: 跨平台移植 Bundle 到新站点（参考本文 §15）
 | payload 加密链 | XOR(50) → b64 → 20 字符交织 | **同**（交织 key 用 UUID 而非 AppID） |
 | PC HMAC-MD5 + 数字提取 | ✓ | **同**（FT 不同：401 → 388） |
 | OB 解码（XOR + `~~~~` split + handler 派发） | 27 个 handler | **27 + 2 个 PoW handler** |
-| SID + Unicode Tag Char 隐写 | ✓ | **同**（Bundle#2+ 隐写 cts 时间戳） |
+| SID + Unicode Variation Selector 隐写 | ✓ | **同**（Bundle#2+ 隐写 cts 时间戳） |
 | UUID v1 with PX 兼容 clockseq | ✓ | **同** |
 | `/ns` probe | ✓ | **同** |
 | **Proof of Work** (SHA-256 16-bit 暴力) | ✗ | **新增** ⭐ |

@@ -2407,7 +2407,7 @@ function genSid(pxsid, serverTs) {
 }
 ```
 
-`0xE0100` 是 Unicode Plane 14 Tag Characters 区域起点。
+`0xE0100` 是 Unicode Plane 14 Variation Selectors 区域起点。
 
 **SDK 源头**：未直接 grep 到 `0xE0100`，但通过反解 sid 字段验证：
 

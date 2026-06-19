@@ -200,7 +200,7 @@ const { computePC } = require('../../../revers/pc.js');
 const pc = computePC(ev2Encrypted, TAG);
 ```
 
-### 6.3.3 SID (Unicode Tag Steganography)
+### 6.3.3 SID (Unicode Variation-Selector Steganography)
 
 ```javascript
 const { encodeSid } = require('../../../revers/sid.js');

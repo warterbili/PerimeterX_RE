@@ -27,7 +27,7 @@ Node 生态已经能跑大部分场景（高吞吐 fetch、CDP、worker_threads 
 | payload (XOR+b64+interleave) | 基线 | ⭐ 1h | ⭐⭐ 2h | ⭐ 1h | ⭐⭐ 2h |
 | pc (HMAC-MD5+digit) | 基线 | ⭐ 1h | ⭐ 1h | ⭐ 1h | ⭐ 1h |
 | ob (decode + 27 handlers) | 基线 | ⭐⭐ 3h | ⭐⭐ 3h | ⭐⭐ 3h | ⭐⭐⭐ 4h |
-| sid (Unicode Tag steg) | 基线 | ⭐ 1h | ⭐⭐ 2h | ⭐⭐ 2h | ⭐⭐ 2h |
+| sid (Unicode Variation-Selector steg) | 基线 | ⭐ 1h | ⭐⭐ 2h | ⭐⭐ 2h | ⭐⭐ 2h |
 | uuid v1 (PX 兼容) | 基线 | ⭐ 30min | ⭐ 30min | ⭐ 30min | ⭐ 30min |
 | hash (djb2 + ml) | 基线 | ⭐ 30min | ⭐ 30min | ⭐ 30min | ⭐ 30min |
 | memory (synth) | 基线 | ⭐ 30min | ⭐ 30min | ⭐ 30min | ⭐ 30min |

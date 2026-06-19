@@ -313,7 +313,7 @@ PC 公式：
 grep -nE "917760|0xE0100|fromCodePoint" main.js
 ```
 
-`0xE0100` (= 917760) 是 Unicode Plane 14 Tag Characters 起点。SID 隐写
+`0xE0100` (= 917760) 是 Unicode Plane 14 Variation Selectors 起点。SID 隐写
 把 ASCII 数字加上这个偏移得到不可见字符。
 
 **为什么稳定**：Unicode Tag 区由 IETF 定义，PX 改不了。

@@ -24,7 +24,7 @@ globalThis._pxUuid = uuid;   // Use the state.pxsid from Bundle#1
 
 All 4 bundle events use **the same uuid throughout** (see #B12).
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:7-24
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -45,7 +45,7 @@ const imports = {
 WebAssembly.instantiate(wasmBytes, imports);
 ```
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:26-44
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -57,7 +57,7 @@ WebAssembly.instantiate(wasmBytes, imports);
 
 **Fix**: use `wasm-tools` to extract the WASM data section; diff magic strings between old and new versions. If they changed, re-analyze WASM.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:241-254
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -69,7 +69,7 @@ WebAssembly.instantiate(wasmBytes, imports);
 
 **Fix**: feed b()'s output **as-is** into Bundle#3 PX561 field `MD1DNnVfRgQ=`; **do not** base64-decode it.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:183-197
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -90,7 +90,7 @@ const hash = await crypto.subtle.digest('SHA-256', buf);
 const hash = crypto.createHash('sha256').update(s).digest('hex');
 ```
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:48-72
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -120,7 +120,7 @@ This differs from the init vs collector AppID in [`1_collector_path.md` gotcha #
 
 **Fix**: extract the Bundle AppID from a real captured Bundle POST and hardcode separately.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:128-136; `ifood-web/collector无感纯算还原/纯算还原.md:38-50`
+**Source**: archived upstream notes (not shipped); `ifood-web/collector无感纯算还原/纯算还原.md:38-50`
 
 ---
 
@@ -139,7 +139,7 @@ This differs from the init vs collector AppID in [`1_collector_path.md` gotcha #
  px11116 DOM+errors]
 ```
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:76-93
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -155,7 +155,7 @@ uuid_bundle#1 = uuid_bundle#2 = uuid_bundle#3 = uuid_bundle#4
 
 **Fix**: generate 1 uuid and use it across all 4 bundles.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:201-212
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -173,7 +173,7 @@ uuid_bundle#1 = uuid_bundle#2 = uuid_bundle#3 = uuid_bundle#4
 - Short-term / experiment: don't send Bundle#4 on success
 - Production / large batch: construct a minimal Bundle#4 telemetry (with `result=success`, duration, attempt count) following Bundle#3; keep your traffic distribution aligned with real browsers
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:216-227; `perimeterX_Re/docs/04_bundle/05_bundle4_fallback.md`
+**Source**: archived upstream notes (not shipped); `perimeterX_Re/docs/04_bundle/05_bundle4_fallback.md`
 
 ---
 
@@ -192,7 +192,7 @@ uuid_bundle#1 = uuid_bundle#2 = uuid_bundle#3 = uuid_bundle#4
 const pressDuration = 1000 + Math.random() * 2000;   // 1000-3000ms
 ```
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:97-110
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -207,7 +207,7 @@ const pressDuration = 1000 + Math.random() * 2000;   // 1000-3000ms
 x = Math.round(bezierX(t) * 10) / 10;
 ```
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:114-125
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -216,9 +216,9 @@ x = Math.round(bezierX(t) * 10) / 10;
 **Symptom**: all fields filled, duration within 1-3s (satisfying #B11), still rejected.
 
 **Root cause**: PX validates not only the `pressDuration` field value, but **cross-references** it against the event timestamp delta:
-- Explicit field `QlNxGAc0fSg= = [1500]`
+- Explicit field `QlNxGAc0fSg= = [1600]`
 - Actual events `pointerdown.ts=37468, pointerup.ts=38936` → delta 1468ms
-- Delta 32ms > 100ms tolerance → judged "synthetic event"
+- Delta 132ms > 100ms tolerance → judged "synthetic event"
 
 **Fix**: always **derive** duration from events; never hardcode independently:
 ```javascript
@@ -249,7 +249,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 // 544 trajectory points evenly distributed across [mouseStartTs, mouseEndTs]
 ```
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:140-153
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -263,7 +263,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 
 **Fix**: use the ready-made `myanmar_encode.js` from the iFood project, passing in the real DOM node list.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:158-169
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -275,7 +275,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 
 **Fix**: use iFood's `error_stack.js`, which returns a 4-element array.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:173-179
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -289,7 +289,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 
 **Fix**: download captcha.js fresh for each new challenge session.
 
-**Source**: Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:231-237
+**Source**: archived upstream notes (not shipped)
 
 ---
 

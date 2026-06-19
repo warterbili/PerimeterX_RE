@@ -23,7 +23,7 @@
 - bootstrap 60 个账号分批，每批 10 个，批间隔 60s
 - 单 IP 单账号每天 ≤ 几十次 collector
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:193-205；Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:70-91
+**来源**：上游逆向笔记（已归档，未随仓发布）；上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -82,11 +82,11 @@ requests.get("https://cw-marketplace.ifood.com.br/...", impersonate="chrome120")
 
 ---
 
-### #E5 ⭐⭐ Python `requests` 把 sid 里的 Unicode Tag Char 丢了
+### #E5 ⭐⭐ Python `requests` 把 sid 里的 Unicode Variation Selector 丢了
 
 **症状**：Python 实现 sid 算法正确，但发出去服务器拒；用 Node 跑等价代码就过。
 
-**根因**：sid 含 Plane 14 Unicode Tag Chars（U+E0100+），人眼"不可见"。Python `requests` 默认按 URL 标准编码，某些版本会丢 / 转 `?`。
+**根因**：sid 含 Plane 14 Unicode Variation Selectors（U+E0100+），人眼"不可见"。Python `requests` 默认按 URL 标准编码，某些版本会丢 / 转 `?`。
 
 **修复**：
 ```python
@@ -99,7 +99,7 @@ assert len(sid.encode('utf-8')) == expected_byte_count
 
 **别用**：Chrome "Copy as cURL"（也丢 Unicode Tag）。
 
-**来源**：Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:101-111
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -114,7 +114,7 @@ assert len(sid.encode('utf-8')) == expected_byte_count
 - 或用 incognito mode
 - 或验证：每批 UUID 都不同 + `_pxvid` 不连续
 
-**来源**：Desktop/新建文件夹 (2)/scripts/（抓包脚本注释）
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 

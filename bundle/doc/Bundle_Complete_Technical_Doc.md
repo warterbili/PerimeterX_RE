@@ -151,7 +151,7 @@ async function triggerCaptcha() {
 | payload encryption chain (serialize → XOR(50) → base64 → interleave) | ✅ | ✅ (interleave key uses UUID instead of AppID) |
 | PC HMAC-MD5 + 16-digit digit extraction | ✅ | ✅ (different FT) |
 | OB response decode (XOR + 4-tilde split + handler dispatch) | ✅ | ✅ + 2 additional PoW handlers |
-| SID + Unicode Tag Char steganography | ✅ | ✅ (includes cts numeric steganography) |
+| SID + Unicode Variation Selector steganography | ✅ | ✅ (includes cts numeric steganography) |
 | UUID v1 with deterministic node | ✅ | ✅ |
 | `/ns` probe | ✅ | ✅ |
 
@@ -374,7 +374,7 @@ seq=3 / rsc=4:  payload, ..., errorPayload, rsc
 | `bi` | bundle info constant (~100-byte base64) | Script-hardcoded | `It` = `"GwNqS048KWpd..."` |
 | `cs` | challenge hash (state.qa) | **Server OB#1 III000 handler issued** | `Ho()` = `qa` |
 | `pc` | 16-digit checksum | HMAC-MD5 client | `jt(it(events), "uuid:tag:ft")` |
-| `sid` | UUID + Unicode Tag steganography (cts digits) | Client | `uuid + hh(ni())` |
+| `sid` | UUID + Unicode Variation-Selector steganography (cts digits) | Client | `uuid + hh(ni())` |
 | `vid` | visitor ID | Client / cookie | `Tt()` |
 | `ci` | challenge ID | Server-issued | `as()` |
 | `cts` | client timestamp (first request UUID, subsequent ms timestamp) | Client | `Ua` |
@@ -1033,7 +1033,7 @@ function jt(t, e) {
 ### 3.4.3 sid Steganography (main.js:4366)
 
 ```js
-// hh(t): encode string as Unicode Tag Characters
+// hh(t): encode string as Unicode Variation Selectors
 function hh(t) {
     return t.split("").reduce((acc, ch) => {
         var hex = ch.codePointAt(0).toString(16).padStart(2, "0");
@@ -1054,7 +1054,7 @@ function hh(t) {
 //   Decoded: "1771967728434" — exactly the cts timestamp!
 ```
 
-⚠️ Python `requests` drops Unicode Tag Chars by default. Use `urllib.parse.quote_plus(sid, safe='')` to explicitly encode (gotcha #E5).
+⚠️ Python `requests` drops Unicode Variation Selectors by default. Use `urllib.parse.quote_plus(sid, safe='')` to explicitly encode (gotcha #E5).
 
 ## 3.5 OB#1 Response Decoding (13-Segment Full Parsing)
 
@@ -2080,7 +2080,7 @@ payload = encrypted EV array (228 fields)
 PC = generatePC(events, uuid, TAG, 388)
 cs = state.qa (from OB#1)
 ci = challenge ID (generated at captcha.js registration)
-sid = state.pxsid + hh(state.no) + hh(cts)   ⭐ contains Unicode Tag steganography
+sid = state.pxsid + hh(state.no) + hh(cts)   ⭐ contains Unicode Variation-Selector steganography
 vid = state.vid
 cts = ms timestamp (**type changed**!)
 ```
@@ -2101,7 +2101,7 @@ payload=<base64+Jf>&appId=PXO1GDTa7Q&tag=<tag>&uuid=<uuid>&ft=388&seq=3&en=NTA&b
 | `cts` | UUID format | **ms timestamp** | Switched after OB#2 (not OB#1) |
 | `cs` | None | **64 hex** | Challenge hash from OB#1 `qa` |
 | `ci` | None | **UUID** | Challenge instance ID |
-| `sid` | Plain UUID | UUID + **steganographed digits (each digit of cts)** | Unicode Tag Chars |
+| `sid` | Plain UUID | UUID + **steganographed digits (each digit of cts)** | Unicode Variation Selectors |
 
 ## 6.3 Payload 228-Field Three-Class Classification
 
@@ -2175,7 +2175,7 @@ Bundle#2's sid is more complex than Bundle#1's:
 Bundle#1 sid: <uuid>
               Plain UUID
 
-Bundle#2 sid: <uuid> + <Unicode Tag Chars encoding each digit of cts timestamp>
+Bundle#2 sid: <uuid> + <Unicode Variation Selectors encoding each digit of cts timestamp>
               UUID + steganography
 
 Example:
@@ -2183,7 +2183,7 @@ Example:
   cts  = "1771967728434"
   sid  = "51338389-11b8-11f1-bb6d-13e608bfecce" + Tag('1') + Tag('7') + Tag('7') + Tag('1') + Tag('9') + Tag('6') + Tag('7') + Tag('7') + Tag('2') + Tag('8') + Tag('4') + Tag('3') + Tag('4')
 
-Unicode Tag Char mapping:
+Unicode Variation Selector mapping:
   Tag('0') = U+E0130
   Tag('1') = U+E0131
   Tag('2') = U+E0132
@@ -2855,7 +2855,7 @@ Bundle#2 POST
   │   - anti-tamper k/v   → replace original anti-tamper position (no delete+add)
   │ cs: state.qa
   │ ci: <challenge UUID>
-  │ sid: uuid + hh(state.no) + hh(cts)   ← Unicode Tag steganography
+  │ sid: uuid + hh(state.no) + hh(cts)   ← Unicode Variation-Selector steganography
   │ cts: state.cts (UUID)
   ▼
 OB#2 (2 segments) updates:
@@ -3275,13 +3275,13 @@ function hh(t) {
 }
 ```
 
-Converts a string to Unicode Tag Characters (U+E0100+ invisible characters).
+Converts a string to Unicode Variation Selectors (U+E0100+ invisible characters).
 
 ```
 "50" → U+E0035 U+E0030 → two invisible Unicode chars
 ```
 
-Empirically, the Unicode Tag Chars appended after the sid UUID encode **each digit of the cts timestamp**, not ni():
+Empirically, the Unicode Variation Selectors appended after the sid UUID encode **each digit of the cts timestamp**, not ni():
 
 ```
 U+E0131='1'
@@ -3508,7 +3508,7 @@ captcha.js auto-sends Bundle#2 → our hook intercepts the response
    ↓
    generatePC(events, uuid, tag, ft=388) → 16-char checksum
    ↓
-   generateSid(pxsid, serverNo) + Unicode Tag steganography
+   generateSid(pxsid, serverNo) + Unicode Variation-Selector steganography
    ↓
    fetch('.../assets/js/bundle?seq=2&rsc=3', { body: ... })
    ↓
@@ -4220,7 +4220,7 @@ Key discoveries during the reverse engineering process:
 - [x] Bundle #2 Request: POST param differences, Payload decryption (80+ browser fingerprint fields)
 - [x] cs source confirmed: server OB response III000 handler
 - [x] pc algorithm confirmed: HMAC-MD5(salt="uuid:tag:ft", data=JSON(events)) → extract + stride
-- [x] sid steganography confirmed: Unicode Tag Characters (U+E0130 series) encode cts timestamp
+- [x] sid steganography confirmed: Unicode Variation Selectors (U+E0130 series) encode cts timestamp
 - [x] Jf() interleave: payload = base64(XOR(JSON,50)) + UUID-driven char interleave (offsets[i]-1)
 - [x] bi / tag source: both script-hardcoded
 - [x] /ns endpoint: return value goes into payload field (Sm), not cs param

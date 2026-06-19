@@ -25,7 +25,7 @@ globalThis._pxUuid = uuid;   // 用 Bundle#1 的 state.pxsid
 
 4 个 bundle 事件全程**用同一个 uuid**（见 #B12）。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:7-24
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -46,7 +46,7 @@ const imports = {
 WebAssembly.instantiate(wasmBytes, imports);
 ```
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:26-44
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -58,7 +58,7 @@ WebAssembly.instantiate(wasmBytes, imports);
 
 **修复**：用 `wasm-tools` 提 WASM data section，对比新旧版本的 magic strings。变了就重新分析 WASM。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:241-254
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -70,7 +70,7 @@ WebAssembly.instantiate(wasmBytes, imports);
 
 **修复**：b() 输出**原样**填到 Bundle#3 PX561 字段 `MD1DNnVfRgQ=`，**不要** base64 解码。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:183-197
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -91,7 +91,7 @@ const hash = await crypto.subtle.digest('SHA-256', buf);
 const hash = crypto.createHash('sha256').update(s).digest('hex');
 ```
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:48-72
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -121,7 +121,7 @@ const hash = crypto.createHash('sha256').update(s).digest('hex');
 
 **修复**：从真抓的 Bundle POST 提取 Bundle AppID 单独硬编码。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:128-136；`ifood-web/collector无感纯算还原/纯算还原.md:38-50`
+**来源**：上游逆向笔记（已归档，未随仓发布）；`ifood-web/collector无感纯算还原/纯算还原.md:38-50`
 
 ---
 
@@ -140,7 +140,7 @@ const hash = crypto.createHash('sha256').update(s).digest('hex');
  px11116 DOM+errors]
 ```
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:76-93
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -156,7 +156,7 @@ uuid_bundle#1 = uuid_bundle#2 = uuid_bundle#3 = uuid_bundle#4
 
 **修复**：生成 1 个 uuid，4 个 bundle 全用它。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:201-212
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -174,7 +174,7 @@ uuid_bundle#1 = uuid_bundle#2 = uuid_bundle#3 = uuid_bundle#4
 - 短期 / 实验：成功路径不发 Bundle#4
 - 生产 / 大批量：构造一个最小的 Bundle#4 telemetry（含 `result=success`、duration、attempt count）跟在 Bundle#3 后面发；保持跟真浏览器的发包统计一致
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:216-227；`perimeterX_Re/docs/04_bundle/05_bundle4_fallback.md`
+**来源**：上游逆向笔记（已归档，未随仓发布）；`perimeterX_Re/docs/04_bundle/05_bundle4_fallback.md`
 
 ---
 
@@ -193,7 +193,7 @@ uuid_bundle#1 = uuid_bundle#2 = uuid_bundle#3 = uuid_bundle#4
 const pressDuration = 1000 + Math.random() * 2000;   // 1000-3000ms
 ```
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:97-110
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -208,7 +208,7 @@ const pressDuration = 1000 + Math.random() * 2000;   // 1000-3000ms
 x = Math.round(bezierX(t) * 10) / 10;
 ```
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:114-125
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -217,9 +217,9 @@ x = Math.round(bezierX(t) * 10) / 10;
 **症状**：所有字段都填了、duration 也在 1-3s 范围（满足 #B11），仍被拒。
 
 **根因**：PX 不只校验 `pressDuration` 字段值，还会**交叉对比**它跟事件时间戳之差：
-- 显式字段 `QlNxGAc0fSg= = [1500]`
+- 显式字段 `QlNxGAc0fSg= = [1600]`
 - 实际事件 `pointerdown.ts=37468, pointerup.ts=38936` → 差 1468ms
-- 差 32ms > 100ms 容忍度 → 判定 "synthetic event"
+- 差 132ms > 100ms 容忍度 → 判定 "synthetic event"
 
 **修复**：永远从事件**派生**duration，不要独立硬编码：
 ```javascript
@@ -250,7 +250,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 // 544 个轨迹点均匀分布在 [mouseStartTs, mouseEndTs]
 ```
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:140-153
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -264,7 +264,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 
 **修复**：用 iFood 项目里现成的 `myanmar_encode.js`，传真实 DOM 节点列表。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:158-169
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -276,7 +276,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 
 **修复**：用 iFood `error_stack.js`，返回 4 元素数组。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:173-179
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 
@@ -290,7 +290,7 @@ const mouseStartTs = mouseEndTs - pressDuration;
 
 **修复**：每个新挑战会话重新下载 captcha.js。
 
-**来源**：Desktop/新建文件夹 (4)/docs/_gotchas_bundle.md:231-237
+**来源**：上游逆向笔记（已归档，未随仓发布）
 
 ---
 

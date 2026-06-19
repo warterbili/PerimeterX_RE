@@ -22,7 +22,7 @@ Pure JavaScript implementations of the 9 cryptographic / encoding / serializatio
 | `payload.js` | `generatePayload(events, serverTs, uuid)` | EV array → POST `payload=` string (serialize → XOR(50) → b64 → interleave) |
 | `pc.js` | `generatePC(events, uuid, tag, ft)` | events + uuid + tag + ft → 16-digit pure-numeric checksum |
 | `ob.js` | `processOb(json, gt)` + named `decodeOb` / `solvePow` / `ml` / `buildSid` | Collector response `.ob` segment decoding + handler dispatch |
-| `sid.js` | `generateSid(pxsid, serverTs)` | Plane-14 Unicode Tag Chars steganography → POST `sid=` |
+| `sid.js` | `generateSid(pxsid, serverTs)` | Plane-14 Unicode Variation Selectors steganography → POST `sid=` |
 | `uuid.js` | Named `uuidV1` / `getUUID` / `resetUUID` / `setUUID` / `formatUUID` / `getRandomBytes` | RFC 4122 v1 (with PX-compatible clockseq) |
 | `hash.js` | Named `generateHash` / `Kt` | djb2 variant |
 | `memory.js` | Named `generateMemory` / `JS_HEAP_SIZE_LIMIT` | `performance.memory` triple synthesis |

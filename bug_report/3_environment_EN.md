@@ -23,7 +23,7 @@ Algorithm-agnostic issues that can cause a 100% correct generator to still get r
 - Bootstrap 60 accounts in batches of 10; 60s between batches
 - Per-IP per-account ≤ a few dozen collector calls per day
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:193-205; Desktop/新建文件夹 (3)/docs/_gotchas_grubhub.md:70-91
+**Source**: archived upstream notes (not shipped); archived upstream notes (not shipped)
 
 ---
 
@@ -82,11 +82,11 @@ requests.get("https://cw-marketplace.ifood.com.br/...", impersonate="chrome120")
 
 ---
 
-### #E5 ⭐⭐ Python `requests` Drops Unicode Tag Chars Inside sid
+### #E5 ⭐⭐ Python `requests` Drops Unicode Variation Selectors Inside sid
 
 **Symptom**: Python correctly implements the sid algorithm, but the server rejects what's sent; the same code in Node passes.
 
-**Root cause**: sid contains Plane 14 Unicode Tag Chars (U+E0100+), invisible to the eye. Python `requests` URL-encodes by default; some versions drop / convert them to `?`.
+**Root cause**: sid contains Plane 14 Unicode Variation Selectors (U+E0100+), invisible to the eye. Python `requests` URL-encodes by default; some versions drop / convert them to `?`.
 
 **Fix**:
 ```python
@@ -99,7 +99,7 @@ assert len(sid.encode('utf-8')) == expected_byte_count
 
 **Don't use**: Chrome "Copy as cURL" (also drops Unicode Tag).
 
-**Source**: Desktop/新建文件夹/px-reverse-skill/references/gotchas.md:101-111
+**Source**: archived upstream notes (not shipped)
 
 ---
 
@@ -114,7 +114,7 @@ assert len(sid.encode('utf-8')) == expected_byte_count
 - Or use incognito mode
 - Or verify: each batch has a different UUID + `_pxvid` is non-continuous
 
-**Source**: Desktop/新建文件夹 (2)/scripts/ (capture script comments)
+**Source**: archived upstream notes (not shipped)
 
 ---
 

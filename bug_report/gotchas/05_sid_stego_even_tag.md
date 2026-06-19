@@ -1,71 +1,71 @@
-# Gotcha 5 — SID stego on even-length TAG
+# Gotcha 5 — SID Variation-Selector steganography (charCode, not digit)
 
-## Symptom
+> ⚠️ **This file was rewritten 2026-06-20.** The earlier version described a
+> non-existent "SID-derived-from-TAG, loop over planes 1..14" algorithm with a
+> degenerate `(p*tagLen)%tagLen` index (which is identically 0) and a function
+> `extractSidFromTag` that is **not** in `revers/sid.js`. That was fabricated
+> scaffolding. The real mechanism is below, grounded in the actual code.
 
-SID extraction works on Grubhub TAG (`FmYgK1gdJEAP` — 12 chars) but breaks on
-some hypothetical TAG with even length where the algorithm-derived "plane 14"
-index falls on a non-existent char.
+## What `sid` actually is
 
-## Root cause
+`sid` is a POST form param = a **visible** prefix (`pxsid`, or `uuid` on the
+no-touch path) + an **invisible** steganographic tail that encodes a server
+counter (`state.no`, and on the bundle path also `cts`).
 
-The SID-from-TAG steganography algorithm (see
-[`docs/02_algorithms/05_sid.md`](../../revers/sid.js)) reads characters
-at positions derived from TAG length. The "Plane-14 Tag Character" step:
-
-```
-for each plane in 1..14:
-    char_index = (plane * tagLen) % alphabetSize
-    sid_char = TAG[char_index % tagLen]
-```
-
-If `tagLen` is even and `tagLen % 14 == 0`, several planes collapse to the
-same index. Not actually a bug in the algorithm; it's a bug in our extractor
-that assumed each plane gave a distinct char.
-
-## Why it was hard to find
-
-- iFood TAG length (16) and Grubhub TAG length (12) both gave 14 distinct
-  characters by coincidence.
-- The bug only manifests on hypothetical TAG lengths like 14, 28, 7, where
-  collisions occur.
-
-## Fix
-
-In `revers/sid.js`:
+Real implementation — [`revers/sid.js`](../../revers/sid.js):
 
 ```js
-function extractSidFromTag(tag) {
-    const planes = [];
-    for (let p = 1; p <= 14; p++) {
-        const idx = (p * tag.length) % tag.length;
-        // Allow collisions — duplicates are fine, SID is still valid
-        planes.push(tag.charCodeAt(idx));
-    }
-    return planes.reduce((acc, b) => acc * 31 + b, 0) >>> 0;
+function hh(t) {                       // encode each char as an invisible codepoint
+    let result = '';
+    for (let i = 0; i < t.length; i++)
+        result += String.fromCodePoint(0xE0100 + t.charCodeAt(i));
+    return result;
+}
+function generateSid(visiblePrefix, serverTimestamp) {
+    return visiblePrefix + hh(String(serverTimestamp));   // pxsid + hh(state.no)
 }
 ```
 
-## Regression test
+SDK origin: `main.js` lines 4365–4373 (`lh`/`hh`/`dh`), where
+`lh = "%uDB40%uDD"` and `unescape(lh + twoHexCharCode)` builds the surrogate
+pair — e.g. `unescape("%uDB40%uDD31")` → (0xDB40, 0xDD31) → **U+E0131**.
 
-`tests/regression/05_sid_stego_lengths.test.js`:
+## The two real pitfalls
 
-```js
-// Span TAG lengths 8 to 24
-for (let len = 8; len <= 24; len++) {
-    const tag = 'x'.repeat(len) + 'y'.repeat(len);  // even length
-    const sid = extractSidFromTag(tag.slice(0, len));
-    assert.ok(Number.isFinite(sid), `SID extract failed for tagLen=${len}`);
-}
+### 5a — it's `U+E0100 + charCode`, NOT `U+E0100 + digitValue`
+
+The base is added to the character **code**, not the numeric value of the digit:
+
+```
+'7' has charCode 0x37  →  U+E0100 + 0x37 = U+E0137     ✅
+                          (NOT U+E0107 — that's the off-by-0x30 trap)
 ```
 
-## Provenance
+So a digit string lands in **U+E0130–U+E0139**, never U+E0100–U+E0109. A decoder
+that does `digits += (cp - 0xE0100)` returns charcodes (55, 56, …) as a run-on
+number — garbage. The correct decode is `String.fromCharCode(cp - 0xE0100)`
+(see `dh()` in `revers/sid.js`).
 
-- SDK location: SID step, line ~7234 (`function ke(t)`)
-- First seen: 2026-05-19 22:00 (during Grubhub port)
+### 5b — the invisible tail gets dropped in transit
+
+These are **Variation Selectors Supplement** codepoints (U+E0100–U+E01EF) —
+Plane-14, invisible. Terminals, `copy as cURL`, naïve logging, and some HTTP
+clients **strip or normalize** them. If the tail is lost, the server sees a
+`sid` whose UTF-8 byte length (`36 + |state.no|*4`) is wrong → flagged as
+non-browser. In Python: `urllib.parse.quote_plus(sid, safe='')` to preserve them
+(this is the real basis of the old "Python requests drops sid characters" note).
+
+## Naming note
+
+The block is the **Variation Selectors Supplement** (U+E0100–U+E01EF), *not* the
+Unicode **Tags** block (U+E0000–U+E007F). Earlier docs called these "Tag
+Characters" — a misnomer (both live in Plane-14 and are invisible, but they are
+different blocks). The implementation is correct; only the label was wrong.
 
 ## Related
 
-- [`docs/02_algorithms/05_sid.md`](../../revers/sid.js)
+- Real algorithm + clarification: [`revers/sid.js`](../../revers/sid.js)
+- Authoritative gotcha list: [`skill/AI_re/references/gotchas.md`](../../skill/AI_re/references/gotchas.md)
 
 ## Next
 

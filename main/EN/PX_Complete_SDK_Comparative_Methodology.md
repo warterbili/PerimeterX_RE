@@ -673,7 +673,7 @@ Adjacent occurrences of `% 10 + 1` and `% 10 + 2` are the anti-tamper site.
 
 ### 3.3 SID Unicode steganography (iFood uses it, Grubhub doesn't)
 
-**iFood**: has SID Unicode-Tag stego; grep hits `fromCodePoint` or
+**iFood**: has SID Unicode-Variation-Selector stego; grep hits `fromCodePoint` or
 similar.
 
 **Grubhub**:

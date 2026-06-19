@@ -322,7 +322,7 @@ land on the PC function.
 grep -nE "917760|0xE0100|fromCodePoint" main.js
 ```
 
-`0xE0100` (= 917760) is the start of the Unicode Plane 14 Tag Characters
+`0xE0100` (= 917760) is the start of the Unicode Plane 14 Variation Selectors
 range. SID stego adds this offset to ASCII digits to produce invisible
 characters.
 

@@ -79,7 +79,7 @@ If you skip Collector and go straight to Bundle: in practice **add at least 3 we
 | payload encryption chain | XOR(50) → b64 → 20-char interleave | **Same** (interleave key uses UUID instead of AppID) |
 | PC HMAC-MD5 + digit extraction | ✓ | **Same** (different FT: 401 → 388) |
 | OB decode (XOR + `~~~~` split + handler dispatch) | 27 handlers | **27 + 2 PoW handlers** |
-| SID + Unicode Tag Char steganography | ✓ | **Same** (Bundle#2+ steganographs cts timestamp) |
+| SID + Unicode Variation Selector steganography | ✓ | **Same** (Bundle#2+ steganographs cts timestamp) |
 | UUID v1 with PX-compatible clockseq | ✓ | **Same** |
 | `/ns` probe | ✓ | **Same** |
 | **Proof of Work** (SHA-256 16-bit brute force) | ✗ | **New** ⭐ |

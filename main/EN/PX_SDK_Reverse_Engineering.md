@@ -162,7 +162,7 @@ en=NTA&                          (base64 of "50" — XOR key declaration)
 uuid=<UUID v1>&
 vid=<UUID>&
 cts=<UUID or numeric ms>&
-sid=<UUID + Unicode-Tag stego>&
+sid=<UUID + Unicode-Variation-Selector stego>&
 pc=<10–11 digit string>&
 payload=<URL-encoded XOR+b64+interleave(JSON)>&
 [bi=<opaque base64>]             (some platforms only, e.g. iFood)
@@ -361,9 +361,9 @@ const SHAPES = {
 There are **27 shapes** total. All 27 are PX-universal — they don't change
 across builds. See Section 9 for the full table.
 
-### 6.5 SID — Unicode Tag steganography
+### 6.5 SID — Unicode Variation-Selector steganography
 
-The `sid=` parameter has form `<UUID><invisible tag chars>`. The invisible
+The `sid=` parameter has form `<UUID><invisible Variation Selectors>`. The invisible
 chars are Unicode codepoints in the range U+E0000–U+E007F:
 
 ```js
@@ -1225,7 +1225,7 @@ const bOut = wasm.b(powAnswer);             // 127 chars from /=+!1@2#3$4%5^6&7*
 | **PX12095** | Marker for the init fingerprint event |
 | **PX12590, PX12610** | Markers for WASM a() and b() outputs |
 | **qa** | Challenge hash issued in OB#1 segment 5 |
-| **SID** | Session ID with Unicode-Tag steganographic suffix |
+| **SID** | Session ID with Variation-Selector steganographic suffix |
 | **state.\*** | Variables derived from OB#1 (no, to, qa, pxsid, vid, cts, appId, jf, o111val) |
 | **TAG** | Per-build base64 token, salt for PC and SID stego |
 | **vid** | Visitor ID, persists across sessions in `_pxvid` cookie |
@@ -1764,7 +1764,7 @@ Locating strategy:
 | PC accepted but not issued | Section E (state.appId must come from ob#1) |
 | sid disagrees with SDK | Gotcha 6 (state.pxsid is not the session uuid) |
 | OB decode comes out as garbage | Gotcha 7 (binary not UTF-8) |
-| Python requests drops sid characters | Gotcha 8 (Unicode Tag characters) |
+| Python requests drops sid characters | Gotcha 8 (Unicode Variation Selectors) |
 | HMAC fields computed correctly but still rejected | Gotcha 9 (UA consistency) |
 | **/auth/login 403 but collector all 200** ⭐ | Section E + extra field (Grubhub EV2 should not carry `DFQ2Ekk4PSU=`) |
 | 5/10 pass rate (intermittent 403 from PX) | **IP rate limiting** — space requests ≥ 10s apart, avoid bursts |
@@ -2488,7 +2488,7 @@ function genSid(pxsid, serverTs) {
 }
 ```
 
-`0xE0100` is the start of Unicode Plane 14 Tag Characters.
+`0xE0100` is the start of Unicode Plane 14 Variation Selectors.
 
 **SDK origin**: `0xE0100` is not directly grep-able, but reverse-engineered
 from the sid field:

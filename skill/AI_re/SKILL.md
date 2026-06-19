@@ -109,7 +109,7 @@ skill/AI_re/  ← Stage 4-8: 定位常量/函数 + 解码 + 字段分析 + 写 g
 | `payload.js` | `generatePayload` + `.decodePayload` | 算法链：serialize → XOR(50) → b64 (UTF-8) → 交织 |
 | `pc.js` | `generatePC` + `.hmacMD5` | HMAC-MD5 + 数字提取 → 16 位 PC |
 | `ob.js` | `decodeOb`, `ml`, ... | OB 段解码 + handler 形状识别 |
-| `sid.js` | `generateSid` | Plane 14 Tag Char Unicode 隐写 |
+| `sid.js` | `generateSid` | Plane 14 Variation Selector Unicode 隐写 |
 | `uuid.js` | `getUUID`, `uuidV1`, ... | RFC 4122 v1（带 PX 兼容 clockseq） |
 | `hash.js` | `generateHash`, `Kt` | djb2 hash 变体 |
 | `memory.js` | `generateMemory` | `performance.memory` 合成 |
